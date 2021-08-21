@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/ui/tutorial.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=84]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=85]
+size = 12
+font_data = SubResource( 84 )
+
+[sub_resource type="DynamicFontData" id=86]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=87]
+size = 10
+font_data = SubResource( 86 )
+
+[sub_resource type="DynamicFontData" id=88]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=89]
+size = 10
+font_data = SubResource( 88 )
+
+[node name="tutorial" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="1" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -50.0
+margin_right = 75.0
+margin_bottom = 54.514
+color = Color( 0.164706, 0, 0.278431, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="1/VBoxContainer"]
+margin_right = 146.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 85 )
+text = "DO THESE THINGS!"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="1/VBoxContainer"]
+margin_top = 16.0
+margin_right = 146.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 87 )
+custom_colors/font_color = Color( 0.980392, 1, 0.0313726, 1 )
+text = "1. answers fall from the sky
+2. shoot incorrect ones, not correct ones
+3. use correct answers to reach the goal"
+valign = 1
+autowrap = true
+
+[node name="1" type="Button" parent="1/VBoxContainer"]
+margin_top = 101.0
+margin_right = 146.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 89 )
+text = "CONTINUE"
+flat = true
+
+[connection signal="pressed" from="1/VBoxContainer/1" to="." method="_on_1_pressed"]
