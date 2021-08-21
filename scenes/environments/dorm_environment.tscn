@@ -1,7 +1,5 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=1]
-[ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=2]
 [ext_resource path="res://sprites/environment/dorm/props_1.png" type="Texture" id=3]
 [ext_resource path="res://sprites/environment/dorm/props_2.png" type="Texture" id=4]
 [ext_resource path="res://sprites/environment/dorm/hutch.png" type="Texture" id=5]
@@ -11,42 +9,39 @@
 
 [node name="dorm environment" type="Node2D"]
 
-[node name="floor" type="Sprite" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="floor" type="Sprite" parent="StaticBody2D"]
 texture = ExtResource( 7 )
 centered = false
 
-[node name="ground props" type="Sprite" parent="."]
+[node name="ground props" type="Sprite" parent="StaticBody2D"]
 texture = ExtResource( 6 )
 centered = false
 
-[node name="desk" type="Sprite" parent="."]
-position = Vector2( 312.659, 123.75 )
-texture = ExtResource( 1 )
-centered = false
-
-[node name="desk chair" type="Sprite" parent="."]
-position = Vector2( 352.403, 144.917 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="walls" type="Sprite" parent="."]
+[node name="walls" type="Sprite" parent="StaticBody2D"]
 texture = ExtResource( 8 )
 centered = false
 
-[node name="bottom props" type="Sprite" parent="."]
+[node name="bottom props" type="Sprite" parent="StaticBody2D"]
+z_index = 1
 texture = ExtResource( 3 )
 centered = false
 
-[node name="top props" type="Sprite" parent="."]
+[node name="top props" type="Sprite" parent="StaticBody2D"]
 texture = ExtResource( 4 )
 centered = false
 
-[node name="hutch" type="Sprite" parent="."]
+[node name="hutch" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 417.075, 231.316 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="props" type="Sprite" parent="."]
+[node name="props" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 417.075, 231.316 )
 texture = ExtResource( 5 )
 centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -21.9755, 70.678 )
+polygon = PoolVector2Array( 38.6994, 225.513, 38.8591, -71.1437, 483.715, -69.3619, 483.715, 390.936, 40.6409, 389.154, 38.8591, 225.229, 148.737, 225.823, 150.499, 349.786, 374.617, 350.908, 375.619, 326.791, 406.503, 325.603, 406.503, 348.173, 471.836, 348.767, 469.46, 269.774, 441.545, 269.774, 438.576, 169.399, 468.866, 167.023, 470.054, 108.224, 409.473, 108.224, 411.849, 71.4001, 370.867, 70.2122, 370.993, 103.135, 336.109, 98.8923, 334.638, 39.9217, 188.53, 42.2974, 185.501, 106.682, 145.767, 108.224, 145.173, 122.478, 54.8953, 121.884, 54.0442, 225.249 )

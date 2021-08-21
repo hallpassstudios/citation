@@ -211,12 +211,12 @@ blend_mode = 1
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
 [sub_resource type="AnimationNodeStateMachine" id=19]
-states/IDLE/node = SubResource( 15 )
-states/IDLE/position = Vector2( 323.667, 152.481 )
-states/WALK/node = SubResource( 16 )
-states/WALK/position = Vector2( 515.667, 151.889 )
-transitions = [ "IDLE", "WALK", SubResource( 17 ), "WALK", "IDLE", SubResource( 18 ) ]
-start_node = "IDLE"
+states/Idle/node = SubResource( 15 )
+states/Idle/position = Vector2( 323.667, 152.481 )
+states/Walk/node = SubResource( 16 )
+states/Walk/position = Vector2( 515.667, 151.889 )
+transitions = [ "Idle", "Walk", SubResource( 17 ), "Walk", "Idle", SubResource( 18 ) ]
+start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
@@ -224,6 +224,7 @@ start_node = "IDLE"
 script = ExtResource( 3 )
 
 [node name="shadow" type="Sprite" parent="."]
+position = Vector2( -2.37842, 31.3158 )
 texture = ExtResource( 2 )
 
 [node name="character" type="Sprite" parent="."]
@@ -252,5 +253,5 @@ tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 20 )
-parameters/IDLE/blend_position = Vector2( 0.743474, -0.0988836 )
-parameters/WALK/blend_position = Vector2( -0.0097459, -0.500797 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( 0, 0 )
