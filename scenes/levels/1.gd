@@ -19,5 +19,5 @@ func _ready():
 		
 func _process(delta):
 	if get_tree().get_nodes_in_group("correct").size() == 0:
-		# we destroyed the correct answer
+		# we destroyed the correct answer, show a message and restart the level
 		get_tree().reload_current_scene()

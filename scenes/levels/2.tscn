@@ -13,7 +13,7 @@
 [ext_resource path="res://sprites/environment/sky/parallaxbg_clouds.png" type="Texture" id=11]
 [ext_resource path="res://scenes/utilities/restart.gd" type="Script" id=12]
 [ext_resource path="res://scenes/ui/Time Container.gd" type="Script" id=13]
-[ext_resource path="res://scenes/player.gd" type="Script" id=14]
+[ext_resource path="res://scenes/player/player.gd" type="Script" id=14]
 [ext_resource path="res://scenes/ui/Mobile Conrols.gd" type="Script" id=15]
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=16]
 [ext_resource path="res://scenes/ui/Score Container.gd" type="Script" id=17]

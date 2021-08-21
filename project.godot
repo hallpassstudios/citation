@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="mechanics"
-run/main_scene="res://scenes/levels/1.tscn"
+run/main_scene="res://scenes/levels/dorm.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false

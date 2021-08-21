@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=1]
+[ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=2]
+[ext_resource path="res://sprites/environment/dorm/props_1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/environment/dorm/props_2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/environment/dorm/hutch.png" type="Texture" id=5]
+[ext_resource path="res://sprites/environment/dorm/ground_props.png" type="Texture" id=6]
+[ext_resource path="res://sprites/environment/dorm/floor.png" type="Texture" id=7]
+[ext_resource path="res://sprites/environment/dorm/walls.png" type="Texture" id=8]
+
+[node name="dorm environment" type="Node2D"]
+
+[node name="floor" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+centered = false
+
+[node name="ground props" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="desk" type="Sprite" parent="."]
+position = Vector2( 312.659, 123.75 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="desk chair" type="Sprite" parent="."]
+position = Vector2( 352.403, 144.917 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="walls" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="bottom props" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="top props" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="hutch" type="Sprite" parent="."]
+position = Vector2( 417.075, 231.316 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="props" type="Sprite" parent="."]
+position = Vector2( 417.075, 231.316 )
+texture = ExtResource( 5 )
+centered = false
