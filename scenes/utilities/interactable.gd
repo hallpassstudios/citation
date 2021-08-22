@@ -7,11 +7,11 @@ enum {
 }
 
 var object : Object
-
-onready var player = globals.player
+var player : Object
 
 func _on_interactables_body_entered(body):
-	print("player entered")
+	print("player entered area")
+	print(globals.player)
 
 func _on_interactables_input_event(viewport, event, shape_idx):
 	# mouse movement input
@@ -22,9 +22,10 @@ func _on_interactables_input_event(viewport, event, shape_idx):
 		var collision_object := object as CollisionObject2D
 		print(object, " has been interacted with!")
 		print(collision_object) 
+		var player = globals.player
 		
 		# tell our player that we're going to be interacting with something
-		if globals.player != null:
+		if player != null:
 			# have our player move over to the object
 			player.move_and_interact()
 			player.state = 2 # interacting

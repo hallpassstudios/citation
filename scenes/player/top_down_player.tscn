@@ -337,3 +337,7 @@ parameters/Walk/blend_position = Vector2( 0.00633919, 0.872928 )
 parameters/Walk2/BlendSpace2D/blend_position = Vector2( -0.312203, -0.0775862 )
 parameters/Walk2/BlendSpace2D/4/playback = SubResource( 40 )
 parameters/Walk2/TimeScale/scale = 0.75
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.5, 1.5 )

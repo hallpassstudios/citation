@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="mechanics"
-run/main_scene="res://scenes/levels/dorm.tscn"
+run/main_scene="res://scenes/levels/start.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -20,10 +20,10 @@ config/icon="res://icon.png"
 
 [autoload]
 
-orientation_check="*res://scenes/utilities/orientation_check.tscn"
-paused="*res://scenes/utilities/pause.tscn"
 globals="*res://scenes/utilities/globals.tscn"
+orientation_check="*res://scenes/utilities/orientation_check.tscn"
 global_ui="*res://scenes/utilities/global_ui.tscn"
+pause="*res://scenes/utilities/pause.tscn"
 
 [display]
 

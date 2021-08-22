@@ -25,7 +25,7 @@ func do_a_thing(value : bool):
 	
 	# we should access our parent sprite and highlight the object
 	var item_sprite = get_child(0)
-	item_sprite.material.set_shader_param("outLineSize", 0.003)
+	item_sprite.material.set_shader_param("outLineSize", 0.02)
 	
 	# then we should turn if off when we get done interacting
 	if(!value):
