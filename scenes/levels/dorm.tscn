@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/environments/dorm_environment.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/player/top_down_player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/levels/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=4]
 [ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=5]
 [ext_resource path="res://scenes/utilities/interactable.gd" type="Script" id=6]
 [ext_resource path="res://scenes/utilities/interactable_item.gd" type="Script" id=7]
+[ext_resource path="res://scenes/levels/dorm.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 57.3157, 41.865 )
+extents = Vector2( 55.7028, 29.6274 )
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -44,40 +43,37 @@ shader_param/outLineSize = 0.0
 shader_param/outLineColor = Plane( 1, 1, 0, 1 )
 
 [node name="dorm" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="player spawn" type="Node2D" parent="."]
+position = Vector2( 246.667, 293.333 )
+
+[node name="dorm environment" parent="." instance=ExtResource( 1 )]
 
 [node name="interactables" type="Area2D" parent="."]
 script = ExtResource( 6 )
 
-[node name="desk chair" type="Sprite" parent="interactables"]
-position = Vector2( 352.403, 144.917 )
-z_index = 11
-texture = ExtResource( 5 )
-centered = false
-
 [node name="desk collider" type="CollisionShape2D" parent="interactables"]
 position = Vector2( 360.676, 153.273 )
 z_index = 10
+z_as_relative = false
 shape = SubResource( 3 )
 script = ExtResource( 7 )
 TYPE = 1
 
 [node name="desk" type="Sprite" parent="interactables/desk collider"]
 material = SubResource( 2 )
-position = Vector2( -57.5065, -33.5186 )
+position = Vector2( -57.9029, -33.915 )
+z_as_relative = false
 texture = ExtResource( 4 )
 centered = false
 
-[node name="dorm environment" parent="." instance=ExtResource( 1 )]
-
-[node name="top down player" parent="." groups=[
-"player",
-] instance=ExtResource( 2 )]
-position = Vector2( 236.012, 269.647 )
-
-[node name="camera" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
-script = ExtResource( 3 )
+[node name="desk chair" type="Sprite" parent="interactables"]
+position = Vector2( 352.404, 144.917 )
+z_index = 11
+texture = ExtResource( 5 )
+centered = false
 
 [connection signal="body_entered" from="interactables" to="interactables" method="_on_interactables_body_entered"]
 [connection signal="input_event" from="interactables" to="interactables" method="_on_interactables_input_event"]
+[connection signal="mouse_entered" from="interactables" to="." method="_on_interactables_mouse_entered"]

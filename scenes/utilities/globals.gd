@@ -14,6 +14,8 @@ var current_scene
 # our player
 onready var player = get_tree().get_nodes_in_group("player")[0]
 var tutorial_played = false
+var player_name : String
+var player_type : Object
 
 # save / load 
 
@@ -49,7 +51,6 @@ func goto_scene(path): # Game requests to switch to this scene.
 
 	# Start your "loading..." animation.
 	# get_node("animation").play("loading")
-
 	wait_frames = 1
 
 func _process(delta):

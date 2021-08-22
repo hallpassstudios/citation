@@ -62,3 +62,7 @@ func move(delta):
 func move_and_interact():
 	will_interact = true
 	print("we're going to move and interact")
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	print("input event!")
