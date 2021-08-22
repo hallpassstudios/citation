@@ -34,15 +34,15 @@ func _physics_process(delta):
 	# what are we colliding with?
 	
 	# our animation states
-	animationTree.set("parameters/Idle/blend_position", velocity.normalized())
-	animationTree.set("parameters/Walk/blend_position", velocity.normalized())
+	animationTree.set("parameters/Idle2/BlendSpace2D/blend_position", velocity.normalized())
+	animationTree.set("parameters/Walk2/BlendSpace2D/blend_position", velocity.normalized())
 	
 	# animate based on our current player state, easy to add other animations this way. Amazing.
 	match state:
 		IDLE:
-			animationState.travel("Idle")
+			animationState.travel("Idle2")
 		WALKING:
-			animationState.travel("Walk")
+			animationState.travel("Walk2")
 		INTERACTING:
 			print("I am interacting!")
 	
