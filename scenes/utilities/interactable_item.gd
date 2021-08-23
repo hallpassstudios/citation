@@ -10,13 +10,6 @@ enum type {
 
 export(type) var TYPE
 
-# Called when the node enters the scene tree for the first time.
-
-func _ready():
-	get_tree().set_debug_collisions_hint(true) 
-	get_tree().is_debugging_collisions_hint()
-
-
 func change_scene():
 	globals.goto_scene("res://Levels/" + travel_to + ".tscn")
 

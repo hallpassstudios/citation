@@ -1,5 +1,5 @@
 {
-	"color": "#ff0044fa",
+	"color": "#ff0021fa",
 	"description": "the main character",
 	"display_name": "",
 	"display_name_bool": false,
@@ -13,7 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://sprites/portraits/main_character.png"
+			"path": "res://sprites/portraits/portrait.png"
 		}
 	],
 	"scale": 100

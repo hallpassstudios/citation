@@ -12,7 +12,7 @@ var time_max = 100 # msec
 var current_scene
 
 # our player
-onready var player = get_tree().get_nodes_in_group("player")[0]
+var player
 var tutorial_played = false
 var player_name : String
 var player_type : Object
@@ -33,11 +33,15 @@ var player_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	print("found player: ", player)
 	# scene management
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
-	
+
+func set_player(current_player):
+	player = current_player
+
 # progressive scene loading
 func goto_scene(path): # Game requests to switch to this scene.
 	print("loading new level: ", path)

@@ -1,6 +1,24 @@
 {
 	"events": [
 		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": true,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"emit_signal": "pause",
+			"event_id": "dialogic_040"
+		},
+		{
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -10,7 +28,11 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Maybe some  [color=#A5EFAC]coffee[/color] from the [color=#A5EFAC]lounge[/color] wll help me"
+			"text": "Maybe some  [color=#876400]coffee[/color] from the [color=#4504F2]lounge[/color] wll help me"
+		},
+		{
+			"emit_signal": "unpause",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

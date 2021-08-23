@@ -8,10 +8,44 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+} ]
+_global_script_class_icons={
+"Dialogic": "",
+"DialogicBackgroundMusic": "",
+"DialogicDefinitionsUtil": "",
+"DialogicResources": "",
+"DialogicUtil": ""
+}
+
 [application]
 
 config/name="mechanics"
-run/main_scene="res://scenes/levels/start.tscn"
+run/main_scene="res://scenes/levels/dorm.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -24,6 +58,7 @@ globals="*res://scenes/utilities/globals.tscn"
 orientation_check="*res://scenes/utilities/orientation_check.tscn"
 global_ui="*res://scenes/utilities/global_ui.tscn"
 pause="*res://scenes/utilities/pause.tscn"
+DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 
 [display]
 
@@ -36,7 +71,7 @@ window/stretch/aspect="keep_width"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/notes_tab/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/notes_tab/plugin.cfg" )
 
 [importer_defaults]
 

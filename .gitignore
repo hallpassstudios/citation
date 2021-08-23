@@ -1,0 +1,21 @@
+.tmp
+.DS_Store
+project-icon.png
+project.godot
+test-scenes
+/.import
+/default_env.tres
+/icon.png
+*.import
+/.vscode
+/previous
+export_presets.cfg
+/builds
+
+# Only add dialogic plugin 
+/addons/*
+!/addons/dialogic
+# Ignore dialogic resources
+/dialogic
+# Place test project files here
+/test-project
