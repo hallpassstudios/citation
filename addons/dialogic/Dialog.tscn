@@ -29,14 +29,23 @@ __meta__ = {
 }
 
 [node name="TextBubble" parent="." instance=ExtResource( 1 )]
-margin_top = -207.0
-margin_bottom = -40.0
+margin_left = -170.0
+margin_top = -60.0
+margin_right = 170.0
+margin_bottom = -10.0
+
+[node name="TextureRect2" type="TextureRect" parent="TextBubble"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Options" type="VBoxContainer" parent="."]
-margin_left = 512.0
-margin_top = 300.0
-margin_right = 512.0
-margin_bottom = 300.0
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -86,6 +95,7 @@ size_flags_vertical = 4
 custom_styles/normal = SubResource( 1 )
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
 bbcode_text = "This is the title"
 text = "This is the title"
 fit_content_height = true
@@ -99,7 +109,7 @@ size_flags_horizontal = 3
 custom_styles/normal = SubResource( 1 )
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.756863, 0.756863, 0.756863, 1 )
-text = "This is the main copy. Here you write the relevant"
+bbcode_enabled = true
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -114,7 +124,7 @@ size_flags_horizontal = 3
 custom_styles/normal = SubResource( 1 )
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.756863, 0.756863, 0.756863, 1 )
-text = "Una linea extra"
+bbcode_enabled = true
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -125,4 +135,5 @@ __meta__ = {
 
 [node name="OptionsDelayedInput" type="Timer" parent="."]
 
+[connection signal="gui_input" from="TextBubble/TextureRect2" to="." method="_on_TextureRect2_gui_input"]
 [connection signal="timeout" from="DefinitionInfo/Timer" to="." method="_on_Definition_Timer_timeout"]

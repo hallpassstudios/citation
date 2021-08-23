@@ -1132,3 +1132,14 @@ func _on_OptionsDelayedInput_timeout():
 	for button in $Options.get_children():
 		if button.is_connected("pressed", self, "answer_question") == false:
 			button.connect("pressed", self, "answer_question", [button, button.get_meta('event_idx'), button.get_meta('question_idx')])
+
+
+func _on_TextureRect2_gui_input(event):
+	if $Options.get_children().size() == 0:
+		if event is InputEventScreenTouch:
+			if event.is_pressed() == true:
+				var a = InputEventAction.new()
+				a.action = input_next
+				a.pressed = true
+				_input(a)
+				a.pressed = false
