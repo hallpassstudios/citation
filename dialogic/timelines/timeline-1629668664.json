@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh golly, I have to get this paper done before tomorrow, I'm [wave amp=10 freq=19]sooooo[/wave]  stressed out!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe some  [color=#A5EFAC]coffee[/color] from the [color=#A5EFAC]lounge[/color] wll help me"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.5",
+		"file": "timeline-1629668664.json",
+		"name": "intro"
+	}
+}

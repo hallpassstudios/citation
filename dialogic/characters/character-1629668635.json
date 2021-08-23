@@ -1,0 +1,20 @@
+{
+	"color": "#ff0044fa",
+	"description": "the main character",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1629668635.json",
+	"mirror_portraits": false,
+	"name": "bird boy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://sprites/portraits/main_character.png"
+		}
+	],
+	"scale": 100
+}
