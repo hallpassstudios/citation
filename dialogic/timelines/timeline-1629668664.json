@@ -4,7 +4,7 @@
 			"action": "join",
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_002",
-			"mirror": true,
+			"mirror": false,
 			"portrait": "",
 			"position": {
 				"0": true,
@@ -15,28 +15,24 @@
 			}
 		},
 		{
-			"emit_signal": "pause",
-			"event_id": "dialogic_040"
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh golly, I have a huge test  tomorrow, I'm [wave amp=10 freq=19]sooooo[/wave]  stressed out!"
 		},
 		{
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Oh golly, I have to get this paper done before tomorrow, I'm [wave amp=10 freq=19]sooooo[/wave]  stressed out!"
+			"text": "I should probably sit down at my [u]desk[/u] and review my [u]notes[/u]  instead of just standing around"
 		},
 		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Maybe some  [color=#876400]coffee[/color] from the [color=#4504F2]lounge[/color] wll help me"
-		},
-		{
-			"emit_signal": "unpause",
-			"event_id": "dialogic_040"
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
-		"dialogic-version": "1.2.5",
+		"dialogic-version": "1.3",
 		"file": "timeline-1629668664.json",
 		"name": "intro"
 	}

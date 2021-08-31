@@ -7,6 +7,7 @@ enum {
 }
 
 export(int) var speed = 200
+var path = []
 var target = Vector2()
 var velocity = Vector2()
 var state = IDLE
@@ -16,6 +17,13 @@ var will_interact : bool
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+
+func _ready():
+
+	# play forward idle animation
+	# animationPlayer.play("idle_down")
+	pass
+	
 
 func _input(event):
 	# mouse movement input
@@ -48,11 +56,13 @@ func _physics_process(delta):
 	
 	# move the player
 	if position.distance_to(target) > 5:
+		print("we are less than the target")
 		move(delta)
 	else:
 		state = IDLE
 		
 func move(delta):
+	print("moving...")
 	velocity = move_and_collide(velocity * delta)
 	
 	if velocity != null:

@@ -16,13 +16,17 @@ var player
 var tutorial_played = false
 var player_name : String
 var player_type : Object
+var player_spawn : int = 0
+var is_lit = false
+var illuminata_completed = false
+var can_shoot = false
+var read_everything = false
+
 
 # save / load 
 
 
 # connect up to high-score DB
-
-
 var platform : String
 var screen_orientation : String
 var right_button
@@ -33,14 +37,15 @@ var player_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	print("found player: ", player)
+	if player:
+		print("found player: ", player)
 	# scene management
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
 
 func set_player(current_player):
 	player = current_player
+	print("globals: setting current player to: ", current_player)
 
 # progressive scene loading
 func goto_scene(path): # Game requests to switch to this scene.

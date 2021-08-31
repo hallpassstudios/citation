@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/environment/hallway/floor.png" type="Texture" id=1]
+[ext_resource path="res://sprites/environment/hallway/walls.png" type="Texture" id=2]
+[ext_resource path="res://sprites/environment/hallway/desk_top.png" type="Texture" id=3]
+[ext_resource path="res://sprites/environment/hallway/ground props.png" type="Texture" id=4]
+[ext_resource path="res://sprites/environment/hallway/banners.png" type="Texture" id=5]
+[ext_resource path="res://sprites/environment/hallway/desk_bottom.png" type="Texture" id=6]
+
+[node name="hallway environment" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="floor" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="walls" type="Sprite" parent="StaticBody2D"]
+z_index = 2
+texture = ExtResource( 2 )
+centered = false
+
+[node name="groundf props" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="banners" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 32.0185, 55.0087 )
+z_index = 2
+texture = ExtResource( 5 )
+centered = false
+
+[node name="desk top" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 49.7672, 257.095 )
+z_index = 2
+texture = ExtResource( 3 )
+
+[node name="desk bottom" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 50.3035, 323.634 )
+z_index = 1
+texture = ExtResource( 6 )

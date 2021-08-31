@@ -9,7 +9,8 @@ onready var nodes = {
 
 var in_theme_editor = false
 var margin = 10
-
+var touch : bool = true
+var touch_position
 
 func _ready():
 	set_deferred('rect_size.y', 0)
@@ -17,14 +18,22 @@ func _ready():
 	nodes['body'].bbcode_enabled = true
 	nodes['extra'].bbcode_enabled = true
 
-
+func _input(event):
+	if event is InputEventScreenTouch:
+		touch_position = get_canvas_transform().affine_inverse().xform(event.position)
+	
 func _process(_delta):
 	if Engine.is_editor_hint() == false or in_theme_editor == true:
 		if visible:
-			if get_global_mouse_position().x < get_viewport().size.x * 0.5:
-				rect_global_position = get_global_mouse_position() - Vector2(0, rect_size.y + (margin * 2))
+			if globals.platform != "mobile":
+				if get_global_mouse_position().x < get_viewport().size.x * 0.5:
+					rect_global_position = get_global_mouse_position() - Vector2(0, rect_size.y + (margin * 2))
+				else:
+					rect_global_position = get_global_mouse_position() - rect_size - Vector2(0, (margin * 2))
+				rect_size.y = 0
 			else:
-				rect_global_position = get_global_mouse_position() - rect_size - Vector2(0, (margin * 2))
+				rect_global_position = touch_position - rect_size - Vector2(0, (margin * 2))
+				print("touching")
 			rect_size.y = 0
 #			
 

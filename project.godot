@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
 "base": "Node",
 "class": "Dialogic",
 "language": "GDScript",
@@ -35,6 +40,7 @@ _global_script_classes=[ {
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 } ]
 _global_script_class_icons={
+"DTS": "",
 "Dialogic": "",
 "DialogicBackgroundMusic": "",
 "DialogicDefinitionsUtil": "",
@@ -44,7 +50,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="mechanics"
+config/name="citation"
 run/main_scene="res://scenes/levels/dorm.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
@@ -58,7 +64,9 @@ globals="*res://scenes/utilities/globals.tscn"
 orientation_check="*res://scenes/utilities/orientation_check.tscn"
 global_ui="*res://scenes/utilities/global_ui.tscn"
 pause="*res://scenes/utilities/pause.tscn"
-DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
+dialogue_controller="*res://scenes/utilities/dialogue controller.tscn"
+background_music="*res://scenes/audio/background music.tscn"
+inventory="*res://scenes/ui/inventory.tscn"
 
 [display]
 

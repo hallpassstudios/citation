@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 #player variables
-export (int) var speed = 1200
+export (int) var speed = 800
 export (int) var jump_speed = -250
 export (int) var gravity = 1000
 export (int, 0, 5000) var push = 1000
@@ -12,17 +12,20 @@ var jumping = false
 var shooting
 var touch_input : Vector2
 var can_jump = false
+var can_shoot = false
 
 onready var animated_sprite = $CollisionShape2D/AnimatedSprite
 var bullet = preload("res://scenes/props/bullet.tscn")
 onready var wand = $CollisionShape2D/wand/Sprite
+onready var camera = $Camera2D
 
 # shooting-related
 var bullet_count = 0
 var max_bullets = 100
 
 func _ready():
-	
+	#center the camera
+	camera.position = animated_sprite.position
 	#get_tree().set_debug_collisions_hint(true) 
 	#get_tree().is_debugging_collisions_hint()
 	pass
@@ -39,19 +42,21 @@ func get_input():
 	# keyboard / mouse input
 	if Input.is_action_pressed("walk_right"):
 		velocity.x += speed
+
 	if Input.is_action_pressed("walk_left"):
 		velocity.x -= speed
-	
+
 	var jump = Input.is_action_just_pressed('jump')
 	
 	if touch_input != Vector2.ZERO:
 		velocity.x += speed * touch_input.x
 	if jump and is_on_floor():
+		print("jumping")
+		animated_sprite.play("jump")
 		jumping = true
 		velocity.y = jump_speed
 	
 	# get our cursor
-	
 	var mouse_position = get_global_mouse_position()
 	
 	# have our wand follow the cursor
@@ -78,6 +83,8 @@ func _input(event):
 			shoot(event)
 
 func shoot(event):
+	if !globals.can_shoot:
+		return
 	# these are our mobile button checks so we don't shoot when pressing them!
 	if event.position.y + 25 > globals.right_button.get_global_transform_with_canvas().origin.y && event.position.x < globals.right_button.get_global_transform_with_canvas().origin.x:
 		return
@@ -110,21 +117,31 @@ func _physics_process(delta):
 			collision.collider.apply_central_impulse(-collision.normal * push)
 	
 	# jumping?
-	if Input.is_action_just_pressed("jump") || !can_jump:
-		if is_on_floor():
-			print("jumping")
-			velocity.y = jump_speed
-			can_jump = true
-	
+#	if Input.is_action_just_pressed("jump") || !can_jump:
+#		if is_on_floor():
+#			velocity.y = jump_speed
+#			can_jump = true
+#
 	# animation
-	if velocity.x > 0:
+	if velocity.x > 0 && is_on_floor():
+		animated_sprite.speed_scale = 1
 		animated_sprite.flip_h = false
 		animated_sprite.play("walk")
-	elif velocity.x < 0:
+	elif velocity.x < 0 && is_on_floor():
+		animated_sprite.speed_scale = 1
 		animated_sprite.flip_h = true
 		animated_sprite.play("walk")
-	else:
+	elif velocity.x == 0 && is_on_floor():
+		animated_sprite.speed_scale = 1
 		animated_sprite.play("idle")
+	elif velocity.x < 0 && !is_on_floor():
+		animated_sprite.speed_scale = 1
+		animated_sprite.flip_h = false
+		animated_sprite.play("jump")
+	elif velocity.x > 0 && !is_on_floor():
+		animated_sprite.flip_h = true
+		animated_sprite.speed_scale = 2
+		animated_sprite.play("jump")
 
 func _on_left_button_released():
 	touch_input = Vector2.ZERO
@@ -140,11 +157,22 @@ func _on_up_button_released():
 
 func _on_death_body_entered(body):
 	if body.name == "player": #or if it's an answer
+		print("player fell")
 		global_ui.fade_out()
 		yield(get_tree().create_timer(2.0), "timeout")
 		get_tree().reload_current_scene()
 		global_ui.fade_in()
 	if body.is_in_group("correct"):
 		get_tree().reload_current_scene()
-
 	#if body.name
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "player": #or if it's an answer
+		print("player fell")
+		global_ui.fade_out()
+		yield(get_tree().create_timer(1.0), "timeout")
+		get_tree().reload_current_scene()
+		global_ui.fade_in()
+	if body.is_in_group("correct"):
+		get_tree().reload_current_scene()

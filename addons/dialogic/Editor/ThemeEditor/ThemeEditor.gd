@@ -111,6 +111,9 @@ onready var n : Dictionary = {
 	'button_offset_y': $"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/HBoxContainer/TextOffsetV",
 	'button_separation': $"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/VerticalSeparation",
 	
+	'button_layout': $"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/Layout",
+	
+	
 	# Button modifiers (Inherited scenes)
 	'button_normal': $"VBoxContainer/TabContainer/Choice Buttons/Column/TabContainer/Normal",
 	'button_hover': $"VBoxContainer/TabContainer/Choice Buttons/Column/TabContainer/Hover",
@@ -151,6 +154,78 @@ onready var n : Dictionary = {
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 func _ready() -> void:
+	$"VBoxContainer/TabContainer/Dialog Text/Column/SectionTitle".text = DTS.translate("Fonts")
+	$"VBoxContainer/TabContainer/Dialog Text/Column/GridContainer/Label5".text = DTS.translate("Regular Font")
+	$"VBoxContainer/TabContainer/Dialog Text/Column/GridContainer/Label6".text = DTS.translate("Bold Font")
+	$"VBoxContainer/TabContainer/Dialog Text/Column/GridContainer/Label7".text = DTS.translate("Italic Font")
+	$"VBoxContainer/TabContainer/Dialog Text/Column2/SectionTitle".text = DTS.translate("Colors")
+	$"VBoxContainer/TabContainer/Dialog Text/Column2/GridContainer/Label3".text = DTS.translate("Text Color")
+	$"VBoxContainer/TabContainer/Dialog Text/Column2/GridContainer/Label".text = DTS.translate("Shadow")
+	$"VBoxContainer/TabContainer/Dialog Text/Column2/GridContainer/Label4".text = DTS.translate("Shadow Offset")
+	$"VBoxContainer/TabContainer/Dialog Text/Column3/SectionTitle".text = DTS.translate("Behaviour")
+	$"VBoxContainer/TabContainer/Dialog Text/Column3/GridContainer/Label6".text = DTS.translate("Speed (bigger = slower)")
+	$"VBoxContainer/TabContainer/Dialog Text/Column3/GridContainer/Label2".text = DTS.translate("Alignment")
+	$"VBoxContainer/TabContainer/Dialog Text/Column3/GridContainer/Label3".text = DTS.translate("Single Portrait Mode")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/SectionTitle".text = DTS.translate("Visuals")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label5".text = DTS.translate("Background Color")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label".text = DTS.translate("Background Texture")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label9".text = DTS.translate("Texture Modulation")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label2".text = DTS.translate("Full width")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label6".text = DTS.translate("Box padding")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label7".text = DTS.translate("Box size (pixels)")
+	$"VBoxContainer/TabContainer/Dialog Box/Column/GridContainer/Label8".text = DTS.translate("Bottom gap")
+	$"VBoxContainer/TabContainer/Dialog Box/Column2/SectionTitle".text = DTS.translate("Next Indicator")
+	$"VBoxContainer/TabContainer/Dialog Box/Column2/GridContainer/Label2".text = DTS.translate("Image")
+	$"VBoxContainer/TabContainer/Dialog Box/Column2/GridContainer/Label4".text = DTS.translate("Animation")
+	$"VBoxContainer/TabContainer/Dialog Box/Column2/GridContainer/Label3".text = DTS.translate("Scale")
+	$"VBoxContainer/TabContainer/Dialog Box/Column2/GridContainer/Label9".text = DTS.translate("Offset")
+	$"VBoxContainer/TabContainer/Dialog Box/Column3/SectionTitle".text = DTS.translate("Behaviour")
+	$"VBoxContainer/TabContainer/Dialog Box/Column3/GridContainer/Label3".text = DTS.translate("Action key")
+	$"VBoxContainer/TabContainer/Dialog Box/Column3/GridContainer/Label4".text = DTS.translate("Fade in time:")
+	$"VBoxContainer/TabContainer/Name Label/Column/SectionTitle".text = DTS.translate("Text")
+	$"VBoxContainer/TabContainer/Name Label/Column/GridContainer/Label5".text = DTS.translate("Name label Font")
+	$"VBoxContainer/TabContainer/Name Label/Column/GridContainer/Label".text = DTS.translate("Use character Color")
+	$"VBoxContainer/TabContainer/Name Label/Column/GridContainer/Label3".text = DTS.translate("Shadow")
+	$"VBoxContainer/TabContainer/Name Label/Column/GridContainer/Label4".text = DTS.translate("Shadow Offset")
+	$"VBoxContainer/TabContainer/Name Label/Column2/SectionTitle".text = DTS.translate("Box")
+	$"VBoxContainer/TabContainer/Name Label/Column2/GridContainer/Label5".text = DTS.translate("Background Color")
+	$"VBoxContainer/TabContainer/Name Label/Column2/GridContainer/Label2".text = DTS.translate("Background Texture")
+	$"VBoxContainer/TabContainer/Name Label/Column2/GridContainer/Label9".text = DTS.translate("Texture Modulation")
+	$"VBoxContainer/TabContainer/Name Label/Column2/GridContainer/Label4".text = DTS.translate("Box Padding")
+	$"VBoxContainer/TabContainer/Name Label/Column3/SectionTitle".text = DTS.translate("Placement")
+	$"VBoxContainer/TabContainer/Name Label/Column3/GridContainer/PositionLabel".text = DTS.translate("Position")
+	$"VBoxContainer/TabContainer/Name Label/Column3/GridContainer/OffsetLabel".text = DTS.translate("Offset")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column/SectionTitle".text = DTS.translate("Button Style")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column2/SectionTitle".text = DTS.translate("Placement")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/Label6".text = DTS.translate("Box padding")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/Label".text = DTS.translate("Fixed button size")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/Label2".text = DTS.translate("Separation")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column2/GridContainer/Label3".text = DTS.translate("Layout")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column3/SectionTitle".text = DTS.translate("Advanced")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column3/GridContainer/CustomButtonsLabel".text = DTS.translate("Use Custom Buttons")
+	$"VBoxContainer/TabContainer/Choice Buttons/Column3/GridContainer/Label2".text = DTS.translate("Use Native Buttons")
+	$"VBoxContainer/TabContainer/Glossary/Column/SectionTitle".text = DTS.translate("Visuals")
+	$"VBoxContainer/TabContainer/Glossary/Column/GridContainer/Label3".text = DTS.translate("Word color")
+	$"VBoxContainer/TabContainer/Glossary/Column/GridContainer/Label4".text = DTS.translate("Background Panel")
+	$"VBoxContainer/TabContainer/Glossary/Column3/SectionTitle".text = DTS.translate("Text")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label5".text = DTS.translate("Title Font")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label8".text = DTS.translate("Title color")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label6".text = DTS.translate("Text Font")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label9".text = DTS.translate("Text color")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label7".text = DTS.translate("Extra Font")
+	$"VBoxContainer/TabContainer/Glossary/Column3/GridContainer/Label10".text = DTS.translate("Extra color")
+	$"VBoxContainer/TabContainer/Glossary/Column2/SectionTitle".text = DTS.translate("Behaviour")
+	$"VBoxContainer/TabContainer/Glossary/Column2/GridContainer/Label2".text = DTS.translate("Show")
+	$"VBoxContainer/TabContainer/Audio/Column/SectionTitle".text = DTS.translate("Typing Sound Effects")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label".text = DTS.translate("Enable")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label2".text = DTS.translate("File or folder path")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label3".text = DTS.translate("Volume")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label4".text = DTS.translate("Volume random range")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label5".text = DTS.translate("Pitch random range")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label6".text = DTS.translate("Allow interrupt")
+	$"VBoxContainer/TabContainer/Audio/Column/GridContainer/Label7".text = DTS.translate("Audio Bus")
+	
+	editor_reference = find_parent('EditorView')
 	AudioServer.connect("bus_layout_changed", self, "_on_bus_layout_changed")
 	# Signal connection to free up some memory
 	connect("visibility_changed", self, "_on_visibility_changed")
@@ -210,6 +285,8 @@ func _ready() -> void:
 	n['button_hover'].connect('style_modified', self, '_on_choice_style_modified')
 	n['button_pressed'].connect('style_modified', self, '_on_choice_style_modified')
 	n['button_disabled'].connect('style_modified', self, '_on_choice_style_modified')
+	
+	n['button_layout'].connect('item_selected', self, '_on_button_layout_selected')
 	
 	n['name_position'].text = 'Left'
 	n['name_position'].connect('item_selected', self, '_on_name_position_selected')
@@ -311,6 +388,8 @@ func load_theme(filename):
 	n['button_fixed'].pressed = theme.get_value('buttons', 'fixed', false)
 	n['button_fixed_x'].value = theme.get_value('buttons', 'fixed_size', Vector2(130,40)).x
 	n['button_fixed_y'].value = theme.get_value('buttons', 'fixed_size', Vector2(130,40)).y
+	
+	n['button_layout'].selected = theme.get_value('buttons', 'layout', 0) 
 	
 	
 	
@@ -1014,6 +1093,7 @@ func _on_TypingAudioBusButton_item_selected(index):
 		return
 	DialogicResources.set_theme_value(current_theme, 'typing_sfx', 'audio_bus', AudioServer.get_bus_name(index))
 
+
 func _on_bus_layout_changed():
 	update_audio_bus_option_buttons()
 
@@ -1026,3 +1106,10 @@ func update_audio_bus_option_buttons():
 			n['typing_sfx_audio_bus'].add_item(bus_name)
 			if bus_name == theme.get_value('typing_sfx', 'audio_bus', "Master"):
 				n['typing_sfx_audio_bus'].select(i)
+
+
+func _on_button_layout_selected(index):
+	if loading:
+		return
+	DialogicResources.set_theme_value(current_theme, 'buttons', 'layout', index)
+	_on_PreviewButton_pressed() # Refreshing the preview

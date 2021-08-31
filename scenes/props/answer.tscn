@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/ui/bar_back.png" type="Texture" id=1]
+[ext_resource path="res://sprites/ui/bar_front.png" type="Texture" id=2]
+[ext_resource path="res://scenes/props/answer.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 63.693, 8.12442 )
+
+[sub_resource type="DynamicFontData" id=84]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=60]
+size = 12
+font_data = SubResource( 84 )
+
+[node name="answer" type="RigidBody2D" groups=[
+"answers",
+]]
+position = Vector2( 254.055, -18.1898 )
+z_index = 1
+collision_layer = 8
+collision_mask = 15
+mass = 100.0
+gravity_scale = 0.3
+continuous_cd = 2
+angular_damp = 10.0
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 65 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CollisionShape2D"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 129.0
+margin_bottom = 19.0
+use_top_left = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="CollisionShape2D/CenterContainer"]
+margin_left = -64.0
+margin_top = -9.0
+margin_right = 64.0
+margin_bottom = 9.0
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CollisionShape2D/CenterContainer"]
+margin_left = -60.0
+margin_top = -8.0
+margin_right = 60.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 120, 15 )
+custom_fonts/font = SubResource( 60 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "still cheating"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,89 +1,296 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=41 format=2]
 
-[ext_resource path="res://scenes/environments/dorm_environment.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/levels/dialogue controller.gd" type="Script" id=2]
+[ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
+[ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/utilities/interactable.gd" type="Script" id=3]
 [ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=4]
-[ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=5]
-[ext_resource path="res://scenes/utilities/interactable.gd" type="Script" id=6]
-[ext_resource path="res://scenes/utilities/interactable_item.gd" type="Script" id=7]
+[ext_resource path="res://scenes/utilities/interactable_item.gd" type="Script" id=5]
+[ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=6]
+[ext_resource path="res://sprites/environment/dorm/game_console_animated.png" type="Texture" id=7]
 [ext_resource path="res://scenes/levels/dorm.gd" type="Script" id=8]
+[ext_resource path="res://sprites/environment/dorm/bed.png" type="Texture" id=9]
+[ext_resource path="res://materials/outline.tres" type="Material" id=10]
+[ext_resource path="res://shaders/outline.gdshader" type="Shader" id=11]
+[ext_resource path="res://sprites/environment/dorm/door.png" type="Texture" id=12]
+[ext_resource path="res://sprites/environment/dorm/ground_props.png" type="Texture" id=13]
+[ext_resource path="res://sprites/npcs/icarus_idle_f.png" type="Texture" id=14]
+[ext_resource path="res://sprites/environment/dorm/props_2.png" type="Texture" id=15]
+[ext_resource path="res://sprites/environment/dorm/hutch.png" type="Texture" id=16]
+[ext_resource path="res://sprites/environment/dorm/props_1.png" type="Texture" id=17]
+[ext_resource path="res://sprites/environment/dorm/walls.png" type="Texture" id=18]
+[ext_resource path="res://sprites/environment/dorm/floor.png" type="Texture" id=19]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 55.7028, 29.6274 )
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-render_mode blend_mix;
-
-uniform float outLineSize  = 0.02;
-uniform vec4  outLineColor = vec4(1.0, 1.0, 1.0, 1.0);
-
-void fragment()
-{
-    vec4 tcol = texture(TEXTURE, UV);
-    
-    if (tcol.a == 0.0)
-    {
-        if (texture(TEXTURE, UV + vec2(0.0,          outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(0.0,         -outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  0.0)).a          != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, 0.0)).a          != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, -outLineSize)).a != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  -outLineSize)).a != 0.0) 
-            tcol = outLineColor;
-    }
-    
-    COLOR = tcol;
-}"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 11 )
 shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 1, 1, 0, 1 )
+shader_param/outLineColor = Plane( 0.4, 1, 0.6, 1 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../game controller:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+length = 2.0
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../game controller:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 11 )
+shader_param/outLineSize = 0.0
+shader_param/outLineColor = Plane( 0.4, 1, 0.6, 1 )
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = ExtResource( 11 )
+shader_param/outLineSize = 0.0
+shader_param/outLineColor = Plane( 2.169, 1, 0.6, 1 )
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = ExtResource( 11 )
+shader_param/outLineSize = 0.0
+shader_param/outLineColor = Plane( 2.281, 1, 0.6, 1 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 14 )
+region = Rect2( 55, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 14 )
+region = Rect2( 110, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 14 )
+region = Rect2( 165, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 14 )
+region = Rect2( 220, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 14 )
+region = Rect2( 275, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 14 )
+region = Rect2( 330, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 14 )
+region = Rect2( 385, 0, 55, 71 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48.2289, 23.3952 )
+
+[sub_resource type="CapsuleShape2D" id=23]
+radius = 14.5065
+height = 0.0
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 39.8407, 22.9418 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 63.9006, 92.5243 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 44.9028, 57.2937 )
+
+[sub_resource type="NavigationPolygon" id=4]
+vertices = PoolVector2Array( 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 403.261, 348.572, 127.289, 289.911, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 35.3648, 176.302, 32.5364, 287.554 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 0, 3, 7, 6, 8, 9 ), PoolIntArray( 10, 11, 0, 9 ), PoolIntArray( 12, 9, 8, 13 ) ]
+outlines = [ PoolVector2Array( 35.3648, 176.302, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 403.261, 348.572, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 127.289, 289.911, 32.5364, 287.554 ) ]
 
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="dialogue controller" type="Control" parent="."]
-pause_mode = 2
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="cursor" type="Node2D" parent="."]
+script = ExtResource( 1 )
 
-[node name="player spawn" type="Node2D" parent="."]
-position = Vector2( 246.667, 293.333 )
+[node name="dialogue controller" parent="." instance=ExtResource( 2 )]
 
-[node name="dorm environment" parent="." instance=ExtResource( 1 )]
+[node name="environment" type="YSort" parent="."]
 
-[node name="interactables" type="Area2D" parent="."]
-script = ExtResource( 6 )
+[node name="player spawn" type="Node2D" parent="environment"]
+z_index = 1
 
-[node name="desk collider" type="CollisionShape2D" parent="interactables"]
-position = Vector2( 360.676, 153.273 )
-z_index = 10
-z_as_relative = false
-shape = SubResource( 3 )
-script = ExtResource( 7 )
+[node name="0" type="Node2D" parent="environment/player spawn"]
+position = Vector2( 240.416, 296.513 )
+
+[node name="1" type="Node2D" parent="environment/player spawn"]
+position = Vector2( 240.888, 182.905 )
+
+[node name="floor" type="Sprite" parent="environment"]
+texture = ExtResource( 19 )
+centered = false
+
+[node name="ground props" type="Sprite" parent="environment"]
+texture = ExtResource( 13 )
+centered = false
+
+[node name="walls" type="Sprite" parent="environment"]
+z_index = 1
+texture = ExtResource( 18 )
+centered = false
+
+[node name="bottom props" type="Sprite" parent="environment"]
+z_index = 3
+texture = ExtResource( 17 )
+centered = false
+
+[node name="top props" type="Sprite" parent="environment"]
+texture = ExtResource( 15 )
+centered = false
+
+[node name="hutch" type="Sprite" parent="environment"]
+position = Vector2( 417.075, 231.316 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="props" type="Sprite" parent="environment"]
+position = Vector2( 417.075, 231.316 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="desk" type="Sprite" parent="environment"]
+material = ExtResource( 10 )
+position = Vector2( 369.684, 155.11 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="chair" type="Sprite" parent="environment"]
+position = Vector2( 368.168, 170.178 )
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="game controller" type="Sprite" parent="environment"]
+material = SubResource( 9 )
+position = Vector2( 115.852, 165.954 )
+z_index = 1
+texture = ExtResource( 7 )
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/game controller"]
+root_node = NodePath("../../interactable zone/game collider")
+autoplay = "idle"
+anims/RESET = SubResource( 5 )
+anims/idle = SubResource( 6 )
+
+[node name="bed" type="Sprite" parent="environment"]
+material = SubResource( 10 )
+position = Vector2( 80.3941, 353.154 )
+z_index = 2
+texture = ExtResource( 9 )
+
+[node name="door" type="Sprite" parent="environment"]
+material = SubResource( 12 )
+position = Vector2( 239.443, 96.8653 )
+z_index = 1
+texture = ExtResource( 12 )
+
+[node name="icarus" type="AnimatedSprite" parent="environment"]
+material = SubResource( 13 )
+position = Vector2( 183.973, 164.284 )
+z_index = 1
+frames = SubResource( 22 )
+frame = 4
+playing = true
+
+[node name="interactable zone" type="Area2D" parent="environment"]
+script = ExtResource( 3 )
+
+[node name="desk collider" type="CollisionShape2D" parent="environment/interactable zone"]
+position = Vector2( 366.315, 159.867 )
+shape = SubResource( 1 )
+script = ExtResource( 5 )
+object_name = "desk"
+has_dialogue = true
+dialogue = "desk"
+dialogue_variable_name = "desk"
+outline_size = 0.025
+sprite = NodePath("../../desk")
 TYPE = 1
 
-[node name="desk" type="Sprite" parent="interactables/desk collider"]
-material = SubResource( 2 )
-position = Vector2( -57.9029, -33.915 )
-z_as_relative = false
-texture = ExtResource( 4 )
-centered = false
+[node name="roommate" type="CollisionShape2D" parent="environment/interactable zone"]
+position = Vector2( 187.688, 183.848 )
+shape = SubResource( 23 )
+script = ExtResource( 5 )
+has_dialogue = true
+dialogue = "joe"
+outline_size = 0.002
+sprite = NodePath("../../icarus")
+TYPE = 1
 
-[node name="desk chair" type="Sprite" parent="interactables"]
-position = Vector2( 352.404, 144.917 )
-z_index = 11
-texture = ExtResource( 5 )
-centered = false
+[node name="game collider" type="CollisionShape2D" parent="environment/interactable zone"]
+position = Vector2( 115.456, 170.513 )
+shape = SubResource( 8 )
+script = ExtResource( 5 )
+object_name = "birdietendo"
+has_dialogue = true
+dialogue = "birdietendo"
+outline_size = 0.003
+sprite = NodePath("../../game controller")
+TYPE = 1
 
-[connection signal="body_entered" from="interactables" to="interactables" method="_on_interactables_body_entered"]
-[connection signal="input_event" from="interactables" to="interactables" method="_on_interactables_input_event"]
-[connection signal="mouse_entered" from="interactables" to="." method="_on_interactables_mouse_entered"]
+[node name="bed collider" type="CollisionShape2D" parent="environment/interactable zone"]
+position = Vector2( 79.3206, 353.95 )
+shape = SubResource( 7 )
+script = ExtResource( 5 )
+object_name = "bed"
+has_dialogue = true
+dialogue = "bed"
+outline_size = 0.01
+sprite = NodePath("../../bed")
+TYPE = 1
+
+[node name="door collider" type="CollisionShape2D" parent="environment/interactable zone"]
+position = Vector2( 239.443, 96.8653 )
+shape = SubResource( 11 )
+script = ExtResource( 5 )
+travel_to = "hallway"
+object_name = "door"
+outline_size = 0.026
+sprite = NodePath("../../door")
+
+[node name="navigation" type="Navigation2D" parent="."]
+
+[node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
+navpoly = SubResource( 4 )
+
+[connection signal="body_shape_entered" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_body_shape_entered"]
+[connection signal="body_shape_exited" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_body_shape_exited"]
+[connection signal="input_event" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_input_event"]
+[connection signal="on_interact" from="environment/interactable zone/game collider" to="." method="_on_game_collider_on_interact"]

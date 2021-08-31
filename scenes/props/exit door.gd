@@ -16,7 +16,8 @@ func _ready():
 #	pass
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("player"):
+	if body.name == "player":
+		print("ewrwe")
 		if get_tree().get_nodes_in_group("incorrect").size() == 0:
 			global_ui.fade_out()
 			yield(get_tree().create_timer(2.0), "timeout")

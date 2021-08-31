@@ -26,6 +26,7 @@ __meta__ = {
 
 [node name="Orientation Check" type="CanvasLayer" parent="."]
 pause_mode = 2
+layer = 2
 
 [node name="Panel" type="Panel" parent="Orientation Check"]
 anchor_right = 1.0
@@ -59,7 +60,7 @@ rect_min_size = Vector2( 360, 120 )
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 0, 0.619608, 1 )
-text = "THIS GAME IS DESIGNED FOR LANDSCAPE MODE, PLEASE ROTATE YOUR DEVICE"
+text = "THIS GAME IS DESIGNED FOR LANDSCAPE MODE, PLEASE ROTATE YOUR DEVICE OR CHANGE WINDOW SIZE"
 align = 1
 valign = 1
 autowrap = true
@@ -74,7 +75,7 @@ margin_left = -1.0
 margin_right = -1.0
 rect_min_size = Vector2( 360, 120 )
 custom_fonts/font = SubResource( 5 )
-text = "THIS GAME IS DESIGNED FOR LANDSCAPE MODE, PLEASE ROTATE YOUR DEVICE"
+text = "THIS GAME IS DESIGNED FOR LANDSCAPE MODE, PLEASE ROTATE YOUR DEVICE OR CHANGE WINDOW SIZE"
 align = 1
 valign = 1
 autowrap = true

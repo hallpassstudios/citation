@@ -20,11 +20,12 @@ texture = ExtResource( 6 )
 centered = false
 
 [node name="walls" type="Sprite" parent="StaticBody2D"]
+z_index = 2
 texture = ExtResource( 8 )
 centered = false
 
 [node name="bottom props" type="Sprite" parent="StaticBody2D"]
-z_index = 1
+z_index = 2
 texture = ExtResource( 3 )
 centered = false
 
@@ -41,7 +42,3 @@ centered = false
 position = Vector2( 417.075, 231.316 )
 texture = ExtResource( 5 )
 centered = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -21.9755, 70.678 )
-polygon = PoolVector2Array( 38.6994, 225.513, 38.8591, -71.1437, 483.715, -69.3619, 483.715, 390.936, 40.6409, 389.154, 38.8591, 225.229, 148.737, 225.823, 150.499, 349.786, 374.617, 350.908, 375.619, 326.791, 406.503, 325.603, 406.503, 348.173, 471.836, 348.767, 469.46, 269.774, 441.545, 269.774, 438.576, 169.399, 468.866, 167.023, 468.576, 110.207, 335.168, 111.149, 334.638, 39.9217, 191.39, 39.9671, 189.975, 108.321, 145.767, 108.224, 145.173, 122.478, 54.8953, 121.884, 54.0442, 225.249 )

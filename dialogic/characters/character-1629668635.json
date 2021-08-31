@@ -1,5 +1,5 @@
 {
-	"color": "#ff0021fa",
+	"color": "#ff9d00ff",
 	"description": "the main character",
 	"display_name": "",
 	"display_name_bool": false,
@@ -9,12 +9,12 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": 0,
+	"offset_y": -55,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://sprites/portraits/portrait.png"
 		}
 	],
-	"scale": 100
+	"scale": 50
 }

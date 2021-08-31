@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://audio/music/neutral.mp3" type="AudioStream" id=1]
+[ext_resource path="res://scenes/audio/background music.gd" type="Script" id=2]
+[ext_resource path="res://audio/music/good.mp3" type="AudioStream" id=3]
+
+[node name="music" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="bg_1" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 3 )
+
+[node name="bg_2" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 1 )
