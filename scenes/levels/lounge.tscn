@@ -558,7 +558,6 @@ material = SubResource( 61 )
 position = Vector2( 431.333, 358.667 )
 z_index = 1
 frames = SubResource( 19 )
-frame = 8
 playing = true
 
 [node name="crystal ball" type="AnimatedSprite" parent="environment"]
@@ -566,7 +565,7 @@ material = SubResource( 62 )
 position = Vector2( 252.666, 236 )
 z_index = 1
 frames = SubResource( 44 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="coffee king" type="AnimatedSprite" parent="environment"]
@@ -574,7 +573,7 @@ material = SubResource( 63 )
 position = Vector2( 549.297, 247.694 )
 z_index = 1
 frames = SubResource( 52 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="coffee machine" type="AnimatedSprite" parent="environment"]
