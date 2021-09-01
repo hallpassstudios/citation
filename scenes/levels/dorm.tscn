@@ -226,7 +226,7 @@ material = SubResource( 13 )
 position = Vector2( 183.973, 164.284 )
 z_index = 1
 frames = SubResource( 22 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="interactable zone" type="Area2D" parent="environment"]

@@ -7,10 +7,6 @@ var player = preload("res://scenes/player/top_down_player.tscn")
 
 func _ready():
 	
-	#play musix
-	if !background_music.bg_1.playing:
-		background_music.bg_1.play()
-		background_music.bg_2.stop()
 	# fade in the level
 	if globals.is_lit:
 		global_ui.fade_in()
@@ -36,6 +32,4 @@ func play_game(value):
 	global_ui.fade_out()
 	# remove the inventory item
 	yield(get_tree().create_timer(3.0), "timeout")
-	background_music.bg_1.stop()
-	background_music.bg_2.play()
 	globals.goto_scene("res://scenes/levels/games/illuminata/illuminata_1.tscn")
