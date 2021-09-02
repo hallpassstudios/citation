@@ -1,8 +1,29 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://shaders/outline.gdshader" type="Shader" id=1]
+[sub_resource type="Shader" id=58]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1);
+uniform float width : hint_range(0, 10) = 1.0;
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * width;
+	
+	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
+}"
 
 [resource]
-shader = ExtResource( 1 )
-shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 2, 1, 0.6, 1 )
+shader = SubResource( 58 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0

@@ -18,9 +18,12 @@ var player_name : String
 var player_type : Object
 var player_spawn : int = 0
 var is_lit = false
+var illuminata_challenge_3 = false
 var illuminata_completed = false
+var caught_joe = false
 var can_shoot = false
 var read_everything = false
+var desk_interact = false
 
 
 # save / load 

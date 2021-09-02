@@ -1,25 +1,21 @@
 shader_type canvas_item;
-render_mode blend_mix;
 
-uniform float outLineSize  = 0.02;
-uniform vec4  outLineColor = vec4(1.0, 1.0, 1.0, 1.0);
+uniform vec4 line_color : hint_color = vec4(1);
+uniform float width : hint_range(0, 10) = 1.0;
 
-void fragment()
-{
-    vec4 tcol = texture(TEXTURE, UV);
-    
-    if (tcol.a == 0.0)
-    {
-        if (texture(TEXTURE, UV + vec2(0.0,          outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(0.0,         -outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  0.0)).a          != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, 0.0)).a          != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(-outLineSize, -outLineSize)).a != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  outLineSize)).a  != 0.0 ||
-            texture(TEXTURE, UV + vec2(outLineSize,  -outLineSize)).a != 0.0) 
-            tcol = outLineColor;
-    }
-    
-    COLOR = tcol;
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * width;
+	
+	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
 }

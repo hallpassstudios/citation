@@ -255,3 +255,7 @@ func _ready():
 	reset()
 	$WritingTimer.connect("timeout", self, "_on_writing_timer_timeout")
 	text_label.meta_underlined = false
+
+
+func _on_RichTextLabel_meta_clicked(meta):
+	print("meta clicked")

@@ -1,16 +1,14 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/utilities/interactable.gd" type="Script" id=3]
 [ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=4]
-[ext_resource path="res://scenes/utilities/interactable_item.gd" type="Script" id=5]
+[ext_resource path="res://scenes/utilities/clicked_area.gd" type="Script" id=5]
 [ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=6]
 [ext_resource path="res://sprites/environment/dorm/game_console_animated.png" type="Texture" id=7]
 [ext_resource path="res://scenes/levels/dorm.gd" type="Script" id=8]
 [ext_resource path="res://sprites/environment/dorm/bed.png" type="Texture" id=9]
 [ext_resource path="res://materials/outline.tres" type="Material" id=10]
-[ext_resource path="res://shaders/outline.gdshader" type="Shader" id=11]
 [ext_resource path="res://sprites/environment/dorm/door.png" type="Texture" id=12]
 [ext_resource path="res://sprites/environment/dorm/ground_props.png" type="Texture" id=13]
 [ext_resource path="res://sprites/npcs/icarus_idle_f.png" type="Texture" id=14]
@@ -19,117 +17,162 @@
 [ext_resource path="res://sprites/environment/dorm/props_1.png" type="Texture" id=17]
 [ext_resource path="res://sprites/environment/dorm/walls.png" type="Texture" id=18]
 [ext_resource path="res://sprites/environment/dorm/floor.png" type="Texture" id=19]
+[ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=21]
 
-[sub_resource type="ShaderMaterial" id=9]
-shader = ExtResource( 11 )
-shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 0.4, 1, 0.6, 1 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60.2834, 29.5395 )
 
-[sub_resource type="Animation" id=5]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../game controller:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.82053, 28.943 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "idle"
-length = 2.0
-loop = true
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../game controller:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
-}
+[sub_resource type="Shader" id=22]
+code = "shader_type canvas_item;
 
-[sub_resource type="ShaderMaterial" id=10]
-shader = ExtResource( 11 )
-shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 0.4, 1, 0.6, 1 )
+uniform vec4 line_color : hint_color = vec4(1);
+uniform float width : hint_range(0, 10) = 1.0;
 
-[sub_resource type="ShaderMaterial" id=12]
-shader = ExtResource( 11 )
-shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 2.169, 1, 0.6, 1 )
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * width;
+	
+	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
+}"
 
-[sub_resource type="ShaderMaterial" id=13]
-shader = ExtResource( 11 )
-shader_param/outLineSize = 0.0
-shader_param/outLineColor = Plane( 2.281, 1, 0.6, 1 )
+[sub_resource type="ShaderMaterial" id=23]
+shader = SubResource( 22 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 14 )
 region = Rect2( 0, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 14 )
 region = Rect2( 55, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 14 )
 region = Rect2( 110, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 14 )
 region = Rect2( 165, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 14 )
 region = Rect2( 220, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 14 )
 region = Rect2( 275, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 14 )
 region = Rect2( 330, 0, 55, 71 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 14 )
 region = Rect2( 385, 0, 55, 71 )
 
-[sub_resource type="SpriteFrames" id=22]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 48.2289, 23.3952 )
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 46.6667, 28.943 )
 
-[sub_resource type="CapsuleShape2D" id=23]
-radius = 14.5065
-height = 0.0
+[sub_resource type="ShaderMaterial" id=24]
+shader = SubResource( 22 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 39.8407, 22.9418 )
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 105, 105 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 63.9006, 92.5243 )
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 7 )
+region = Rect2( 105, 0, 105, 105 )
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 44.9028, 57.2937 )
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 7 )
+region = Rect2( 210, 0, 105, 105 )
 
-[sub_resource type="NavigationPolygon" id=4]
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 7 )
+region = Rect2( 315, 0, 105, 105 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 7 )
+region = Rect2( 420, 0, 105, 105 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 7 )
+region = Rect2( 525, 0, 105, 105 )
+
+[sub_resource type="SpriteFrames" id=31]
+animations = [ {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 46.6667, 96.3052 )
+
+[sub_resource type="ShaderMaterial" id=32]
+shader = SubResource( 22 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 46.6667, 55.5287 )
+
+[sub_resource type="Shader" id=34]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1);
+uniform float width : hint_range(0, 10) = 1.0;
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * width;
+	
+	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
+}"
+
+[sub_resource type="ShaderMaterial" id=33]
+shader = SubResource( 34 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
+
+[sub_resource type="NavigationPolygon" id=21]
 vertices = PoolVector2Array( 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 403.261, 348.572, 127.289, 289.911, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 35.3648, 176.302, 32.5364, 287.554 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 0, 3, 7, 6, 8, 9 ), PoolIntArray( 10, 11, 0, 9 ), PoolIntArray( 12, 9, 8, 13 ) ]
 outlines = [ PoolVector2Array( 35.3648, 176.302, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 403.261, 348.572, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 127.289, 289.911, 32.5364, 287.554 ) ]
@@ -153,144 +196,154 @@ position = Vector2( 240.416, 296.513 )
 [node name="1" type="Node2D" parent="environment/player spawn"]
 position = Vector2( 240.888, 182.905 )
 
-[node name="floor" type="Sprite" parent="environment"]
+[node name="static objects" type="YSort" parent="environment"]
+
+[node name="floor" type="Sprite" parent="environment/static objects"]
 texture = ExtResource( 19 )
 centered = false
 
-[node name="ground props" type="Sprite" parent="environment"]
+[node name="ground props" type="Sprite" parent="environment/static objects"]
 texture = ExtResource( 13 )
 centered = false
 
-[node name="walls" type="Sprite" parent="environment"]
+[node name="walls" type="Sprite" parent="environment/static objects"]
 z_index = 1
 texture = ExtResource( 18 )
 centered = false
 
-[node name="bottom props" type="Sprite" parent="environment"]
+[node name="bottom props" type="Sprite" parent="environment/static objects"]
 z_index = 3
 texture = ExtResource( 17 )
 centered = false
 
-[node name="top props" type="Sprite" parent="environment"]
+[node name="top props" type="Sprite" parent="environment/static objects"]
 texture = ExtResource( 15 )
 centered = false
 
-[node name="hutch" type="Sprite" parent="environment"]
+[node name="hutch" type="Sprite" parent="environment/static objects"]
 position = Vector2( 417.075, 231.316 )
 texture = ExtResource( 16 )
 centered = false
 
-[node name="props" type="Sprite" parent="environment"]
+[node name="props" type="Sprite" parent="environment/static objects"]
 position = Vector2( 417.075, 231.316 )
 texture = ExtResource( 16 )
 centered = false
 
-[node name="desk" type="Sprite" parent="environment"]
-material = ExtResource( 10 )
-position = Vector2( 369.684, 155.11 )
-z_index = 1
-texture = ExtResource( 4 )
-
-[node name="chair" type="Sprite" parent="environment"]
+[node name="chair" type="Sprite" parent="environment/static objects"]
 position = Vector2( 368.168, 170.178 )
 z_index = 1
 texture = ExtResource( 6 )
 
-[node name="game controller" type="Sprite" parent="environment"]
-material = SubResource( 9 )
-position = Vector2( 115.852, 165.954 )
-z_index = 1
-texture = ExtResource( 7 )
-hframes = 6
+[node name="interactable objects" type="YSort" parent="environment"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="environment/game controller"]
-root_node = NodePath("../../interactable zone/game collider")
-autoplay = "idle"
-anims/RESET = SubResource( 5 )
-anims/idle = SubResource( 6 )
-
-[node name="bed" type="Sprite" parent="environment"]
-material = SubResource( 10 )
-position = Vector2( 80.3941, 353.154 )
-z_index = 2
-texture = ExtResource( 9 )
-
-[node name="door" type="Sprite" parent="environment"]
-material = SubResource( 12 )
-position = Vector2( 239.443, 96.8653 )
-z_index = 1
-texture = ExtResource( 12 )
-
-[node name="icarus" type="AnimatedSprite" parent="environment"]
-material = SubResource( 13 )
-position = Vector2( 183.973, 164.284 )
-z_index = 1
-frames = SubResource( 22 )
-frame = 4
-playing = true
-
-[node name="interactable zone" type="Area2D" parent="environment"]
-script = ExtResource( 3 )
-
-[node name="desk collider" type="CollisionShape2D" parent="environment/interactable zone"]
-position = Vector2( 366.315, 159.867 )
-shape = SubResource( 1 )
+[node name="desk" type="Area2D" parent="environment/interactable objects"]
+position = Vector2( 368.558, 155.309 )
 script = ExtResource( 5 )
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk"]
+shape = SubResource( 1 )
+script = ExtResource( 21 )
 object_name = "desk"
 has_dialogue = true
 dialogue = "desk"
-dialogue_variable_name = "desk"
-outline_size = 0.025
-sprite = NodePath("../../desk")
+outline_size = 2.0
 TYPE = 1
 
-[node name="roommate" type="CollisionShape2D" parent="environment/interactable zone"]
-position = Vector2( 187.688, 183.848 )
-shape = SubResource( 23 )
+[node name="desk" type="Sprite" parent="environment/interactable objects/desk/collider"]
+material = ExtResource( 10 )
+texture = ExtResource( 4 )
+
+[node name="joe" type="Area2D" parent="environment/interactable objects"]
+position = Vector2( 192.846, 182.194 )
 script = ExtResource( 5 )
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/joe"]
+position = Vector2( 203.54, 92.0419 )
+shape = SubResource( 2 )
+script = ExtResource( 21 )
+object_name = "joe"
 has_dialogue = true
 dialogue = "joe"
-outline_size = 0.002
-sprite = NodePath("../../icarus")
+outline_size = 2.0
 TYPE = 1
 
-[node name="game collider" type="CollisionShape2D" parent="environment/interactable zone"]
-position = Vector2( 115.456, 170.513 )
-shape = SubResource( 8 )
+[node name="joe" type="AnimatedSprite" parent="environment/interactable objects/joe/collider"]
+material = SubResource( 23 )
+z_index = 1
+frames = SubResource( 12 )
+frame = 2
+playing = true
+
+[node name="game console" type="Area2D" parent="environment/interactable objects"]
+position = Vector2( 114.958, 165.208 )
 script = ExtResource( 5 )
-object_name = "birdietendo"
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/game console"]
+shape = SubResource( 13 )
+script = ExtResource( 21 )
 has_dialogue = true
 dialogue = "birdietendo"
-outline_size = 0.003
-sprite = NodePath("../../game controller")
+outline_size = 2.0
 TYPE = 1
 
-[node name="bed collider" type="CollisionShape2D" parent="environment/interactable zone"]
-position = Vector2( 79.3206, 353.95 )
-shape = SubResource( 7 )
+[node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
+material = SubResource( 24 )
+frames = SubResource( 31 )
+frame = 1
+playing = true
+
+[node name="bed" type="Area2D" parent="environment/interactable objects"]
+position = Vector2( 80.3745, 349.546 )
 script = ExtResource( 5 )
-object_name = "bed"
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/bed"]
+position = Vector2( 0, 2.12132 )
+shape = SubResource( 17 )
+script = ExtResource( 21 )
 has_dialogue = true
 dialogue = "bed"
-outline_size = 0.01
-sprite = NodePath("../../bed")
+outline_size = 2.0
 TYPE = 1
 
-[node name="door collider" type="CollisionShape2D" parent="environment/interactable zone"]
-position = Vector2( 239.443, 96.8653 )
-shape = SubResource( 11 )
+[node name="bed" type="Sprite" parent="environment/interactable objects/bed/collider"]
+material = SubResource( 32 )
+z_index = 2
+texture = ExtResource( 9 )
+
+[node name="door to hallway" type="Area2D" parent="environment/interactable objects"]
+position = Vector2( 239.551, 94.8302 )
 script = ExtResource( 5 )
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to hallway"]
+position = Vector2( 0, 2.12132 )
+shape = SubResource( 19 )
+script = ExtResource( 21 )
 travel_to = "hallway"
-object_name = "door"
-outline_size = 0.026
-sprite = NodePath("../../door")
+outline_size = 3.0
+
+[node name="door" type="Sprite" parent="environment/interactable objects/door to hallway/collider"]
+material = SubResource( 33 )
+z_index = 1
+texture = ExtResource( 12 )
 
 [node name="navigation" type="Navigation2D" parent="."]
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
-navpoly = SubResource( 4 )
+navpoly = SubResource( 21 )
 
-[connection signal="body_shape_entered" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_body_shape_entered"]
-[connection signal="body_shape_exited" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_body_shape_exited"]
-[connection signal="input_event" from="environment/interactable zone" to="environment/interactable zone" method="_on_interactable_zone_input_event"]
-[connection signal="on_interact" from="environment/interactable zone/game collider" to="." method="_on_game_collider_on_interact"]
+[connection signal="body_entered" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects/joe" to="environment/interactable objects/joe/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/joe" to="environment/interactable objects/joe/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/joe" to="environment/interactable objects/joe/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects/game console" to="environment/interactable objects/game console/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/game console" to="environment/interactable objects/game console/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/game console" to="environment/interactable objects/game console/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects/bed" to="environment/interactable objects/bed/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/bed" to="environment/interactable objects/bed/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/bed" to="environment/interactable objects/bed/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_input_event"]

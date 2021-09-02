@@ -46,14 +46,15 @@ static func set_definition_variable(data: Dictionary, id: String, name: String, 
 	})
 
 
-static func set_definition_glossary(data: Dictionary, id: String, name: String,  title: String,  text: String,  extra: String):
+static func set_definition_glossary(data: Dictionary, id: String, name: String,  title: String,  text: String,  extra: String, url:String):
 	set_definition('glossary', data, {
 		'id': id,
 		'name': name,
 		'title': title,
 		'text': text,
 		'extra': extra,
-		'type': 1
+		'type': 1,
+		'url': url,
 	})
 
 

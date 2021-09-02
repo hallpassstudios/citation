@@ -368,10 +368,10 @@ static func set_default_definition_variable(id: String, name: String, value):
 	save_default_definitions(data)
 
 
-static func set_default_definition_glossary(id: String, name: String, extra_title: String,  extra_text: String,  extra_extra: String):
+static func set_default_definition_glossary(id: String, name: String, extra_title: String,  extra_text: String,  extra_extra: String, url: String):
 	# WARNING: For use in the editor only
 	var data = get_default_definitions()
-	DialogicDefinitionsUtil.set_definition_glossary(data, id, name, extra_title, extra_text, extra_extra)
+	DialogicDefinitionsUtil.set_definition_glossary(data, id, name, extra_title, extra_text, extra_extra, url)
 	save_default_definitions(data)
 
 
