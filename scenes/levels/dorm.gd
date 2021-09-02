@@ -32,4 +32,5 @@ func play_game(value):
 	global_ui.fade_out()
 	# remove the inventory item
 	yield(get_tree().create_timer(3.0), "timeout")
+	background_music.play()
 	globals.goto_scene("res://scenes/levels/games/illuminata/illuminata_1.tscn")
