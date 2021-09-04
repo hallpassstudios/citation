@@ -17,7 +17,6 @@ func _ready():
 func _process(delta):
 	if isCopy:
 		if stepify(song_file.get_playback_position(), 0.01) + 0.10 >= song_length:
-			print("copy reached end")
 			get_parent().songCopy = null
 			get_parent().remove_child(self)
 
