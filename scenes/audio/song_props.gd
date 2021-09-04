@@ -16,7 +16,7 @@ func _ready():
 
 func _process(delta):
 	if isCopy:
-		if stepify(song_file.get_playback_position(), 0.01) + 0.10 >= stepify(song_file.stream.get_length(), 0.01):
+		if stepify(song_file.get_playback_position(), 0.01) + 0.10 >= song_length:
 			print("copy reached end")
 			get_parent().songCopy = null
 			get_parent().remove_child(self)
@@ -25,7 +25,7 @@ func add_stream(song_filename):
 	if song_filename != "":
 		var audioStream: AudioStream = load(song_filename)
 		song_file.set_stream(audioStream)
-	song_length = song_file.stream.get_length() 
+	song_length = stepify(song_file.stream.get_length(), 0.01) 
 		
 func play():
 	song_file.play()
@@ -34,6 +34,6 @@ func is_playing():
 	return song_file.is_playing()
 	
 func reached_end():
-	return song_file.get_playback_position() > total_seconds
+	return stepify(song_file.get_playback_position(), 0.01) >= total_seconds
 	
 	
