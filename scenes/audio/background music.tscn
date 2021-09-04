@@ -17,6 +17,6 @@ pause_mode = 2
 stream = ExtResource( 1 )
 
 [node name="song" parent="." instance=ExtResource( 4 )]
-song_filename = "res://audio/music/excellent.mp3"
-bpm = 100
-total_beats = 120
+song_filename = "res://audio/music/loop_test.mp3"
+bpm = 130
+total_beats = 4
