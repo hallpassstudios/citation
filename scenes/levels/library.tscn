@@ -545,6 +545,7 @@ z_index = 1
 shape = SubResource( 35 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.0196078, 0, 0.117647, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

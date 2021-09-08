@@ -426,7 +426,7 @@ TYPE = 1
 material = SubResource( 24 )
 z_index = 1
 frames = SubResource( 39 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -445,6 +445,7 @@ TYPE = 1
 material = SubResource( 41 )
 z_index = 1
 frames = SubResource( 49 )
+frame = 3
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
