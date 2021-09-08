@@ -1,8 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/levels/start.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/title hallway.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/title.png" type="Texture" id=3]
+[ext_resource path="res://button.tres" type="StyleBox" id=4]
+[ext_resource path="res://button_hover.tres" type="StyleBox" id=5]
+[ext_resource path="res://button_pressed.tres" type="StyleBox" id=6]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 9
+extra_spacing_top = 2
+font_data = SubResource( 1 )
+
+[node name="Start Page" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="." groups=[
 "player",
@@ -22,42 +36,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color( 0.74902, 0, 0.403922, 0.360784 )
+[node name="Title Hallway" type="Sprite" parent="Control"]
+scale = Vector2( 0.751475, 0.617671 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Title" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.821
+anchor_bottom = 0.5
+margin_left = -123.053
+margin_top = -48.3589
+margin_right = 11.3871
+margin_bottom = 1.64114
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Menu" type="VBoxContainer" parent="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -34.5
-margin_top = -10.0
-margin_right = 34.5
-margin_bottom = 10.0
-text = "PLAY!"
+margin_left = -34.6684
+margin_top = 9.92334
+margin_right = 40.3316
+margin_bottom = 59.9233
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="Control"]
-wait_time = 5.0
-autostart = true
-
-[node name="Label" type="Label" parent="Control"]
-margin_right = 40.0
+[node name="Start" type="Button" parent="Control/Menu"]
+margin_right = 75.0
 margin_bottom = 14.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+rect_min_size = Vector2( 75, 0 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "START"
 
-[node name="TextureButton" type="TextureButton" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Backstory" type="Button" parent="Control/Menu"]
+margin_top = 18.0
+margin_right = 75.0
+margin_bottom = 32.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "BACKSTORY"
 
-[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
+[node name="Credits" type="Button" parent="Control/Menu"]
+margin_top = 36.0
+margin_right = 75.0
+margin_bottom = 50.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "CREDITS"
+
+[connection signal="pressed" from="Control/Menu/Start" to="Control" method="_on_Start_pressed"]
