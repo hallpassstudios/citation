@@ -9,7 +9,6 @@ func loop(song):
 		song.play()
 		
 	if song.is_playing() and song.reached_end():
-		print("Handle change.")
 		
 		if songCopy == null:
 			#instantiate a new song scene
