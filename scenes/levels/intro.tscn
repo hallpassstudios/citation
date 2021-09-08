@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://sprites/ui/intro/intro_2.png" type="Texture" id=1]
 [ext_resource path="res://sprites/ui/intro/intro_6.png" type="Texture" id=2]
@@ -52,6 +52,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "cycle 1",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": false,
 "name": "0",
@@ -60,23 +65,55 @@ animations = [ {
 "frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "1",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 46 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 38 ), ExtResource( 47 ), ExtResource( 39 ) ],
 "loop": true,
 "name": "2",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "3",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ) ],
 "loop": true,
 "name": "4",
-"speed": 5.0
+"speed": 1.0
 } ]
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="DynamicFontData" id=2]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=5]
+antialiased = false
+font_path = "res://fonts/onesize.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = SubResource( 5 )
 
 [node name="intro" type="Control"]
 anchor_right = 1.0
@@ -95,21 +132,98 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 179.316, 56.5411 )
+position = Vector2( 176.579, 61.967 )
 scale = Vector2( 0.7286, 0.495374 )
 frames = SubResource( 1 )
-animation = "0"
+animation = "cycle 1"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 4 )
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -52.0
+margin_left = -55.0
 margin_top = -20.0
+custom_fonts/font = SubResource( 3 )
 text = "next..."
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title 1" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.2348
+margin_top = -55.9314
+margin_right = 83.7652
+margin_bottom = -41.9314
+custom_fonts/font = SubResource( 6 )
+text = "welcome to dream school"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title 2" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.894
+margin_top = -54.3705
+margin_right = 91.106
+margin_bottom = -40.3705
+custom_fonts/font = SubResource( 6 )
+text = "welcome to dream school"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title 3" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.894
+margin_top = -54.3705
+margin_right = 91.106
+margin_bottom = -40.3705
+custom_fonts/font = SubResource( 6 )
+text = "welcome to dream school"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title 4" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -78.4925
+margin_top = -26.3406
+margin_right = 92.5075
+margin_bottom = -12.3406
+custom_fonts/font = SubResource( 6 )
+text = "welcome to dream school"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

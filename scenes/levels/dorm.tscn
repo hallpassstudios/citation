@@ -180,17 +180,6 @@ outlines = [ PoolVector2Array( 35.3648, 176.302, 172.775, 179.182, 172.577, 134.
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -171.786
-margin_top = -99.9323
-margin_right = 676.214
-margin_bottom = 607.068
-mouse_filter = 2
-color = Color( 0.262745, 0.180392, 0.180392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="cursor" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
@@ -283,7 +272,7 @@ TYPE = 1
 material = SubResource( 23 )
 z_index = 1
 frames = SubResource( 12 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -301,7 +290,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 24 )
 frames = SubResource( 31 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]

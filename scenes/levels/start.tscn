@@ -46,8 +46,6 @@ layer = -1
 script = ExtResource( 7 )
 
 [node name="sky" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-position = Vector2( 0.593933, -42.7631 )
-scale = Vector2( 1, 1.5 )
 motion_scale = Vector2( 0.3, 1 )
 motion_mirroring = Vector2( 600, 0 )
 
@@ -66,7 +64,7 @@ centered = false
 hframes = 4
 
 [node name="clouds" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-motion_scale = Vector2( 0.4, 10 )
+motion_scale = Vector2( 0.4, 2 )
 motion_mirroring = Vector2( 800, 0 )
 
 [node name="clouds" type="Sprite" parent="Control/ParallaxBackground/clouds"]
