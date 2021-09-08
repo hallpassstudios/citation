@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var greeting = "hi"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
