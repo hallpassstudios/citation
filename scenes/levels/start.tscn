@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/levels/start.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ui/title hallway.png" type="Texture" id=2]
@@ -6,6 +6,11 @@
 [ext_resource path="res://button.tres" type="StyleBox" id=4]
 [ext_resource path="res://button_hover.tres" type="StyleBox" id=5]
 [ext_resource path="res://button_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://scenes/utilities/parallax.gd" type="Script" id=7]
+[ext_resource path="res://sprites/environment/sky/parallaxbg_clouds.png" type="Texture" id=8]
+[ext_resource path="res://sprites/environment/sky/parallaxbg_bunnies.png" type="Texture" id=9]
+[ext_resource path="res://sprites/environment/sky/parallaxbg_sky.png" type="Texture" id=10]
+[ext_resource path="res://sprites/environment/sky/parallaxbg-sunst.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFontData" id=1]
 antialiased = false
@@ -32,6 +37,75 @@ margin_right = 180.0
 margin_bottom = 60.0
 mouse_filter = 1
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Control"]
+layer = -1
+script = ExtResource( 7 )
+
+[node name="sky" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+position = Vector2( 0.593933, -42.7631 )
+scale = Vector2( 1, 1.5 )
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 600, 0 )
+
+[node name="sky" type="Sprite" parent="Control/ParallaxBackground/sky"]
+texture = ExtResource( 10 )
+centered = false
+hframes = 4
+
+[node name="sun" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+
+[node name="sun" type="Sprite" parent="Control/ParallaxBackground/sun"]
+position = Vector2( -286.275, -1.18787 )
+texture = ExtResource( 11 )
+centered = false
+hframes = 4
+
+[node name="clouds" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+motion_scale = Vector2( 0.4, 10 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="clouds" type="Sprite" parent="Control/ParallaxBackground/clouds"]
+position = Vector2( -471.583, -1.18787 )
+texture = ExtResource( 8 )
+centered = false
+hframes = 2
+
+[node name="bunnies" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 500, 0 )
+
+[node name="bunnies" type="Sprite" parent="Control/ParallaxBackground/bunnies"]
+position = Vector2( -389.62, -8.31506 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.687653
+margin_top = -116.379
+margin_right = 0.687653
+margin_bottom = -116.379
+mouse_filter = 2
+color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.60318
+margin_top = 128.559
+margin_right = -0.60318
+margin_bottom = 128.559
+mouse_filter = 2
+color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
