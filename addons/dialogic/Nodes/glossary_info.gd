@@ -5,18 +5,21 @@ onready var nodes = {
 	'title': $VBoxContainer/Title,
 	'body': $VBoxContainer/Content,
 	'extra': $VBoxContainer/Extra,
+	'url': $VBoxContainer/URL
 }
 
 var in_theme_editor = false
 var margin = 10
 var touch : bool = true
 var touch_position
+var url : String
 
 func _ready():
 	set_deferred('rect_size.y', 0)
 	nodes['title'].bbcode_enabled = true
 	nodes['body'].bbcode_enabled = true
 	nodes['extra'].bbcode_enabled = true
+
 
 func _input(event):
 	if event is InputEventScreenTouch:
@@ -41,6 +44,9 @@ func load_preview(info):
 	nodes['title'].visible = false
 	nodes['body'].visible = false
 	nodes['extra'].visible = false
+	nodes['url'].visible = false
+	print("url is: ", nodes['url'].text)
+	print("title is: ", nodes['title'].text)
 	
 	if info['title'] != '':
 		nodes['title'].bbcode_text = info['title']
@@ -53,7 +59,11 @@ func load_preview(info):
 	if info['extra'] != '':
 		nodes['extra'].bbcode_text = info['extra']
 		nodes['extra'].visible = true
-
+	
+	if info['url'] != '':
+		print("has url")
+		print(info['url'])
+		url = info['url']
 
 func load_theme(theme):
 	# Fonts

@@ -55,7 +55,7 @@ run/main_scene="res://scenes/levels/dorm.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-boot_splash/bg_color=Color( 0.0980392, 0.00784314, 0.0666667, 1 )
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -141,5 +141,5 @@ vram_compression/import_etc2=false
 quality/shadows/filter_mode=0
 quality/reflections/texture_array_reflections=false
 quality/reflections/high_quality_ggx=false
-environment/default_clear_color=Color( 0.0823529, 0.00392157, 0.0627451, 1 )
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

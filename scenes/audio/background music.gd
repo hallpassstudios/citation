@@ -2,6 +2,14 @@ extends Node2D
 
 var songCopy = null
 
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+onready var base = $base
+onready var excellent = $excellent
+onready var bad = $bad
+
+
 func loop(song):
 	# get audio file data : BPM and total beats in song
 	# will use process time rather than delta time

@@ -77,6 +77,7 @@ func _ready():
 	$TextBubble.connect("text_completed", self, "_on_text_completed")
 	$TextBubble/RichTextLabel.connect('meta_hover_started', self, '_on_RichTextLabel_meta_hover_started')
 	$TextBubble/RichTextLabel.connect('meta_hover_ended', self, '_on_RichTextLabel_meta_hover_ended')
+	$TextBubble/RichTextLabel.connect('meta_clicked', self, '_on_RichTextLabel_meta_clicked')
 	
 	# Getting the character information
 	characters = DialogicUtil.get_character_list()
@@ -323,7 +324,7 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 				'event_idx': event_idx,
 				}
 			if event.has('condition') and event.has('definition') and event.has('value'):
-				print("e")
+				#print("e")
 				option = {
 					'question_idx': opened_branch['question_idx'],
 					'label': parse_definitions(event['choice'], true, false),
@@ -333,7 +334,7 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 					'value': event['value'],
 					}
 			else:
-				print("er")
+				#print("er")
 				option = {
 					'question_idx': opened_branch['question_idx'],
 					'label': parse_definitions(event['choice'], true, false),
@@ -345,7 +346,7 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 			dialog_script['events'][opened_branch['event_idx']]['options'].append(option)
 			event['question_idx'] = opened_branch['question_idx']
 		elif event['event_id'] == 'dialogic_010':
-			print("err")
+			#print("err")
 			event['event_idx'] = event_idx
 			event['question_idx'] = question_idx
 			event['answered'] = false
@@ -353,7 +354,7 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 			questions.append(event)
 			parser_queue.append(event)
 		elif event['event_id'] == 'dialogic_012':
-			print("errr")
+			#print("errr")
 			event['event_idx'] = event_idx
 			event['question_idx'] = question_idx
 			event['answered'] = false
@@ -440,7 +441,7 @@ func _input(event: InputEvent) -> void:
 			if waiting_for_answer == false and waiting_for_input == false and while_dialog_animation == false:
 				$FX/CharacterVoice.stop_voice() # stop the current voice as well 
 				_load_next_event()
-				print("using input")
+				#print("using input")
 		if settings.has_section_key('dialog', 'propagate_input'):
 			
 			var propagate_input: bool = settings.get_value('dialog', 'propagate_input')
@@ -457,9 +458,9 @@ func set_dialog_script(value):
 
 
 func update_name(character) -> void:
-	print("updating name")
+	#print("updating name")
 	if character.has('name'):
-		print("char has name")
+		#print("char has name")
 		var parsed_name = character['name']
 		if character.has('display_name'):
 			if character['display_name'] != '':
@@ -474,7 +475,7 @@ func update_text(text: String) -> String:
 	if settings.has_section_key('dialog', 'translations') and settings.get_value('dialog', 'translations'):
 		text = tr(text)
 	var final_text = parse_definitions(parse_alignment(text))
-	print("updating final text")
+	#print("updating final text")
 	final_text = final_text.replace('[br]', '\n')
 
 	$TextBubble.update_text(final_text)
@@ -515,7 +516,7 @@ func _on_text_completed():
 func on_timeline_start():
 	if not Engine.is_editor_hint():
 		if settings.get_value('saving', 'save_definitions_on_start', true):
-			print("saving definitions")
+			#print("saving definitions")
 			save_definitions()
 			pass
 		if settings.get_value('saving', 'save_current_timeline', true):
@@ -691,11 +692,11 @@ func event_handler(event: Dictionary):
 			waiting_for_answer = true
 			if event.has('name'):
 				update_name(event['name'])
-				print('10')
+				#print('10')
 			elif event.has('character'):
 				var character_data = get_character(event['character'])
 				update_name(character_data)
-				print('10')
+				#print('10')
 				grab_portrait_focus(character_data, event)
 			#voice 
 			handle_voice(event)
@@ -715,7 +716,7 @@ func event_handler(event: Dictionary):
 			var def_value = null
 			var current_question = questions[event['question_idx']]
 			for d in definitions['variables']:
-				print(d)
+				#print(d)
 				if d['id'] == event['definition']:
 					def_value = d['value']
 			
@@ -955,7 +956,7 @@ func get_classic_choice_button(label: String):
 		$Options/ButtonContainer.set('custom_constants/separation', theme.get_value('buttons', 'gap', 20))
 		
 		# Different styles
-		var default_background = 'res://addons/dialogic/Example Assets/backgrounds/background-2.png'
+		var default_background = 'res://addons/dialogic/Example Assets/backgrounds/background-1.png'
 		var default_style = [
 			false,               # 0 $TextColor/CheckBox
 			Color.white,         # 1 $TextColor/ColorPickerButton
@@ -1139,8 +1140,14 @@ func load_theme(filename):
 
 	return theme
 
+func _on_RichTextLabel_meta_clicked(meta):
+	for d in definitions['glossary']:
+		if d['id'] == meta:
+			if d['url'] != '':
+				OS.shell_open(d['url'])
 
 func _on_RichTextLabel_meta_hover_started(meta):
+	print("hover started")
 	var correct_type = false
 	for d in definitions['glossary']:
 		if d['id'] == meta:
@@ -1148,6 +1155,7 @@ func _on_RichTextLabel_meta_hover_started(meta):
 				'title': d['title'],
 				'body': parse_definitions(d['text'], true, false), # inserts variables but not other glossary items!
 				'extra': d['extra'],
+				'url': d['url']
 			})
 			correct_type = true
 			dprint('[D] Hovered over glossary entry: ', d)
@@ -1178,7 +1186,7 @@ func dprint(string, arg1='', arg2='', arg3='', arg4='' ):
 
 
 func _compare_definitions(def_value: String, event_value: String, condition: String):
-	print("comparing variables")
+	# print("comparing variables")
 	var condition_met = false;
 	if def_value != null and event_value != null:
 		# check if event_value equals a definition name and use that instead

@@ -11,6 +11,7 @@ onready var nodes = {
 	'extra_title': $VBoxContainer/HBoxContainer/ExtraInfo/Title,
 	'extra_text': $VBoxContainer/HBoxContainer/ExtraInfo/Text,
 	'extra_extra': $VBoxContainer/HBoxContainer/ExtraInfo/Extra,
+	'url': $VBoxContainer/HBoxContainer/ExtraInfo/URL
 }
 
 func _ready():
@@ -32,6 +33,7 @@ func load_definition(id):
 	nodes['extra_title'].text = current_definition['title']
 	nodes['extra_text'].text = current_definition['text']
 	nodes['extra_extra'].text = current_definition['extra']
+	nodes['url'].text = current_definition['url']
 	
 
 func reset_editor():
@@ -39,6 +41,7 @@ func reset_editor():
 	nodes['extra_title'].text = ''
 	nodes['extra_text'].text = ''
 	nodes['extra_extra'].text = ''
+	nodes['url'].text = ''
 
 
 func _on_name_changed(text):
@@ -63,9 +66,10 @@ func _update_name_on_tree():
 
 func create_glossary_entry() -> String:
 	var id = DialogicUtil.generate_random_id()
-	DialogicResources.set_default_definition_glossary(id, 'New glossary entry', '', '', '')
+	DialogicResources.set_default_definition_glossary(id, 'New glossary entry', '', '', '', '')
 	return id
 
 func save_definition():
 	if current_definition != null and current_definition['id'] != '':
-		DialogicResources.set_default_definition_glossary(current_definition['id'], nodes['name'].text, nodes['extra_title'].text, nodes['extra_text'].text, nodes['extra_extra'].text)
+		print("saving definition")
+		DialogicResources.set_default_definition_glossary(current_definition['id'], nodes['name'].text, nodes['extra_title'].text, nodes['extra_text'].text, nodes['extra_extra'].text, nodes['url'].text)

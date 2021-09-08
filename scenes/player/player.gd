@@ -6,6 +6,8 @@ export (int) var jump_speed = -250
 export (int) var gravity = 1000
 export (int, 0, 5000) var push = 1000
 
+export(NodePath) var jump_button
+
 # realtime
 var velocity = Vector2.ZERO
 var jumping = false
@@ -30,10 +32,10 @@ func _ready():
 	#get_tree().is_debugging_collisions_hint()
 	pass
 
-func _on_left_button_pressed():
+func left_pressed():
 	touch_input = Vector2(-1,0)
 
-func _on_right_button_pressed():
+func right_pressed():
 	touch_input = Vector2(1,0)
 	
 func get_input():
@@ -45,13 +47,11 @@ func get_input():
 
 	if Input.is_action_pressed("walk_left"):
 		velocity.x -= speed
-
 	var jump = Input.is_action_just_pressed('jump')
 	
 	if touch_input != Vector2.ZERO:
 		velocity.x += speed * touch_input.x
 	if jump and is_on_floor():
-		print("jumping")
 		animated_sprite.play("jump")
 		jumping = true
 		velocity.y = jump_speed
@@ -106,6 +106,7 @@ func shoot(event):
 
 func _physics_process(delta):
 	get_input()
+
 	
 	# movement
 	velocity.y += gravity * delta
@@ -116,12 +117,6 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("answers"):
 			collision.collider.apply_central_impulse(-collision.normal * push)
 	
-	# jumping?
-#	if Input.is_action_just_pressed("jump") || !can_jump:
-#		if is_on_floor():
-#			velocity.y = jump_speed
-#			can_jump = true
-#
 	# animation
 	if velocity.x > 0 && is_on_floor():
 		animated_sprite.speed_scale = 1
@@ -143,14 +138,17 @@ func _physics_process(delta):
 		animated_sprite.speed_scale = 2
 		animated_sprite.play("jump")
 
-func _on_left_button_released():
+func left_released():
 	touch_input = Vector2.ZERO
 	
-func _on_right_button_released():
+func right_released():
 	touch_input = Vector2.ZERO
 
-func _on_up_button_pressed():
-	can_jump = false
+func jump():
+	if is_on_floor():
+		animated_sprite.play("jump")
+		jumping = true
+		velocity.y = jump_speed
 
 func _on_up_button_released():
 	can_jump = true
@@ -160,18 +158,6 @@ func _on_death_body_entered(body):
 		print("player fell")
 		global_ui.fade_out()
 		yield(get_tree().create_timer(2.0), "timeout")
-		get_tree().reload_current_scene()
-		global_ui.fade_in()
-	if body.is_in_group("correct"):
-		get_tree().reload_current_scene()
-	#if body.name
-
-
-func _on_Area2D_body_entered(body):
-	if body.name == "player": #or if it's an answer
-		print("player fell")
-		global_ui.fade_out()
-		yield(get_tree().create_timer(1.0), "timeout")
 		get_tree().reload_current_scene()
 		global_ui.fade_in()
 	if body.is_in_group("correct"):

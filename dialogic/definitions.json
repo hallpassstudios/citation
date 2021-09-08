@@ -1,62 +1,6 @@
 {
 	"glossary": [
 		{
-			"extra": "click it",
-			"id": "1629936042-949",
-			"name": "desk",
-			"text": "this is where the magic happens. click  it.",
-			"title": "a desk",
-			"type": 1
-		},
-		{
-			"extra": "ask around",
-			"id": "1629935979-599",
-			"name": "notes",
-			"text": "You need these if you want to have any chance of passing this test",
-			"title": "Your notes",
-			"type": 1
-		},
-		{
-			"extra": "he knows ancient secrets",
-			"id": "1629935878-233",
-			"name": "joe",
-			"text": "Joe is your roomate, he is generally helpful, if not a bit stoic",
-			"title": "A Trusy Friend",
-			"type": 1
-		},
-		{
-			"extra": "source: writingcenter.unc.edu",
-			"id": "1629924473-384",
-			"name": "academic integrity",
-			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
-			"title": "Academic Integrity",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630249033-588",
-			"name": "key",
-			"text": "Opens the door to the classroom.",
-			"title": "classroom key",
-			"type": 1
-		},
-		{
-			"extra": "he looks [i]stressed[/i] out",
-			"id": "1630249200-850",
-			"name": "coffee king",
-			"text": "without the help of this magical bean, many a student would suffer",
-			"title": "the KING",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630249447-419",
-			"name": "library",
-			"text": "An essential resource not only for information, but also to help you when you have academic questions",
-			"title": "The Library",
-			"type": 1
-		},
-		{
 			"extra": "",
 			"id": "1630251574-315",
 			"name": "contract cheating",
@@ -65,68 +9,31 @@
 			"type": 1
 		},
 		{
+			"extra": "why does he have it?",
+			"id": "1630355199-907",
+			"name": "key to the classroom",
+			"text": "this key opens the classroom",
+			"title": "classroom key",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "he knows ancient secrets",
+			"id": "1629935878-233",
+			"name": "joe",
+			"text": "Joe is your roomate, he is generally helpful, if not a bit stoic",
+			"title": "A Trusy Friend",
+			"type": 1,
+			"url": ""
+		},
+		{
 			"extra": "",
 			"id": "1630254242-381",
 			"name": "light",
 			"text": "where on earth can you possibly find some light? ",
 			"title": "some light",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630254665-813",
-			"name": "crystel ball",
-			"text": "Why is it in the lounge?",
-			"title": "an ominous crystal ball",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630254933-380",
-			"name": "token",
-			"text": "These are the coin of the realm, at least as far as getting coffee is concerned",
-			"title": "a small token",
-			"type": 1
-		},
-		{
-			"extra": "keep talking",
-			"id": "1630256633-248",
-			"name": "game",
-			"text": "I wonder what this is?",
-			"title": "the game",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630256957-483",
-			"name": "dream school",
-			"text": "this is your university, duh!",
-			"title": "dream school",
-			"type": 1
-		},
-		{
-			"extra": "",
-			"id": "1630257154-623",
-			"name": "game cartridge",
-			"text": "you need this in order to play!",
-			"title": "a game catridge",
-			"type": 1
-		},
-		{
-			"extra": "source: Oxford Dictionary",
-			"id": "1630257319-447",
-			"name": "unscrupulous",
-			"text": "having or showing no moral principles; not honest or fair.",
-			"title": "unscrupulous",
-			"type": 1
-		},
-		{
-			"extra": "right and wrong",
-			"id": "1630258466-952",
-			"name": "illuminatata cartridge",
-			"text": "a game about light and dark",
-			"title": "illuminatata cartridge",
-			"type": 1
+			"type": 1,
+			"url": ""
 		},
 		{
 			"extra": "source: dictionary.com",
@@ -134,31 +41,17 @@
 			"name": "crumpet",
 			"text": "a round soft unsweetened bread resembling a muffin, cooked on a griddle or the like, and often toasted.",
 			"title": "crumpet",
-			"type": 1
+			"type": 1,
+			"url": ""
 		},
 		{
-			"extra": "why does he have it?",
-			"id": "1630355199-907",
-			"name": "key to the classroom",
-			"text": "this key opens the classroom",
-			"title": "classroom key",
-			"type": 1
-		},
-		{
-			"extra": "check the loung",
-			"id": "1630361968-144",
-			"name": "some coffee",
-			"text": "joe needs this to finish his paper quickly",
-			"title": "coffee",
-			"type": 1
-		},
-		{
-			"extra": "it dispenses coffee",
-			"id": "1630362101-400",
-			"name": "coffee machine",
-			"text": "a huge and complex and critical contraption ",
-			"title": "coffee machine",
-			"type": 1
+			"extra": "right and wrong",
+			"id": "1630258466-952",
+			"name": "illuminatata cartridge",
+			"text": "a game about light and dark",
+			"title": "illuminatata cartridge",
+			"type": 1,
+			"url": ""
 		},
 		{
 			"extra": "and unscrupulous",
@@ -166,7 +59,116 @@
 			"name": "star dude",
 			"text": "he's a bit sketchy. ",
 			"title": "star dude",
-			"type": 1
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630519665-787",
+			"name": "information",
+			"text": "",
+			"title": "",
+			"type": 1,
+			"url": "https://www2.cortland.edu/dotAsset/fddc5439-1889-4f66-8f4f-70e6149f0c6a.pdf"
+		},
+		{
+			"extra": "",
+			"id": "1630254665-813",
+			"name": "crystal ball",
+			"text": "Why is it in the lounge?",
+			"title": "an ominous crystal ball",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "he looks [i]stressed[/i] out",
+			"id": "1630249200-850",
+			"name": "coffee king",
+			"text": "without the help of this magical bean, many a student would suffer",
+			"title": "the KING",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630249447-419",
+			"name": "library",
+			"text": "An essential resource not only for information, but also to help you when you have academic questions",
+			"title": "The Library",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "ask around",
+			"id": "1629935979-599",
+			"name": "notes",
+			"text": "You need these if you want to have any chance of passing this test",
+			"title": "Your notes",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "source: writingcenter.unc.edu",
+			"id": "1629924473-384",
+			"name": "academic integrity",
+			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
+			"title": "Academic Integrity",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630439663-648",
+			"name": "citation",
+			"text": "a game about the trials and tribulations of ethical scholarship",
+			"title": "citation",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "check the loung",
+			"id": "1630361968-144",
+			"name": "some coffee",
+			"text": "joe needs this to finish his paper quickly",
+			"title": "coffee",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "click it",
+			"id": "1629936042-949",
+			"name": "desk",
+			"text": "this is where the magic happens. click  it.",
+			"title": "your desk",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "source: Oxford Dictionary",
+			"id": "1630257319-447",
+			"name": "unscrupulous",
+			"text": "having or showing no moral principles; not honest or fair.",
+			"title": "unscrupulous",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630257154-623",
+			"name": "game cartridge",
+			"text": "you need this in order to play!",
+			"title": "a game catridge",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "keep talking",
+			"id": "1630256633-248",
+			"name": "game",
+			"text": "I wonder what this is?",
+			"title": "the game",
+			"type": 1,
+			"url": ""
 		},
 		{
 			"extra": "",
@@ -174,25 +176,59 @@
 			"name": "games",
 			"text": "games can help you learn!",
 			"title": "games",
-			"type": 1
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "it dispenses coffee",
+			"id": "1630362101-400",
+			"name": "coffee machine",
+			"text": "a huge and complex and critical contraption ",
+			"title": "coffee machine",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630249033-588",
+			"name": "key",
+			"text": "Opens the door to the classroom.",
+			"title": "classroom key",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630256957-483",
+			"name": "dream school",
+			"text": "this is your university, duh!",
+			"title": "dream school",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630254933-380",
+			"name": "token",
+			"text": "These are the coin of the realm, at least as far as getting coffee is concerned",
+			"title": "a small token",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630518583-648",
+			"name": "Academic Integrity for Students at NYU",
+			"text": "Click this to be transported to a magical information superhighway",
+			"title": "NYU Academic Integrity Policy",
+			"type": 1,
+			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
 		}
 	],
 	"variables": [
 		{
-			"id": "1630258075-885",
-			"name": "need_spell",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630263147-252",
 			"name": "illuminata cartridge",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630350440-392",
-			"name": "questions",
 			"type": 0,
 			"value": "0"
 		},
@@ -203,32 +239,8 @@
 			"value": "0"
 		},
 		{
-			"id": "1630353426-910",
-			"name": "paper",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630255667-592",
 			"name": "explored_library",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630347918-543",
-			"name": "books",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630359440-817",
-			"name": "shelf 1",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630359450-788",
-			"name": "shelf 2",
 			"type": 0,
 			"value": "0"
 		},
@@ -269,8 +281,20 @@
 			"value": "0"
 		},
 		{
-			"id": "1629847073-571",
-			"name": "desk",
+			"id": "1630444561-366",
+			"name": "quest",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630359440-817",
+			"name": "shelf 1",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630440117-787",
+			"name": "caught",
 			"type": 0,
 			"value": "0"
 		},
@@ -281,8 +305,50 @@
 			"value": "0"
 		},
 		{
+			"id": "1630353426-910",
+			"name": "paper",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1629847073-571",
+			"name": "desk",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630350440-392",
+			"name": "questions",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630258075-885",
+			"name": "need_spell",
+			"type": 0,
+			"value": "0"
+		},
+		{
 			"id": "1630355221-179",
 			"name": "key",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630528470-366",
+			"name": "return to dorm",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630347918-543",
+			"name": "books",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630359450-788",
+			"name": "shelf 2",
 			"type": 0,
 			"value": "0"
 		}
