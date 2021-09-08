@@ -18,7 +18,7 @@ func is_playing():
 	return song_file.is_playing()
 	
 func reached_end():
-	print(spb," ", bpm," ", total_beats)
-	print("SONG FIL PLAYBACK: ", song_file.get_playback_position())
-	print("total seconds for song ", float(spb*total_beats))
+	#print(spb," ", bpm," ", total_beats)
+	#print("SONG FIL PLAYBACK: ", song_file.get_playback_position())
+	#print("total seconds for song ", float(spb*total_beats))
 	return song_file.get_playback_position() > float(spb * total_beats)
