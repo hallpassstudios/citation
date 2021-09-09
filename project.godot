@@ -38,6 +38,51 @@ _global_script_classes=[ {
 "class": "DialogicUtil",
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
+"base": "Node",
+"class": "Firebase",
+"language": "GDScript",
+"path": "res://firebase_app_lite/firebase.gd"
+}, {
+"base": "Node",
+"class": "FirebaseApp",
+"language": "GDScript",
+"path": "res://firebase_app_lite/app.gd"
+}, {
+"base": "Reference",
+"class": "FirebaseDataSnapshot",
+"language": "GDScript",
+"path": "res://firebase_database_lite/data_snapshot.gd"
+}, {
+"base": "Node",
+"class": "FirebaseDatabase",
+"language": "GDScript",
+"path": "res://firebase_database_lite/database.gd"
+}, {
+"base": "Reference",
+"class": "FirebaseError",
+"language": "GDScript",
+"path": "res://firebase_app_lite/error.gd"
+}, {
+"base": "FirebaseEventProcessorLite",
+"class": "FirebaseEventProcessor",
+"language": "GDScript",
+"path": "res://firebase_database_lite/event_processor.gd"
+}, {
+"base": "Reference",
+"class": "FirebaseEventProcessorLite",
+"language": "GDScript",
+"path": "res://firebase_database_lite/event_processor_lite.gd"
+}, {
+"base": "Node",
+"class": "FirebaseReference",
+"language": "GDScript",
+"path": "res://firebase_database_lite/reference.gd"
+}, {
+"base": "Node",
+"class": "HTTPSSEClient",
+"language": "GDScript",
+"path": "res://firebase_database_lite/http_sse_client.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -45,7 +90,16 @@ _global_script_class_icons={
 "DialogicBackgroundMusic": "",
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
-"DialogicUtil": ""
+"DialogicUtil": "",
+"Firebase": "res://firebase_app_lite/icon.png",
+"FirebaseApp": "res://firebase_app_lite/icon.png",
+"FirebaseDataSnapshot": "res://firebase_database_lite/icon.png",
+"FirebaseDatabase": "res://firebase_database_lite/icon.png",
+"FirebaseError": "res://firebase_app_lite/icon.png",
+"FirebaseEventProcessor": "res://firebase_database_lite/icon.png",
+"FirebaseEventProcessorLite": "res://firebase_database_lite/icon.png",
+"FirebaseReference": "res://firebase_database_lite/icon.png",
+"HTTPSSEClient": "res://firebase_database_lite/icon.png"
 }
 
 [application]
@@ -67,6 +121,8 @@ pause="*res://scenes/utilities/pause.tscn"
 dialogue_controller="*res://scenes/utilities/dialogue controller.tscn"
 background_music="*res://scenes/audio/background music.tscn"
 inventory="*res://scenes/ui/inventory.tscn"
+firebase="*res://firebase_app_lite/firebase.gd"
+analytics="*res://scenes/utilities/analytics.gd"
 
 [display]
 
@@ -136,6 +192,7 @@ common/enable_pause_aware_picking=true
 
 quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 quality/shadows/filter_mode=0

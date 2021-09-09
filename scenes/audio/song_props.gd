@@ -2,10 +2,11 @@ extends Node
 
 onready var song_file = $song_file
 export(String) var song_filename = ""
-export(int) var bpm = 0 
+export(int) var bpm = 1
 export(int) var total_beats = 0
 var isCopy = false
 var spb = 0.0
+
 var total_seconds = 0.0
 var song_length = 0
 
@@ -34,5 +35,4 @@ func is_playing():
 	
 func reached_end():
 	return stepify(song_file.get_playback_position(), 0.01) >= total_seconds
-	
-	
+

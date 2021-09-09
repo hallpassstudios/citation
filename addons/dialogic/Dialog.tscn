@@ -25,15 +25,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 120.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextBubble" parent="." instance=ExtResource( 1 )]
 margin_left = 10.0
-margin_top = 60.0
+margin_top = 70.0
 margin_right = 350.0
-margin_bottom = 110.0
+margin_bottom = 120.0
 
 [node name="TextureRect2" type="TextureRect" parent="TextBubble"]
 anchor_right = 1.0

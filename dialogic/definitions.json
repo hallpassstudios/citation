@@ -351,6 +351,12 @@
 			"name": "shelf 2",
 			"type": 0,
 			"value": "0"
+		},
+		{
+			"id": "1631101879-648",
+			"name": "entered classroom",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }

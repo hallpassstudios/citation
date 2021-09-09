@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://sprites/environment/library/props.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -28,9 +28,119 @@
 [ext_resource path="res://sprites/environment/sky/parallaxbg_clouds.png" type="Texture" id=26]
 [ext_resource path="res://sprites/environment/sky/parallaxbg_sky.png" type="Texture" id=27]
 [ext_resource path="res://sprites/environment/sky/parallaxbg-sunst.png" type="Texture" id=28]
-[ext_resource path="res://sprites/npcs/shadesm.png" type="Texture" id=29]
+[ext_resource path="res://sprites/npcs/shade_animated.png" type="Texture" id=29]
 [ext_resource path="res://sprites/environment/library/flame.png" type="Texture" id=30]
 [ext_resource path="res://sprites/ui/light_mask_flame.png" type="Texture" id=31]
+[ext_resource path="res://sprites/npcs/shadeTransformt.png" type="Texture" id=32]
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 29 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 29 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 29 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 29 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 29 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 29 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 29 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 32 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 32 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 32 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 32 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 32 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 32 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 32 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 32 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 32 )
+region = Rect2( 1024, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 32 )
+region = Rect2( 1152, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 32 )
+region = Rect2( 1280, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 32 )
+region = Rect2( 1408, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 32 )
+region = Rect2( 1536, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 32 )
+region = Rect2( 1664, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 32 )
+region = Rect2( 1792, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 32 )
+region = Rect2( 1920, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=84]
+animations = [ {
+"frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ) ],
+"loop": false,
+"name": "spooky",
+"speed": 5.0
+} ]
 
 [sub_resource type="Animation" id=24]
 length = 0.001
@@ -283,11 +393,13 @@ script = ExtResource( 22 )
 
 [node name="interactable objects" type="YSort" parent="environment"]
 
-[node name="joe" type="Sprite" parent="environment/interactable objects"]
-visible = false
-position = Vector2( 406, 284 )
+[node name="shade" type="AnimatedSprite" parent="environment/interactable objects"]
+position = Vector2( 432, 292 )
 z_index = 2
-texture = ExtResource( 29 )
+frames = SubResource( 84 )
+animation = "spooky"
+frame = 15
+playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
 
@@ -369,7 +481,6 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="flame" type="Sprite" parent="environment/static objects"]
-visible = false
 position = Vector2( 433, 231 )
 z_index = 2
 texture = ExtResource( 30 )

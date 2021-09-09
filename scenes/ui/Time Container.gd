@@ -1,16 +1,13 @@
 extends HBoxContainer
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export(NodePath) var game_over
 
 var timer
 onready var label = $"Time"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	print(game_over)
 	timer = Timer.new()
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	#timeout is what says in docs, in signals
@@ -29,4 +26,6 @@ func _on_timer_timeout():
    game_over()
 
 func game_over():
-	print("game over")
+	# show game over screen
+	get_node(game_over).visible = true
+	set_process(false)

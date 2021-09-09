@@ -9,7 +9,7 @@ func _ready():
 	# Changes only the arrow shape of the cursor.
 	# This is similar to changing it in the project settings.
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	Input.set_custom_mouse_cursor(crosshair)
+	Input.set_custom_mouse_cursor(arrow)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

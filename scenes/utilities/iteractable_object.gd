@@ -39,8 +39,11 @@ func _on_interactable_input_event(viewport, event, shape_idx):
 				print("nothing")
 
 func outline(value):
-	# we should access our parent sprite and highlight the object
-	get_child(0).material.set_shader_param("width", outline_size)
+	if value:
+		# we should access our parent sprite and highlight the object
+		get_child(0).material.set_shader_param("width", outline_size)
+	else: 
+		get_child(0).material.set_shader_param("width", 0)
 
 func _on_interactable_body_entered(body):
 	if body.name == "top down player":

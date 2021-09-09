@@ -8,10 +8,10 @@ var player = preload("res://scenes/player/top_down_player.tscn")
 func _ready():
 	
 	#play musix
-	if !background_music.base.playing:
-		background_music.base.play()
-		background_music.excellent.stop()
-		background_music.bad.stop()
+#	if !background_music.base.playing:
+#		background_music.base.play()
+#		background_music.excellent.stop()
+#		background_music.bad.stop()
 	# fade in the level
 	if globals.is_lit:
 		global_ui.fade_in()
