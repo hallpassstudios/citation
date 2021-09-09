@@ -52,16 +52,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "cycle 1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "0",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "1",
@@ -72,15 +62,25 @@ animations = [ {
 "name": "2",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "3",
-"speed": 1.0
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "0",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ) ],
 "loop": true,
 "name": "4",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "3",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "cycle 1",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=4]

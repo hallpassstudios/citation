@@ -6,7 +6,7 @@ var greeting = "hi"
 # var b = "text"
 onready var base = $base
 onready var excellent = $excellent
-# onready var bad = $bad
+onready var bad = $bad
 
 func loop(song):
 	# get audio file data : BPM and total beats in song
