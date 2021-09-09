@@ -5,11 +5,11 @@
 	"display_name_bool": false,
 	"id": "character-1629668635.json",
 	"mirror_portraits": false,
-	"name": "lily",
+	"name": "LILY",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": -55,
+	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",

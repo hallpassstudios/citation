@@ -2,9 +2,10 @@ extends Node
 
 onready var song_file = $song_file
 export(String) var song_filename = ""
-export(int) var bpm = 0 
+export(int) var bpm = 1
 export(int) var total_beats = 0
 var spb = 0.0
+
 func _ready():
 	if song_filename != "":
 		var audioStream: AudioStream = load(song_filename)

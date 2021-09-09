@@ -577,13 +577,13 @@ shadow_size = 1
 shadow_offset = Vector2( 0.686, 0.1 )
 anti_aliasing = false
 
-[sub_resource type="DynamicFontData" id=85]
+[sub_resource type="DynamicFontData" id=145]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=138]
 size = 12
-font_data = SubResource( 85 )
+font_data = SubResource( 145 )
 
 [sub_resource type="RectangleShape2D" id=139]
 extents = Vector2( 10, 36.1345 )

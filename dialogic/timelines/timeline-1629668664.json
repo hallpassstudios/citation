@@ -4,14 +4,14 @@
 			"action": "join",
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_002",
-			"mirror": false,
+			"mirror": true,
 			"portrait": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": false
+				"4": true
 			}
 		},
 		{

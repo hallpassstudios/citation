@@ -15,45 +15,45 @@
 [sub_resource type="RectangleShape2D" id=66]
 extents = Vector2( 26.87, 4.064 )
 
-[sub_resource type="DynamicFontData" id=71]
+[sub_resource type="DynamicFontData" id=141]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=68]
 size = 12
-font_data = SubResource( 71 )
+font_data = SubResource( 141 )
 
-[sub_resource type="DynamicFontData" id=72]
+[sub_resource type="DynamicFontData" id=142]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=47]
 size = 12
-font_data = SubResource( 72 )
+font_data = SubResource( 142 )
 
-[sub_resource type="DynamicFontData" id=73]
+[sub_resource type="DynamicFontData" id=143]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=49]
 size = 12
-font_data = SubResource( 73 )
+font_data = SubResource( 143 )
 
-[sub_resource type="DynamicFontData" id=74]
+[sub_resource type="DynamicFontData" id=144]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=51]
 size = 12
-font_data = SubResource( 74 )
+font_data = SubResource( 144 )
 
-[sub_resource type="DynamicFontData" id=75]
+[sub_resource type="DynamicFontData" id=145]
 antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=53]
 size = 12
-font_data = SubResource( 75 )
+font_data = SubResource( 145 )
 
 [sub_resource type="CircleShape2D" id=16]
 radius = 30.0

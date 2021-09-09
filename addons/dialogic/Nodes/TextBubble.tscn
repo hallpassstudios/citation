@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://addons/dialogic/Example Assets/Fonts/DefaultFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://addons/dialogic/Example Assets/backgrounds/background-2.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/typing5.wav" type="AudioStream" id=8]
 [ext_resource path="res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/typing1.wav" type="AudioStream" id=9]
 [ext_resource path="res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/typing4.wav" type="AudioStream" id=10]
+[ext_resource path="res://dialogue.tres" type="Theme" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 0 )
@@ -50,8 +51,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="StyleBoxFlat" id=5]
-content_margin_left = 5.0
-content_margin_right = 5.0
+content_margin_left = 0.0
+content_margin_right = 0.0
 content_margin_bottom = 0.0
 bg_color = Color( 1, 1, 1, 0 )
 expand_margin_left = 10.0
@@ -96,6 +97,7 @@ margin_left = 20.0
 margin_top = 10.0
 margin_right = -20.0
 margin_bottom = -10.0
+theme = ExtResource( 11 )
 custom_styles/normal = SubResource( 1 )
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
