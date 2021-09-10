@@ -33,116 +33,116 @@
 [ext_resource path="res://sprites/ui/light_mask_flame.png" type="Texture" id=31]
 [ext_resource path="res://sprites/npcs/shadeTransformt.png" type="Texture" id=32]
 
-[sub_resource type="AtlasTexture" id=60]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=61]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 29 )
 region = Rect2( 128, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=62]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 29 )
 region = Rect2( 256, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=63]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 29 )
 region = Rect2( 384, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=64]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 29 )
 region = Rect2( 512, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=65]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 29 )
 region = Rect2( 640, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=66]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 29 )
 region = Rect2( 768, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=67]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 29 )
 region = Rect2( 896, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=68]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=69]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 32 )
 region = Rect2( 128, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=70]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 32 )
 region = Rect2( 256, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 32 )
 region = Rect2( 384, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=72]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 32 )
 region = Rect2( 512, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=73]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 32 )
 region = Rect2( 640, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=74]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 32 )
 region = Rect2( 768, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=75]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 32 )
 region = Rect2( 896, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=76]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 32 )
 region = Rect2( 1024, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=77]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 32 )
 region = Rect2( 1152, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=78]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 32 )
 region = Rect2( 1280, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=79]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 32 )
 region = Rect2( 1408, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=80]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 32 )
 region = Rect2( 1536, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=81]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 32 )
 region = Rect2( 1664, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=82]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 32 )
 region = Rect2( 1792, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=83]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 32 )
 region = Rect2( 1920, 0, 128, 128 )
 
-[sub_resource type="SpriteFrames" id=84]
+[sub_resource type="SpriteFrames" id=25]
 animations = [ {
-"frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": false,
 "name": "spooky",
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=26]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Light2D:energy")
@@ -169,8 +169,7 @@ tracks/1/keys = {
 "values": [ 2.5 ]
 }
 
-[sub_resource type="Animation" id=25]
-resource_name = "idle"
+[sub_resource type="Animation" id=27]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Light2D:energy")
@@ -197,13 +196,13 @@ tracks/1/keys = {
 "values": [ 2.5, 2.7, 2.5 ]
 }
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 51, 64 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 49, 63 )
 
-[sub_resource type="Shader" id=22]
+[sub_resource type="Shader" id=30]
 code = "shader_type canvas_item;
 
 uniform vec4 line_color : hint_color = vec4(1);
@@ -226,55 +225,55 @@ void fragment() {
 	COLOR = mix(color, line_color, outline - color.a);
 }"
 
-[sub_resource type="ShaderMaterial" id=51]
-shader = SubResource( 22 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 51, 71 )
-
-[sub_resource type="ShaderMaterial" id=52]
-shader = SubResource( 22 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 53, 69 )
-
-[sub_resource type="ShaderMaterial" id=53]
-shader = SubResource( 22 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=31]
-extents = Vector2( 52, 68 )
-
-[sub_resource type="ShaderMaterial" id=54]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=31]
+shader = SubResource( 30 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 51, 71 )
+
+[sub_resource type="ShaderMaterial" id=33]
+shader = SubResource( 30 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
+
+[sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 53, 69 )
 
-[sub_resource type="ShaderMaterial" id=55]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=35]
+shader = SubResource( 30 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="RectangleShape2D" id=33]
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 52, 68 )
+
+[sub_resource type="ShaderMaterial" id=37]
+shader = SubResource( 30 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 53, 69 )
+
+[sub_resource type="ShaderMaterial" id=39]
+shader = SubResource( 30 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
+
+[sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 53, 65 )
 
-[sub_resource type="ShaderMaterial" id=56]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=41]
+shader = SubResource( 30 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="RectangleShape2D" id=57]
+[sub_resource type="RectangleShape2D" id=42]
 extents = Vector2( 21, 52 )
 
-[sub_resource type="Shader" id=58]
+[sub_resource type="Shader" id=43]
 code = "shader_type canvas_item;
 
 uniform vec4 line_color : hint_color = vec4(1);
@@ -297,88 +296,88 @@ void fragment() {
 	COLOR = mix(color, line_color, outline - color.a);
 }"
 
-[sub_resource type="ShaderMaterial" id=59]
-shader = SubResource( 58 )
+[sub_resource type="ShaderMaterial" id=44]
+shader = SubResource( 43 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="NavigationPolygon" id=34]
+[sub_resource type="NavigationPolygon" id=45]
 vertices = PoolVector2Array( 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 309.882, 42.641, 182.439, 42.9658, -166.118, -14.359, -167.118, -51.359, 77.6879, -13.6458, 396.882, 43.641, -2.4776, 413.53, -2.42502, 234.599, 181.882, 236.641, 491.409, 414.09, 77.882, 43.641, 309.882, 237.641, 489.882, 237.641 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 0, 7, 8 ), PoolIntArray( 9, 10, 4, 11 ), PoolIntArray( 3, 12, 7, 0 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 8, 17, 11, 4 ), PoolIntArray( 8, 7, 18, 15 ), PoolIntArray( 16, 15, 18 ), PoolIntArray( 16, 18, 19 ) ]
 outlines = [ PoolVector2Array( -2.42502, 234.599, 181.882, 236.641, 182.439, 42.9658, 77.882, 43.641, 77.6879, -13.6458, -166.118, -14.359, -167.118, -51.359, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 396.882, 43.641, 309.882, 42.641, 309.882, 237.641, 489.882, 237.641, 491.409, 414.09, -2.4776, 413.53 ) ]
 
-[sub_resource type="RectangleShape2D" id=35]
+[sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 64, 28 )
 
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 27 )
-region = Rect2( 0, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 27 )
-region = Rect2( 800, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 27 )
-region = Rect2( 1600, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 27 )
-region = Rect2( 2400, 0, 800, 120 )
-
-[sub_resource type="SpriteFrames" id=40]
-animations = [ {
-"frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 28 )
-region = Rect2( 0, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 28 )
-region = Rect2( 800, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 28 )
-region = Rect2( 1600, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 28 )
-region = Rect2( 2400, 0, 800, 120 )
-
-[sub_resource type="SpriteFrames" id=45]
-animations = [ {
-"frames": [ SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 26 )
-region = Rect2( 0, 0, 800, 120 )
-
 [sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 26 )
-region = Rect2( 800, 0, 800, 120 )
+atlas = ExtResource( 27 )
+region = Rect2( 0, 0, 800, 120 )
 
 [sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 27 )
+region = Rect2( 800, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 27 )
+region = Rect2( 1600, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 27 )
+region = Rect2( 2400, 0, 800, 120 )
+
+[sub_resource type="SpriteFrames" id=51]
+animations = [ {
+"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 28 )
+region = Rect2( 0, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 28 )
+region = Rect2( 800, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 28 )
+region = Rect2( 1600, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 28 )
+region = Rect2( 2400, 0, 800, 120 )
+
+[sub_resource type="SpriteFrames" id=56]
+animations = [ {
+"frames": [ SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 26 )
+region = Rect2( 800, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=59]
 atlas = ExtResource( 25 )
 region = Rect2( 0, 0, 800, 120 )
 
-[sub_resource type="SpriteFrames" id=49]
+[sub_resource type="SpriteFrames" id=60]
 animations = [ {
-"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=50]
+[sub_resource type="RectangleShape2D" id=61]
 extents = Vector2( 186, 19 )
 
 [node name="library" type="Node2D"]
@@ -396,7 +395,7 @@ script = ExtResource( 22 )
 [node name="shade" type="AnimatedSprite" parent="environment/interactable objects"]
 position = Vector2( 432, 292 )
 z_index = 2
-frames = SubResource( 84 )
+frames = SubResource( 25 )
 animation = "spooky"
 frame = 15
 playing = true
@@ -493,8 +492,8 @@ color = Color( 0.909804, 0.407843, 0.407843, 1 )
 
 [node name="flame animator" type="AnimationPlayer" parent="environment/static objects/flame"]
 autoplay = "idle"
-anims/RESET = SubResource( 24 )
-anims/idle = SubResource( 25 )
+anims/RESET = SubResource( 26 )
+anims/idle = SubResource( 27 )
 
 [node name="player spawn" type="YSort" parent="environment"]
 script = ExtResource( 23 )
@@ -509,7 +508,7 @@ position = Vector2( 64, 189 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 1"]
-shape = SubResource( 26 )
+shape = SubResource( 28 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 1"
@@ -526,7 +525,7 @@ position = Vector2( 160, 189 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 2"]
-shape = SubResource( 27 )
+shape = SubResource( 29 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 2"
@@ -534,7 +533,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 2" type="Sprite" parent="environment/interactable objects2/shelf 2/collider"]
-material = SubResource( 51 )
+material = SubResource( 31 )
 z_index = 1
 texture = ExtResource( 17 )
 
@@ -543,7 +542,7 @@ position = Vector2( 256, 189 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 3"]
-shape = SubResource( 29 )
+shape = SubResource( 32 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 3"
@@ -551,7 +550,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 3" type="Sprite" parent="environment/interactable objects2/shelf 3/collider"]
-material = SubResource( 52 )
+material = SubResource( 33 )
 z_index = 1
 texture = ExtResource( 10 )
 
@@ -560,7 +559,7 @@ position = Vector2( 608, 198 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 4"]
-shape = SubResource( 30 )
+shape = SubResource( 34 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 4"
@@ -568,7 +567,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 4" type="Sprite" parent="environment/interactable objects2/shelf 4/collider"]
-material = SubResource( 53 )
+material = SubResource( 35 )
 position = Vector2( 0, -10 )
 z_index = 1
 texture = ExtResource( 16 )
@@ -578,7 +577,7 @@ position = Vector2( 704, 197 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 5"]
-shape = SubResource( 31 )
+shape = SubResource( 36 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 5"
@@ -586,7 +585,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 5" type="Sprite" parent="environment/interactable objects2/shelf 5/collider"]
-material = SubResource( 54 )
+material = SubResource( 37 )
 position = Vector2( 0, -9 )
 z_index = 1
 texture = ExtResource( 19 )
@@ -596,7 +595,7 @@ position = Vector2( 799, 197 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 6"]
-shape = SubResource( 32 )
+shape = SubResource( 38 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 6"
@@ -604,7 +603,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 6" type="Sprite" parent="environment/interactable objects2/shelf 6/collider"]
-material = SubResource( 55 )
+material = SubResource( 39 )
 position = Vector2( 1, -9 )
 z_index = 1
 texture = ExtResource( 21 )
@@ -614,7 +613,7 @@ position = Vector2( 640, 485 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/shelf 7"]
-shape = SubResource( 33 )
+shape = SubResource( 40 )
 script = ExtResource( 5 )
 has_dialogue = true
 dialogue = "shelf 7"
@@ -622,7 +621,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="shelf 7" type="Sprite" parent="environment/interactable objects2/shelf 7/collider"]
-material = SubResource( 56 )
+material = SubResource( 41 )
 z_index = 1
 texture = ExtResource( 20 )
 
@@ -631,14 +630,14 @@ position = Vector2( 168, 560 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/door to lounge"]
-shape = SubResource( 57 )
+shape = SubResource( 42 )
 script = ExtResource( 5 )
 travel_to = "lounge"
 outline_size = 2.0
 spawn_point = 2
 
 [node name="door" type="Sprite" parent="environment/interactable objects2/door to lounge/collider"]
-material = SubResource( 59 )
+material = SubResource( 44 )
 z_index = 2
 texture = ExtResource( 4 )
 
@@ -646,14 +645,14 @@ texture = ExtResource( 4 )
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
 position = Vector2( 186.118, 299.359 )
-navpoly = SubResource( 34 )
+navpoly = SubResource( 45 )
 
 [node name="collision" type="StaticBody2D" parent="navigation"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="navigation/collision"]
 position = Vector2( 431, 734 )
 z_index = 1
-shape = SubResource( 35 )
+shape = SubResource( 46 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.0196078, 0, 0.117647, 1 )
@@ -667,7 +666,7 @@ motion_mirroring = Vector2( 600, 0 )
 [node name="sky" type="AnimatedSprite" parent="ParallaxBackground/sky"]
 scale = Vector2( 1, 1.56 )
 z_index = -1
-frames = SubResource( 40 )
+frames = SubResource( 51 )
 frame = 2
 centered = false
 
@@ -677,7 +676,7 @@ motion_scale = Vector2( 0.4, 1 )
 [node name="sun" type="AnimatedSprite" parent="ParallaxBackground/sun"]
 position = Vector2( -387, 7 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 45 )
+frames = SubResource( 56 )
 frame = 2
 centered = false
 
@@ -687,7 +686,7 @@ motion_mirroring = Vector2( 480, 0 )
 
 [node name="clouds" type="AnimatedSprite" parent="ParallaxBackground/clouds"]
 position = Vector2( -89, 36 )
-frames = SubResource( 49 )
+frames = SubResource( 60 )
 frame = 1
 centered = false
 
@@ -695,7 +694,7 @@ centered = false
 visible = false
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground/bunnies"]
-frames = SubResource( 49 )
+frames = SubResource( 60 )
 frame = 1
 centered = false
 
@@ -704,7 +703,7 @@ position = Vector2( 435, 397 )
 z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shade collider"]
-shape = SubResource( 50 )
+shape = SubResource( 61 )
 
 [node name="mask" type="ColorRect" parent="."]
 margin_left = 857.0

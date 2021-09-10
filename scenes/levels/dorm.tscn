@@ -25,7 +25,7 @@ extents = Vector2( 60.2834, 29.5395 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.82053, 28.943 )
 
-[sub_resource type="Shader" id=22]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 
 uniform vec4 line_color : hint_color = vec4(1);
@@ -48,103 +48,103 @@ void fragment() {
 	COLOR = mix(color, line_color, outline - color.a);
 }"
 
-[sub_resource type="ShaderMaterial" id=23]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 14 )
-region = Rect2( 55, 0, 55, 71 )
+region = Rect2( 0, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 14 )
-region = Rect2( 110, 0, 55, 71 )
+region = Rect2( 55, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 14 )
-region = Rect2( 165, 0, 55, 71 )
+region = Rect2( 110, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 14 )
-region = Rect2( 220, 0, 55, 71 )
+region = Rect2( 165, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 14 )
-region = Rect2( 275, 0, 55, 71 )
+region = Rect2( 220, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 14 )
-region = Rect2( 330, 0, 55, 71 )
+region = Rect2( 275, 0, 55, 71 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 14 )
+region = Rect2( 330, 0, 55, 71 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 14 )
 region = Rect2( 385, 0, 55, 71 )
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 46.6667, 28.943 )
 
-[sub_resource type="ShaderMaterial" id=24]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=15]
+shader = SubResource( 3 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 105, 105 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 7 )
 region = Rect2( 105, 0, 105, 105 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 7 )
 region = Rect2( 210, 0, 105, 105 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 7 )
 region = Rect2( 315, 0, 105, 105 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 7 )
 region = Rect2( 420, 0, 105, 105 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 7 )
 region = Rect2( 525, 0, 105, 105 )
 
-[sub_resource type="SpriteFrames" id=31]
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 46.6667, 96.3052 )
 
-[sub_resource type="ShaderMaterial" id=32]
-shader = SubResource( 22 )
+[sub_resource type="ShaderMaterial" id=24]
+shader = SubResource( 3 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 46.6667, 55.5287 )
 
-[sub_resource type="Shader" id=34]
+[sub_resource type="Shader" id=26]
 code = "shader_type canvas_item;
 
 uniform vec4 line_color : hint_color = vec4(1);
@@ -167,15 +167,15 @@ void fragment() {
 	COLOR = mix(color, line_color, outline - color.a);
 }"
 
-[sub_resource type="ShaderMaterial" id=33]
-shader = SubResource( 34 )
+[sub_resource type="ShaderMaterial" id=27]
+shader = SubResource( 26 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="NavigationPolygon" id=21]
-vertices = PoolVector2Array( 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 403.261, 348.572, 127.289, 289.911, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 35.3648, 176.302, 32.5364, 287.554 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 0, 3, 7, 6, 8, 9 ), PoolIntArray( 10, 11, 0, 9 ), PoolIntArray( 12, 9, 8, 13 ) ]
-outlines = [ PoolVector2Array( 35.3648, 176.302, 172.775, 179.182, 172.577, 134.785, 298.88, 134.347, 298.409, 180.074, 440.301, 180.545, 433.15, 219.576, 401.058, 222.408, 403.261, 348.572, 441.244, 347.894, 442.252, 413.289, 129.798, 409.321, 127.289, 289.911, 32.5364, 287.554 ) ]
+[sub_resource type="NavigationPolygon" id=28]
+vertices = PoolVector2Array( 192.219, 129.271, 298.353, 128.343, 297.425, 182.802, 192.219, 178.16, 155.453, 414.648, 144.084, 414.968, 142.447, 252.645, 155.336, 399.921, 122.973, 252.614, 47.5803, 253.498, 46.0902, 186.454, 114.862, 185.587, 121.432, 219.928, 403.22, 364.917, 438.361, 364.69, 438.658, 404.767, 387.921, 404.916, 386.879, 383.847, 435.3, 183.203, 435.135, 219.975, 401.109, 221.022, 345.367, 383.252, 345.516, 403.338, 314.419, 403.636, 314.27, 397.387, 160.039, 213.745, 170.205, 184.683, 171.619, 178.421, 402.857, 268.384, 161.114, 200.643, 163.336, 191.148 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16, 17 ), PoolIntArray( 2, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24 ), PoolIntArray( 6, 8, 12, 25 ), PoolIntArray( 24, 7, 6, 25, 21 ), PoolIntArray( 21, 26, 27, 3, 2, 20, 28, 13, 17 ), PoolIntArray( 21, 25, 29, 30, 26 ) ]
+outlines = [ PoolVector2Array( 46.0902, 186.454, 114.862, 185.587, 121.432, 219.928, 160.039, 213.745, 161.114, 200.643, 163.336, 191.148, 170.205, 184.683, 171.619, 178.421, 192.219, 178.16, 192.219, 129.271, 298.353, 128.343, 297.425, 182.802, 435.3, 183.203, 435.135, 219.975, 401.109, 221.022, 402.857, 268.384, 403.22, 364.917, 438.361, 364.69, 438.658, 404.767, 387.921, 404.916, 386.879, 383.847, 345.367, 383.252, 345.516, 403.338, 314.419, 403.636, 314.27, 397.387, 155.336, 399.921, 155.453, 414.648, 144.084, 414.968, 142.447, 252.645, 122.973, 252.614, 47.5803, 253.498 ) ]
 
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
@@ -199,10 +199,12 @@ position = Vector2( 240.888, 182.905 )
 [node name="static objects" type="YSort" parent="environment"]
 
 [node name="floor" type="Sprite" parent="environment/static objects"]
+position = Vector2( 0.332245, 0 )
 texture = ExtResource( 19 )
 centered = false
 
 [node name="ground props" type="Sprite" parent="environment/static objects"]
+position = Vector2( 0.299042, -5.07278 )
 texture = ExtResource( 13 )
 centered = false
 
@@ -212,6 +214,7 @@ texture = ExtResource( 18 )
 centered = false
 
 [node name="bottom props" type="Sprite" parent="environment/static objects"]
+position = Vector2( -0.345337, -0.345337 )
 z_index = 3
 texture = ExtResource( 17 )
 centered = false
@@ -269,10 +272,10 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="joe" type="AnimatedSprite" parent="environment/interactable objects/joe/collider"]
-material = SubResource( 23 )
+material = SubResource( 4 )
 z_index = 1
-frames = SubResource( 12 )
-frame = 7
+frames = SubResource( 13 )
+frame = 3
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -280,7 +283,7 @@ position = Vector2( 114.958, 165.208 )
 script = ExtResource( 5 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/game console"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 script = ExtResource( 21 )
 has_dialogue = true
 dialogue = "birdietendo"
@@ -288,9 +291,9 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
-material = SubResource( 24 )
-frames = SubResource( 31 )
-frame = 4
+material = SubResource( 15 )
+frames = SubResource( 22 )
+frame = 2
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -299,7 +302,7 @@ script = ExtResource( 5 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/bed"]
 position = Vector2( 0, 2.12132 )
-shape = SubResource( 17 )
+shape = SubResource( 23 )
 script = ExtResource( 21 )
 has_dialogue = true
 dialogue = "bed"
@@ -307,7 +310,7 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="bed" type="Sprite" parent="environment/interactable objects/bed/collider"]
-material = SubResource( 32 )
+material = SubResource( 24 )
 z_index = 2
 texture = ExtResource( 9 )
 
@@ -317,20 +320,21 @@ script = ExtResource( 5 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to hallway"]
 position = Vector2( 0, 2.12132 )
-shape = SubResource( 19 )
+shape = SubResource( 25 )
 script = ExtResource( 21 )
 travel_to = "hallway"
 outline_size = 3.0
 
 [node name="door" type="Sprite" parent="environment/interactable objects/door to hallway/collider"]
-material = SubResource( 33 )
+material = SubResource( 27 )
 z_index = 1
 texture = ExtResource( 12 )
 
 [node name="navigation" type="Navigation2D" parent="."]
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
-navpoly = SubResource( 21 )
+position = Vector2( 1.57208, 0.497391 )
+navpoly = SubResource( 28 )
 
 [connection signal="body_entered" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_exited"]
