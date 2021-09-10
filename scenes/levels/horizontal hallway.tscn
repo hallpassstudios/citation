@@ -14,81 +14,81 @@
 [ext_resource path="res://sprites/environment/horizontal hallway/hallwayscene-props.png" type="Texture" id=12]
 [ext_resource path="res://sprites/environment/horizontal hallway/hallwayscene-foreground.png" type="Texture" id=13]
 
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 800, 120 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 8 )
+region = Rect2( 800, 0, 800, 120 )
+
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 8 )
-region = Rect2( 800, 0, 800, 120 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 8 )
 region = Rect2( 1600, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 8 )
 region = Rect2( 2400, 0, 800, 120 )
 
-[sub_resource type="SpriteFrames" id=34]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 9 )
 region = Rect2( 800, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 9 )
 region = Rect2( 1600, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 9 )
 region = Rect2( 2400, 0, 800, 120 )
 
-[sub_resource type="SpriteFrames" id=35]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 7 )
 region = Rect2( 800, 0, 800, 120 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 800, 120 )
 
-[sub_resource type="SpriteFrames" id=36]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 30 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 22, 68 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 19, 57.106 )
 
-[sub_resource type="NavigationPolygon" id=4]
+[sub_resource type="NavigationPolygon" id=17]
 vertices = PoolVector2Array( 42, 136, 441, 135, 441, 223, 42, 224 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 42, 136, 441, 135, 441, 223, 42, 224 ) ]
@@ -104,7 +104,7 @@ motion_mirroring = Vector2( 600, 0 )
 
 [node name="sky" type="AnimatedSprite" parent="ParallaxBackground/sky"]
 z_index = -1
-frames = SubResource( 34 )
+frames = SubResource( 5 )
 frame = 2
 centered = false
 
@@ -114,7 +114,7 @@ motion_scale = Vector2( 0.4, 1 )
 [node name="sun" type="AnimatedSprite" parent="ParallaxBackground/sun"]
 position = Vector2( -387, 7 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 35 )
+frames = SubResource( 10 )
 frame = 2
 centered = false
 
@@ -124,7 +124,7 @@ motion_mirroring = Vector2( 480, 0 )
 
 [node name="clouds" type="AnimatedSprite" parent="ParallaxBackground/clouds"]
 position = Vector2( -89, 36 )
-frames = SubResource( 36 )
+frames = SubResource( 14 )
 frame = 1
 centered = false
 
@@ -132,7 +132,7 @@ centered = false
 visible = false
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground/bunnies"]
-frames = SubResource( 36 )
+frames = SubResource( 14 )
 frame = 1
 centered = false
 
@@ -166,6 +166,7 @@ texture = ExtResource( 13 )
 centered = false
 
 [node name="background" type="Sprite" parent="environment"]
+position = Vector2( -0.504211, 0 )
 texture = ExtResource( 11 )
 centered = false
 
@@ -178,7 +179,7 @@ script = ExtResource( 3 )
 
 [node name="door to classroom" type="CollisionShape2D" parent="interactable zone"]
 position = Vector2( 13, 126 )
-shape = SubResource( 5 )
+shape = SubResource( 15 )
 script = ExtResource( 5 )
 travel_to = "classroom"
 object_name = "classroom door"
@@ -187,7 +188,7 @@ sprite = NodePath("../../environment/classroom door")
 
 [node name="door to lounge" type="CollisionShape2D" parent="interactable zone"]
 position = Vector2( 465, 117 )
-shape = SubResource( 6 )
+shape = SubResource( 16 )
 script = ExtResource( 5 )
 travel_to = "lounge"
 object_name = "lounge door"
@@ -198,7 +199,8 @@ spawn_point = 1
 [node name="navigation" type="Navigation2D" parent="."]
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
-navpoly = SubResource( 4 )
+position = Vector2( -0.504272, 0.504272 )
+navpoly = SubResource( 17 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 476.0
