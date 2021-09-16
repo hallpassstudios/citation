@@ -1,0 +1,170 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/levels/games/minigame/quiz control.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/progress.png" type="Texture" id=2]
+[ext_resource path="res://sprites/ui/under.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.0941176, 0, 0.0980392, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+anti_aliasing = false
+
+[sub_resource type="DynamicFontData" id=12]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+outline_size = 1
+outline_color = Color( 0.556863, 0, 1, 1 )
+font_data = SubResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFontData" id=8]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+font_data = SubResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="quiz control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="answer label" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -46.0
+margin_top = 10.0
+margin_right = 46.0
+margin_bottom = 25.0
+custom_styles/normal = SubResource( 14 )
+custom_fonts/font = SubResource( 13 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Control" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+rect_min_size = Vector2( 360, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question container" type="VBoxContainer" parent="question"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -35.0
+grow_vertical = 0
+rect_min_size = Vector2( 360, 30 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="progress" type="TextureProgress" parent="question/question container"]
+margin_right = 360.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 360, 5 )
+value = 90.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+
+[node name="question" type="RichTextLabel" parent="question/question container"]
+margin_top = 5.0
+margin_right = 360.0
+margin_bottom = 35.0
+grow_vertical = 0
+rect_min_size = Vector2( 360, 30 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "This is a question do you love it?!"
+
+[node name="answer" type="Control" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+grow_vertical = 0
+rect_min_size = Vector2( 360, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="answer container" type="HBoxContainer" parent="answer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -30.0
+rect_min_size = Vector2( 360, 30 )
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Label" parent="answer/answer container"]
+margin_right = 180.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 180, 30 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "FaLSE"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="2" type="Label" parent="answer/answer container"]
+margin_left = 180.0
+margin_right = 360.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 180, 30 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "This is totally true!"
+align = 1
+valign = 1
+autowrap = true

@@ -25,6 +25,8 @@ var can_shoot = false
 var read_everything = false
 var desk_interact = false
 
+var in_minigame = true
+
 
 # save / load 
 

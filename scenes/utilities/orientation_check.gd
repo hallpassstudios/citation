@@ -4,9 +4,6 @@ This script / scene is specifically to check for orientation on the device and r
 
 extends Node
 
-signal screen_orientation_changed(orientation)
-const WINDOW_SIZE := OS.window_size
-
 var platform : String
 var screen_orientation : String
 
@@ -25,7 +22,11 @@ func _ready():
 		print("this is a desktop")
 
 func _process(delta):
-	
+	# if we are not in the minigame
+	if globals.in_minigame:
+		panel.visible = false
+		return
+		
 	if OS.get_window_size().x < OS.get_window_size().y:
 		screen_orientation = "portrait"
 		panel.visible = true

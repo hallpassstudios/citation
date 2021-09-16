@@ -213,7 +213,7 @@ nodes/BlendSpace2D/position = Vector2( 120, 60 )
 nodes/TimeScale/node = SubResource( 30 )
 nodes/TimeScale/position = Vector2( 400, 100 )
 nodes/output/position = Vector2( 580, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace2D" ]
+node_connections = [ "TimeScale", 0, "BlendSpace2D", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeAnimation" id=21]
 animation = "walk_left"
@@ -274,7 +274,7 @@ nodes/BlendSpace2D/position = Vector2( 120, 80 )
 nodes/TimeScale/node = SubResource( 38 )
 nodes/TimeScale/position = Vector2( 360, 100 )
 nodes/output/position = Vector2( 580, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace2D" ]
+node_connections = [ "TimeScale", 0, "BlendSpace2D", "output", 0, "TimeScale" ]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
@@ -376,7 +376,7 @@ texture = ExtResource( 2 )
 texture = ExtResource( 1 )
 hframes = 8
 vframes = 8
-frame = 7
+frame = 40
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.44
@@ -409,7 +409,6 @@ parameters/Walk2/TimeScale/scale = 0.75
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 1.5, 1.5 )
 
 [node name="light animation" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 41 )

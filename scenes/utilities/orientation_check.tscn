@@ -82,5 +82,3 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[connection signal="screen_orientation_changed" from="." to="." method="_on_Control_screen_orientation_changed"]

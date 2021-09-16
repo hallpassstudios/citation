@@ -1,0 +1,378 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/levels/games/minigame/chunks/start.gd" type="Script" id=2]
+[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=3]
+[ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=4]
+
+[sub_resource type="DynamicFontData" id=48]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=46]
+size = 12
+font_data = SubResource( 48 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 4, 5 )
+
+[node name="start" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="spawn" type="Position2D" parent="."]
+position = Vector2( 7.62939e-06, -572 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 7.62939e-06, -584 )
+scale = Vector2( 8.4, 1.2 )
+
+[node name="sort" type="YSort" parent="."]
+
+[node name="doors" type="TileMap" parent="sort"]
+z_index = 2
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2097140, 112, 0 )
+
+[node name="path tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 10, 10 )
+cell_quadrant_size = 10
+cell_tile_origin = 1
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2490356, 95, 0, -2424820, 95, 0, -2359284, 95, 0, -2293748, 95, 0, -2228212, 95, 0, -2162676, 110, 0, -1703924, 107, 0, -1638396, 93, 0, -1638395, 93, 0, -1638394, 93, 0, -1638393, 93, 0, -1638392, 93, 0, -1638391, 93, 0, -1638390, 93, 0, -1638389, 93, 0, -1638388, 98, 0, -1572864, 103, 0, -1507328, 103, 0, -1441792, 103, 0, -1376256, 103, 0, -1245189, 106, 0, -1245188, 91, 0, -1245187, 91, 0, -1245186, 91, 0, -1245185, 91, 0, -1310720, 108, 0, -1310719, 91, 0, -1310718, 91, 0, -1310717, 91, 0, -1310716, 91, 0, -1310715, 94, 0, -1179653, 95, 0, -1179652, 3, 0, -1179651, 3, 0, -1179650, 3, 0, -1179649, 3, 0, -1245184, 3, 0, -1245183, 3, 0, -1245182, 3, 0, -1245181, 3, 0, -1245180, 3, 0, -1245179, 95, 0, -1114117, 95, 0, -1114116, 3, 0, -1114115, 3, 0, -1114114, 3, 0, -1114113, 3, 0, -1179648, 3, 0, -1179647, 3, 0, -1179646, 3, 0, -1179645, 3, 0, -1179644, 3, 0, -1179643, 95, 0, -1048581, 95, 0, -1048580, 3, 0, -1048579, 3, 0, -1048577, 3, 0, -1114112, 3, 0, -1114111, 3, 0, -1114110, 3, 0, -1114109, 3, 0, -1114108, 3, 0, -1114107, 95, 0, -983045, 95, 0, -983044, 3, 0, -983043, 3, 0, -983042, 3, 0, -983041, 3, 0, -1048576, 3, 0, -1048575, 3, 0, -1048574, 3, 0, -1048573, 3, 0, -1048572, 3, 0, -1048571, 95, 0, -917509, 95, 0, -917508, 3, 0, -917507, 3, 0, -917506, 3, 0, -917505, 3, 0, -983040, 3, 0, -983039, 3, 0, -983038, 3, 0, -983037, 3, 0, -983036, 3, 0, -983035, 95, 0, -851973, 102, 0, -851972, 93, 0, -851971, 93, 0, -851970, 93, 0, -851969, 93, 0, -917504, 108, 0, -917503, 93, 0, -917502, 93, 0, -917501, 93, 0, -917500, 93, 0, -917499, 98, 0, -851968, 103, 0, -786432, 103, 0, -720896, 103, 0, -655360, 103, 0, -589824, 103, 0, -524288, 103, 0, -458752, 103, 0, -393216, 103, 0, -327680, 103, 0, -262144, 103, 0, -196608, 103, 0, -131072, 103, 0, -65536, 110, 0 )
+
+[node name="collision tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2686966, 42, 0, -2686965, 42, 0, -2686964, 42, 0, -2686963, 42, 0, -2686962, 42, 0, -2621430, 47, 0, -2621429, 76, 0, -2621428, 47, 0, -2621427, 76, 0, -2621426, 47, 0, -2555894, 47, 0, -2555893, 47, 0, -2555892, 113, 0, -2555891, 47, 0, -2555890, 47, 0, -2097143, 49, 0, -2097142, 59, 0, -2097141, 59, 0, -2097140, 112, 0, -2097139, 59, 0, -2097138, 59, 0, -2097137, 49, 0, -2031607, 49, 0, -2031601, 49, 0, -1966071, 47, 0, -1966065, 47, 0, -1900535, 47, 0, -1900531, 3, 0, -1900529, 47, 0, -1834999, 47, 0, -1834993, 47, 0, -1769463, 47, 0, -1769462, 61, 0, -1769461, 61, 0, -1769459, 61, 0, -1769458, 61, 0, -1769457, 47, 0 )
+
+[node name="ground tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2949122, 121, 0, -2949121, 121, 0, -2883590, 121, 0, -2883589, 121, 0, -2883588, 121, 0, -2883587, 121, 0, -2883586, 121, 0, -2883585, 118, 0, -2949120, 118, 0, -2949119, 118, 0, -2949118, 118, 0, -2949117, 118, 0, -2818060, 118, 0, -2818059, 118, 0, -2818058, 116, 0, -2818057, 116, 0, -2818056, 116, 0, -2818055, 121, 0, -2818054, 121, 0, -2818053, 121, 0, -2818052, 121, 0, -2818051, 121, 0, -2883582, 121, 0, -2883581, 118, 0, -2752524, 118, 0, -2752523, 116, 0, -2752522, 116, 0, -2752521, 121, 0, -2752520, 121, 0, -2752519, 121, 0, -2752518, 118, 0, -2752517, 121, 0, -2752516, 118, 0, -2818046, 121, 0, -2818045, 118, 0, -2818044, 118, 0, -2818043, 118, 0, -2818037, 121, 0, -2818036, 121, 0, -2818035, 121, 0, -2818034, 121, 0, -2818033, 121, 0, -2818032, 118, 0, -2818031, 118, 0, -2818030, 118, 0, -2686989, 118, 0, -2686988, 116, 0, -2686987, 121, 0, -2686986, 121, 0, -2686985, 121, 0, -2686982, 121, 0, -2752507, 118, 0, -2752506, 118, 0, -2752505, 118, 0, -2752504, 118, 0, -2752503, 145, 0, -2752502, 140, 0, -2752501, 140, 0, -2752500, 140, 0, -2752499, 140, 0, -2752498, 140, 0, -2752495, 121, 0, -2752494, 118, 0, -2621453, 118, 0, -2621452, 116, 0, -2621447, 121, 0, -2621446, 121, 0, -2686969, 118, 0, -2686967, 144, 0, -2686961, 136, 0, -2686959, 118, 0, -2686958, 118, 0, -2555918, 121, 0, -2555917, 118, 0, -2555916, 116, 0, -2621431, 144, 0, -2621425, 136, 0, -2621423, 118, 0, -2621422, 118, 0, -2490382, 121, 0, -2490381, 118, 0, -2490380, 116, 0, -2490379, 116, 0, -2555895, 144, 0, -2555889, 136, 0, -2555886, 118, 0, -2424846, 121, 0, -2424845, 118, 0, -2424844, 118, 0, -2490359, 147, 0, -2490358, 132, 0, -2490357, 132, 0, -2490355, 132, 0, -2490354, 132, 0, -2490353, 138, 0, -2490350, 118, 0, -2490349, 118, 0, -2359309, 121, 0, -2359308, 118, 0, -2359307, 118, 0, -2424814, 121, 0, -2424813, 118, 0, -2293774, 116, 0, -2293773, 121, 0, -2293772, 121, 0, -2293771, 118, 0, -2359277, 121, 0, -2359276, 118, 0, -2359275, 118, 0, -2359274, 118, 0, -2359273, 118, 0, -2228238, 116, 0, -2228237, 116, 0, -2228236, 118, 0, -2228235, 118, 0, -2293741, 121, 0, -2293740, 121, 0, -2293737, 118, 0, -2162701, 116, 0, -2162700, 116, 0, -2228204, 121, 0, -2228203, 121, 0, -2228202, 118, 0, -2228201, 118, 0, -2097164, 116, 0, -2162667, 121, 0, -2162666, 118, 0, -2031628, 116, 0, -2031627, 116, 0, -2097131, 118, 0, -2097130, 118, 0, -1966094, 119, 0, -1966093, 118, 0, -1966092, 118, 0, -2031606, 3, 0, -2031605, 3, 0, -2031604, 0, 0, -2031603, 0, 0, -2031602, 3, 0, -2031595, 118, 0, -1900558, 119, 0, -1900557, 118, 0, -1966070, 2, 0, -1966069, 8, 0, -1966068, 7, 0, -1966067, 2, 0, -1966066, 2, 0, -1966059, 118, 0, -1966058, 117, 0, -1966057, 117, 0, -1835022, 118, 0, -1835021, 119, 0, -1900534, 2, 0, -1900533, 3, 0, -1900532, 6, 0, -1900530, 8, 0, -1900523, 117, 0, -1900522, 117, 0, -1769487, 116, 0, -1769486, 118, 0, -1769485, 119, 0, -1834998, 3, 0, -1834997, 3, 0, -1834996, 10, 0, -1834995, 4, 0, -1834994, 3, 0, -1834987, 117, 0, -1703952, 118, 0, -1703951, 116, 0, -1703950, 116, 0, -1703949, 119, 0, -1703948, 119, 0, -1769460, 11, 0, -1769451, 117, 0, -1638414, 116, 0, -1638413, 116, 0, -1638412, 119, 0, -1703915, 117, 0, -1572878, 121, 0, -1572877, 116, 0, -1572876, 116, 0, -1638379, 117, 0, -1507342, 119, 0, -1507341, 119, 0, -1572843, 121, 0, -1441807, 119, 0, -1441806, 119, 0, -1507320, 89, 0, -1507308, 121, 0, -1507307, 121, 0, -1376272, 119, 0, -1376271, 119, 0, -1376270, 121, 0, -1441772, 121, 0, -1441771, 117, 0, -1310737, 119, 0, -1310736, 121, 0, -1310735, 121, 0, -1376237, 117, 0, -1376236, 117, 0, -1245202, 119, 0, -1245201, 117, 0, -1245200, 117, 0, -1310701, 117, 0, -1179666, 117, 0, -1179665, 117, 0, -1245166, 117, 0, -1245165, 117, 0, -1114131, 117, 0, -1114130, 117, 0, -1114129, 119, 0, -1179630, 117, 0, -1048593, 119, 0, -1114094, 117, 0, -983057, 119, 0, -983056, 119, 0, -1048559, 121, 0, -1048558, 117, 0, -1048557, 117, 0, -917521, 119, 0, -917520, 119, 0, -983024, 116, 0, -983023, 116, 0, -983022, 116, 0, -851985, 119, 0, -851984, 119, 0, -917488, 116, 0, -917487, 121, 0, -786450, 119, 0, -786449, 119, 0, -786448, 116, 0, -851952, 116, 0, -851951, 121, 0, -851950, 116, 0, -720912, 116, 0, -720911, 116, 0, -786416, 121, 0, -786415, 116, 0, -786414, 116, 0, -655376, 118, 0, -655375, 116, 0, -720881, 121, 0, -720880, 116, 0, -720879, 116, 0, -589840, 117, 0, -589839, 117, 0, -655345, 116, 0, -655344, 116, 0, -524305, 118, 0, -524304, 119, 0, -524303, 117, 0, -589810, 116, 0, -589809, 116, 0, -458768, 118, 0, -458767, 121, 0, -524275, 116, 0, -524274, 116, 0, -524273, 121, 0, -393232, 118, 0, -393231, 121, 0, -458739, 116, 0, -458738, 121, 0, -327696, 119, 0, -327695, 121, 0, -393204, 116, 0, -393203, 116, 0, -262160, 119, 0, -262159, 121, 0, -262158, 121, 0, -327668, 116, 0, -196624, 118, 0, -196623, 118, 0, -196622, 121, 0, -262133, 121, 0, -262132, 116, 0, -131087, 118, 0, -131086, 119, 0, -131085, 121, 0, -196597, 120, 0, -196596, 116, 0, -196595, 116, 0, -65550, 118, 0, -65549, 121, 0, -131060, 120, 0, -131059, 116, 0, -131058, 116, 0, -14, 118, 0, -13, 121, 0, -65524, 121, 0, -65523, 121, 0, -65522, 116, 0, 65522, 118, 0, 65523, 118, 0, 65524, 118, 0, 65525, 119, 0, 65526, 118, 0, 65527, 121, 0, 13, 121, 0, 14, 116, 0, 131060, 118, 0, 131061, 119, 0, 131062, 118, 0, 131063, 118, 0, 131064, 119, 0, 131065, 121, 0, 65544, 116, 0, 65547, 120, 0, 65548, 121, 0, 65549, 116, 0, 65550, 116, 0, 196599, 118, 0, 196600, 119, 0, 196601, 121, 0, 196602, 119, 0, 196603, 121, 0, 131078, 116, 0, 131079, 116, 0, 131080, 120, 0, 131081, 120, 0, 131082, 116, 0, 131083, 116, 0, 131084, 116, 0, 131085, 116, 0, 262136, 119, 0, 262137, 119, 0, 262139, 121, 0, 262140, 121, 0, 262141, 119, 0, 262142, 119, 0, 262143, 119, 0, 196608, 119, 0, 196609, 119, 0, 196610, 121, 0, 196612, 116, 0, 196613, 116, 0, 196614, 120, 0, 196615, 120, 0, 196616, 116, 0, 196617, 116, 0, 196619, 116, 0, 327673, 119, 0, 327674, 119, 0, 327675, 119, 0, 327676, 119, 0, 327677, 119, 0, 262146, 119, 0, 262147, 119, 0, 262148, 119, 0, 262149, 120, 0, 262150, 120, 0, 262151, 116, 0, 262152, 116, 0, 393210, 119, 0, 393211, 119, 0, 327683, 120, 0, 327684, 120, 0 )
+
+[node name="prop tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -2490359, 61, 0, -2490358, 61, 0, -2490357, 61, 0, -2490355, 61, 0, -2490354, 61, 0, -2490353, 61, 0, -2031606, 125, 0, -2031605, 125, 0, -2031603, 124, 0, -2031602, 126, 0, -1900534, 124, 0, -1900533, 125, 0, -1900531, 126, 0, -1900530, 125, 0, -1834998, 3, 0, -1834997, 3, 0, -1834995, 4, 0, -1834994, 3, 0, -1638400, 106, 0, -1638399, 101, 0, -1638398, 101, 0, -1638397, 101, 0 )
+
+[node name="question" type="Node2D" parent="."]
+position = Vector2( 22, -60 )
+
+[node name="border" type="NinePatchRect" parent="question"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "welcome"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question2" type="Node2D" parent="."]
+position = Vector2( 22, -152 )
+
+[node name="border" type="NinePatchRect" parent="question2"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question2/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "playing is simple"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question3" type="Node2D" parent="."]
+position = Vector2( -30, -2 )
+
+[node name="border" type="NinePatchRect" parent="question3"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question3/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "mobile magic:
+touch and drag"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question4" type="Node2D" parent="."]
+position = Vector2( 72, -2 )
+
+[node name="border" type="NinePatchRect" parent="question4"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question4/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "computer magic:
+wasd, arrows"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question5" type="Node2D" parent="."]
+position = Vector2( 22, -204 )
+
+[node name="border" type="NinePatchRect" parent="question5"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question5/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "your goal is simple too..."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question6" type="Node2D" parent="."]
+position = Vector2( 52, -254 )
+
+[node name="border" type="NinePatchRect" parent="question6"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question6/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "choose the UNETHICAL path"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question7" type="Node2D" parent="."]
+position = Vector2( 142, -336 )
+
+[node name="border" type="NinePatchRect" parent="question7"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question7/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "or choose the ETHICAL path"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question8" type="Node2D" parent="."]
+position = Vector2( -32, -368 )
+
+[node name="border" type="NinePatchRect" parent="question8"]
+margin_left = -58.0
+margin_top = -30.0
+margin_right = 24.0
+margin_bottom = 6.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question8/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "the lamp is the key"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+position = Vector2( 125, -385 )
+shape = SubResource( 47 )
+
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="sort" method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="sort" method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="viewport_entered" from="VisibilityNotifier2D" to="sort" method="_on_VisibilityNotifier2D_viewport_entered"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]

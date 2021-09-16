@@ -26,4 +26,4 @@ void fragment() {
 [resource]
 shader = SubResource( 1 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 2.0
+shader_param/width = 0.0

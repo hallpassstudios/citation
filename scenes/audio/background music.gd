@@ -6,7 +6,6 @@ var songCopy = null
 # var b = "text"
 onready var base = $base
 onready var excellent = $excellent
-onready var bad = $bad
 
 
 func loop(song):

@@ -1,0 +1,215 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://sprites/minigame/mainCharacterLowResSheet.png" type="Texture" id=1]
+[ext_resource path="res://sprites/character/shadow.png" type="Texture" id=2]
+[ext_resource path="res://scenes/player/top_down_runner.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 32 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle_down"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle_up"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 27, 28, 29, 30, 31 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "right"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "walk_up"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 32, 33, 34, 35 ]
+}
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 6.15787
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "idle_up"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 11 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 12 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 14 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "right"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "right"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "right"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "walk_up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=16]
+blend_point_0/node = SubResource( 21 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 22 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 23 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 24 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachine" id=19]
+states/Idle/node = SubResource( 15 )
+states/Idle/position = Vector2( 303.667, 151.889 )
+states/Walk/node = SubResource( 16 )
+states/Walk/position = Vector2( 516.667, 151.889 )
+transitions = [ "Idle", "Walk", SubResource( 17 ), "Walk", "Idle", SubResource( 18 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -131, 52 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=20]
+
+[sub_resource type="Animation" id=41]
+length = 0.001
+
+[sub_resource type="Animation" id=42]
+resource_name = "idle"
+loop = true
+
+[node name="top down runner" type="KinematicBody2D" groups=[
+"player",
+]]
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+collision_mask = 4
+script = ExtResource( 3 )
+speed = 50.0
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="shadow" type="Sprite" parent="YSort"]
+position = Vector2( -0.0346804, 12.8964 )
+scale = Vector2( 0.376801, 0.463708 )
+texture = ExtResource( 2 )
+
+[node name="character" type="Sprite" parent="YSort"]
+z_index = 1
+texture = ExtResource( 1 )
+hframes = 8
+vframes = 6
+frame = 32
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 0.44
+anims/RESET = SubResource( 1 )
+anims/idle_down = SubResource( 2 )
+anims/idle_up = SubResource( 5 )
+anims/right = SubResource( 7 )
+anims/walk_up = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.198196, 11.7139 )
+shape = SubResource( 10 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 19 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 20 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -30.2723 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_smoothed = true
+drag_margin_v_enabled = true
+drag_margin_top = 0.7
+drag_margin_bottom = 0.7
+
+[node name="light animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 41 )
+anims/idle = SubResource( 42 )

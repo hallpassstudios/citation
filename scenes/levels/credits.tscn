@@ -1,6 +1,71 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/levels/credits.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/credit_border.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="DynamicFontData" id=2]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+font_data = SubResource( 4 )
 
 [node name="credits" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.0
+margin_top = -114.5
+margin_right = 231.0
+margin_bottom = 114.5
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer/TextureRect"]
+margin_left = 136.458
+margin_top = -0.167419
+margin_right = 312.458
+margin_bottom = 14.8326
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.713726, 0, 1 )
+text = "THE LEGEND OF THE RATIO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+margin_left = 21.2182
+margin_top = 18.8425
+margin_right = 440.218
+margin_bottom = 213.842
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH"
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

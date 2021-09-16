@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/levels/start.gd" type="Script" id=1]
-[ext_resource path="res://sprites/ui/title hallway.png" type="Texture" id=2]
+[ext_resource path="res://scenes/levels/title hallway.png" type="Texture" id=2]
 [ext_resource path="res://sprites/ui/title.png" type="Texture" id=3]
 [ext_resource path="res://button.tres" type="StyleBox" id=4]
 [ext_resource path="res://button_hover.tres" type="StyleBox" id=5]
@@ -27,14 +27,8 @@ font_data = SubResource( 3 )
 "player",
 ]]
 pause_mode = 2
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -180.0
-margin_top = -60.0
-margin_right = 180.0
-margin_bottom = 60.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 mouse_filter = 1
 script = ExtResource( 1 )
 __meta__ = {
@@ -43,13 +37,16 @@ __meta__ = {
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Control"]
 layer = -1
+follow_viewport_enable = true
+scroll_ignore_camera_zoom = true
 script = ExtResource( 7 )
 
 [node name="sky" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-motion_scale = Vector2( 0.3, 1 )
+motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 600, 0 )
 
 [node name="sky" type="Sprite" parent="Control/ParallaxBackground/sky"]
+position = Vector2( 1.49658, 61.3613 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 4
@@ -58,7 +55,7 @@ hframes = 4
 motion_scale = Vector2( 0.1, 1 )
 
 [node name="sun" type="Sprite" parent="Control/ParallaxBackground/sun"]
-position = Vector2( -286.275, -1.18787 )
+position = Vector2( -407.665, 57.1984 )
 texture = ExtResource( 11 )
 centered = false
 hframes = 4
@@ -68,7 +65,7 @@ motion_scale = Vector2( 0.4, 2 )
 motion_mirroring = Vector2( 800, 0 )
 
 [node name="clouds" type="Sprite" parent="Control/ParallaxBackground/clouds"]
-position = Vector2( -471.583, -1.18787 )
+position = Vector2( 109.406, 51.7255 )
 texture = ExtResource( 8 )
 centered = false
 hframes = 2
@@ -78,73 +75,59 @@ motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="bunnies" type="Sprite" parent="Control/ParallaxBackground/bunnies"]
-position = Vector2( -389.62, -8.31506 )
+position = Vector2( 47.4444, 63.6471 )
 texture = ExtResource( 9 )
 centered = false
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.687653
-margin_top = -116.379
-margin_right = 0.687653
-margin_bottom = -116.379
-mouse_filter = 2
-color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect2" type="ColorRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.60318
-margin_top = 128.559
-margin_right = -0.60318
-margin_bottom = 128.559
-mouse_filter = 2
-color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Title Hallway" type="Sprite" parent="Control"]
-scale = Vector2( 0.751475, 0.617671 )
 texture = ExtResource( 2 )
-centered = false
-
-[node name="Title" type="TextureRect" parent="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.821
-anchor_bottom = 0.5
-margin_left = -123.053
-margin_top = -48.3589
-margin_right = 11.3871
-margin_bottom = 1.64114
-texture = ExtResource( 3 )
-expand = true
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="VBoxContainer" parent="Control"]
+[node name="Title" type="TextureRect" parent="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -34.6684
-margin_top = 9.92334
-margin_right = 40.3316
-margin_bottom = 59.9233
+margin_left = -169.94
+margin_top = -25.0
+margin_right = 169.94
+margin_bottom = 25.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="Control/Title"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.1049
+margin_top = 64.9899
+margin_right = 37.8951
+margin_bottom = 114.99
+rect_min_size = Vector2( 100, 50 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="Control/Menu"]
-margin_right = 75.0
+[node name="Start" type="Button" parent="Control/Title/Menu"]
+margin_right = 100.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 75, 0 )
 focus_mode = 0
@@ -155,9 +138,9 @@ custom_fonts/font = SubResource( 2 )
 enabled_focus_mode = 0
 text = "START"
 
-[node name="Backstory" type="Button" parent="Control/Menu"]
+[node name="Backstory" type="Button" parent="Control/Title/Menu"]
 margin_top = 18.0
-margin_right = 75.0
+margin_right = 100.0
 margin_bottom = 32.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 5 )
@@ -167,9 +150,9 @@ custom_fonts/font = SubResource( 2 )
 enabled_focus_mode = 0
 text = "BACKSTORY"
 
-[node name="Credits" type="Button" parent="Control/Menu"]
+[node name="Credits" type="Button" parent="Control/Title/Menu"]
 margin_top = 36.0
-margin_right = 75.0
+margin_right = 100.0
 margin_bottom = 50.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 5 )
@@ -179,4 +162,9 @@ custom_fonts/font = SubResource( 2 )
 enabled_focus_mode = 0
 text = "CREDITS"
 
-[connection signal="pressed" from="Control/Menu/Start" to="Control" method="_on_Start_pressed"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 320.724, 179.962 )
+
+[connection signal="gui_input" from="Control" to="Control" method="_on_Control_gui_input"]
+[connection signal="pressed" from="Control/Title/Menu/Start" to="Control" method="_on_Start_pressed"]
+[connection signal="pressed" from="Control/Title/Menu/Backstory" to="Control" method="_on_Backstory_pressed"]
