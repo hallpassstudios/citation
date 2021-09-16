@@ -1,11 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
 [ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=4]
 [ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=5]
-[ext_resource path="res://scenes/levels/games/minigame/chunks/main.gd" type="Script" id=6]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/outside.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -21,6 +21,12 @@ font_data = SubResource( 1 )
 [sub_resource type="DynamicFont" id=6]
 size = 12
 font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+font_data = SubResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.870588, 0.403922, 1, 1 )
@@ -41,11 +47,13 @@ border_width_bottom = 1
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.780392, 0, 1, 1 )
 
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://fonts/HungryPro.ttf"
+[sub_resource type="DynamicFontData" id=48]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
 
-[sub_resource type="DynamicFont" id=5]
-font_data = SubResource( 4 )
+[sub_resource type="DynamicFont" id=49]
+size = 12
+font_data = SubResource( 48 )
 
 [sub_resource type="DynamicFontData" id=45]
 font_path = "res://fonts/zpix.ttf"
@@ -53,6 +61,14 @@ font_path = "res://fonts/zpix.ttf"
 [sub_resource type="DynamicFont" id=46]
 size = 12
 font_data = SubResource( 45 )
+
+[sub_resource type="DynamicFontData" id=50]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=51]
+size = 20
+font_data = SubResource( 50 )
 
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 4, 5 )
@@ -121,8 +137,8 @@ valign = 1
 margin_top = 38.0
 margin_right = 338.0
 margin_bottom = 49.0
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "try again, joe is counting on you!"
 align = 1
 
@@ -132,10 +148,10 @@ margin_right = 338.0
 margin_bottom = 74.0
 focus_mode = 0
 mouse_filter = 1
+custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 5 )
 enabled_focus_mode = 0
 text = "TRY AGAIN!"
 
@@ -168,22 +184,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="question text" type="Label" parent="question/border"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -33.0
-margin_top = -7.0
-margin_right = 99.0
-margin_bottom = 20.0
+[node name="text" type="RichTextLabel" parent="question/border"]
+margin_left = 29.6013
+margin_top = 14.1944
+margin_right = 78.6013
+margin_bottom = 27.1944
 rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 4
-custom_fonts/font = SubResource( 46 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 49 )
+bbcode_enabled = true
+bbcode_text = "[center]welcome[/center]"
 text = "welcome"
-align = 1
-valign = 1
-autowrap = true
+fit_content_height = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -206,22 +219,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="question text" type="Label" parent="question2/border"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -33.0
-margin_top = -7.0
-margin_right = 99.0
-margin_bottom = 20.0
+[node name="text2" type="RichTextLabel" parent="question2/border"]
+margin_left = 4.95503
+margin_top = 13.8741
+margin_right = 147.955
+margin_bottom = 26.8741
 rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 4
-custom_fonts/font = SubResource( 46 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 49 )
+bbcode_enabled = true
+bbcode_text = "[center]playing is simple[/center]"
 text = "playing is simple"
-align = 1
-valign = 1
-autowrap = true
+fit_content_height = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -360,7 +370,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="text" type="RichTextLabel" parent="question6/border"]
+margin_left = 17.9372
+margin_top = 10.9011
+margin_right = 117.937
+margin_bottom = 36.9011
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/bold_font = SubResource( 51 )
+custom_fonts/normal_font = SubResource( 49 )
+bbcode_enabled = true
+bbcode_text = "[center]choose the [color=red]unethical[/color] path[/center]"
+text = "choose the unethical path"
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="question text" type="Label" parent="question6/border"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -398,22 +427,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="question text" type="Label" parent="question7/border"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -33.0
-margin_top = -7.0
-margin_right = 99.0
-margin_bottom = 20.0
+[node name="text" type="RichTextLabel" parent="question7/border"]
+margin_left = 18.0544
+margin_top = 11.6823
+margin_right = 118.054
+margin_bottom = 37.6823
 rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 4
-custom_fonts/font = SubResource( 46 )
-text = "or choose the ETHICAL path"
-align = 1
-valign = 1
-autowrap = true
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/bold_font = SubResource( 51 )
+custom_fonts/normal_font = SubResource( 49 )
+bbcode_enabled = true
+bbcode_text = "[center]or choose the [color=yellow]ethical[/color] path[/center]"
+text = "or choose the ethical path"
+fit_content_height = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }

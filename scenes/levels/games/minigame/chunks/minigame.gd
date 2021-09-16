@@ -39,4 +39,6 @@ func _on_answer_2_body_entered(body):
 		print("player collided")
 
 func _on_exit_body_entered(body):
-	globals.goto_scene("res://scenes/levels/minigame/chunks/house.tscn")
+	if body.name == "top down runner":
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/house.tscn")
+	
