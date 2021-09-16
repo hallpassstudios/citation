@@ -5,6 +5,8 @@ var velocity = Vector2.ZERO
 export var friction = 0.01
 export var acceleration = 1
 
+var current_scene
+
 enum {
 	IDLE,
 	WALKING,
@@ -56,8 +58,9 @@ func _physics_process(delta):
 		animationState.travel("Walk")
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		if collision.collider.is_in_group("killer"):
-			get_tree().get_root().get_node("main").restart("OUCH! watch out for spikes!")
+		print("Collided with: ", collision.collider.name)
+		if collision.collider.is_in_group("spikes"):
+			get_parent().restart("OUCH! watch out for spikes!")
 
 
 func _on_joystick_use_move_vector(move_vector):

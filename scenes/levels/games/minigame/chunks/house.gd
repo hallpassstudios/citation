@@ -14,8 +14,25 @@ func _ready():
 	add_child(current_player)
 	current_player.position = spawn.position
 
+func restart(message):
+	$HUD/restart.visible = true
+	$HUD/restart/VBoxContainer/title.text = message
+	get_tree().paused = true
 
+func _on_restart_pressed():
+	print("pressed restart")
+	$HUD/restart.visible = false
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_quit_pressed():
+	globals.goto_scene("res://scenes/levels/dorm.tscn")
+
+func _on_trap_body_entered(body):
+	if body.name == "top down runner":
+		print("you're trapped")
+		$spikies.gravity_scale = 10
+
+func _on_Area2D_body_entered(body):
+	if body.name == "top down runner":
+		restart("maybe try a different path!")
