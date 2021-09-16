@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -8,6 +8,15 @@
 [ext_resource path="res://scenes/levels/games/minigame/chunks/house.gd" type="Script" id=6]
 [ext_resource path="res://sprites/minigame/bookcase.png" type="Texture" id=7]
 [ext_resource path="res://sprites/minigame/spikes.png" type="Texture" id=8]
+[ext_resource path="res://sprites/minigame/table.png" type="Texture" id=9]
+[ext_resource path="res://sprites/minigame/key.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFontData" id=45]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=46]
+size = 12
+font_data = SubResource( 45 )
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -17,11 +26,11 @@ antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 50
+size = 40
 font_data = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 20
+size = 30
 font_data = SubResource( 1 )
 
 [sub_resource type="DynamicFontData" id=4]
@@ -51,13 +60,6 @@ border_width_bottom = 1
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.780392, 0, 1, 1 )
 
-[sub_resource type="DynamicFontData" id=45]
-font_path = "res://fonts/zpix.ttf"
-
-[sub_resource type="DynamicFont" id=46]
-size = 12
-font_data = SubResource( 45 )
-
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 4, 5 )
 
@@ -65,16 +67,45 @@ extents = Vector2( 4, 5 )
 extents = Vector2( 5, 5 )
 
 [sub_resource type="RectangleShape2D" id=49]
-extents = Vector2( 8.98099, 10 )
+extents = Vector2( 8.98099, 15 )
 
 [sub_resource type="RectangleShape2D" id=50]
-extents = Vector2( 5, 5 )
+extents = Vector2( 25, 5 )
 
 [sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 5, 5 )
+extents = Vector2( 25, 5 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 4, 4 )
 
 [node name="house" type="Node2D"]
 script = ExtResource( 6 )
+
+[node name="arrow2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -72.0
+margin_right = 152.0
+margin_bottom = -30.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "how do you feel about:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="joystick" type="CanvasLayer" parent="."]
 script = ExtResource( 1 )
@@ -132,8 +163,9 @@ custom_fonts/font = SubResource( 2 )
 text = "SORRY, YOU DIDN'T SUCCEED."
 align = 1
 valign = 1
+autowrap = true
 
-[node name="fun text" type="Label" parent="HUD/restart/VBoxContainer"]
+[node name="subtitle" type="Label" parent="HUD/restart/VBoxContainer"]
 margin_top = 57.0
 margin_right = 572.0
 margin_bottom = 76.0
@@ -141,6 +173,8 @@ custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "try again, joe is counting on you!"
 align = 1
+autowrap = true
+uppercase = true
 
 [node name="restart" type="Button" parent="HUD/restart/VBoxContainer"]
 margin_top = 86.0
@@ -243,7 +277,7 @@ __meta__ = {
 }
 
 [node name="question 6" type="Node2D" parent="."]
-position = Vector2( 36.9176, -67.3472 )
+position = Vector2( 51, -70 )
 z_index = 1
 
 [node name="border" type="NinePatchRect" parent="question 6"]
@@ -271,6 +305,118 @@ margin_bottom = 28.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 46 )
+text = "cheating on an exam"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 8" type="Node2D" parent="."]
+position = Vector2( 101, -70 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question 8"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question 8/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -10.0
+margin_right = 99.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "falsifying data"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 9" type="Node2D" parent="."]
+position = Vector2( 150, -70 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question 9"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question 9/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -10.0
+margin_right = 99.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "having someone else write a paper"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 10" type="Node2D" parent="."]
+position = Vector2( 202, -70 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question 10"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question 10/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -10.0
+margin_right = 99.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "will cause you to lost your membership"
 align = 1
 valign = 1
 autowrap = true
@@ -279,7 +425,7 @@ __meta__ = {
 }
 
 [node name="question 3" type="Node2D" parent="."]
-position = Vector2( -17, -230 )
+position = Vector2( -18, -190 )
 z_index = 1
 
 [node name="border" type="NinePatchRect" parent="question 3"]
@@ -304,7 +450,7 @@ anchor_bottom = 0.5
 margin_left = -33.0
 margin_top = -10.0
 margin_right = 99.0
-margin_bottom = 32.0
+margin_bottom = 28.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 46 )
@@ -376,13 +522,50 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -33.0
-margin_top = -10.0
+margin_top = -12.0
 margin_right = 99.0
-margin_bottom = 32.0
+margin_bottom = 30.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 46 )
 text = "depends on your academic tradition"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 7" type="Node2D" parent="."]
+position = Vector2( 214, -192 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question 7"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question 7/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -12.0
+margin_right = 99.0
+margin_bottom = 30.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "who cares if others are hurt by my actions..."
 align = 1
 valign = 1
 autowrap = true
@@ -401,7 +584,7 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -1507334, 74, 0, -1507333, 48, 0, -1507332, 48, 0, -1507331, 48, 0, -1507330, 48, 0, -1507329, 48, 0, -1572864, 48, 0, -1572863, 48, 0, -1572862, 48, 0, -1572861, 48, 0, -1572860, 48, 0, -1572859, 49, 0, -1572858, 54, 0, -1441798, 48, 0, -1441797, 48, 0, -1441796, 48, 0, -1441795, 48, 0, -1441794, 48, 0, -1441793, 48, 0, -1507328, 48, 0, -1507327, 48, 0, -1507326, 48, 0, -1507325, 48, 0, -1507324, 48, 0, -1507323, 48, 0, -1507322, 48, 0, -1376262, 48, 0, -1376261, 48, 0, -1376260, 48, 0, -1376259, 48, 0, -1376258, 48, 0, -1376257, 48, 0, -1441792, 48, 0, -1441791, 48, 0, -1441790, 48, 0, -1441789, 48, 0, -1441788, 48, 0, -1441787, 48, 0, -1441786, 48, 0, -1310737, 48, 0, -1310736, 48, 0, -1310735, 48, 0, -1310734, 48, 0, -1310733, 48, 0, -1310732, 48, 0, -1310731, 48, 0, -1310730, 48, 0, -1310729, 48, 0, -1310728, 48, 0, -1310727, 48, 0, -1310726, 49, 0, -1310725, 49, 0, -1310724, 49, 0, -1310723, 49, 0, -1310722, 49, 0, -1310721, 49, 0, -1376256, 49, 0, -1376255, 49, 0, -1376254, 49, 0, -1376253, 49, 0, -1376252, 49, 0, -1376251, 49, 0, -1376250, 49, 0, -1376249, 48, 0, -1376248, 48, 0, -1376247, 48, 0, -1376246, 48, 0, -1376245, 48, 0, -1376244, 48, 0, -1376243, 48, 0, -1376242, 48, 0, -1376241, 49, 0, -1376240, 49, 0, -1376239, 49, 0, -1376238, 49, 0, -1376237, 49, 0, -1376236, 49, 0, -1245201, 49, 0, -1245200, 49, 0, -1245199, 49, 0, -1245198, 49, 0, -1245197, 49, 0, -1245196, 49, 0, -1245195, 49, 0, -1245194, 49, 0, -1245193, 49, 0, -1245192, 49, 0, -1245191, 49, 0, -1245190, 49, 0, -1310714, 49, 0, -1310713, 49, 0, -1310712, 49, 0, -1310711, 49, 0, -1310710, 49, 0, -1310709, 49, 0, -1310708, 49, 0, -1310707, 49, 0, -1310706, 49, 0, -1310705, 49, 0, -1310704, 49, 0, -1310703, 49, 0, -1310702, 49, 0, -1310701, 49, 0, -1310700, 49, 0, -1179665, 49, 0, -1245164, 49, 0, -1179628, 49, 0, -1048593, 49, 0, -1048592, 49, 0, -1048591, 49, 0, -1048590, 49, 0, -1048589, 49, 0, -1048588, 49, 0, -1048587, 49, 0, -1048586, 49, 0, -1048585, 49, 0, -1048584, 49, 0, -1048583, 49, 0, -1048582, 49, 0, -1114106, 49, 0, -1114105, 49, 0, -1114104, 49, 0, -1114103, 49, 0, -1114102, 49, 0, -1114101, 49, 0, -1114100, 49, 0, -1114099, 49, 0, -1114098, 49, 0, -1114092, 49, 0, -983046, 49, 0, -983045, 49, 0, -983044, 49, 0, -983043, 49, 0, -1048573, 49, 0, -1048572, 49, 0, -1048571, 49, 0, -1048570, 49, 0, -1048562, 49, 0, -1048556, 49, 0, -917507, 49, 0, -983037, 49, 0, -983026, 49, 0, -983020, 49, 0, -851971, 49, 0, -917501, 49, 0, -917490, 49, 0, -917489, 49, 0, -917488, 49, 0, -917487, 49, 0, -917486, 49, 0, -917485, 49, 0, -917484, 49, 0, -786435, 49, 0, -851965, 49, 0, -720899, 49, 0, -655363, 49, 0, -720893, 49, 0, -589827, 49, 0, -589826, 49, 0, -589825, 49, 0, -655360, 47, 0, -655359, 49, 0, -655357, 49, 0, -524291, 47, 0, -524290, 47, 0, -524289, 47, 0, -589824, 47, 0, -589823, 47, 0, -589821, 47, 0, -196612, 79, 0, -196611, 79, 0, -196610, 79, 0, -196609, 79, 0, -262144, 79, 0, -262143, 79, 0, -262142, 87, 0, -262141, 79, 0, -131076, 49, 0, -131075, 49, 0, -131074, 49, 0, -131073, 49, 0, -196608, 49, 0, -196607, 49, 0, -196605, 49, 0, -65540, 49, 0, -131069, 49, 0, -4, 49, 0, -65533, 49, 0, 65532, 47, 0, 65533, 47, 0, 3, 49, 0, 131069, 47, 0, 65539, 49, 0, 196605, 47, 0, 131074, 161, 0, 131075, 47, 0, 262141, 47, 0, 262142, 47, 0, 262143, 47, 0, 196608, 114, 0, 196609, 47, 0, 196610, 47, 0, 196611, 47, 0 )
+tile_data = PoolIntArray( -1507334, 74, 0, -1507333, 48, 0, -1507332, 48, 0, -1507331, 48, 0, -1507330, 48, 0, -1507329, 48, 0, -1572864, 48, 0, -1572863, 48, 0, -1572862, 48, 0, -1572861, 48, 0, -1572860, 48, 0, -1572859, 49, 0, -1572858, 54, 0, -1441798, 48, 0, -1441797, 48, 0, -1441796, 48, 0, -1441795, 48, 0, -1441794, 48, 0, -1441793, 48, 0, -1507328, 48, 0, -1507327, 48, 0, -1507326, 48, 0, -1507325, 48, 0, -1507324, 48, 0, -1507323, 48, 0, -1507322, 48, 0, -1376262, 48, 0, -1376261, 48, 0, -1376260, 48, 0, -1376259, 48, 0, -1376258, 48, 0, -1376257, 48, 0, -1441792, 48, 0, -1441791, 48, 0, -1441790, 48, 0, -1441789, 48, 0, -1441788, 48, 0, -1441787, 48, 0, -1441786, 48, 0, -1310738, 47, 0, -1310737, 48, 0, -1310736, 48, 0, -1310735, 48, 0, -1310734, 48, 0, -1310733, 48, 0, -1310732, 48, 0, -1310731, 48, 0, -1310730, 48, 0, -1310729, 48, 0, -1310728, 48, 0, -1310727, 48, 0, -1310726, 49, 0, -1310725, 49, 0, -1310724, 49, 0, -1310723, 49, 0, -1310722, 49, 0, -1310721, 49, 0, -1376256, 49, 0, -1376255, 49, 0, -1376254, 49, 0, -1376253, 49, 0, -1376252, 49, 0, -1376251, 49, 0, -1376250, 49, 0, -1376249, 48, 0, -1376248, 48, 0, -1376247, 48, 0, -1376246, 48, 0, -1376245, 48, 0, -1376244, 48, 0, -1376243, 48, 0, -1376242, 48, 0, -1376241, 49, 0, -1376240, 49, 0, -1376239, 49, 0, -1376238, 49, 0, -1376237, 49, 0, -1376236, 49, 0, -1376235, 49, 0, -1376234, 49, 0, -1376233, 49, 0, -1376232, 49, 0, -1376231, 49, 0, -1376230, 49, 0, -1376229, 49, 0, -1376228, 49, 0, -1376227, 47, 0, -1245202, 47, 0, -1245201, 49, 0, -1245200, 49, 0, -1245199, 49, 0, -1245198, 49, 0, -1245197, 49, 0, -1245196, 49, 0, -1245195, 49, 0, -1245194, 49, 0, -1245193, 49, 0, -1245192, 49, 0, -1245191, 49, 0, -1245190, 49, 0, -1310714, 49, 0, -1310713, 49, 0, -1310712, 49, 0, -1310711, 49, 0, -1310710, 49, 0, -1310709, 49, 0, -1310708, 49, 0, -1310707, 49, 0, -1310706, 49, 0, -1310692, 49, 0, -1310691, 47, 0, -1179666, 47, 0, -1179665, 49, 0, -1245156, 49, 0, -1245155, 47, 0, -1114130, 47, 0, -1179620, 49, 0, -1179619, 47, 0, -1048594, 47, 0, -1048593, 49, 0, -1048592, 49, 0, -1048591, 49, 0, -1048590, 49, 0, -1048589, 49, 0, -1048588, 49, 0, -1048587, 49, 0, -1048586, 49, 0, -1048585, 49, 0, -1048584, 49, 0, -1048583, 49, 0, -1048582, 49, 0, -1114106, 49, 0, -1114105, 49, 0, -1114104, 49, 0, -1114103, 49, 0, -1114102, 49, 0, -1114101, 49, 0, -1114100, 49, 0, -1114099, 49, 0, -1114098, 49, 0, -1114092, 49, 0, -1114091, 49, 0, -1114090, 49, 0, -1114089, 49, 0, -1114088, 49, 0, -1114087, 49, 0, -1114086, 49, 0, -1114085, 49, 0, -1114084, 49, 0, -1114083, 47, 0, -983058, 47, 0, -983057, 47, 0, -983056, 47, 0, -983055, 47, 0, -983054, 47, 0, -983053, 47, 0, -983052, 47, 0, -983051, 47, 0, -983050, 47, 0, -983049, 47, 0, -983048, 47, 0, -983047, 47, 0, -983046, 49, 0, -983045, 49, 0, -983044, 49, 0, -983043, 49, 0, -1048573, 49, 0, -1048572, 49, 0, -1048571, 49, 0, -1048570, 49, 0, -1048569, 47, 0, -1048568, 47, 0, -1048567, 47, 0, -1048566, 47, 0, -1048565, 47, 0, -1048564, 47, 0, -1048563, 47, 0, -1048562, 49, 0, -1048556, 49, 0, -1048555, 47, 0, -1048554, 47, 0, -1048553, 47, 0, -1048552, 47, 0, -1048551, 47, 0, -1048550, 47, 0, -1048549, 47, 0, -1048548, 47, 0, -1048547, 47, 0, -917510, 47, 0, -917509, 47, 0, -917508, 47, 0, -917507, 49, 0, -983037, 49, 0, -983036, 47, 0, -983035, 47, 0, -983026, 49, 0, -983020, 49, 0, -851972, 49, 0, -851971, 49, 0, -917501, 49, 0, -917500, 49, 0, -917490, 49, 0, -917489, 49, 0, -917488, 49, 0, -917487, 49, 0, -917486, 49, 0, -917485, 49, 0, -917484, 49, 0, -786436, 49, 0, -786435, 49, 0, -851965, 49, 0, -851964, 49, 0, -720900, 49, 0, -720899, 49, 0, -786429, 47, 0, -786428, 49, 0, -655364, 49, 0, -655363, 49, 0, -720893, 49, 0, -720892, 49, 0, -589828, 49, 0, -589827, 49, 0, -589826, 49, 0, -589825, 49, 0, -655360, 47, 0, -655359, 49, 0, -655357, 49, 0, -655356, 49, 0, -524292, 49, 0, -524291, 47, 0, -524290, 47, 0, -524289, 47, 0, -589824, 47, 0, -589823, 47, 0, -589821, 49, 0, -589820, 49, 0, -196612, 79, 0, -196611, 79, 0, -196610, 79, 0, -196609, 79, 0, -262144, 79, 0, -262143, 79, 0, -262142, 87, 0, -262141, 79, 0, -131076, 49, 0, -131075, 49, 0, -131074, 49, 0, -131073, 49, 0, -196608, 49, 0, -196607, 49, 0, -196605, 49, 0, -65540, 49, 0, -131069, 49, 0, -4, 49, 0, -65533, 49, 0, 65532, 47, 0, 65533, 47, 0, 3, 49, 0, 131069, 47, 0, 65539, 49, 0, 196605, 47, 0, 131074, 161, 0, 131075, 47, 0, 262141, 47, 0, 262142, 47, 0, 262143, 47, 0, 196608, 114, 0, 196609, 47, 0, 196610, 47, 0, 196611, 47, 0 )
 
 [node name="props" type="TileMap" parent="sort"]
 position = Vector2( 7.62939e-06, 0 )
@@ -409,7 +592,7 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -1114097, 32, 0, -1114096, 30, 0, -65538, 158, 0, -65537, 155, 0, -131072, 157, 0, -3, 154, 0 )
+tile_data = PoolIntArray( -1310700, 165, 0, -1310699, 165, 0, -1310698, 165, 0, -1310697, 165, 0, -1310696, 165, 0, -1310695, 165, 0, -1310694, 165, 0, -1310693, 165, 0, -1179628, 166, 0, -1114097, 32, 0, -1114096, 30, 0, -589822, 115, 0, -65538, 158, 0, -65537, 155, 0, -131072, 157, 0, -3, 154, 0 )
 
 [node name="spikes" type="TileMap" parent="sort" groups=[
 "spikes",
@@ -419,16 +602,15 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -1048561, 18, 0, -1048560, 18, 0, -1048559, 18, 0, -1048558, 18, 0, -1048557, 18, 0, -983025, 17, 0, -983024, 17, 0, -983023, 17, 0, -983022, 17, 0, -983021, 17, 0, -65538, 158, 0, -65537, 155, 0, -131072, 157, 0, -3, 154, 0 )
+tile_data = PoolIntArray( -1048561, 18, 0, -1048560, 18, 0, -1048559, 18, 0, -1048558, 18, 0, -1048557, 18, 0, -983025, 17, 0, -983024, 17, 0, -983023, 17, 0, -983022, 17, 0, -983021, 17, 0 )
 
 [node name="doors" type="TileMap" parent="sort"]
-position = Vector2( 7.62939e-06, 0 )
 z_index = 3
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -655358, 49, 0, -589822, 115, 0 )
+tile_data = PoolIntArray( -1114129, 112, 0 )
 
 [node name="exit" type="Area2D" parent="sort"]
 position = Vector2( 0, 22 )
@@ -457,11 +639,11 @@ shape = SubResource( 48 )
 position = Vector2( 160.038, -179.902 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trap"]
-position = Vector2( -1.03802, -0.0983582 )
+position = Vector2( 30.962, 4.90164 )
 shape = SubResource( 49 )
 
 [node name="spikies" type="RigidBody2D" parent="."]
-position = Vector2( 155, -185 )
+position = Vector2( 155, -195 )
 rotation = -3.14159
 collision_layer = 4
 mode = 2
@@ -471,20 +653,98 @@ contact_monitor = true
 can_sleep = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikies"]
+position = Vector2( -20, 0 )
 shape = SubResource( 50 )
 
 [node name="spike2" type="Sprite" parent="spikies"]
+texture = ExtResource( 8 )
+
+[node name="spike3" type="Sprite" parent="spikies"]
+position = Vector2( -10, 0 )
+texture = ExtResource( 8 )
+
+[node name="spike4" type="Sprite" parent="spikies"]
+position = Vector2( -20, 0 )
+texture = ExtResource( 8 )
+
+[node name="spike5" type="Sprite" parent="spikies"]
+position = Vector2( -30, 0 )
+texture = ExtResource( 8 )
+
+[node name="spike6" type="Sprite" parent="spikies"]
+position = Vector2( -40, 0 )
 texture = ExtResource( 8 )
 
 [node name="Area2D" type="Area2D" parent="spikies"]
 position = Vector2( -1.90735e-06, 4.76837e-07 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikies/Area2D"]
-position = Vector2( 7.62939e-06, -9.53674e-07 )
+position = Vector2( -20, 0 )
 shape = SubResource( 51 )
+
+[node name="table" type="RigidBody2D" parent="."]
+position = Vector2( 72, -47 )
+gravity_scale = 0.0
+linear_damp = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
+shape = SubResource( 52 )
+
+[node name="Sprite" type="Sprite" parent="table/CollisionShape2D"]
+texture = ExtResource( 9 )
+
+[node name="table" type="Area2D" parent="table"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table/table"]
+shape = SubResource( 53 )
+
+[node name="table2" type="RigidBody2D" parent="."]
+position = Vector2( 123, -47 )
+gravity_scale = 0.0
+linear_damp = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table2"]
+shape = SubResource( 52 )
+
+[node name="Sprite" type="Sprite" parent="table2/CollisionShape2D"]
+texture = ExtResource( 9 )
+
+[node name="table" type="Area2D" parent="table2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table2/table"]
+shape = SubResource( 53 )
+
+[node name="table3" type="RigidBody2D" parent="."]
+position = Vector2( 172, -47 )
+gravity_scale = 0.0
+linear_damp = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table3"]
+shape = SubResource( 52 )
+
+[node name="Sprite" type="Sprite" parent="table3/CollisionShape2D"]
+texture = ExtResource( 9 )
+
+[node name="table" type="Area2D" parent="table3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table3/table"]
+shape = SubResource( 53 )
+
+[node name="key" type="Area2D" parent="."]
+visible = false
+position = Vector2( 223, -47 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key"]
+shape = SubResource( 54 )
+
+[node name="Sprite" type="Sprite" parent="key/CollisionShape2D"]
+texture = ExtResource( 10 )
 
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="body_entered" from="trap" to="." method="_on_trap_body_entered"]
 [connection signal="body_entered" from="spikies" to="." method="_on_spikies_body_entered"]
 [connection signal="body_entered" from="spikies/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="table/table" to="." method="_on_table_body_entered"]
+[connection signal="body_entered" from="table2/table" to="." method="_on_table_body_entered"]
+[connection signal="body_entered" from="table3/table" to="." method="_on_table_body_entered"]
