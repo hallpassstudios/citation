@@ -11,11 +11,6 @@ font_path = "res://fonts/zpix.ttf"
 extra_spacing_bottom = 5
 font_data = SubResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0745098, 0.0823529, 0.0980392, 1 )
-expand_margin_left = 20.0
-expand_margin_right = 20.0
-
 [sub_resource type="DynamicFontData" id=2]
 antialiased = false
 font_path = "res://fonts/zpix.ttf"
@@ -23,6 +18,11 @@ font_path = "res://fonts/zpix.ttf"
 [sub_resource type="DynamicFont" id=3]
 size = 14
 font_data = SubResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0745098, 0.0823529, 0.0980392, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
 
 [node name="backstory" type="Node2D"]
 script = ExtResource( 1 )
@@ -50,9 +50,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -206.608
-margin_top = -8.49726
+margin_top = 112.503
 margin_right = 216.392
-margin_bottom = 750.503
+margin_bottom = 871.503
 size_flags_horizontal = 2
 custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
@@ -60,7 +60,7 @@ bbcode_text = "Welcome to [color=red]Dream School[/color] - one of the planet's 
 
 Another aspect that makes the school unique, and frankly, what makes it such a draw for the world's best and brightest, is that it is located above an ancient, unexplored source of magical energy: [color=red]THE RATIO[/color]. 
 
-The magical energy emanating from the depths below Dream School seems to exist in two competitive states at once. The scholars from long long ago named these states of energy [color=blue]ethical[/color] energy, and [color=red]unethical[/color] energy. You remember being told that it's like the distinction between good magic and evil evil magic, but that's not exactly the best analogy - unethical magic and ethical magic can have the same outcomes, but only in the short term. Long-term, unethical magic damages the very fabric of society, corrupting those who pursue the mystical arts as a way to help society progress and improve. Casting unethical spells can not only get you kicked out of Dream School, but can also cause the entire community to become a worse place."
+The magical energy emanating from the depths below Dream School seems to exist in two competitive states at once. The scholars from long long ago named these states of energy [color=yellow]ethical[/color] energy, and [color=red]unethical[/color] energy. You remember being told that it's like the distinction between good magic and evil evil magic, but that's not exactly the best analogy - unethical magic and ethical magic can have the same outcomes, but only in the short term. Long-term, unethical magic damages the very fabric of society, corrupting those who pursue the mystical arts as a way to help society progress and improve. Casting unethical spells can not only get you kicked out of Dream School, but can also cause the entire community to become a worse place."
 text = "Welcome to Dream School - one of the planet's best schools for mystics and scholars of magic. One of the things that makes Dream School unique, is that it has a singular focus on the pursuit of new knowledge - it's a magical research university with the mission of advancing society's knowledge of the mystic arts and sciences.
 
 Another aspect that makes the school unique, and frankly, what makes it such a draw for the world's best and brightest, is that it is located above an ancient, unexplored source of magical energy: THE RATIO. 
@@ -78,18 +78,18 @@ margin_top = 222.18
 margin_right = 657.374
 margin_bottom = 827.18
 rect_pivot_offset = Vector2( 27.4051, 116.348 )
-color = Color( 0.0745098, 0.0823529, 0.0980392, 1 )
+color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer/TextureRect"]
-margin_left = -91.7141
-margin_top = -501.327
-margin_right = 548.286
-margin_bottom = 9.67279
+margin_left = -110.0
+margin_top = -502.5
+margin_right = 530.0
+margin_bottom = 8.49979
 rect_pivot_offset = Vector2( 27.4051, 116.348 )
-color = Color( 0.0745098, 0.0823529, 0.0980392, 1 )
+color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,8 +107,8 @@ margin_left = 136.291
 margin_top = -2.00075
 margin_right = 312.291
 margin_bottom = 12.9993
-custom_styles/normal = SubResource( 1 )
 custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
 text = "THE LEGEND OF THE RATIO"
 __meta__ = {
 "_edit_use_anchors_": false

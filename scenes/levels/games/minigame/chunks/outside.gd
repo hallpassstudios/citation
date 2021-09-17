@@ -13,3 +13,7 @@ func _ready():
 	globals.player = current_player
 	add_child(current_player)
 	current_player.position = spawn.position
+
+func _on_exit_body_entered(body):
+	if body.name == "top down runner":
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/house.tscn")

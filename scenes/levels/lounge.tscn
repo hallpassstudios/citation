@@ -366,6 +366,7 @@ extents = Vector2( 17.1195, 9.47253 )
 extents = Vector2( 44, 6.00002 )
 
 [node name="lounge" type="Node2D"]
+position = Vector2( -0.396393, 0 )
 script = ExtResource( 6 )
 
 [node name="background" type="ColorRect" parent="."]
@@ -408,7 +409,7 @@ __meta__ = {
 [node name="player spawn" type="YSort" parent="environment"]
 
 [node name="0" type="Node2D" parent="environment/player spawn"]
-position = Vector2( 432.501, 558 )
+position = Vector2( 651.711, 211.148 )
 
 [node name="1" type="Node2D" parent="environment/player spawn"]
 position = Vector2( 193.529, 389.882 )
@@ -434,7 +435,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -453,7 +454,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -472,7 +473,7 @@ TYPE = 1
 material = SubResource( 31 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -493,7 +494,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 5
+frame = 8
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]

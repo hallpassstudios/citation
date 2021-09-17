@@ -94,6 +94,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 42, 136, 441, 135, 441, 223, 42, 224 ) ]
 
 [node name="horizontal hallway" type="Node2D"]
+position = Vector2( 2, -1 )
 script = ExtResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -246,6 +247,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.431373, 0.278431, 0.733333, 1 )
 
 [connection signal="body_shape_entered" from="interactable zone" to="interactable zone" method="_on_interactable_zone_body_shape_entered"]
