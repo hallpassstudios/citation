@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/levels/credits.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ui/credit_border.png" type="Texture" id=2]
+[ext_resource path="res://sprites/npcs/shade_idle.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=4]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+font_data = SubResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -16,12 +24,45 @@ font_path = "res://fonts/zpix.ttf"
 size = 14
 font_data = SubResource( 2 )
 
-[sub_resource type="DynamicFontData" id=4]
-antialiased = false
-font_path = "res://fonts/HungryPro.ttf"
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
 
-[sub_resource type="DynamicFont" id=5]
-font_data = SubResource( 4 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="credits" type="Node2D"]
 script = ExtResource( 1 )
@@ -42,7 +83,70 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="CanvasLayer/TextureRect"]
+[node name="story" type="Label" parent="CanvasLayer/TextureRect"]
+margin_left = 21.2182
+margin_top = 232.842
+margin_right = 440.218
+margin_bottom = 427.842
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "It looks like this creature wasn't playing games. You manage to escape the library and immediate return to your dorm and find out that Joe is gone. That creature certainly has something to do with his disappearance. You wonder if the cartridge might hold another clue as well. That'll be the first thing you do after you've had a chance to report Joe missing. 
+
+It looks like you have a few mysteries on your hands now:
+Where's Joe? 
+Who is that strange shade?
+Why did Joe have a stack of contract cheating ads in his desk? 
+Who took your notes?
+
+CREDITS
+Story - Christian Grewell
+Art - Andrew Liu, Hatim Behnsain, Soojin Lee
+Music and Sound - Zane Fadul
+Programming - Christian Grewell
+
+Thanks for playing CITATION EP 1: NOTES. "
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_left = 108.0
+margin_top = -4.0
+margin_right = 541.0
+margin_bottom = 84.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+margin_left = 107.109
+margin_top = 285.84
+margin_right = 540.109
+margin_bottom = 373.84
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.0
+margin_top = -114.5
+margin_right = 231.0
+margin_bottom = 114.5
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer/TextureRect2"]
 margin_left = 136.458
 margin_top = -0.167419
 margin_right = 312.458
@@ -50,22 +154,15 @@ margin_bottom = 14.8326
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.713726, 0, 1 )
-text = "THE LEGEND OF THE RATIO"
+text = "THE END...FOR NOW."
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
-margin_left = 21.2182
-margin_top = 18.8425
-margin_right = 440.218
-margin_bottom = 213.842
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH. HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH.HERES A BUNCH OF TEXT THAT WILL EVENTUALLY BE THE BACKSTORY FOR THE GAME. BLAH BLAH"
-align = 3
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 328.148, 244.404 )
+scale = Vector2( 2.23427, 2.23427 )
+frames = SubResource( 14 )
+frame = 5
+playing = true

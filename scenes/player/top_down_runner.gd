@@ -4,8 +4,10 @@ export(float) var speed = 128
 var velocity = Vector2.ZERO
 export var friction = 0.01
 export var acceleration = 1
-
+var can_move = true
 var current_scene
+var direction = Vector2.ZERO
+var touch_active
 
 enum {
 	IDLE,
@@ -22,26 +24,28 @@ onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
-	# animationState.travel("Idle2")
 	pass
 
 func _process(delta):
 	pass
+
+func light_up():
+	$Light2D.visible = true
 	
-func get_input():
-	var input = Vector2()
+func _input(event):
+	direction = Vector2.ZERO
 	if Input.is_action_pressed('ui_right'):
-		input.x += 1
+		direction.x += 1
 	if Input.is_action_pressed('ui_left'):
-		input.x -= 1
+		direction.x -= 1
 	if Input.is_action_pressed('ui_down'):
-		input.y += 1
+		direction.y += 1
 	if Input.is_action_pressed('ui_up'):
-		input.y -= 1
-	return input
+		direction.y -= 1
 
 func _physics_process(delta):
-	var direction = get_input()
+	if !can_move:
+		return
 	velocity = lerp(velocity, direction.normalized() * speed, acceleration)
 	velocity = move_and_slide(velocity)
 	if velocity == Vector2.ZERO:
@@ -59,12 +63,8 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.is_in_group("spikes"):
-			get_parent().restart("OUCH! watch out for spikes!", "they hurt")
-
-
+			globals.current_scene.restart("OUCH! watch out for spikes!", "they hurt")
+	
 func _on_joystick_use_move_vector(move_vector):
-	velocity = lerp(velocity, move_vector.normalized() * speed, acceleration)
-	velocity = move_and_slide(velocity)
-	animationTree.set("parameters/Walk/BlendSpace2D/blend_position", move_vector.normalized())
-	# we are moving, so walk
-	animationState.travel("Walk")
+	if touch_active:
+		direction = move_vector

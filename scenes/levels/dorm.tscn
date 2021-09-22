@@ -134,7 +134,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 46.6667, 96.3052 )
+extents = Vector2( 69.8913, 96.3052 )
 
 [sub_resource type="ShaderMaterial" id=24]
 shader = SubResource( 3 )
@@ -142,7 +142,7 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 46.6667, 55.5287 )
+extents = Vector2( 46.6667, 133.862 )
 
 [sub_resource type="Shader" id=26]
 code = "shader_type canvas_item;
@@ -295,7 +295,6 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 2
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -321,7 +320,7 @@ position = Vector2( 239.551, 94.8302 )
 script = ExtResource( 5 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to hallway"]
-position = Vector2( 0, 2.12132 )
+position = Vector2( 0, -74.6474 )
 shape = SubResource( 25 )
 script = ExtResource( 21 )
 travel_to = "hallway"
@@ -329,6 +328,7 @@ outline_size = 3.0
 
 [node name="door" type="Sprite" parent="environment/interactable objects/door to hallway/collider"]
 material = SubResource( 27 )
+position = Vector2( 0, 76.7687 )
 z_index = 1
 texture = ExtResource( 12 )
 

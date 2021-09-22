@@ -253,50 +253,18 @@ navpoly = SubResource( 15 )
 
 [node name="collisions" type="StaticBody2D" parent="navigation"]
 
-[node name="desk1" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 41.7915, 174.302 )
-scale = Vector2( 0.604581, 0.431684 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 29.8603, 364.667, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
-[node name="desk2" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 205.008, 204.002 )
-scale = Vector2( 0.576418, 0.351174 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 29.8603, 364.667, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
-[node name="desk3" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 41.5233, 270.776 )
-scale = Vector2( 0.604581, 0.381844 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 33.0981, 371.368, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
-[node name="desk4" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 201.62, 258.239 )
-scale = Vector2( 0.604581, 0.416349 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 33.0981, 371.368, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
-[node name="desk5" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 42.0596, 332.522 )
-scale = Vector2( 0.604581, 0.416348 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 33.0981, 371.368, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 201.888, 329.773 )
-scale = Vector2( 0.604581, 0.42785 )
-polygon = PoolVector2Array( 62.7509, 292.101, 65.0037, 319.462, 32.1131, 323.031, 33.0981, 371.368, 66.806, 375.969, 172.687, 375.969, 167.28, 288.533 )
-
 [node name="stage" type="CollisionPolygon2D" parent="navigation/collisions"]
 position = Vector2( -0.70301, 67.0529 )
 scale = Vector2( 0.988897, 0.703729 )
 polygon = PoolVector2Array( 107.25, 277.375, 148.823, 301.252, 242.033, 301.043, 275.813, 279.357, 277.482, 220.553, 103.783, 222.013 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.431373, 0.278431, 0.733333, 1 )
 
 [node name="desk" type="CanvasLayer" parent="."]
 pause_mode = 2
 
 [node name="container" type="HBoxContainer" parent="desk"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

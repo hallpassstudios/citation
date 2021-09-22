@@ -7,24 +7,24 @@
 			"mirror": true,
 			"portrait": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": true
+				"4": false
 			}
 		},
 		{
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Oh golly, I have a huge test  tomorrow, I'm [wave amp=10 freq=19]sooooo[/wave]  stressed out! Academic Integrity for Students at NYU"
+			"text": "Oh golly, I have a huge test  tomorrow, I'm [wave amp=10 freq=19]sooooo[/wave] stressed out!"
 		},
 		{
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I should probably sit down at my [u]desk[/u] and review my [u]notes[/u]  instead of just standing around"
+			"text": "I should probably sit down at my [u]desk[/u] and review my [u]notes[/u] instead of just standing around"
 		},
 		{
 			"event_id": "dialogic_022",

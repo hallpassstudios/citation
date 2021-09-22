@@ -44,7 +44,12 @@ func set_objective(objective):
 		"completed": true,
 		"elapsed time": OS.get_ticks_msec()
 	}), "completed")
-	
+
+func objective_completed(objective_name, data):
+	var ref : FirebaseReference = db.get_reference_lite("/" + session_id + "/objectives/" + objective_name)
+	var result = yield(ref.update({
+		"data": data
+	}), "completed")
 
 static func getRandomInt():
   # Randomize every time to minimize the risk of collisions

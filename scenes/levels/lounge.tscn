@@ -2,6 +2,7 @@
 
 [ext_resource path="res://sprites/environment/lounge/plant11.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/ui/advertisement.png" type="Texture" id=3]
 [ext_resource path="res://sprites/environment/hallway/bottom door.png" type="Texture" id=4]
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=5]
 [ext_resource path="res://scenes/levels/lounge.gd" type="Script" id=6]
@@ -42,7 +43,6 @@
 [ext_resource path="res://sprites/environment/lounge/cafeBar.png" type="Texture" id=41]
 [ext_resource path="res://sprites/environment/lounge/crystalBall.png" type="Texture" id=42]
 [ext_resource path="res://sprites/environment/lounge/bean.png" type="Texture" id=43]
-[ext_resource path="res://sprites/environment/lounge/advertisement.png" type="Texture" id=44]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.3975, 29.5395 )
@@ -339,7 +339,7 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="RectangleShape2D" id=61]
-extents = Vector2( 36.0001, 50 )
+extents = Vector2( 36.0001, 75.2137 )
 
 [sub_resource type="ShaderMaterial" id=62]
 shader = SubResource( 20 )
@@ -355,9 +355,9 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="NavigationPolygon" id=65]
-vertices = PoolVector2Array( 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 459.068, 87.5196, 459.4, 140.725, 446.613, 317.226, 408.854, 138.398, 457.468, 414.744, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999, 431.877, 415.297, 28.3516, 77.6634, 407.304, 76.6252, 421.771, 328.117, 397.985, 368.842, 396.904, 416.053, 441.953, 402.358 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 5, 3, 6, 7 ), PoolIntArray( 8, 9, 10, 11, 12 ), PoolIntArray( 11, 13, 14, 7 ), PoolIntArray( 11, 7, 6, 15 ), PoolIntArray( 11, 15, 16 ), PoolIntArray( 11, 16, 17 ), PoolIntArray( 12, 18, 8 ), PoolIntArray( 11, 17, 12 ) ]
-outlines = [ PoolVector2Array( 28.3516, 77.6634, 407.304, 76.6252, 408.854, 138.398, 459.4, 140.725, 459.068, 87.5196, 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 446.613, 317.226, 421.771, 328.117, 397.985, 368.842, 396.904, 416.053, 431.877, 415.297, 441.953, 402.358, 457.468, 414.744, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999 ) ]
+vertices = PoolVector2Array( 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 449.049, 126.705, 455.223, 84.0512, 446.613, 317.226, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999, 457.468, 414.744, 28.3516, 77.6634, 407.304, 76.6252, 422.859, 126.331, 421.771, 328.117, 431.877, 415.297, 441.953, 402.358, 396.904, 416.053, 397.985, 368.842 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 9, 11, 12, 13, 6, 14 ), PoolIntArray( 15, 16, 10 ), PoolIntArray( 15, 10, 9, 17 ), PoolIntArray( 13, 4, 6 ), PoolIntArray( 9, 14, 18 ), PoolIntArray( 9, 18, 17 ) ]
+outlines = [ PoolVector2Array( 28.3516, 77.6634, 407.304, 76.6252, 422.859, 126.331, 449.049, 126.705, 455.223, 84.0512, 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 446.613, 317.226, 421.771, 328.117, 397.985, 368.842, 396.904, 416.053, 431.877, 415.297, 441.953, 402.358, 457.468, 414.744, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999 ) ]
 
 [sub_resource type="RectangleShape2D" id=66]
 extents = Vector2( 17.1195, 9.47253 )
@@ -395,9 +395,9 @@ margin_left = -180.0
 margin_top = -60.0
 margin_right = 180.0
 margin_bottom = 60.0
-texture = ExtResource( 44 )
+texture = ExtResource( 3 )
 expand = true
-stretch_mode = 4
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -409,7 +409,7 @@ __meta__ = {
 [node name="player spawn" type="YSort" parent="environment"]
 
 [node name="0" type="Node2D" parent="environment/player spawn"]
-position = Vector2( 651.711, 211.148 )
+position = Vector2( 430.844, 561.64 )
 
 [node name="1" type="Node2D" parent="environment/player spawn"]
 position = Vector2( 193.529, 389.882 )
@@ -435,7 +435,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 7
+frame = 1
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -454,7 +454,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -473,7 +473,6 @@ TYPE = 1
 material = SubResource( 31 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 2
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -494,7 +493,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -555,6 +554,7 @@ position = Vector2( 760, 306 )
 script = ExtResource( 36 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to library"]
+position = Vector2( -5.1532, 7.13522 )
 shape = SubResource( 61 )
 script = ExtResource( 5 )
 travel_to = "library"
@@ -562,6 +562,7 @@ outline_size = 2.0
 
 [node name="library door" type="Sprite" parent="environment/interactable objects/door to library/collider"]
 material = SubResource( 62 )
+position = Vector2( 5.1532, -7.13522 )
 z_index = 1
 texture = ExtResource( 38 )
 
@@ -786,26 +787,6 @@ navpoly = SubResource( 65 )
 
 [node name="collisions" type="StaticBody2D" parent="navigation"]
 
-[node name="beanbag3" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 452.498, 308.965 )
-scale = Vector2( 0.304641, 0.558258 )
-polygon = PoolVector2Array( 297.256, 455.203, 382.946, 455.584, 373.699, 430.071, 340.409, 421.693, 304.654, 423.978 )
-
-[node name="beanbag1" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 589.271, 292.989 )
-scale = Vector2( 0.313375, 0.593588 )
-polygon = PoolVector2Array( 297.256, 455.203, 382.946, 455.584, 373.699, 430.071, 340.409, 421.693, 304.654, 423.978 )
-
-[node name="crystalball" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 28.6329, 102.585 )
-scale = Vector2( 0.886811, 0.576889 )
-polygon = PoolVector2Array( 207.977, 230.396, 220.583, 181.484, 261.932, 173.92, 282.102, 185.518, 298.742, 206.192, 298.238, 233.926, 310.844, 246.028, 317.399, 259.643, 305.801, 263.677, 287.144, 264.181, 263.444, 264.181, 234.198, 259.138, 216.549, 261.66, 199.405, 262.164, 189.32, 262.164, 194.867, 240.985 )
-
-[node name="owl thing" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 262.531, 236.715 )
-scale = Vector2( 0.667389, 0.537194 )
-polygon = PoolVector2Array( 239.302, 179.296, 257.293, 186.21, 263.444, 264.181, 244.924, 273.5 )
-
 [node name="coffee table" type="CollisionShape2D" parent="navigation/collisions"]
 position = Vector2( 257.95, 515.935 )
 shape = SubResource( 66 )
@@ -813,51 +794,6 @@ shape = SubResource( 66 )
 [node name="coffee bar" type="CollisionShape2D" parent="navigation/collisions"]
 position = Vector2( 676, 242 )
 shape = SubResource( 67 )
-
-[node name="plant" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 482.313, -95.8727 )
-scale = Vector2( 0.343809, 0.793046 )
-polygon = PoolVector2Array( 326.916, 448.544, 359.25, 448.987, 358.365, 435.699, 343.574, 411.479, 335.193, 410.451 )
-
-[node name="statue" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 179.913, 10.8307 )
-scale = Vector2( 0.652777, 0.967106 )
-polygon = PoolVector2Array( 514.899, 279.607, 507.812, 322.129, 494.967, 322.129, 493.195, 338.075, 528.187, 338.518, 529.073, 324.344, 527.301, 298.211 )
-
-[node name="statue2" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 177.256, 121.565 )
-scale = Vector2( 0.652777, 0.967106 )
-polygon = PoolVector2Array( 514.899, 279.607, 507.812, 322.129, 494.967, 322.129, 493.195, 338.075, 528.187, 338.518, 529.073, 324.344, 527.301, 298.211 )
-
-[node name="statue3" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 86.9085, 69.7883 )
-scale = Vector2( 0.726027, 0.842715 )
-polygon = PoolVector2Array( 326.916, 448.544, 359.25, 448.987, 358.365, 435.699, 342.52, 382.103, 335.193, 410.451 )
-
-[node name="statue4" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 127.915, -14.1057 )
-scale = Vector2( 0.623287, 0.793046 )
-polygon = PoolVector2Array( 326.916, 448.544, 359.25, 448.987, 358.365, 435.699, 342.52, 382.103, 335.193, 410.451 )
-
-[node name="sofa1" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 248.603, 325.545 )
-scale = Vector2( 0.23928, 0.457388 )
-polygon = PoolVector2Array( 321.159, 475.487, 368.84, 479.37, 357.453, 397.429, 324.006, 398.206 )
-
-[node name="sofa2" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 101.997, 315.308 )
-scale = Vector2( 0.23928, 0.457388 )
-polygon = PoolVector2Array( 321.159, 475.487, 368.84, 479.37, 357.453, 397.429, 324.006, 398.206 )
-
-[node name="sofa3" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 154.643, 308.7 )
-scale = Vector2( 0.23928, 0.374637 )
-polygon = PoolVector2Array( 344.949, 435.98, 538.995, 436.779, 542.051, 408.004, 337.309, 406.405 )
-
-[node name="sofa4" type="CollisionPolygon2D" parent="navigation/collisions"]
-position = Vector2( 163.11, 413.691 )
-scale = Vector2( 0.219191, 0.367115 )
-polygon = PoolVector2Array( 344.949, 435.98, 538.995, 436.779, 542.051, 408.004, 337.309, 406.405 )
 
 [connection signal="body_entered" from="environment/interactable objects/owl" to="environment/interactable objects/owl/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/owl" to="environment/interactable objects/owl/collider" method="_on_interactable_body_exited"]

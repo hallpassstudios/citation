@@ -1,8 +1,8 @@
 extends Control
 
 func play_dialogue(dialogue_name):
-	pause(true)
-	
+	pause(true)	
+	globals.player.can_move = false
 	var dialogue = Dialogic.start(dialogue_name, true)
 	add_child(dialogue)
 	dialogue.connect("dialogic_signal", self, "pause")
@@ -16,5 +16,7 @@ func pause(value):
 		
 func after_dialog(timeline_name):
 	#print("unpausing after dialogue")
-	yield(get_tree().create_timer(0.2), "timeout")
 	get_tree().paused = false
+	yield(get_tree().create_timer(.5), "timeout")
+	globals.player.can_move = true
+	

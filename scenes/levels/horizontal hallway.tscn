@@ -247,7 +247,6 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0.431373, 0.278431, 0.733333, 1 )
 
 [connection signal="body_shape_entered" from="interactable zone" to="interactable zone" method="_on_interactable_zone_body_shape_entered"]

@@ -1,0 +1,227 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
+[ext_resource path="res://sprites/minigame/person.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=6]
+[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=7]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/office.gd" type="Script" id=8]
+
+[sub_resource type="CircleShape2D" id=27]
+radius = 64.0
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.207843, 0.0901961, 0.239216, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.133333, 0, 0.172549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.780392, 0, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=45]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=46]
+size = 12
+font_data = SubResource( 45 )
+
+[node name="office" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="joystick" type="CanvasLayer" parent="."]
+script = ExtResource( 1 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="joystick"]
+visible = false
+modulate = Color( 1, 1, 1, 0.145098 )
+normal = ExtResource( 6 )
+shape = SubResource( 27 )
+visibility_mode = 1
+
+[node name="touch sprite" type="Sprite" parent="joystick"]
+visible = false
+position = Vector2( 32, 32 )
+texture = ExtResource( 3 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="restart" type="Control" parent="HUD"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD/restart"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.121569, 0.0980392, 0.0980392, 0.564706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/restart"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -286.0
+margin_top = -94.0
+margin_right = 286.0
+margin_bottom = 94.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="HUD/restart/VBoxContainer"]
+margin_right = 572.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 2 )
+text = "SORRY, YOU DIDN'T SUCCEED."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="subtitle" type="Label" parent="HUD/restart/VBoxContainer"]
+margin_top = 57.0
+margin_right = 572.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
+text = "try again, joe is counting on you!"
+align = 1
+autowrap = true
+uppercase = true
+
+[node name="restart" type="Button" parent="HUD/restart/VBoxContainer"]
+margin_top = 86.0
+margin_right = 572.0
+margin_bottom = 133.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "TRY AGAIN!"
+
+[node name="quit" type="Button" parent="HUD/restart/VBoxContainer"]
+margin_top = 143.0
+margin_right = 572.0
+margin_bottom = 196.0
+focus_mode = 0
+mouse_filter = 1
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "QUIT GAME"
+flat = true
+
+[node name="question4" type="Node2D" parent="."]
+position = Vector2( 220, -127 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question4"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question4/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "dr. chuck ESQ, MD, MBA, LMSW"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sort" type="YSort" parent="."]
+
+[node name="spawner" type="Position2D" parent="sort"]
+position = Vector2( 235, -79 )
+
+[node name="wall tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -851948, 47, 0, -851947, 47, 0, -851946, 47, 0, -851945, 47, 0, -851944, 47, 0, -851943, 47, 0, -851942, 47, 0, -786412, 49, 0, -786411, 49, 0, -786410, 49, 0, -786409, 49, 0, -786408, 49, 0, -786407, 49, 0, -786406, 49, 0, -720876, 47, 0, -720870, 49, 0, -655340, 47, 0, -655334, 47, 0, -589804, 47, 0, -589798, 47, 0, -524262, 47, 0, -458732, 47, 0, -458726, 47, 0, -393196, 47, 0, -393195, 47, 0, -393194, 47, 0, -393193, 47, 0, -393192, 47, 0, -393191, 47, 0, -393190, 47, 0 )
+
+[node name="props" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -655338, 149, 0, -458731, 158, 0, -458730, 163, 0, -458728, 157, 0, -458727, 160, 0 )
+
+[node name="doors" type="TileMap" parent="sort"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -524268, 115, 0 )
+
+[node name="Sprite" type="Sprite" parent="sort"]
+position = Vector2( 234, -103 )
+texture = ExtResource( 4 )
+
+[connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]

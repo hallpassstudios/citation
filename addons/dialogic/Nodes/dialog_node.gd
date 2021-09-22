@@ -418,7 +418,8 @@ func _process(delta):
 		$TextBubble/NextIndicatorContainer/NextIndicator.visible = false # Hide if question 
 		if waiting_for_answer and Input.is_action_just_released(input_next):
 			$Options/ButtonContainer.get_child(0).grab_focus()
-	
+
+			
 	# Hide if no input is required
 	if current_event.has('text'):
 		if '[nw]' in current_event['text'] or '[nw=' in current_event['text']:
@@ -430,7 +431,6 @@ func _process(delta):
 
 
 func _input(event: InputEvent) -> void:
-
 	if not Engine.is_editor_hint() and event.is_action_pressed(input_next) and not waiting:
 		if not $TextBubble.is_finished():
 			# Skip to end if key is pressed during the text animation
@@ -443,11 +443,9 @@ func _input(event: InputEvent) -> void:
 				_load_next_event()
 				#print("using input")
 		if settings.has_section_key('dialog', 'propagate_input'):
-			
 			var propagate_input: bool = settings.get_value('dialog', 'propagate_input')
 			if not propagate_input:
 				get_tree().set_input_as_handled()
-
 
 func show_dialog():
 	visible = true
@@ -460,8 +458,10 @@ func set_dialog_script(value):
 func update_name(character) -> void:
 	#print("updating name")
 	if character.has('name'):
-		#print("char has name")
 		var parsed_name = character['name']
+		print(parsed_name)
+		if parsed_name == "LILY":
+			parsed_name = globals.player_name
 		if character.has('display_name'):
 			if character['display_name'] != '':
 				parsed_name = character['display_name']
@@ -703,6 +703,7 @@ func event_handler(event: Dictionary):
 			update_text(event['question'])
 		# Choice event
 		'dialogic_011':
+			print("showing choices...")
 			emit_signal("event_start", "choice", event)
 			for q in questions:
 				if q['question_idx'] == event['question_idx']:
@@ -1034,8 +1035,8 @@ func add_choice_button(option: Dictionary):
 	$Options/ButtonContainer.add_child(button)
 	
 	# Selecting the first button added
-	if $Options/ButtonContainer.get_child_count() == 1:
-		button.grab_focus()
+#	if $Options/ButtonContainer.get_child_count() == 1:
+#		button.grab_focus()
 	
 	button.set_meta('event_idx', option['event_idx'])
 	button.set_meta('question_idx', option['question_idx'])
@@ -1043,7 +1044,8 @@ func add_choice_button(option: Dictionary):
 	if Input.get_mouse_mode() != Input.MOUSE_MODE_VISIBLE:
 		last_mouse_mode = Input.get_mouse_mode()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) # Make sure the cursor is visible for the options selection
-
+	
+	set_process(false)
 
 func answer_question(i, event_idx, question_idx):
 	if $TextBubble.is_finished():

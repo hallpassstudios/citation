@@ -25,11 +25,15 @@ var can_shoot = false
 var read_everything = false
 var desk_interact = false
 
-var in_minigame = true
+var in_minigame = false
 
-
-# save / load 
-
+# stats
+var stats = {
+	"spike_deaths" : 0,
+	"reprimands" : 0,
+	"books_read" : 0,
+	"table_flips" : 0
+}
 
 # connect up to high-score DB
 var platform : String
@@ -42,6 +46,7 @@ var player_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_process(true)
 	if player:
 		print("found player: ", player)
 	# scene management
@@ -53,7 +58,8 @@ func set_player(current_player):
 	print("globals: setting current player to: ", current_player)
 
 # progressive scene loading
-func goto_scene(path): # Game requests to switch to this scene.
+func goto_scene(path):
+	# Game requests to switch to this scene.
 	print("loading new level: ", path)
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null: # Check for errors.

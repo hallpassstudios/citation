@@ -9,6 +9,8 @@ export(int) var dialogue_variable_value
 export(float) var outline_size
 export(int) var spawn_point
 
+var already_inside : bool
+
 enum type {
 	DOOR = 0,
 	OBJECT = 1,
@@ -46,7 +48,9 @@ func outline(value):
 		get_child(0).material.set_shader_param("width", 0)
 
 func _on_interactable_body_entered(body):
+	print("entering...", body.name)
 	if body.name == "top down player":
+		already_inside = true
 		if clicked_object == get_parent().get_name():
 			# play dialogue if we have it
 			if has_dialogue:
@@ -58,5 +62,7 @@ func _on_interactable_body_entered(body):
 				dialogue_controller.play_dialogue('interact')
 
 func _on_interactable_body_exited(body):
-	get_child(0).material.set_shader_param("width", 0)
-	globals.player.interact(false) 
+	if body.name == "top down player":
+		get_child(0).material.set_shader_param("width", 0)
+		globals.player.interact(false) 
+		already_inside = false

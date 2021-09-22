@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/levels/credits.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/backstory.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ui/credit_border.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=4]
@@ -11,6 +11,11 @@ font_path = "res://fonts/zpix.ttf"
 extra_spacing_bottom = 5
 font_data = SubResource( 4 )
 
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
 [sub_resource type="DynamicFontData" id=2]
 antialiased = false
 font_path = "res://fonts/zpix.ttf"
@@ -19,12 +24,8 @@ font_path = "res://fonts/zpix.ttf"
 size = 14
 font_data = SubResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0745098, 0.0823529, 0.0980392, 1 )
-expand_margin_left = 20.0
-expand_margin_right = 20.0
-
 [node name="backstory" type="Node2D"]
+position = Vector2( 0.117859, 0 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -107,8 +108,8 @@ margin_left = 136.291
 margin_top = -2.00075
 margin_right = 312.291
 margin_bottom = 12.9993
-custom_fonts/font = SubResource( 3 )
 custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "THE LEGEND OF THE RATIO"
 __meta__ = {
 "_edit_use_anchors_": false

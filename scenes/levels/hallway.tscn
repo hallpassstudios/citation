@@ -16,8 +16,8 @@
 [ext_resource path="res://sprites/environment/hallway/desk_bottom.png" type="Texture" id=14]
 [ext_resource path="res://sprites/environment/hallway/ground props.png" type="Texture" id=15]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 46.6667, 48.7622 )
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 141.125, 126.447 )
 
 [sub_resource type="Shader" id=2]
 code = "shader_type canvas_item;
@@ -47,10 +47,10 @@ shader = SubResource( 2 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 35.896, 9.51835 )
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 35.896, 87.5884 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 12.3975, 29.5395 )
 
 [sub_resource type="AtlasTexture" id=6]
@@ -129,19 +129,20 @@ position = Vector2( 97.515, 156.183 )
 
 [node name="interactable objects" type="YSort" parent="environment"]
 
-[node name="door to lounge" type="Area2D" parent="environment/interactable objects"]
+[node name="interactable" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 93.9574, 69.8407 )
 script = ExtResource( 3 )
 
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to lounge"]
-position = Vector2( 0, 2.12132 )
-shape = SubResource( 1 )
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/interactable"]
+position = Vector2( -1.05827, -57.1464 )
+shape = SubResource( 16 )
 script = ExtResource( 1 )
 travel_to = "lounge"
 outline_size = 3.0
 
-[node name="door" type="Sprite" parent="environment/interactable objects/door to lounge/collider"]
+[node name="door" type="Sprite" parent="environment/interactable objects/interactable/collider"]
 material = SubResource( 3 )
+position = Vector2( 1.05827, 59.2677 )
 z_index = 1
 texture = ExtResource( 8 )
 
@@ -150,8 +151,8 @@ position = Vector2( 96.0177, 501.404 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to dorm"]
-position = Vector2( 0, 2.12132 )
-shape = SubResource( 4 )
+position = Vector2( -1.05829, 83.0788 )
+shape = SubResource( 18 )
 script = ExtResource( 1 )
 travel_to = "dorm"
 outline_size = 3.0
@@ -159,6 +160,7 @@ spawn_point = 1
 
 [node name="dorm door" type="Sprite" parent="environment/interactable objects/door to dorm/collider"]
 material = ExtResource( 10 )
+position = Vector2( 1.05829, -80.9575 )
 texture = ExtResource( 7 )
 
 [node name="star dude" type="Area2D" parent="environment/interactable objects"]
@@ -166,7 +168,7 @@ position = Vector2( 54.0726, 195.711 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/star dude"]
-shape = SubResource( 5 )
+shape = SubResource( 17 )
 script = ExtResource( 1 )
 has_dialogue = true
 dialogue = "star dude"
@@ -176,6 +178,7 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = ExtResource( 10 )
 frames = SubResource( 14 )
+frame = 3
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -186,6 +189,7 @@ texture = ExtResource( 9 )
 centered = false
 
 [node name="walls" type="Sprite" parent="environment/static objects"]
+position = Vector2( 0, 1 )
 z_index = 2
 texture = ExtResource( 5 )
 centered = false
@@ -216,9 +220,9 @@ texture = ExtResource( 14 )
 position = Vector2( 3.7189, -0.67395 )
 navpoly = SubResource( 15 )
 
-[connection signal="body_entered" from="environment/interactable objects/door to lounge" to="environment/interactable objects/door to lounge/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/door to lounge" to="environment/interactable objects/door to lounge/collider" method="_on_interactable_body_exited"]
-[connection signal="input_event" from="environment/interactable objects/door to lounge" to="environment/interactable objects/door to lounge/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects/interactable" to="environment/interactable objects/interactable/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects/interactable" to="environment/interactable objects/interactable/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects/interactable" to="environment/interactable objects/interactable/collider" method="_on_interactable_input_event"]
 [connection signal="body_entered" from="environment/interactable objects/door to dorm" to="environment/interactable objects/door to dorm/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/door to dorm" to="environment/interactable objects/door to dorm/collider" method="_on_interactable_body_exited"]
 [connection signal="input_event" from="environment/interactable objects/door to dorm" to="environment/interactable objects/door to dorm/collider" method="_on_interactable_input_event"]

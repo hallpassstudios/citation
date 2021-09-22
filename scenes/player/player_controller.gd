@@ -3,6 +3,7 @@ extends KinematicBody2D
 export(float) var character_speed = 300.0
 var path = []
 var target : Vector2 
+var can_move: bool = true
 
 enum {
 	IDLE,
@@ -16,8 +17,8 @@ var is_colliding : bool = false
 
 var PLAYER_STATE = IDLE
 
-onready var navigation_controller = get_node('/root/' + globals.current_scene.name + '/navigation')
 #onread vars
+onready var navigation_controller = get_node('/root/' + globals.current_scene.name + '/navigation')
 onready var animationPlayer = $AnimationPlayer
 onready var lightAnimation = $"light animation"
 onready var animationTree = $AnimationTree
@@ -28,6 +29,8 @@ func _ready():
 	if globals.is_lit && globals.current_scene.get_name() == "library":
 		lightAnimation.play("idle")
 		light.visible = true
+	else:
+		light.visible = false
 		
 
 func _process(delta):
@@ -40,6 +43,8 @@ func _process(delta):
 			animationState.travel("Idle2")
 
 func _unhandled_input(event):
+	if !can_move:
+		return
 	if event.is_action_pressed("click"):
 		_update_navigation_path(self.position, get_global_mouse_position())
 	
@@ -47,6 +52,8 @@ func _unhandled_input(event):
 		_update_navigation_path(self.position, get_canvas_transform().affine_inverse().xform(event.position))
 		
 func move_along_path(distance):
+	if !can_move:
+		return
 	var last_point = self.position
 	var direction = (target - position).normalized()
 

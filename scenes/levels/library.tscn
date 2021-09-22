@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://sprites/environment/library/props.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -30,8 +30,11 @@
 [ext_resource path="res://sprites/environment/sky/parallaxbg-sunst.png" type="Texture" id=28]
 [ext_resource path="res://sprites/npcs/shade_animated.png" type="Texture" id=29]
 [ext_resource path="res://sprites/environment/library/flame.png" type="Texture" id=30]
-[ext_resource path="res://sprites/ui/light_mask_flame.png" type="Texture" id=31]
+[ext_resource path="res://sprites/ui/light_mask_no_diether.png" type="Texture" id=31]
 [ext_resource path="res://sprites/npcs/shadeTransformt.png" type="Texture" id=32]
+[ext_resource path="res://shaders/library.tres" type="Material" id=33]
+[ext_resource path="res://sprites/environment/library/table_top.png" type="Texture" id=34]
+[ext_resource path="res://sprites/npcs/shade_idle.png" type="Texture" id=35]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 29 )
@@ -129,6 +132,38 @@ region = Rect2( 1792, 0, 128, 128 )
 atlas = ExtResource( 32 )
 region = Rect2( 1920, 0, 128, 128 )
 
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 35 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 35 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 35 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 35 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 35 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 35 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 35 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 35 )
+region = Rect2( 896, 0, 128, 128 )
+
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
@@ -139,7 +174,12 @@ animations = [ {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": false,
 "name": "spooky",
-"speed": 5.0
+"speed": 10.0
+}, {
+"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"loop": true,
+"name": "spooky idle",
+"speed": 10.0
 } ]
 
 [sub_resource type="Animation" id=26]
@@ -271,7 +311,10 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="RectangleShape2D" id=42]
-extents = Vector2( 21, 52 )
+extents = Vector2( 32, 70 )
+
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 72, 44 )
 
 [sub_resource type="Shader" id=43]
 code = "shader_type canvas_item;
@@ -296,15 +339,15 @@ void fragment() {
 	COLOR = mix(color, line_color, outline - color.a);
 }"
 
-[sub_resource type="ShaderMaterial" id=44]
+[sub_resource type="ShaderMaterial" id=63]
 shader = SubResource( 43 )
 shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="NavigationPolygon" id=45]
-vertices = PoolVector2Array( 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 309.882, 42.641, 182.439, 42.9658, -166.118, -14.359, -167.118, -51.359, 77.6879, -13.6458, 396.882, 43.641, -2.4776, 413.53, -2.42502, 234.599, 181.882, 236.641, 491.409, 414.09, 77.882, 43.641, 309.882, 237.641, 489.882, 237.641 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 0, 7, 8 ), PoolIntArray( 9, 10, 4, 11 ), PoolIntArray( 3, 12, 7, 0 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 8, 17, 11, 4 ), PoolIntArray( 8, 7, 18, 15 ), PoolIntArray( 16, 15, 18 ), PoolIntArray( 16, 18, 19 ) ]
-outlines = [ PoolVector2Array( -2.42502, 234.599, 181.882, 236.641, 182.439, 42.9658, 77.882, 43.641, 77.6879, -13.6458, -166.118, -14.359, -167.118, -51.359, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 396.882, 43.641, 309.882, 42.641, 309.882, 237.641, 489.882, 237.641, 491.409, 414.09, -2.4776, 413.53 ) ]
+vertices = PoolVector2Array( 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 309.882, 42.641, 182.439, 42.9658, -0.117996, 400.641, -2.42502, 234.599, 181.882, 236.641, 491.882, 404.641, -166.118, -14.359, -167.118, -51.359, 77.6879, -13.6458, 396.882, 43.641, 77.882, 43.641, 309.882, 237.641, 489.882, 237.641 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 0, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 14, 4, 15 ), PoolIntArray( 3, 16, 7, 0 ), PoolIntArray( 8, 17, 15, 4 ), PoolIntArray( 8, 7, 18, 11 ), PoolIntArray( 12, 11, 18 ), PoolIntArray( 12, 18, 19 ) ]
+outlines = [ PoolVector2Array( -2.42502, 234.599, 181.882, 236.641, 182.439, 42.9658, 77.882, 43.641, 77.6879, -13.6458, -166.118, -14.359, -167.118, -51.359, 176.882, -52.359, 174.882, -127.359, 324.882, -127.359, 325.882, -51.359, 656.882, -53.359, 655.882, -16.359, 396.668, -14.2063, 396.882, 43.641, 309.882, 42.641, 309.882, 237.641, 489.882, 237.641, 491.882, 404.641, -0.117996, 400.641 ) ]
 
 [sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 64, 28 )
@@ -391,13 +434,14 @@ script = ExtResource( 22 )
 [node name="environment" type="YSort" parent="."]
 
 [node name="interactable objects" type="YSort" parent="environment"]
+pause_mode = 2
 
 [node name="shade" type="AnimatedSprite" parent="environment/interactable objects"]
+visible = false
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-animation = "spooky"
-frame = 15
+frame = 6
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -488,7 +532,7 @@ texture = ExtResource( 30 )
 position = Vector2( 4, 42 )
 texture = ExtResource( 31 )
 texture_scale = 2.5
-color = Color( 0.909804, 0.407843, 0.407843, 1 )
+color = Color( 0.647059, 0.34902, 0.513726, 1 )
 
 [node name="flame animator" type="AnimationPlayer" parent="environment/static objects/flame"]
 autoplay = "idle"
@@ -630,6 +674,7 @@ position = Vector2( 168, 560 )
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/door to lounge"]
+position = Vector2( -14, 2 )
 shape = SubResource( 42 )
 script = ExtResource( 5 )
 travel_to = "lounge"
@@ -637,14 +682,36 @@ outline_size = 2.0
 spawn_point = 2
 
 [node name="door" type="Sprite" parent="environment/interactable objects2/door to lounge/collider"]
-material = SubResource( 44 )
+material = ExtResource( 33 )
+position = Vector2( 14, -2 )
 z_index = 2
 texture = ExtResource( 4 )
+
+[node name="bulletin" type="Area2D" parent="environment/interactable objects2"]
+position = Vector2( 232, 502 )
+z_index = 1
+script = ExtResource( 3 )
+
+[node name="collider" type="CollisionShape2D" parent="environment/interactable objects2/bulletin"]
+position = Vector2( 0, 2 )
+shape = SubResource( 62 )
+script = ExtResource( 5 )
+object_name = "bulletin"
+has_dialogue = true
+dialogue = "bulletin"
+outline_size = 2.0
+TYPE = 1
+
+[node name="Sprite" type="Sprite" parent="environment/interactable objects2/bulletin/collider"]
+material = SubResource( 63 )
+position = Vector2( 0, -2 )
+texture = ExtResource( 34 )
 
 [node name="navigation" type="Navigation2D" parent="."]
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
 position = Vector2( 186.118, 299.359 )
+z_index = 1
 navpoly = SubResource( 45 )
 
 [node name="collision" type="StaticBody2D" parent="navigation"]
@@ -753,4 +820,7 @@ __meta__ = {
 [connection signal="body_entered" from="environment/interactable objects2/door to lounge" to="environment/interactable objects2/door to lounge/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects2/door to lounge" to="environment/interactable objects2/door to lounge/collider" method="_on_interactable_body_exited"]
 [connection signal="input_event" from="environment/interactable objects2/door to lounge" to="environment/interactable objects2/door to lounge/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="environment/interactable objects2/bulletin" to="environment/interactable objects2/bulletin/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="environment/interactable objects2/bulletin" to="environment/interactable objects2/bulletin/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="environment/interactable objects2/bulletin" to="environment/interactable objects2/bulletin/collider" method="_on_interactable_input_event"]
 [connection signal="body_entered" from="shade collider" to="." method="_on_Area2D_body_entered"]

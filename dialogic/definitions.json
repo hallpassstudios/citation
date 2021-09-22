@@ -162,24 +162,6 @@
 			"url": ""
 		},
 		{
-			"extra": "keep talking",
-			"id": "1630256633-248",
-			"name": "game",
-			"text": "I wonder what this is?",
-			"title": "the game",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630367387-299",
-			"name": "games",
-			"text": "games can help you learn!",
-			"title": "games",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "it dispenses coffee",
 			"id": "1630362101-400",
 			"name": "coffee machine",
@@ -223,6 +205,24 @@
 			"title": "NYU Academic Integrity Policy",
 			"type": 1,
 			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
+		},
+		{
+			"extra": "",
+			"id": "1632308346-585",
+			"name": "Academic Bulletin",
+			"text": "This is an official document that tells you about academic programs and regulations. ",
+			"title": "Academic Bulletin",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1632310767-917",
+			"name": "Bean King",
+			"text": "He's rich! (and bold)",
+			"title": "Bean King",
+			"type": 1,
+			"url": ""
 		}
 	],
 	"variables": [
@@ -355,6 +355,36 @@
 		{
 			"id": "1631101879-648",
 			"name": "entered classroom",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1631925577-718",
+			"name": "spoke to judge",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1631925726-614",
+			"name": "spoke to prisoners",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1632076048-701",
+			"name": "started",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1632162541-198",
+			"name": "took book",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1632308461-200",
+			"name": "bulletin",
 			"type": 0,
 			"value": "0"
 		}

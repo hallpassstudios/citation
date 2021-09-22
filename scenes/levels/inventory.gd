@@ -52,6 +52,12 @@ func update_inventory():
 		if inv == "key":
 			slot_1.visible = true
 			slot_1.set_normal_texture(load("res://sprites/ui/key.png"))
+		if inv == "lantern":
+			slot_1.visible = true
+			slot_1.set_normal_texture(load("res://sprites/ui/lantern.png"))
+		if inv == "bulletin":
+			slot_1.visible = true
+			slot_1.set_normal_texture(load("res://sprites/ui/bulletin.png"))
 
 func _on_slot_1_pressed():
 	dialogue_controller.play_dialogue(inventory[0])

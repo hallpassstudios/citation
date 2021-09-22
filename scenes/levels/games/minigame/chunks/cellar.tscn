@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://sprites/minigame/person.png" type="Texture" id=5]
 [ext_resource path="res://scenes/levels/games/minigame/chunks/cellar.gd" type="Script" id=6]
 [ext_resource path="res://sprites/minigame/quotes.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=8]
+[ext_resource path="res://sprites/minigame/door_2.png" type="Texture" id=9]
+[ext_resource path="res://audio/sfx/item.mp3" type="AudioStream" id=10]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -22,14 +25,6 @@ font_data = SubResource( 1 )
 [sub_resource type="DynamicFont" id=6]
 size = 30
 font_data = SubResource( 1 )
-
-[sub_resource type="DynamicFontData" id=4]
-antialiased = false
-font_path = "res://fonts/HungryPro.ttf"
-
-[sub_resource type="DynamicFont" id=5]
-size = 50
-font_data = SubResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.207843, 0.0901961, 0.239216, 1 )
@@ -50,19 +45,44 @@ border_width_bottom = 1
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.780392, 0, 1, 1 )
 
+[sub_resource type="DynamicFontData" id=4]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = SubResource( 4 )
+
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 4, 5 )
-
-[sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 3, 3 )
-
-[sub_resource type="RectangleShape2D" id=49]
-extents = Vector2( 3, 3 )
 
 [sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 3, 5 )
 
-[node name="house" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 5, 5 )
+
+[sub_resource type="DynamicFontData" id=45]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=51]
+size = 12
+font_data = SubResource( 45 )
+
+[sub_resource type="DynamicFontData" id=54]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=55]
+size = 12
+font_data = SubResource( 54 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 3, 5 )
+
+[node name="courtroom" type="Node2D"]
 script = ExtResource( 6 )
 
 [node name="joystick" type="CanvasLayer" parent="."]
@@ -127,8 +147,8 @@ autowrap = true
 margin_top = 57.0
 margin_right = 572.0
 margin_bottom = 76.0
-custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
 custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
 text = "try again, joe is counting on you!"
 align = 1
 autowrap = true
@@ -140,10 +160,10 @@ margin_right = 572.0
 margin_bottom = 133.0
 focus_mode = 0
 mouse_filter = 1
-custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 enabled_focus_mode = 0
 text = "TRY AGAIN!"
 
@@ -173,7 +193,7 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -786427, 49, 0, -786426, 49, 0, -786425, 49, 0, -786424, 49, 0, -786423, 49, 0, -786419, 49, 0, -786418, 49, 0, -786417, 49, 0, -786416, 49, 0, -786415, 49, 0, -720891, 49, 0, -720887, 49, 0, -720883, 49, 0, -720879, 49, 0, -655355, 49, 0, -655351, 49, 0, -655347, 49, 0, -655343, 49, 0, -589819, 49, 0, -589818, 49, 0, -589816, 49, 0, -589815, 49, 0, -589811, 49, 0, -589810, 49, 0, -589808, 49, 0, -589807, 49, 0, -524282, 49, 0, -524280, 49, 0, -524274, 49, 0, -524272, 49, 0, -393220, 49, 0, -393219, 49, 0, -393218, 49, 0, -393217, 49, 0, -458752, 49, 0, -458751, 49, 0, -458750, 49, 0, -458749, 49, 0, -458748, 49, 0, -458747, 49, 0, -458746, 49, 0, -458744, 49, 0, -458743, 49, 0, -458742, 49, 0, -458741, 49, 0, -458740, 49, 0, -458739, 49, 0, -458738, 49, 0, -458736, 49, 0, -458735, 49, 0, -458734, 49, 0, -327684, 49, 0, -262148, 49, 0, -327677, 49, 0, -327676, 49, 0, -327675, 49, 0, -327674, 49, 0, -327672, 49, 0, -327671, 49, 0, -327670, 49, 0, -327669, 49, 0, -327668, 49, 0, -327667, 49, 0, -327666, 49, 0, -327664, 49, 0, -327663, 49, 0, -327662, 49, 0, -196612, 49, 0, -262141, 49, 0, -262138, 49, 0, -262136, 49, 0, -262130, 49, 0, -262128, 49, 0, -131076, 49, 0, -196605, 49, 0, -196603, 49, 0, -196602, 49, 0, -196600, 49, 0, -196599, 49, 0, -196595, 49, 0, -196594, 49, 0, -196592, 49, 0, -196591, 49, 0, -65540, 49, 0, -131069, 49, 0, -131067, 49, 0, -131063, 49, 0, -131059, 49, 0, -131055, 49, 0, -4, 49, 0, -65533, 49, 0, -65531, 49, 0, -65527, 49, 0, -65523, 49, 0, -65519, 49, 0, 65532, 49, 0, 3, 49, 0, 5, 49, 0, 6, 49, 0, 7, 49, 0, 8, 49, 0, 9, 49, 0, 13, 49, 0, 14, 49, 0, 15, 49, 0, 16, 49, 0, 17, 49, 0, 131068, 49, 0, 131069, 49, 0, 131070, 49, 0, 131071, 49, 0, 65536, 49, 0, 65538, 49, 0, 65539, 49, 0 )
+tile_data = PoolIntArray( -851950, 49, 0, -851949, 49, 0, -851948, 49, 0, -851947, 49, 0, -851946, 49, 0, -851945, 49, 0, -851944, 49, 0, -851943, 49, 0, -851942, 49, 0, -851941, 49, 0, -851940, 49, 0, -851939, 49, 0, -851938, 49, 0, -786414, 49, 0, -786413, 49, 0, -786403, 49, 0, -786402, 49, 0, -720878, 49, 0, -720877, 49, 0, -720867, 49, 0, -720866, 49, 0, -655342, 49, 0, -655341, 49, 0, -655331, 49, 0, -655330, 49, 0, -589806, 49, 0, -589805, 49, 0, -589795, 49, 0, -589794, 49, 0, -458757, 49, 0, -458756, 49, 0, -458755, 49, 0, -458754, 49, 0, -458753, 49, 0, -524288, 49, 0, -524287, 49, 0, -524286, 49, 0, -524285, 49, 0, -524284, 49, 0, -524283, 49, 0, -524282, 49, 0, -524281, 49, 0, -524280, 49, 0, -524279, 49, 0, -524278, 49, 0, -524277, 49, 0, -524276, 49, 0, -524275, 49, 0, -524274, 49, 0, -524273, 49, 0, -524272, 49, 0, -524271, 49, 0, -524270, 49, 0, -524269, 49, 0, -524259, 49, 0, -524258, 49, 0, -393221, 49, 0, -393220, 49, 0, -393219, 49, 0, -393218, 49, 0, -393217, 49, 0, -458752, 49, 0, -458751, 49, 0, -458750, 49, 0, -458749, 49, 0, -458748, 49, 0, -458747, 49, 0, -458746, 49, 0, -458745, 49, 0, -458744, 49, 0, -458743, 49, 0, -458742, 49, 0, -458741, 49, 0, -458740, 49, 0, -458739, 49, 0, -458738, 49, 0, -458737, 49, 0, -458736, 49, 0, -458735, 49, 0, -458734, 49, 0, -458733, 49, 0, -458723, 49, 0, -458722, 49, 0, -327685, 49, 0, -327684, 49, 0, -393187, 49, 0, -393186, 49, 0, -262149, 49, 0, -262148, 49, 0, -327677, 49, 0, -327676, 49, 0, -327675, 49, 0, -327674, 49, 0, -327673, 49, 0, -327672, 49, 0, -327671, 49, 0, -327670, 49, 0, -327669, 49, 0, -327668, 49, 0, -327667, 49, 0, -327666, 49, 0, -327665, 49, 0, -327664, 49, 0, -327663, 49, 0, -327662, 49, 0, -327661, 49, 0, -327651, 49, 0, -327650, 49, 0, -196613, 49, 0, -196612, 49, 0, -262141, 49, 0, -262140, 49, 0, -262139, 49, 0, -262138, 49, 0, -262137, 49, 0, -262136, 49, 0, -262135, 49, 0, -262134, 49, 0, -262133, 49, 0, -262132, 49, 0, -262131, 49, 0, -262130, 49, 0, -262129, 49, 0, -262128, 49, 0, -262127, 49, 0, -262126, 49, 0, -262125, 49, 0, -262115, 49, 0, -262114, 49, 0, -131077, 49, 0, -131076, 49, 0, -196605, 49, 0, -196604, 49, 0, -196590, 49, 0, -196589, 49, 0, -196579, 49, 0, -196578, 49, 0, -65541, 49, 0, -65540, 49, 0, -131069, 49, 0, -131068, 49, 0, -131054, 49, 0, -131053, 49, 0, -131043, 49, 0, -131042, 49, 0, -5, 49, 0, -4, 49, 0, -65533, 49, 0, -65532, 49, 0, -65518, 49, 0, -65517, 49, 0, -65507, 49, 0, -65506, 49, 0, 65531, 49, 0, 65532, 49, 0, 4, 112, 0, 18, 49, 0, 19, 49, 0, 20, 49, 0, 21, 49, 0, 22, 49, 0, 23, 49, 0, 24, 49, 0, 25, 49, 0, 26, 49, 0, 27, 49, 0, 28, 49, 0, 29, 49, 0, 30, 49, 0, 131067, 49, 0, 131068, 49, 0, 131069, 49, 0, 131070, 49, 0, 131071, 49, 0, 65536, 49, 0, 65537, 49, 0, 65538, 49, 0, 65539, 49, 0, 65540, 49, 0, 65554, 49, 0, 65555, 49, 0, 65556, 49, 0, 65557, 49, 0, 65558, 49, 0, 65559, 49, 0, 65560, 49, 0, 65561, 49, 0, 65562, 49, 0, 65563, 49, 0, 65564, 49, 0, 65565, 49, 0, 65566, 49, 0, 196603, 49, 0, 196604, 49, 0, 196605, 49, 0, 196606, 49, 0, 196607, 49, 0, 131072, 49, 0, 131073, 49, 0, 131074, 49, 0, 131075, 49, 0, 131076, 49, 0 )
 
 [node name="ground" type="TileMap" parent="sort"]
 position = Vector2( 7.62939e-06, 0 )
@@ -189,7 +209,7 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -786413, 47, 0, -786412, 47, 0, -786411, 47, 0, -786410, 47, 0, -786409, 47, 0, -786408, 47, 0, -786407, 47, 0, -786406, 47, 0, -786405, 47, 0, -786404, 47, 0, -720877, 47, 0, -720868, 47, 0, -655341, 47, 0, -655332, 47, 0, -589805, 47, 0, -589796, 47, 0, -524269, 47, 0, -524260, 47, 0, -458733, 47, 0, -458724, 47, 0, -393216, 12, 0, -393215, 12, 0, -393188, 47, 0, -262146, 12, 0, -327661, 47, 0, -327654, 157, 0, -327652, 47, 0, -262125, 47, 0, -262116, 47, 0, -196589, 47, 0, -196580, 47, 0, -131053, 47, 0, -131044, 47, 0, -65517, 47, 0, -65508, 47, 0, 19, 47, 0, 20, 47, 0, 21, 47, 0, 22, 47, 0, 23, 47, 0, 24, 47, 0, 25, 47, 0, 26, 47, 0, 27, 47, 0, 28, 47, 0 )
+tile_data = PoolIntArray( -786412, 150, 0, -786411, 150, 0, -786410, 150, 0, -786409, 150, 0, -786408, 150, 0, -786407, 150, 0, -786406, 150, 0, -786405, 150, 0, -786404, 114, 0, -589801, 153, 0, -589798, 153, 0, -393216, 12, 0, -393215, 12, 0, -262146, 12, 0, -327657, 153, 0, -327654, 153, 0 )
 
 [node name="spikes" type="TileMap" parent="sort" groups=[
 "spikes",
@@ -199,14 +219,6 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-
-[node name="doors" type="TileMap" parent="sort"]
-z_index = 3
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 10, 10 )
-show_collision = true
-format = 1
-tile_data = PoolIntArray( -1114129, 112, 0, 65537, 49, 0 )
 
 [node name="exit" type="Area2D" parent="sort"]
 position = Vector2( 0, 22 )
@@ -223,12 +235,10 @@ gravity_scale = 0.0
 linear_damp = 10.0
 angular_damp = 1000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/quotes"]
-position = Vector2( 0, -1 )
-shape = SubResource( 48 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sort/quotes"]
+polygon = PoolVector2Array( 0, -5, 3, -3, 3, 2, -3, 2, -3, -3 )
 
-[node name="Sprite" type="Sprite" parent="sort/quotes/CollisionShape2D"]
-position = Vector2( 0, 1 )
+[node name="Sprite" type="Sprite" parent="sort/quotes/CollisionPolygon2D"]
 texture = ExtResource( 7 )
 
 [node name="quotes2" type="RigidBody2D" parent="sort"]
@@ -239,62 +249,265 @@ gravity_scale = 0.0
 linear_damp = 10.0
 angular_damp = 1000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/quotes2"]
-position = Vector2( 0, -1 )
-shape = SubResource( 49 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sort/quotes2"]
+polygon = PoolVector2Array( 3, 2, 3, -2, 0, -5, -3, -2, -3, 2 )
 
-[node name="Sprite" type="Sprite" parent="sort/quotes2/CollisionShape2D"]
-position = Vector2( 0, 1 )
+[node name="Sprite" type="Sprite" parent="sort/quotes2/CollisionPolygon2D"]
 texture = ExtResource( 7 )
 flip_h = true
 
-[node name="person 1" type="Area2D" parent="sort"]
-position = Vector2( 75, -7 )
+[node name="hatim" type="Area2D" parent="sort"]
+position = Vector2( 226, -27 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/person 1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/hatim"]
+position = Vector2( 0, -8 )
 shape = SubResource( 50 )
 
-[node name="Sprite" type="Sprite" parent="sort/person 1/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="sort/hatim/CollisionShape2D"]
 texture = ExtResource( 5 )
 
-[node name="person 2" type="Area2D" parent="sort"]
-position = Vector2( 155, -101 )
+[node name="soojin" type="Area2D" parent="sort"]
+position = Vector2( 226, -86 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/person 2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/soojin"]
+position = Vector2( 0, 11 )
 shape = SubResource( 50 )
 
-[node name="Sprite" type="Sprite" parent="sort/person 2/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="sort/soojin/CollisionShape2D"]
 texture = ExtResource( 5 )
 
-[node name="person 3" type="Area2D" parent="sort"]
-position = Vector2( 155, -8 )
+[node name="zane" type="Area2D" parent="sort"]
+position = Vector2( 256, -26 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/person 3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/zane"]
+position = Vector2( 0, -9 )
 shape = SubResource( 50 )
 
-[node name="Sprite" type="Sprite" parent="sort/person 3/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="sort/zane/CollisionShape2D"]
 texture = ExtResource( 5 )
 
-[node name="person 4" type="Area2D" parent="sort"]
-position = Vector2( 75, -102 )
+[node name="andrew" type="Area2D" parent="sort"]
+position = Vector2( 256, -75 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/person 4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/andrew"]
 shape = SubResource( 50 )
 
-[node name="Sprite" type="Sprite" parent="sort/person 4/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="sort/andrew/CollisionShape2D"]
 texture = ExtResource( 5 )
 
 [node name="judge" type="Area2D" parent="sort"]
-position = Vector2( 271, -51 )
+position = Vector2( 258, -97 )
 z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sort/judge"]
-position = Vector2( -13, 4 )
+position = Vector2( 28, 43 )
 shape = SubResource( 50 )
 
 [node name="Sprite" type="Sprite" parent="sort/judge/CollisionShape2D"]
 texture = ExtResource( 5 )
 
+[node name="quote 1 area" type="Area2D" parent="sort"]
+position = Vector2( -21, -50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/quote 1 area"]
+shape = SubResource( 52 )
+
+[node name="quote 2 area" type="Area2D" parent="sort"]
+position = Vector2( 21, -50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort/quote 2 area"]
+shape = SubResource( 52 )
+
+[node name="door" type="StaticBody2D" parent="sort"]
+position = Vector2( 35, -55 )
+
+[node name="success" type="AudioStreamPlayer2D" parent="sort/door"]
+stream = ExtResource( 10 )
+
+[node name="collider" type="CollisionShape2D" parent="sort/door"]
+shape = SubResource( 53 )
+
+[node name="Sprite" type="Sprite" parent="sort/door/collider"]
+texture = ExtResource( 9 )
+
+[node name="1" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 234.0
+margin_top = -48.0
+margin_right = 240.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 51 )
+text = "HATIM"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 234.0
+margin_top = -86.0
+margin_right = 242.0
+margin_bottom = 1.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 51 )
+text = "SOOJIN"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 264.0
+margin_top = -42.0
+margin_right = 272.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 51 )
+text = "ZANE"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 264.0
+margin_top = -87.0
+margin_right = 272.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 51 )
+text = "ANDREW"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="statement 1" type="Node2D" parent="."]
+position = Vector2( 309, -74 )
+rotation = 1.57079
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="statement 1"]
+margin_right = 82.0
+margin_bottom = 36.0
+texture = ExtResource( 8 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="statement 1/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -10.0
+margin_right = 99.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 51 )
+text = "the honorablish judge judy"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 4" type="Node2D" parent="."]
+position = Vector2( 7.62939e-06, -21 )
+z_index = 1
+
+[node name="question text" type="Label" parent="question 4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -11.0
+margin_right = 116.0
+margin_bottom = 31.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 55 )
+text = "- 老子"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question 5" type="Node2D" parent="."]
+position = Vector2( 7.62939e-06, -9 )
+z_index = 1
+
+[node name="question text" type="Label" parent="question 5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -38.0
+margin_right = 116.0
+margin_bottom = 4.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 55 )
+text = "The journey of a thousand miles begins with one step."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Area2D" parent="."]
+position = Vector2( 47, 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+shape = SubResource( 56 )
+
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]
-[connection signal="body_entered" from="sort/person 1" to="." method="_on_person_1_body_entered"]
+[connection signal="body_entered" from="sort/hatim" to="." method="_on_person_1_body_entered"]
+[connection signal="body_entered" from="sort/soojin" to="." method="_on_person_2_body_entered"]
+[connection signal="body_entered" from="sort/zane" to="." method="_on_person_3_body_entered"]
+[connection signal="body_entered" from="sort/andrew" to="." method="_on_person_4_body_entered"]
+[connection signal="body_entered" from="sort/judge" to="." method="_on_judge_body_entered"]
+[connection signal="body_entered" from="sort/quote 1 area" to="." method="_on_quote_1_area_body_entered"]
+[connection signal="body_entered" from="sort/quote 2 area" to="." method="_on_quote_2_area_body_entered"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]

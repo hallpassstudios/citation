@@ -1,0 +1,947 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
+[ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=5]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/final.gd" type="Script" id=6]
+[ext_resource path="res://sprites/minigame/lantern.png" type="Texture" id=7]
+[ext_resource path="res://audio/sfx/item.mp3" type="AudioStream" id=8]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/HUD.gd" type="Script" id=9]
+
+[sub_resource type="CircleShape2D" id=27]
+radius = 64.0
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.207843, 0.0901961, 0.239216, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.133333, 0, 0.172549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.780392, 0, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=45]
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=46]
+size = 12
+font_data = SubResource( 45 )
+
+[sub_resource type="DynamicFontData" id=49]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=51]
+size = 10
+font_data = SubResource( 49 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 20, 8 )
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=50]
+size = 10
+font_data = SubResource( 49 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 10, 3 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 10, 9 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 191, 238 )
+
+[sub_resource type="Animation" id=55]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=58]
+
+[node name="final" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="joystick" type="CanvasLayer" parent="."]
+script = ExtResource( 1 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="joystick"]
+visible = false
+modulate = Color( 1, 1, 1, 0.145098 )
+normal = ExtResource( 4 )
+shape = SubResource( 27 )
+visibility_mode = 1
+
+[node name="touch sprite" type="Sprite" parent="joystick"]
+visible = false
+position = Vector2( 32, 32 )
+texture = ExtResource( 3 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 9 )
+
+[node name="restart" type="Control" parent="HUD"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HUD/restart"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.121569, 0.0980392, 0.0980392, 0.564706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/restart"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -286.0
+margin_top = -94.0
+margin_right = 286.0
+margin_bottom = 94.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="HUD/restart/VBoxContainer"]
+margin_right = 572.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 2 )
+text = "SORRY, YOU DIDN'T SUCCEED."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="subtitle" type="Label" parent="HUD/restart/VBoxContainer"]
+margin_top = 57.0
+margin_right = 572.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
+text = "try again, joe is counting on you!"
+align = 1
+autowrap = true
+uppercase = true
+
+[node name="restart" type="Button" parent="HUD/restart/VBoxContainer"]
+margin_top = 86.0
+margin_right = 572.0
+margin_bottom = 133.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "TRY AGAIN!"
+
+[node name="quit" type="Button" parent="HUD/restart/VBoxContainer"]
+margin_top = 143.0
+margin_right = 572.0
+margin_bottom = 196.0
+focus_mode = 0
+mouse_filter = 1
+custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 0
+text = "QUIT GAME"
+flat = true
+
+[node name="question2" type="Node2D" parent="."]
+position = Vector2( -78, -38.75 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question2"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question2/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "a pledge will light your path"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question4" type="Node2D" parent="."]
+position = Vector2( -142, 0 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question4"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question4/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "beware spikies!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question3" type="Node2D" parent="."]
+position = Vector2( -305, -127 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="question3"]
+margin_right = 82.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="question3/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -7.0
+margin_right = 99.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "you win. awesome"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 93, -58 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="1"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 119.0
+margin_bottom = 38.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="1/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -46.0
+margin_top = -10.0
+margin_right = 142.0
+margin_bottom = 30.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I will perform all my academic obligations honestly. "
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 93, -7 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="3"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 119.0
+margin_bottom = 38.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="3/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -46.0
+margin_top = -10.0
+margin_right = 142.0
+margin_bottom = 30.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I will consider my academic obligations"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 141, -164 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="2"]
+margin_right = 136.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="2/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -55.0
+margin_top = -10.0
+margin_right = 169.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I will not represent the words, works, or ideas of others as my own"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Node2D" parent="."]
+position = Vector2( 62, -164 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="5"]
+margin_right = 136.0
+margin_bottom = 36.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="5/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -55.0
+margin_top = -10.0
+margin_right = 169.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I may represent others work as my own"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Node2D" parent="."]
+position = Vector2( 292, -92 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="4"]
+margin_right = 146.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="4/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -55.0
+margin_top = -11.0
+margin_right = 169.0
+margin_bottom = 31.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I will not seek to misleed faculty or others in their evaluation of my work"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Node2D" parent="."]
+position = Vector2( 193, -68 )
+z_index = 1
+
+[node name="border" type="NinePatchRect" parent="6"]
+margin_right = 146.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question text" type="Label" parent="6/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -55.0
+margin_top = -11.0
+margin_right = 169.0
+margin_bottom = 31.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "I will not get caught misleading other their evaluation of my work"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sort" type="YSort" parent="."]
+
+[node name="spawner" type="Position2D" parent="sort"]
+
+[node name="wall tiles" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -1507330, 49, 0, -1507329, 49, 0, -1572864, 49, 0, -1572863, 49, 0, -1572862, 49, 0, -1572861, 49, 0, -1572860, 49, 0, -1572859, 49, 0, -1572858, 49, 0, -1572857, 49, 0, -1572856, 49, 0, -1572855, 49, 0, -1572854, 49, 0, -1572853, 49, 0, -1572852, 49, 0, -1572851, 49, 0, -1572850, 49, 0, -1572849, 49, 0, -1441794, 49, 0, -1441793, 49, 0, -1507328, 49, 0, -1507327, 49, 0, -1507326, 49, 0, -1507325, 49, 0, -1507324, 49, 0, -1507323, 49, 0, -1507322, 49, 0, -1507321, 49, 0, -1507320, 49, 0, -1507319, 49, 0, -1507318, 49, 0, -1507317, 49, 0, -1507316, 49, 0, -1507315, 49, 0, -1507314, 49, 0, -1507313, 49, 0, -1376258, 49, 0, -1376257, 49, 0, -1441778, 49, 0, -1441777, 49, 0, -1310722, 49, 0, -1310721, 49, 0, -1376253, 49, 0, -1376252, 49, 0, -1376251, 49, 0, -1376250, 49, 0, -1376249, 49, 0, -1376248, 49, 0, -1376247, 49, 0, -1376242, 49, 0, -1376241, 49, 0, -1245186, 49, 0, -1245185, 49, 0, -1310717, 49, 0, -1310716, 49, 0, -1310715, 49, 0, -1310714, 49, 0, -1310713, 49, 0, -1310712, 49, 0, -1310711, 49, 0, -1310710, 49, 0, -1310709, 49, 0, -1310708, 49, 0, -1310707, 49, 0, -1310706, 49, 0, -1310705, 49, 0, -1179650, 49, 0, -1179649, 49, 0, -1245181, 49, 0, -1245180, 49, 0, -1245179, 49, 0, -1245175, 49, 0, -1245174, 49, 0, -1245173, 49, 0, -1245172, 49, 0, -1245171, 49, 0, -1245170, 49, 0, -1245169, 49, 0, -1114114, 49, 0, -1114113, 49, 0, -1179645, 49, 0, -1179644, 49, 0, -1179643, 49, 0, -1048578, 49, 0, -1048577, 49, 0, -1114109, 49, 0, -1114108, 49, 0, -1114107, 49, 0, -1114106, 49, 0, -1114105, 49, 0, -1114104, 49, 0, -1114103, 49, 0, -1114102, 49, 0, -1114101, 49, 0, -1114100, 49, 0, -1114099, 49, 0, -1114098, 49, 0, -1114097, 49, 0, -1114096, 49, 0, -1114095, 49, 0, -1114094, 49, 0, -1114093, 49, 0, -1114092, 49, 0, -1114091, 49, 0, -1114090, 49, 0, -1114089, 49, 0, -1114088, 49, 0, -1114087, 49, 0, -1114086, 49, 0, -1114085, 49, 0, -1114084, 49, 0, -1114083, 49, 0, -1114082, 49, 0, -1114081, 49, 0, -1114080, 49, 0, -1114075, 49, 0, -1114074, 49, 0, -1114073, 49, 0, -1114072, 49, 0, -1114071, 49, 0, -1114070, 49, 0, -1114069, 49, 0, -1114068, 49, 0, -1114067, 49, 0, -1114066, 49, 0, -1114065, 49, 0, -1114064, 49, 0, -1114063, 49, 0, -1114062, 49, 0, -1114061, 49, 0, -1114060, 49, 0, -1114059, 49, 0, -1114058, 49, 0, -1114057, 49, 0, -1114056, 49, 0, -1114055, 49, 0, -1114054, 49, 0, -1114053, 49, 0, -1114052, 49, 0, -1114051, 49, 0, -1114050, 49, 0, -1114049, 49, 0, -1114048, 49, 0, -1114047, 49, 0, -1114046, 49, 0, -1114045, 49, 0, -983042, 49, 0, -983041, 49, 0, -1048573, 49, 0, -1048572, 49, 0, -1048571, 49, 0, -1048570, 49, 0, -1048569, 49, 0, -1048568, 49, 0, -1048567, 49, 0, -1048566, 49, 0, -1048565, 49, 0, -1048564, 49, 0, -1048563, 49, 0, -1048562, 49, 0, -1048561, 49, 0, -1048560, 49, 0, -1048559, 49, 0, -1048558, 49, 0, -1048557, 49, 0, -1048556, 49, 0, -1048555, 49, 0, -1048554, 49, 0, -1048553, 49, 0, -1048552, 49, 0, -1048551, 49, 0, -1048550, 49, 0, -1048549, 49, 0, -1048548, 49, 0, -1048547, 49, 0, -1048546, 49, 0, -1048545, 49, 0, -1048544, 49, 0, -1048539, 49, 0, -1048538, 49, 0, -1048537, 49, 0, -1048536, 49, 0, -1048535, 49, 0, -1048534, 49, 0, -1048533, 49, 0, -1048532, 49, 0, -1048531, 49, 0, -1048530, 49, 0, -1048529, 49, 0, -1048528, 49, 0, -1048527, 49, 0, -1048526, 49, 0, -1048525, 49, 0, -1048524, 49, 0, -1048523, 49, 0, -1048522, 49, 0, -1048521, 49, 0, -1048520, 49, 0, -1048519, 49, 0, -1048518, 49, 0, -1048517, 49, 0, -1048516, 49, 0, -1048515, 49, 0, -1048514, 49, 0, -1048513, 49, 0, -1048512, 49, 0, -1048511, 49, 0, -1048510, 49, 0, -1048509, 49, 0, -917506, 49, 0, -917505, 49, 0, -983037, 49, 0, -983036, 49, 0, -983035, 49, 0, -983034, 49, 0, -983033, 49, 0, -983032, 49, 0, -983031, 49, 0, -983030, 49, 0, -983029, 49, 0, -983028, 49, 0, -983027, 49, 0, -983026, 49, 0, -983025, 49, 0, -983024, 49, 0, -983023, 49, 0, -983022, 49, 0, -983021, 49, 0, -983020, 49, 0, -983019, 49, 0, -983018, 49, 0, -983017, 49, 0, -983016, 49, 0, -983015, 49, 0, -983014, 49, 0, -983013, 49, 0, -983012, 49, 0, -983011, 49, 0, -983010, 49, 0, -983009, 49, 0, -983008, 49, 0, -983003, 49, 0, -983002, 49, 0, -982974, 49, 0, -982973, 49, 0, -851970, 49, 0, -851969, 49, 0, -917473, 49, 0, -917472, 49, 0, -917467, 49, 0, -917466, 49, 0, -917438, 49, 0, -917437, 49, 0, -786434, 49, 0, -786433, 49, 0, -851968, 49, 0, -851967, 49, 0, -851966, 49, 0, -851965, 49, 0, -851964, 49, 0, -851963, 49, 0, -851962, 49, 0, -851961, 49, 0, -851960, 49, 0, -851959, 49, 0, -851958, 49, 0, -851957, 49, 0, -851956, 49, 0, -851954, 49, 0, -851953, 49, 0, -851952, 49, 0, -851951, 49, 0, -851950, 49, 0, -851949, 49, 0, -851948, 49, 0, -851947, 49, 0, -851946, 49, 0, -851937, 49, 0, -851936, 49, 0, -851931, 49, 0, -851930, 49, 0, -851902, 49, 0, -851901, 49, 0, -720898, 49, 0, -720897, 49, 0, -786432, 49, 0, -786431, 49, 0, -786430, 49, 0, -786429, 49, 0, -786428, 49, 0, -786427, 49, 0, -786426, 49, 0, -786425, 49, 0, -786424, 49, 0, -786423, 49, 0, -786422, 49, 0, -786421, 49, 0, -786420, 49, 0, -786418, 49, 0, -786417, 49, 0, -786416, 49, 0, -786415, 49, 0, -786414, 49, 0, -786413, 49, 0, -786412, 49, 0, -786411, 49, 0, -786410, 49, 0, -786401, 49, 0, -786400, 49, 0, -786395, 49, 0, -786394, 49, 0, -786366, 49, 0, -786365, 49, 0, -655390, 128, 0, -655388, 130, 0, -720885, 49, 0, -720884, 49, 0, -720882, 49, 0, -720881, 49, 0, -720875, 49, 0, -720874, 49, 0, -720865, 49, 0, -720864, 49, 0, -720863, 49, 0, -720862, 49, 0, -720861, 49, 0, -720860, 49, 0, -720859, 49, 0, -720858, 49, 0, -720830, 49, 0, -720829, 49, 0, -655349, 49, 0, -655348, 49, 0, -655346, 49, 0, -655345, 49, 0, -655339, 49, 0, -655338, 49, 0, -655337, 49, 0, -655336, 49, 0, -655335, 49, 0, -655334, 49, 0, -655332, 49, 0, -655331, 49, 0, -655330, 49, 0, -655329, 49, 0, -655328, 49, 0, -655327, 49, 0, -655326, 49, 0, -655325, 49, 0, -655324, 49, 0, -655323, 49, 0, -655322, 49, 0, -655294, 49, 0, -655293, 49, 0, -589818, 49, 0, -589817, 49, 0, -589816, 49, 0, -589815, 49, 0, -589814, 49, 0, -589813, 49, 0, -589812, 49, 0, -589810, 49, 0, -589809, 49, 0, -589808, 49, 0, -589803, 49, 0, -589802, 49, 0, -589801, 49, 0, -589800, 49, 0, -589799, 49, 0, -589798, 49, 0, -589796, 49, 0, -589795, 49, 0, -589794, 49, 0, -589793, 49, 0, -589792, 49, 0, -589791, 49, 0, -589790, 49, 0, -589789, 49, 0, -589788, 49, 0, -589787, 49, 0, -589786, 49, 0, -589758, 49, 0, -589757, 49, 0, -458779, 182, 0, -524282, 49, 0, -524281, 49, 0, -524280, 49, 0, -524279, 49, 0, -524278, 49, 0, -524277, 49, 0, -524276, 49, 0, -524274, 49, 0, -524273, 49, 0, -524272, 49, 0, -524271, 49, 0, -524270, 49, 0, -524263, 49, 0, -524262, 49, 0, -524260, 49, 0, -524259, 49, 0, -524258, 49, 0, -524257, 49, 0, -524256, 49, 0, -524255, 49, 0, -524254, 49, 0, -524253, 49, 0, -524252, 49, 0, -524251, 49, 0, -524250, 49, 0, -524222, 49, 0, -524221, 49, 0, -458746, 49, 0, -458745, 49, 0, -458735, 49, 0, -458734, 49, 0, -458733, 49, 0, -458732, 49, 0, -458731, 49, 0, -458730, 49, 0, -458729, 49, 0, -458728, 49, 0, -458727, 49, 0, -458726, 49, 0, -458724, 49, 0, -458723, 49, 0, -458722, 49, 0, -458721, 49, 0, -458720, 49, 0, -458719, 49, 0, -458718, 49, 0, -458717, 49, 0, -458716, 49, 0, -458715, 49, 0, -458714, 49, 0, -458686, 49, 0, -458685, 49, 0, -393210, 49, 0, -393209, 49, 0, -393207, 49, 0, -393206, 49, 0, -393205, 49, 0, -393204, 49, 0, -393203, 49, 0, -393202, 49, 0, -393201, 49, 0, -393199, 49, 0, -393198, 49, 0, -393197, 49, 0, -393196, 49, 0, -393195, 49, 0, -393194, 49, 0, -393193, 49, 0, -393192, 49, 0, -393191, 49, 0, -393190, 49, 0, -393150, 49, 0, -393149, 49, 0, -262148, 49, 0, -262147, 49, 0, -262146, 49, 0, -262145, 49, 0, -327680, 49, 0, -327679, 49, 0, -327678, 49, 0, -327677, 49, 0, -327676, 49, 0, -327675, 49, 0, -327674, 49, 0, -327673, 49, 0, -327671, 49, 0, -327670, 49, 0, -327669, 49, 0, -327668, 49, 0, -327667, 49, 0, -327666, 49, 0, -327665, 49, 0, -327663, 49, 0, -327662, 49, 0, -327661, 49, 0, -327660, 49, 0, -327659, 49, 0, -327658, 49, 0, -327657, 49, 0, -327656, 49, 0, -327655, 49, 0, -327654, 49, 0, -327652, 49, 0, -327651, 49, 0, -327650, 49, 0, -327649, 49, 0, -327648, 49, 0, -327647, 49, 0, -327646, 49, 0, -327645, 49, 0, -327644, 49, 0, -327643, 49, 0, -327642, 49, 0, -327641, 49, 0, -327640, 49, 0, -327639, 49, 0, -327638, 49, 0, -327637, 49, 0, -327636, 49, 0, -327635, 49, 0, -327634, 49, 0, -327633, 49, 0, -327632, 49, 0, -327631, 49, 0, -327630, 49, 0, -327629, 49, 0, -327628, 49, 0, -327627, 49, 0, -327626, 49, 0, -327625, 49, 0, -327624, 49, 0, -327623, 49, 0, -327622, 49, 0, -327621, 49, 0, -327620, 49, 0, -327619, 49, 0, -327618, 49, 0, -327617, 49, 0, -327616, 49, 0, -327615, 49, 0, -327614, 49, 0, -327613, 49, 0, -196616, 49, 0, -196615, 49, 0, -196614, 49, 0, -196613, 49, 0, -196612, 49, 0, -196611, 49, 0, -196610, 49, 0, -196609, 49, 0, -262144, 49, 0, -262143, 49, 0, -262142, 49, 0, -262141, 49, 0, -262140, 49, 0, -262139, 49, 0, -262138, 49, 0, -262137, 49, 0, -262135, 49, 0, -262134, 49, 0, -262133, 49, 0, -262132, 49, 0, -262131, 49, 0, -262130, 49, 0, -262129, 49, 0, -262127, 49, 0, -262126, 49, 0, -262116, 49, 0, -262115, 49, 0, -262114, 49, 0, -262113, 49, 0, -262112, 49, 0, -262111, 49, 0, -262110, 49, 0, -262109, 49, 0, -262108, 49, 0, -262107, 49, 0, -262106, 49, 0, -262105, 49, 0, -262104, 49, 0, -262103, 49, 0, -262102, 49, 0, -262101, 49, 0, -262100, 49, 0, -262099, 49, 0, -262098, 49, 0, -262097, 49, 0, -262096, 49, 0, -262095, 49, 0, -262094, 49, 0, -262093, 49, 0, -262092, 49, 0, -262091, 49, 0, -262090, 49, 0, -262089, 49, 0, -262088, 49, 0, -262087, 49, 0, -262086, 49, 0, -262085, 49, 0, -262084, 49, 0, -262083, 49, 0, -262082, 49, 0, -262081, 49, 0, -262080, 49, 0, -262079, 49, 0, -262078, 49, 0, -262077, 49, 0, -131080, 49, 0, -131079, 49, 0, -131078, 49, 0, -131077, 49, 0, -131076, 49, 0, -196605, 49, 0, -196604, 49, 0, -196603, 49, 0, -196602, 49, 0, -196601, 49, 0, -196599, 49, 0, -196598, 49, 0, -196597, 49, 0, -196596, 49, 0, -196595, 49, 0, -196594, 49, 0, -196593, 49, 0, -196592, 59, 0, -196591, 49, 0, -196590, 49, 0, -196588, 49, 0, -196587, 49, 0, -196586, 49, 0, -196585, 49, 0, -196584, 49, 0, -196583, 49, 0, -196582, 49, 0, -196581, 49, 0, -196580, 49, 0, -131063, 49, 0, -131062, 49, 0, -131061, 49, 0, -131060, 49, 0, -131059, 49, 0, -131058, 49, 0, -131057, 49, 0, -131055, 49, 0, -131054, 49, 0, -131052, 49, 0, -131051, 49, 0, -131050, 49, 0, -131049, 49, 0, -131048, 49, 0, -131047, 49, 0, -131046, 49, 0, -131045, 49, 0, -131044, 49, 0, -8, 49, 0, -7, 49, 0, -6, 47, 0, -5, 47, 0, -4, 49, 0, -65533, 49, 0, -65532, 48, 0, -65531, 49, 0, -65530, 49, 0, -65529, 49, 0, -65527, 49, 0, -65526, 49, 0, -65525, 49, 0, -65524, 49, 0, -65523, 49, 0, -65522, 49, 0, -65521, 49, 0, -65519, 49, 0, -65518, 49, 0, -65516, 49, 0, -65515, 49, 0, -65509, 49, 0, -65508, 49, 0, -65507, 49, 0, -65506, 49, 0, -65505, 49, 0, -65504, 49, 0, -65503, 49, 0, 65528, 49, 0, 65529, 48, 0, 65530, 49, 0, 65531, 49, 0, 65532, 49, 0, 3, 49, 0, 4, 49, 0, 5, 49, 0, 6, 48, 0, 7, 49, 0, 9, 49, 0, 10, 49, 0, 11, 49, 0, 12, 49, 0, 13, 49, 0, 14, 49, 0, 15, 49, 0, 17, 49, 0, 18, 49, 0, 20, 49, 0, 21, 49, 0, 27, 49, 0, 28, 49, 0, 29, 49, 0, 30, 49, 0, 31, 49, 0, 32, 49, 0, 33, 49, 0, 131064, 49, 0, 131065, 47, 0, 131066, 49, 0, 131067, 49, 0, 131068, 49, 0, 131069, 49, 0, 131070, 49, 0, 131071, 49, 0, 65536, 48, 0, 65537, 49, 0, 65538, 49, 0, 65539, 49, 0, 65540, 49, 0, 65541, 49, 0, 65542, 49, 0, 65543, 49, 0, 65545, 49, 0, 65546, 49, 0, 65547, 49, 0, 65548, 49, 0, 65549, 49, 0, 65550, 49, 0, 65551, 49, 0, 65553, 49, 0, 65554, 49, 0, 65556, 49, 0, 65557, 49, 0, 65563, 49, 0, 65564, 49, 0, 65568, 49, 0, 65569, 49, 0, 196600, 49, 0, 196601, 49, 0, 196602, 48, 0, 196603, 49, 0, 196604, 48, 0, 196605, 49, 0, 196606, 49, 0, 196607, 47, 0, 131072, 49, 0, 131073, 49, 0, 131074, 49, 0, 131075, 49, 0, 131076, 49, 0, 131077, 48, 0, 131078, 49, 0, 131079, 49, 0, 131089, 49, 0, 131090, 49, 0, 131092, 49, 0, 131093, 49, 0, 131094, 49, 0, 131095, 49, 0, 131096, 49, 0, 131097, 49, 0, 131098, 49, 0, 131099, 49, 0, 131100, 49, 0, 131104, 49, 0, 131105, 49, 0, 262136, 49, 0, 262137, 47, 0, 262138, 49, 0, 262139, 49, 0, 262140, 48, 0, 262141, 47, 0, 262142, 49, 0, 262143, 49, 0, 196608, 49, 0, 196609, 49, 0, 196610, 47, 0, 196611, 49, 0, 196612, 49, 0, 196613, 49, 0, 196614, 49, 0, 196615, 49, 0, 196616, 49, 0, 196617, 49, 0, 196618, 49, 0, 196619, 49, 0, 196620, 49, 0, 196621, 49, 0, 196622, 49, 0, 196623, 49, 0, 196625, 49, 0, 196626, 49, 0, 196628, 49, 0, 196629, 49, 0, 196630, 49, 0, 196631, 49, 0, 196632, 49, 0, 196633, 49, 0, 196634, 49, 0, 196635, 49, 0, 196636, 49, 0, 196640, 49, 0, 196641, 49, 0, 327672, 49, 0, 327673, 49, 0, 327674, 49, 0, 327675, 47, 0, 327676, 48, 0, 327677, 49, 0, 327678, 47, 0, 327679, 49, 0, 262144, 49, 0, 262145, 48, 0, 262146, 49, 0, 262147, 49, 0, 262148, 49, 0, 262149, 49, 0, 262150, 49, 0, 262151, 49, 0, 262152, 49, 0, 262153, 49, 0, 262154, 49, 0, 262155, 49, 0, 262156, 49, 0, 262157, 49, 0, 262158, 49, 0, 262159, 49, 0, 262161, 49, 0, 262162, 49, 0, 262176, 49, 0, 262177, 49, 0, 393208, 49, 0, 393209, 49, 0, 393210, 47, 0, 393211, 47, 0, 393212, 49, 0, 393213, 49, 0, 393214, 49, 0, 393215, 49, 0, 327680, 49, 0, 327681, 49, 0, 327682, 49, 0, 327683, 49, 0, 327684, 49, 0, 327685, 49, 0, 327686, 49, 0, 327687, 49, 0, 327688, 49, 0, 327689, 49, 0, 327690, 49, 0, 327691, 49, 0, 327692, 49, 0, 327693, 49, 0, 327694, 49, 0, 327695, 49, 0, 327697, 49, 0, 327698, 49, 0, 327700, 49, 0, 327701, 49, 0, 327702, 49, 0, 327703, 49, 0, 327704, 49, 0, 327705, 49, 0, 327706, 49, 0, 327707, 49, 0, 327708, 49, 0, 327709, 49, 0, 327710, 49, 0, 327711, 49, 0, 327712, 49, 0, 327713, 49, 0, 393219, 49, 0, 393220, 49, 0, 393221, 49, 0, 393222, 49, 0, 393223, 49, 0, 393224, 49, 0, 393225, 49, 0, 393226, 49, 0, 393227, 49, 0, 393228, 49, 0, 393229, 49, 0, 393230, 49, 0, 393231, 49, 0, 393233, 49, 0, 393234, 49, 0, 393236, 49, 0, 393237, 49, 0, 393238, 49, 0, 393239, 49, 0, 393240, 49, 0, 393241, 49, 0, 393242, 49, 0, 393243, 49, 0, 393244, 49, 0, 393245, 49, 0, 393246, 49, 0, 393247, 49, 0, 393248, 49, 0, 393249, 49, 0, 458764, 49, 0, 458765, 49, 0, 458769, 49, 0, 458770, 49, 0, 458772, 49, 0, 458773, 49, 0, 524300, 49, 0, 524301, 49, 0, 524305, 49, 0, 524306, 49, 0, 524308, 49, 0, 524309, 49, 0, 589836, 49, 0, 589837, 49, 0, 589841, 49, 0, 589842, 49, 0, 589844, 49, 0, 589845, 49, 0, 655372, 49, 0, 655373, 49, 0, 655374, 49, 0, 655375, 49, 0, 655376, 49, 0, 655377, 49, 0, 655378, 49, 0, 655380, 49, 0, 655381, 49, 0, 655382, 49, 0, 655383, 49, 0, 720908, 49, 0, 720909, 49, 0, 720910, 49, 0, 720911, 49, 0, 720912, 49, 0, 720913, 49, 0, 720914, 49, 0, 720916, 49, 0, 720917, 49, 0, 720918, 49, 0, 720919, 49, 0, 786447, 49, 0, 786448, 49, 0, 786454, 49, 0, 786455, 49, 0, 851983, 49, 0, 851984, 49, 0, 851990, 49, 0, 851991, 49, 0, 917519, 49, 0, 917520, 49, 0, 917521, 49, 0, 917522, 49, 0, 917523, 49, 0, 917524, 49, 0, 917525, 49, 0, 917526, 49, 0, 917527, 49, 0, 983055, 49, 0, 983056, 49, 0, 983057, 49, 0, 983058, 49, 0, 983059, 49, 0, 983060, 49, 0, 983061, 49, 0, 983062, 49, 0, 983063, 49, 0 )
+
+[node name="props" type="TileMap" parent="sort"]
+position = Vector2( 7.62939e-06, 0 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -131074, 165, 0, -196607, 165, 0 )
+
+[node name="doors" type="TileMap" parent="sort"]
+z_index = 3
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -655389, 127, 0 )
+
+[node name="death" type="TileMap" parent="sort"]
+z_index = 3
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+
+[node name="ground" type="TileMap" parent="sort"]
+z_index = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -655389, 127, 0, -589853, 107, 0, -524317, 105, 0, -458781, -1610612638, 0, -458780, 93, 0, -458778, 93, 0, -458777, 91, 0, -458776, 93, 0, -458775, -1610612630, 0, -393239, -1610612643, 0, -327703, 95, 0, -262167, -1073741642, 0, -196631, -1610612638, 0, -196630, 99, 0, -196629, 108, 0, -131093, 103, 0, -65564, 1610612834, 0, -65563, -1073741721, 0, -65562, -1073741721, 0, -65561, -1073741721, 0, -65560, -1073741721, 0, -65559, -1073741721, 0, -65558, -1073741721, 0, -65557, -1073741722, 0, -65546, 107, 0, -28, 1610612831, 0, -10, 95, 0, 65508, 1610612831, 0, 65526, 95, 0, 131044, 1610612831, 0, 131062, 95, 0, 196580, -1610612638, 0, 196581, 1610612829, 0, 196582, 1610612829, 0, 196583, 1610612829, 0, 196584, 1610612829, 0, 196585, 1610612829, 0, 196586, 1610612829, 0, 196587, 1610612829, 0, 196588, 1610612829, 0, 196589, 1610612829, 0, 196590, 182, 0, 196591, 101, 0, 196592, 101, 0, 196593, 182, 0, 196594, -1073741721, 0, 196595, -1073741726, 0, 196598, 95, 0, 262131, 95, 0, 262134, 95, 0, 327667, 95, 0, 327670, 95, 0, 393203, -1610612638, 0, 393204, 93, 0, 393205, 93, 0, 393206, 98, 0 )
+
+[node name="spikes" type="TileMap" parent="sort" groups=[
+"spikes",
+]]
+position = Vector2( -400, 100 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 10, 10 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -1572853, 17, 0, -1507318, 17, 0, -1507316, 17, 0, -1507315, 17, 0, -1441783, 17, 0, -1441778, 17, 0, -1441777, 18, 0, -1376248, 17, 0, -1376247, 17, 0, -1376240, 18, 0, -1376239, 18, 0, -1310712, 17, 0, -1310706, 17, 0, -1310705, 18, 0, -1310702, 17, 0, -1310701, 17, 0, -1245175, 17, 0, -1245164, 17, 0, -1179640, 18, 0, -1179628, 18, 0, -1114105, 18, 0, -1114102, 17, 0, -1114093, 18, 0, -1114090, 18, 0, -1114089, 18, 0, -1114085, 17, 0, -1114082, 18, 0, -1048569, 18, 0, -1048567, 17, 0, -1048562, 17, 0, -1048557, 18, 0, -1048556, 17, 0, -1048555, 17, 0, -1048552, 18, 0, -1048551, 17, 0, -1048550, 17, 0, -1048549, 17, 0, -1048548, 18, 0, -1048547, 18, 0, -1048545, 18, 0, -983032, 18, 0, -983030, 17, 0, -983026, 18, 0, -983025, 17, 0, -983017, 17, 0, -983016, 17, 0, -983015, 18, 0, -983014, 18, 0, -983013, 17, 0, -983012, 17, 0, -983008, 18, 0, -917496, 18, 0, -917493, 17, 0, -917492, 18, 0, -917491, 18, 0, -917480, 18, 0, -917479, 17, 0, -917478, 18, 0, -917477, 18, 0, -917476, 17, 0, -851959, 17, 0, -851945, 17, 0, -851944, 17, 0, -851943, 17, 0, -851942, 17, 0, -851941, 17, 0, -851940, 18, 0, -786423, 18, 0, -786411, 17, 0, -786408, 17, 0, -786407, 18, 0, -786406, 17, 0, -786405, 18, 0, -786404, 17, 0, -720886, 17, 0, -720877, 17, 0, -720872, 17, 0, -720871, 17, 0, -720869, 18, 0, -655352, 17, 0, -655351, 18, 0, -655346, 17, 0, -655344, 17, 0, -655341, 17, 0, -655338, 17, 0, -589815, 18, 0, -589814, 17, 0, -524279, 17, 0, -524259, 17, 0, -458742, 17, 0, -458740, 17, 0, -458735, 17, 0, -458724, 17, 0, -393207, 17, 0, -393205, 18, 0, -393203, 18, 0, -393202, 17, 0, -393198, 17, 0, -393196, 17, 0, -393192, 17, 0, -393191, 17, 0, -327669, 17, 0, -327667, 17, 0, -327665, 17, 0, -327662, 18, 0, -327661, 17, 0, -327659, 18, 0, -327658, 17, 0, -327657, 17, 0, -327656, 17, 0, -262130, 17, 0, -262128, 18, 0, -262127, 18, 0, -262119, 17, 0, -262112, 18, 0, -196592, 17, 0, -196582, 17, 0, -196581, 17, 0, -196580, 17, 0, -196579, 17, 0, -196577, 18, 0, -131042, 18, 0 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+z_index = 2
+
+[node name="word puzzle" type="Node2D" parent="."]
+position = Vector2( 438, -118 )
+
+[node name="Label2" type="Label" parent="word puzzle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = 12.0
+margin_right = 122.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = SubResource( 51 )
+text = "i will endeavor to uphold the:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="word puzzle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 53.0
+margin_top = 11.0
+margin_right = 73.0
+margin_bottom = 27.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = SubResource( 51 )
+text = "and"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="word puzzle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 83.0
+margin_top = 11.0
+margin_right = 460.0
+margin_bottom = 27.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = SubResource( 51 )
+text = "on which our university community depends and call on others to do so."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 1" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 18, -12 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 1"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 1/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "values"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 2" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 40, 34 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 2"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 2/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "standards"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 3" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 71, 34 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 3"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 3/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "ideals"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 4" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 18, 34 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 4"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 4/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "thoughts"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 5" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 41, -12 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 5"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 5/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "tricks"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="word 6" type="RigidBody2D" parent="word puzzle"]
+position = Vector2( 69, -12 )
+z_index = 1
+mode = 2
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 100.0
+angular_damp = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 6"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 47 )
+
+[node name="Label" type="Label" parent="word puzzle/word 6/CollisionShape2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 8.0
+custom_styles/normal = SubResource( 48 )
+custom_fonts/font = SubResource( 50 )
+text = "secrets"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zone 1" type="Area2D" parent="."]
+position = Vector2( 456, -105 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone 1"]
+shape = SubResource( 52 )
+
+[node name="ColorRect" type="ColorRect" parent="zone 1/CollisionShape2D"]
+margin_left = -10.0
+margin_top = -3.0
+margin_right = 10.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zone 2" type="Area2D" parent="."]
+position = Vector2( 479, -105 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone 2"]
+shape = SubResource( 52 )
+
+[node name="ColorRect" type="ColorRect" parent="zone 2/CollisionShape2D"]
+margin_left = -10.0
+margin_top = -3.0
+margin_right = 10.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zone 3" type="Area2D" parent="."]
+position = Vector2( 508, -105 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone 3"]
+shape = SubResource( 52 )
+
+[node name="ColorRect" type="ColorRect" parent="zone 3/CollisionShape2D"]
+margin_left = -10.0
+margin_top = -3.0
+margin_right = 10.0
+margin_bottom = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="torch zone" type="Area2D" parent="."]
+visible = false
+position = Vector2( 632, -106 )
+
+[node name="Sprite" type="Sprite" parent="torch zone"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch zone"]
+shape = SubResource( 53 )
+
+[node name="success" type="AudioStreamPlayer2D" parent="torch zone"]
+stream = ExtResource( 8 )
+
+[node name="fade out" type="Area2D" parent="."]
+position = Vector2( -90, -16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fade out"]
+position = Vector2( -174, 0 )
+shape = SubResource( 54 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fade out"]
+playback_speed = 2.0
+anims/RESET = SubResource( 55 )
+anims/fade_in = SubResource( 57 )
+anims/fade_out = SubResource( 56 )
+
+[node name="exit" type="Area2D" parent="."]
+position = Vector2( -285, -110 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+shape = SubResource( 58 )
+
+[connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="body_entered" from="zone 1" to="." method="_on_zone_1_body_entered"]
+[connection signal="body_entered" from="zone 2" to="." method="_on_zone_2_body_entered"]
+[connection signal="body_entered" from="zone 3" to="." method="_on_zone_3_body_entered"]
+[connection signal="body_entered" from="torch zone" to="." method="_on_torch_zone_body_entered"]
+[connection signal="body_entered" from="fade out" to="." method="_on_fade_out_body_entered"]
+[connection signal="body_exited" from="fade out" to="." method="_on_fade_out_body_exited"]
+[connection signal="animation_finished" from="fade out/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]

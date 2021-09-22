@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-signal use_move_vector
 var move_vector
 var joystick_active
 var touchscreen_active
@@ -26,10 +25,14 @@ func _input(event):
 			$TouchScreenButton.visible = false
 			$"touch sprite".visible = false
 			touchscreen_active = false
+			globals.player._on_joystick_use_move_vector(Vector2.ZERO)
 			
 func _physics_process(delta):
 	if joystick_active:
-		emit_signal("use_move_vector", move_vector)
+		globals.player._on_joystick_use_move_vector(move_vector)
+		globals.player.touch_active = true
+	else:
+		globals.player.touch_active = false
 		
 func calculate_move_vector(event_position):
 	var texture_center = $TouchScreenButton.position + Vector2(64,64)

@@ -664,7 +664,7 @@ __meta__ = {
 }
 
 [node name="Score Container" type="HBoxContainer" parent="HUD/Hud"]
-margin_right = 360.0
+margin_right = 640.0
 margin_bottom = 14.0
 script = ExtResource( 21 )
 
@@ -685,23 +685,23 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "100"
 
 [node name="Time Container" type="HBoxContainer" parent="HUD/Hud"]
-margin_right = 360.0
+margin_right = 640.0
 margin_bottom = 14.0
 alignment = 2
 script = ExtResource( 17 )
 
 [node name="Time Label" type="Label" parent="HUD/Hud/Time Container"]
-margin_left = 238.0
+margin_left = 518.0
 margin_top = 1.0
-margin_right = 340.0
+margin_right = 620.0
 margin_bottom = 13.0
 custom_fonts/font = SubResource( 51 )
 text = "TIME REMAINING:"
 
 [node name="Time" type="Label" parent="HUD/Hud/Time Container"]
-margin_left = 344.0
+margin_left = 624.0
 margin_top = 1.0
-margin_right = 360.0
+margin_right = 640.0
 margin_bottom = 13.0
 custom_fonts/font = SubResource( 53 )
 custom_colors/font_color = Color( 1, 0.996078, 0, 1 )

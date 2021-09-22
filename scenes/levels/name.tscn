@@ -1,0 +1,457 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/levels/name.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFontData" id=53]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=59]
+size = 24
+extra_spacing_top = 3
+extra_spacing_bottom = 4
+font_data = SubResource( 53 )
+
+[sub_resource type="StyleBoxFlat" id=58]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+expand_margin_left = 7.0
+expand_margin_right = 8.0
+
+[sub_resource type="DynamicFontData" id=50]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=60]
+size = 40
+font_data = SubResource( 50 )
+
+[sub_resource type="DynamicFontData" id=56]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=61]
+size = 24
+font_data = SubResource( 56 )
+
+[node name="name input" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_styles/panel = SubResource( 57 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prompt" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -143.0
+margin_top = -138.0
+margin_right = 63.0
+margin_bottom = -107.0
+custom_fonts/font = SubResource( 59 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "enter your name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.0
+margin_top = -88.0
+margin_right = 57.0
+margin_bottom = -53.0
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 59 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "..."
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.0
+margin_top = -188.0
+margin_right = 286.0
+columns = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="Label" parent="Panel/GridContainer"]
+margin_right = 60.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "A"
+align = 1
+valign = 1
+
+[node name="B" type="Label" parent="Panel/GridContainer"]
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "B"
+align = 1
+valign = 1
+
+[node name="C" type="Label" parent="Panel/GridContainer"]
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "C"
+align = 1
+valign = 1
+
+[node name="D" type="Label" parent="Panel/GridContainer"]
+margin_left = 192.0
+margin_right = 252.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "D"
+align = 1
+valign = 1
+
+[node name="E" type="Label" parent="Panel/GridContainer"]
+margin_left = 256.0
+margin_right = 316.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "E"
+align = 1
+valign = 1
+
+[node name="F" type="Label" parent="Panel/GridContainer"]
+margin_left = 320.0
+margin_right = 380.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "F"
+align = 1
+valign = 1
+
+[node name="G" type="Label" parent="Panel/GridContainer"]
+margin_left = 384.0
+margin_right = 444.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "G"
+align = 1
+valign = 1
+
+[node name="H" type="Label" parent="Panel/GridContainer"]
+margin_left = 448.0
+margin_right = 508.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "H"
+align = 1
+valign = 1
+
+[node name="I" type="Label" parent="Panel/GridContainer"]
+margin_left = 512.0
+margin_right = 572.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "I"
+align = 1
+valign = 1
+
+[node name="J" type="Label" parent="Panel/GridContainer"]
+margin_top = 45.0
+margin_right = 60.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "J"
+align = 1
+valign = 1
+
+[node name="K" type="Label" parent="Panel/GridContainer"]
+margin_left = 64.0
+margin_top = 45.0
+margin_right = 124.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "K"
+align = 1
+valign = 1
+
+[node name="L" type="Label" parent="Panel/GridContainer"]
+margin_left = 128.0
+margin_top = 45.0
+margin_right = 188.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "L"
+align = 1
+valign = 1
+
+[node name="M" type="Label" parent="Panel/GridContainer"]
+margin_left = 192.0
+margin_top = 45.0
+margin_right = 252.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "M"
+align = 1
+valign = 1
+
+[node name="N" type="Label" parent="Panel/GridContainer"]
+margin_left = 256.0
+margin_top = 45.0
+margin_right = 316.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "N"
+align = 1
+valign = 1
+
+[node name="O" type="Label" parent="Panel/GridContainer"]
+margin_left = 320.0
+margin_top = 45.0
+margin_right = 380.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "O"
+align = 1
+valign = 1
+
+[node name="P" type="Label" parent="Panel/GridContainer"]
+margin_left = 384.0
+margin_top = 45.0
+margin_right = 444.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "P"
+align = 1
+valign = 1
+
+[node name="Q" type="Label" parent="Panel/GridContainer"]
+margin_left = 448.0
+margin_top = 45.0
+margin_right = 508.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "Q"
+align = 1
+valign = 1
+
+[node name="R" type="Label" parent="Panel/GridContainer"]
+margin_left = 512.0
+margin_top = 45.0
+margin_right = 572.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "R"
+align = 1
+valign = 1
+
+[node name="S" type="Label" parent="Panel/GridContainer"]
+margin_top = 90.0
+margin_right = 60.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="T" type="Label" parent="Panel/GridContainer"]
+margin_left = 64.0
+margin_top = 90.0
+margin_right = 124.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "T"
+align = 1
+valign = 1
+
+[node name="U" type="Label" parent="Panel/GridContainer"]
+margin_left = 128.0
+margin_top = 90.0
+margin_right = 188.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "U"
+align = 1
+valign = 1
+
+[node name="V" type="Label" parent="Panel/GridContainer"]
+margin_left = 192.0
+margin_top = 90.0
+margin_right = 252.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "V"
+align = 1
+valign = 1
+
+[node name="W" type="Label" parent="Panel/GridContainer"]
+margin_left = 256.0
+margin_top = 90.0
+margin_right = 316.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "W"
+align = 1
+valign = 1
+
+[node name="X" type="Label" parent="Panel/GridContainer"]
+margin_left = 320.0
+margin_top = 90.0
+margin_right = 380.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "X"
+align = 1
+valign = 1
+
+[node name="Y" type="Label" parent="Panel/GridContainer"]
+margin_left = 384.0
+margin_top = 90.0
+margin_right = 444.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "Y"
+align = 1
+valign = 1
+
+[node name="Z" type="Label" parent="Panel/GridContainer"]
+margin_left = 448.0
+margin_top = 90.0
+margin_right = 508.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "Z"
+align = 1
+valign = 1
+
+[node name="BACKSPACE" type="Label" parent="Panel/GridContainer"]
+margin_left = 512.0
+margin_top = 90.0
+margin_right = 572.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 60, 30 )
+mouse_filter = 0
+custom_fonts/font = SubResource( 60 )
+text = "<"
+align = 1
+valign = 1
+
+[node name="Submit" type="Button" parent="Panel"]
+margin_left = 390.0
+margin_top = 95.0
+margin_right = 486.0
+margin_bottom = 125.0
+focus_mode = 0
+custom_fonts/font = SubResource( 61 )
+enabled_focus_mode = 0
+text = "SUBMIT"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="Panel/GridContainer/A" to="." method="_on_A_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/B" to="." method="_on_B_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/C" to="." method="_on_C_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/D" to="." method="_on_D_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/E" to="." method="_on_E_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/F" to="." method="_on_F_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/G" to="." method="_on_G_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/H" to="." method="_on_H_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/I" to="." method="_on_I_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/J" to="." method="_on_J_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/K" to="." method="_on_K_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/L" to="." method="_on_L_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/M" to="." method="_on_M_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/N" to="." method="_on_N_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/O" to="." method="_on_O_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/P" to="." method="_on_P_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/Q" to="." method="_on_Q_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/R" to="." method="_on_R_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/S" to="." method="_on_S_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/T" to="." method="_on_T_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/U" to="." method="_on_U_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/V" to="." method="_on_V_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/W" to="." method="_on_W_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/X" to="." method="_on_X_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/Y" to="." method="_on_Y_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/Z" to="." method="_on_Z_gui_input"]
+[connection signal="gui_input" from="Panel/GridContainer/BACKSPACE" to="." method="_on_BACKSPACE_gui_input"]
+[connection signal="pressed" from="Panel/Submit" to="." method="_on_Submit_pressed"]
