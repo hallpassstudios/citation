@@ -441,7 +441,6 @@ visible = false
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 6
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]

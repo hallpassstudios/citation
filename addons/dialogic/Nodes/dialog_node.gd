@@ -18,6 +18,9 @@ var current_theme: ConfigFile
 var current_timeline: String = ''
 var current_event: Dictionary
 
+var current_url
+onready var confirmation_dialogue = $"Confirmation Dialogue"
+
 ## The timeline to load when starting the scene
 export(String, "TimelineDropdown") var timeline: String
 ## Should we clear saved data (definitions and timeline progress) on start?
@@ -459,7 +462,6 @@ func update_name(character) -> void:
 	#print("updating name")
 	if character.has('name'):
 		var parsed_name = character['name']
-		print(parsed_name)
 		if parsed_name == "LILY":
 			parsed_name = globals.player_name
 		if character.has('display_name'):
@@ -1146,10 +1148,12 @@ func _on_RichTextLabel_meta_clicked(meta):
 	for d in definitions['glossary']:
 		if d['id'] == meta:
 			if d['url'] != '':
-				OS.shell_open(d['url'])
+				print("opening dialogue")
+				open_confirmation(d['url'])
 
 func _on_RichTextLabel_meta_hover_started(meta):
 	print("hover started")
+	$DefinitionInfo.hovering = true
 	var correct_type = false
 	for d in definitions['glossary']:
 		if d['id'] == meta:
@@ -1178,6 +1182,7 @@ func _on_Definition_Timer_timeout():
 	# Adding a timer to avoid a graphical glitch
 	definition_visible = false
 	$DefinitionInfo.visible = definition_visible
+	$DefinitionInfo.hovering = false
 
 
 func dprint(string, arg1='', arg2='', arg3='', arg4='' ):
@@ -1372,3 +1377,15 @@ func _on_TextureRect2_gui_input(event):
 				a.pressed = true
 				_input(a)
 				a.pressed = false
+
+func open_confirmation(url):
+	print("opening confirmation dialogue")
+	current_url = url
+	$"Confirmation Dialogue".visible = true
+
+func _on_Yes_pressed():
+	$"Confirmation Dialogue".visible = false
+	OS.shell_open(current_url)
+	
+func _on_No_pressed():
+	$"Confirmation Dialogue".visible = false

@@ -137,6 +137,7 @@ anims/Static = SubResource( 3 )
 "anims/Up and down" = SubResource( 4 )
 
 [node name="NameLabel" type="Label" parent="."]
+visible = false
 margin_top = -48.0
 margin_right = 58.0
 margin_bottom = -8.0
@@ -188,4 +189,4 @@ script = ExtResource( 5 )
 samples = [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ) ]
 random_strategy = 2
 
-[connection signal="gui_input" from="RichTextLabel" to="." method="_on_RichTextLabel_gui_input"]
+[connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://sprites/minigame/lantern.png" type="Texture" id=7]
 [ext_resource path="res://audio/sfx/item.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scenes/levels/games/minigame/chunks/HUD.gd" type="Script" id=9]
+[ext_resource path="res://sprites/ui/light_mask_flame.png" type="Texture" id=10]
+[ext_resource path="res://sprites/npcs/bat1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/npcs/bat2.png" type="Texture" id=12]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/bat.gd" type="Script" id=13]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -83,60 +87,34 @@ size = 10
 font_data = SubResource( 49 )
 
 [sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 10, 3 )
+extents = Vector2( 10, 0.57045 )
 
 [sub_resource type="RectangleShape2D" id=53]
-extents = Vector2( 10, 9 )
-
-[sub_resource type="RectangleShape2D" id=54]
-extents = Vector2( 191, 238 )
-
-[sub_resource type="Animation" id=55]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("../CanvasModulate:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=57]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/path = NodePath("../CanvasModulate:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=56]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/path = NodePath("../CanvasModulate:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
+extents = Vector2( 3, 5 )
 
 [sub_resource type="RectangleShape2D" id=58]
+
+[sub_resource type="CircleShape2D" id=61]
+radius = 70.7817
+
+[sub_resource type="SpriteFrames" id=59]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 10, 3 )
+
+[sub_resource type="CircleShape2D" id=63]
+radius = 12.7381
+
+[sub_resource type="Curve2D" id=62]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -163.44, -37.7559, 0, 0, 0, 0, -200.083, -4.33334, 0, 0, 0, 0, -226.283, -67.3853, 0, 0, 0, 0, -208.885, -128.559, 0, 0, 0, 0, -141.537, -141.468, 0, 0, 0, 0, -102.812, -122.386, 0, 0, 0, 0, -110.482, -75.4296, 0, 0, 0, 0, -128.531, -48.1968, 0, 0, 0, 0, -161.788, -38.3852, 0, 0, 0, 0, -163.44, -37.7559 )
+}
 
 [node name="final" type="Node2D"]
 script = ExtResource( 6 )
@@ -296,19 +274,45 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -33.0
-margin_top = -7.0
+margin_top = -6.0
 margin_right = 99.0
-margin_bottom = 20.0
+margin_bottom = 21.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 46 )
-text = "beware spikies!"
+text = "shortcut come on by!"
 align = 1
 valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="question text2" type="Label" parent="question4/border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = -12.0
+margin_right = 99.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 46 )
+text = "beware giant bat"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="question4/border"]
+position = Vector2( 0, -4.79167 )
+points = PoolVector2Array( 10, 18, 70, 18 )
+width = 0.5
+default_color = Color( 1, 1, 1, 1 )
 
 [node name="question3" type="Node2D" parent="."]
 position = Vector2( -305, -127 )
@@ -373,7 +377,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -46.0
 margin_top = -10.0
-margin_right = 142.0
+margin_right = 154.0
 margin_bottom = 30.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 4
@@ -570,6 +574,7 @@ __meta__ = {
 [node name="sort" type="YSort" parent="."]
 
 [node name="spawner" type="Position2D" parent="sort"]
+position = Vector2( -61, -15 )
 
 [node name="wall tiles" type="TileMap" parent="sort"]
 position = Vector2( 7.62939e-06, 0 )
@@ -618,11 +623,6 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 10, 10 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -1572853, 17, 0, -1507318, 17, 0, -1507316, 17, 0, -1507315, 17, 0, -1441783, 17, 0, -1441778, 17, 0, -1441777, 18, 0, -1376248, 17, 0, -1376247, 17, 0, -1376240, 18, 0, -1376239, 18, 0, -1310712, 17, 0, -1310706, 17, 0, -1310705, 18, 0, -1310702, 17, 0, -1310701, 17, 0, -1245175, 17, 0, -1245164, 17, 0, -1179640, 18, 0, -1179628, 18, 0, -1114105, 18, 0, -1114102, 17, 0, -1114093, 18, 0, -1114090, 18, 0, -1114089, 18, 0, -1114085, 17, 0, -1114082, 18, 0, -1048569, 18, 0, -1048567, 17, 0, -1048562, 17, 0, -1048557, 18, 0, -1048556, 17, 0, -1048555, 17, 0, -1048552, 18, 0, -1048551, 17, 0, -1048550, 17, 0, -1048549, 17, 0, -1048548, 18, 0, -1048547, 18, 0, -1048545, 18, 0, -983032, 18, 0, -983030, 17, 0, -983026, 18, 0, -983025, 17, 0, -983017, 17, 0, -983016, 17, 0, -983015, 18, 0, -983014, 18, 0, -983013, 17, 0, -983012, 17, 0, -983008, 18, 0, -917496, 18, 0, -917493, 17, 0, -917492, 18, 0, -917491, 18, 0, -917480, 18, 0, -917479, 17, 0, -917478, 18, 0, -917477, 18, 0, -917476, 17, 0, -851959, 17, 0, -851945, 17, 0, -851944, 17, 0, -851943, 17, 0, -851942, 17, 0, -851941, 17, 0, -851940, 18, 0, -786423, 18, 0, -786411, 17, 0, -786408, 17, 0, -786407, 18, 0, -786406, 17, 0, -786405, 18, 0, -786404, 17, 0, -720886, 17, 0, -720877, 17, 0, -720872, 17, 0, -720871, 17, 0, -720869, 18, 0, -655352, 17, 0, -655351, 18, 0, -655346, 17, 0, -655344, 17, 0, -655341, 17, 0, -655338, 17, 0, -589815, 18, 0, -589814, 17, 0, -524279, 17, 0, -524259, 17, 0, -458742, 17, 0, -458740, 17, 0, -458735, 17, 0, -458724, 17, 0, -393207, 17, 0, -393205, 18, 0, -393203, 18, 0, -393202, 17, 0, -393198, 17, 0, -393196, 17, 0, -393192, 17, 0, -393191, 17, 0, -327669, 17, 0, -327667, 17, 0, -327665, 17, 0, -327662, 18, 0, -327661, 17, 0, -327659, 18, 0, -327658, 17, 0, -327657, 17, 0, -327656, 17, 0, -262130, 17, 0, -262128, 18, 0, -262127, 18, 0, -262119, 17, 0, -262112, 18, 0, -196592, 17, 0, -196582, 17, 0, -196581, 17, 0, -196580, 17, 0, -196579, 17, 0, -196577, 18, 0, -131042, 18, 0 )
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-z_index = 2
 
 [node name="word puzzle" type="Node2D" parent="."]
 position = Vector2( 438, -118 )
@@ -691,6 +691,16 @@ angular_damp = 1000.0
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
 
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 1/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.1123
+margin_right = 20.0
+margin_bottom = 10.1123
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="word puzzle/word 1/CollisionShape2D"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -720,6 +730,16 @@ angular_damp = 1000.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 2"]
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
+
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 2/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.0
+margin_right = 34.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="word puzzle/word 2/CollisionShape2D"]
 anchor_left = 0.5
@@ -751,6 +771,16 @@ angular_damp = 1000.0
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
 
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 3/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.1123
+margin_right = 20.0
+margin_bottom = 10.1123
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="word puzzle/word 3/CollisionShape2D"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -774,12 +804,23 @@ z_index = 1
 mode = 2
 mass = 100.0
 gravity_scale = 0.0
+contact_monitor = true
 linear_damp = 100.0
 angular_damp = 1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 4"]
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
+
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 4/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.0
+margin_right = 28.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="word puzzle/word 4/CollisionShape2D"]
 anchor_left = 0.5
@@ -811,6 +852,16 @@ angular_damp = 1000.0
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
 
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 5/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.1123
+margin_right = 20.0
+margin_bottom = 10.1123
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="word puzzle/word 5/CollisionShape2D"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -840,6 +891,16 @@ angular_damp = 1000.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="word puzzle/word 6"]
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 47 )
+
+[node name="ColorRect" type="ColorRect" parent="word puzzle/word 6/CollisionShape2D"]
+margin_left = -20.0
+margin_top = 6.0
+margin_right = 22.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="word puzzle/word 6/CollisionShape2D"]
 anchor_left = 0.5
@@ -905,29 +966,32 @@ __meta__ = {
 
 [node name="torch zone" type="Area2D" parent="."]
 visible = false
-position = Vector2( 632, -106 )
+position = Vector2( 567, -92 )
+
+[node name="ColorRect" type="ColorRect" parent="torch zone"]
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 7.0
+margin_bottom = 7.0
+color = Color( 0.231373, 0, 0.466667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="torch zone"]
 texture = ExtResource( 7 )
+
+[node name="Light2D" type="Light2D" parent="torch zone/Sprite"]
+texture = ExtResource( 10 )
+energy = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch zone"]
 shape = SubResource( 53 )
 
 [node name="success" type="AudioStreamPlayer2D" parent="torch zone"]
 stream = ExtResource( 8 )
-
-[node name="fade out" type="Area2D" parent="."]
-position = Vector2( -90, -16 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fade out"]
-position = Vector2( -174, 0 )
-shape = SubResource( 54 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fade out"]
-playback_speed = 2.0
-anims/RESET = SubResource( 55 )
-anims/fade_in = SubResource( 57 )
-anims/fade_out = SubResource( 56 )
+volume_db = -10.0
+pitch_scale = 0.5
 
 [node name="exit" type="Area2D" parent="."]
 position = Vector2( -285, -110 )
@@ -935,13 +999,45 @@ position = Vector2( -285, -110 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 shape = SubResource( 58 )
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0, 0, 0, 1 )
+
+[node name="bat" type="KinematicBody2D" parent="."]
+position = Vector2( -115.782, -73.6222 )
+z_index = 2
+script = ExtResource( 13 )
+patrol_path = NodePath("../Path2D")
+
+[node name="detect radius" type="Area2D" parent="bat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat/detect radius"]
+shape = SubResource( 61 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bat"]
+frames = SubResource( 59 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat"]
+shape = SubResource( 60 )
+
+[node name="death" type="Area2D" parent="bat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat/death"]
+position = Vector2( 0, -4.71937 )
+shape = SubResource( 63 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 62 )
+
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="body_entered" from="zone 1" to="." method="_on_zone_1_body_entered"]
 [connection signal="body_entered" from="zone 2" to="." method="_on_zone_2_body_entered"]
 [connection signal="body_entered" from="zone 3" to="." method="_on_zone_3_body_entered"]
 [connection signal="body_entered" from="torch zone" to="." method="_on_torch_zone_body_entered"]
-[connection signal="body_entered" from="fade out" to="." method="_on_fade_out_body_entered"]
-[connection signal="body_exited" from="fade out" to="." method="_on_fade_out_body_exited"]
-[connection signal="animation_finished" from="fade out/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]
+[connection signal="body_entered" from="bat/detect radius" to="bat" method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="bat/detect radius" to="bat" method="_on_detect_radius_body_exited"]
+[connection signal="body_entered" from="bat/death" to="." method="_on_death_body_entered"]

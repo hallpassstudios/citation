@@ -58,28 +58,28 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
-"loop": true,
+"loop": false,
 "name": "1",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 46 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 38 ), ExtResource( 47 ), ExtResource( 39 ) ],
-"loop": true,
+"loop": false,
 "name": "2",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ) ],
-"loop": true,
+"loop": false,
 "name": "4",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 15 ) ],
-"loop": true,
+"loop": false,
 "name": "3",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "cycle 2",
+"name": "cycle 1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 39 ), ExtResource( 17 ), ExtResource( 23 ) ],
@@ -92,9 +92,9 @@ animations = [ {
 "name": "cycle 4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "cycle 1",
+"name": "cycle 2",
 "speed": 5.0
 } ]
 
@@ -155,10 +155,12 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 318.419, 192.819 )
+position = Vector2( 318.419, 188.819 )
 scale = Vector2( 0.7286, 0.495374 )
 frames = SubResource( 1 )
-animation = "0"
+animation = "1"
+frame = 7
+playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle = SubResource( 2 )
@@ -168,8 +170,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -55.0
-margin_top = -20.0
+margin_left = -65.3708
+margin_top = -25.6569
+margin_right = -10.3708
+margin_bottom = -5.65686
 focus_mode = 0
 custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0

@@ -25,7 +25,6 @@ func _ready():
 func _on_AnimatedSprite_animation_finished():
 	current_animation_finished = true
 	# wait a fixed amount of time and then go to the next page
-	
 	# play a loop animation depending on current animation:
 	if current_animation == 0:
 		$AnimatedSprite.play("cycle 1")
@@ -38,8 +37,7 @@ func _on_AnimatedSprite_animation_finished():
 	
 func next_page():
 	current_animation_finished = false
-	print("showing next animation")
-	print(current_animation)
+	
 	match current_animation:
 		0:
 			next_pressed = false
@@ -81,7 +79,7 @@ func next_page():
 			yield(get_tree().create_timer(1.0), "timeout")
 			$"title 6".visible = true
 			if next_pressed:
-				$"title 6".visible = true
+				$"title 6".visible = false
 
 		4: 
 			next_pressed = false

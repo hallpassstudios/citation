@@ -2,15 +2,29 @@ extends Node2D
 
 onready var player = preload("res://scenes/player/top_down_runner.tscn")
 onready var spawn = $"sort/spawner"
+
 var faded
 var correct_count = 0
 var sound_played = false
 onready var hud = $HUD
 
+var word_1 : Vector2
+var word_2 : Vector2
+var word_3 : Vector2
+var word_4 : Vector2
+var word_5 : Vector2
+var word_6 : Vector2
+
+var word_1_correct : bool
+var word_2_correct : bool
+var word_3_correct : bool
+
+var should_reset : bool
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	# dialogue_controller.play_dialogue("cellar")
-	$CanvasModulate.visible = false
 	# clear color to black
 	VisualServer.set_default_clear_color(Color(0,0,0,0.0))
 	# spawn player
@@ -22,16 +36,26 @@ func _ready():
 	globals.current_scene = self
 	$"torch zone".visible = false
 	$"torch zone".monitoring = false
+	
+	# set our word positions
+	word_1 = $"word puzzle/word 1".position
+	word_2 = $"word puzzle/word 2".position
+	word_3 = $"word puzzle/word 3".position
+	word_4 = $"word puzzle/word 4".position
+	word_5 = $"word puzzle/word 5".position
+	word_6 = $"word puzzle/word 6".position
 
 func restart(title, subtitle):
 	hud.restart(title,subtitle)
 
-func _process(delta):
+func _process(delta):	
 	if correct_count == 3 && !sound_played:
 		$"torch zone".visible = true
 		$"torch zone".monitoring = true
 		$"torch zone/success".play()
 		sound_played = true
+		$CanvasModulate.visible = true
+		
 
 func _on_restart_pressed():
 	hud._on_restart_pressed()
@@ -53,16 +77,25 @@ func _on_fade_back_body_entered(body):
 		faded = false
 
 func _on_zone_1_body_entered(body):
-	if body.name == "word 1":
+	if body.name == "word 1" && !word_1_correct:
+		body.sleeping = true
 		correct_count += 1
-		
+		word_1_correct = true
+		$"word puzzle/word 4".visible = false
+
 func _on_zone_2_body_entered(body):
-	if body.name == "word 2":
+	if body.name == "word 2" && !word_2_correct:
+		body.sleeping = true
 		correct_count += 1
+		word_2_correct = true
+		$"word puzzle/word 5".visible = false
 
 func _on_zone_3_body_entered(body):
-	if body.name == "word 3":
+	if body.name == "word 3" && !word_3_correct:
+		body.sleeping = true
 		correct_count += 1
+		word_3_correct = true
+		$"word puzzle/word 6".visible = false
 
 func _on_torch_zone_body_entered(body):
 	if body.name == "top down runner":
@@ -101,3 +134,7 @@ func return_to_dorm():
 
 func fade_out():
 	global_ui.fade_out()
+
+func _on_death_body_entered(body):
+	if body.name == "top down runner":
+		restart("oh bats!", "maybe he is afraid of something?!")

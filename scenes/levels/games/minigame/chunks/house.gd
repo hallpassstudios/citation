@@ -9,6 +9,7 @@ var key_1
 var key_2
 var key_3
 var spike_count
+var played_door_sound : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -65,11 +66,14 @@ func _on_key_body_entered(body):
 
 func _on_door_body_entered(body):
 	if body.name == "top down runner":
-		if has_key:
+		if has_key && !played_door_sound:
 			$door.visible = false
 			$door/StaticBody2D/collider.set_deferred("disabled", true)
 			$door.monitoring = false
 			$door/door_click.play()
+			played_door_sound = true
+			
+			
 
 func _on_table_1_body_entered(body):
 	if body.name == "top down runner":
@@ -109,7 +113,6 @@ func _on_table_3_body_entered(body):
 		if key_progress == 3:
 			$key.visible = true
 			$key/success.play()
-
 
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":

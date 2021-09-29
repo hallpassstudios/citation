@@ -31,6 +31,7 @@ func _process(delta):
 
 func light_up():
 	$Light2D.visible = true
+	globals.is_lit = true
 	
 func _input(event):
 	direction = Vector2.ZERO

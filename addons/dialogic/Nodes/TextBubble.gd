@@ -8,6 +8,7 @@ onready var text_label = $RichTextLabel
 onready var name_label = $NameLabel
 onready var next_indicator = $NextIndicatorContainer/NextIndicator
 
+var is_player_char : bool
 var _finished := false
 var _theme
 
@@ -27,6 +28,12 @@ func update_name(name: String, color: Color = Color.white, autocolor: bool=false
 		name_label.rect_size = Vector2(-1, 40)
 		# Setting the color and text
 		name_label.text = name
+		if name == globals.player_name:
+			print("player character is talking")
+			is_player_char = true
+		else:
+			print("npc is talking")
+			is_player_char = false
 		# Alignment
 		call_deferred('align_name_label')
 		if autocolor:
@@ -239,12 +246,12 @@ func align_name_label():
 	var horizontal_offset = _theme.get_value('name', 'horizontal_offset', 0)
 	var name_label_position = _theme.get_value('name', 'position', 0)
 	var label_size = name_label.rect_size.x
-	if name_label_position == 0:
-		name_label.rect_global_position.x = rect_global_position.x + horizontal_offset
+	if is_player_char == true:
+		name_label.rect_global_position.x = rect_global_position.x - 100
 	elif name_label_position == 1: # Center
 		name_label.rect_global_position.x = rect_global_position.x + (rect_size.x / 2) - (label_size / 2) + horizontal_offset
-	elif name_label_position == 2: # Right
-		name_label.rect_global_position.x = rect_global_position.x + rect_size.x - label_size + horizontal_offset
+	elif is_player_char == false: # Right ##TO D0: IF NOT PLAYER, THEN NAME_POSITION IS 2
+		name_label.rect_global_position.x = rect_global_position.x + rect_size.x - label_size + 60
 
 ## *****************************************************************************
 ##								OVERRIDES
@@ -259,10 +266,3 @@ func _ready():
 
 func _on_RichTextLabel_meta_clicked(meta):
 	print("meta clicked")
-
-func _on_RichTextLabel_gui_input(event):
-	if event is InputEventScreenDrag:
-		var current_line = 0
-		var line_count = $RichTextLabel.get_line_count()
-		print(line_count)
-		# $RichTextLabel.scroll_to_line(line_count)

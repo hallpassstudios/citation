@@ -199,15 +199,6 @@
 		},
 		{
 			"extra": "",
-			"id": "1630518583-648",
-			"name": "Academic Integrity for Students at NYU",
-			"text": "Click this to be transported to a magical information superhighway",
-			"title": "NYU Academic Integrity Policy",
-			"type": 1,
-			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
-		},
-		{
-			"extra": "",
 			"id": "1632308346-585",
 			"name": "Academic Bulletin",
 			"text": "This is an official document that tells you about academic programs and regulations. ",
@@ -223,6 +214,15 @@
 			"title": "Bean King",
 			"type": 1,
 			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630518583-648",
+			"name": "Academic Integrity for Students at NYU",
+			"text": "Click this to be transported to a magical information superhighway",
+			"title": "NYU Academic Integrity Policy",
+			"type": 1,
+			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
 		}
 	],
 	"variables": [

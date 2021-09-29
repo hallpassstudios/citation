@@ -55,9 +55,10 @@ func _on_Submit_pressed():
 		prompt.text = "enter password"
 
 func _on_A_gui_input(event):
-	if event.is_action_pressed("click") || (event is InputEventScreenTouch 	and event.pressed == false):
-		password_string = password_string + "A"
-		password.text = password_string
+	if event.is_action_pressed("click") || event is InputEventScreenTouch:
+		if event.pressed == true:
+			password_string = password_string + "A"
+			password.text = password_string
 
 func _on_B_gui_input(event):
 	if event.is_action_pressed("click") || (event is InputEventScreenTouch 	and event.pressed == false):

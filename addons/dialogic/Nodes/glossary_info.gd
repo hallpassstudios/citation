@@ -13,6 +13,7 @@ var margin = 10
 var touch : bool = true
 var touch_position
 var url : String
+var hovering
 
 func _ready():
 	set_deferred('rect_size.y', 0)
@@ -22,6 +23,12 @@ func _ready():
 
 
 func _input(event):
+	if event is InputEventMouseButton and event.is_pressed() && hovering:
+		if url != null:
+			print(url)
+			# show the confirmation dialogue
+			get_parent().current_url = url
+			get_parent().open_confirmation(url)
 	if event is InputEventScreenTouch:
 		touch_position = get_canvas_transform().affine_inverse().xform(event.position)
 	
@@ -61,7 +68,6 @@ func load_preview(info):
 		nodes['extra'].visible = true
 	
 	if info['url'] != '':
-		print("has url")
 		print(info['url'])
 		url = info['url']
 
