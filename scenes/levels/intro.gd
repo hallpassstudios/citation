@@ -10,6 +10,7 @@ var page_3 : Label
 var page_4 : Label
 
 var next_pressed
+var press_received = false
 
 
 func _ready():
@@ -25,22 +26,26 @@ func _ready():
 func _on_AnimatedSprite_animation_finished():
 	current_animation_finished = true
 	# wait a fixed amount of time and then go to the next page
+	
 	# play a loop animation depending on current animation:
-	if current_animation == 0:
-		$AnimatedSprite.play("cycle 1")
-	if current_animation == 1:
-		$AnimatedSprite.play("cycle 2")
-	if current_animation == 2:
-		$AnimatedSprite.play("cycle 3")
-	if current_animation == 3:
-		$AnimatedSprite.play("cycle 4")
+#	if current_animation == 0:
+#		$AnimatedSprite.play("cycle 1")
+#	if current_animation == 1:
+#		$AnimatedSprite.play("cycle 2")
+#	if current_animation == 2:
+#		$AnimatedSprite.play("cycle 3")
+#	if current_animation == 3:
+#		$AnimatedSprite.play("cycle 4")
+
+	if current_animation < 4:
+		$AnimatedSprite.play("cycle %d" % (current_animation + 1))
 	
 func next_page():
 	current_animation_finished = false
-	
+	print("showing next animation")
+	print(current_animation)
 	match current_animation:
 		0:
-			next_pressed = false
 			print("playing animation 0")
 			$AnimatedSprite.play(str(current_animation))
 			$"title 1".visible = true
@@ -51,8 +56,7 @@ func next_page():
 			$AnimatedSprite.play(str(current_animation))
 			$"title 1".visible = false
 			yield(get_tree().create_timer(1.0), "timeout")
-			$"title 2".visible = true
-			if next_pressed:
+			if current_animation == 1:
 				$"title 2".visible = true
 		2: 
 			next_pressed = false
@@ -61,13 +65,9 @@ func next_page():
 			$"title 2".visible = false
 			$"title 3".visible = true
 			yield(get_tree().create_timer(2.0), "timeout")
-			if next_pressed:
+			if current_animation == 2:
 				$"title 4".visible = true
 				$"title 5".visible = true
-			if next_pressed:
-				$"title 4".visible = false
-				yield(get_tree().create_timer(2.0), "timeout")
-				$"title 5".visible = false
 
 		3: 
 			next_pressed = false
@@ -77,9 +77,8 @@ func next_page():
 			$"title 5".visible = false
 			$AnimatedSprite.play(str(current_animation))
 			yield(get_tree().create_timer(1.0), "timeout")
-			$"title 6".visible = true
-			if next_pressed:
-				$"title 6".visible = false
+			if current_animation == 3:
+				$"title 6".visible = true
 
 		4: 
 			next_pressed = false
@@ -102,25 +101,27 @@ func _on_Button_pressed():
 	# stop our sprite
 	$AnimatedSprite.stop()
 	
+	# reset countdown
+	timer.start(7)
+	
 	# what's our current animation?
 	print("current animation is: ", current_animation)
 	print("next animation is: ", current_animation + 1)
-	match current_animation:
-		0:
-			print("never showing title 1 again")
-		1:
-			print("never showing title 2 again")
-		2:
-			print("never showing title 3 again")
-		3:
-			print("never showing title 4 again")
-		4:
-			print("never showing title 5 again")
-		5:
-			print("never showing title 6 again")
-		6:
-			print("never showing title 7 again")
+#	match current_animation:
+#		0:
+#			print("never showing title 1 again")
+#		1:
+#			print("never showing title 2 again")
+#		2:
+#			print("never showing title 3 again")
+#		3:
+#			print("never showing title 4 again")
+#		4:
+#			print("never showing title 5 again")
+#		5:
+#			print("never showing title 6 again")
+#		6:
+#			print("never showing title 7 again")
 			
 	current_animation += 1
 	next_page()
-
