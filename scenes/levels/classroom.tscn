@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://sprites/environment/library/door.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -18,8 +18,7 @@
 [ext_resource path="res://sprites/environment/classroom/desk1.png" type="Texture" id=16]
 [ext_resource path="res://sprites/environment/classroom/desk6.png" type="Texture" id=17]
 [ext_resource path="res://scenes/utilities/player spawn.gd" type="Script" id=18]
-[ext_resource path="res://sprites/environment/classroom/paper_stack.png" type="Texture" id=19]
-[ext_resource path="res://sprites/ui/citation_cartridge.png" type="Texture" id=20]
+[ext_resource path="res://sprites/ui/insideDesk.png" type="Texture" id=19]
 [ext_resource path="res://scenes/utilities/clicked_area.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -71,7 +70,7 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 15, 49 )
+extents = Vector2( 52.2605, 49 )
 
 [sub_resource type="ShaderMaterial" id=14]
 shader = ExtResource( 11 )
@@ -127,6 +126,7 @@ centered = false
 
 [node name="desk 1" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 103, 321 )
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 1"]
@@ -144,6 +144,7 @@ texture = ExtResource( 16 )
 
 [node name="desk 2" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 263, 321 )
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 2"]
@@ -161,6 +162,7 @@ texture = ExtResource( 12 )
 
 [node name="desk 3" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 103, 397 )
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 3"]
@@ -178,6 +180,7 @@ texture = ExtResource( 13 )
 
 [node name="desk 4" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 265, 398 )
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 4"]
@@ -195,6 +198,7 @@ texture = ExtResource( 14 )
 
 [node name="desk 5" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 103, 475 )
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 5"]
@@ -212,6 +216,7 @@ texture = ExtResource( 15 )
 
 [node name="desk 6" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 263, 474 )
+z_index = -1
 script = ExtResource( 3 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 6"]
@@ -232,6 +237,7 @@ position = Vector2( 376, 463 )
 script = ExtResource( 21 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to hallway"]
+position = Vector2( 28.2843, 0 )
 shape = SubResource( 13 )
 script = ExtResource( 5 )
 travel_to = "horizontal hallway"
@@ -240,6 +246,7 @@ spawn_point = 1
 
 [node name="door" type="Sprite" parent="environment/interactable objects/door to hallway/collider"]
 material = SubResource( 14 )
+position = Vector2( -28.2843, 0 )
 z_index = 2
 texture = ExtResource( 1 )
 
@@ -265,6 +272,7 @@ color = Color( 0.431373, 0.278431, 0.733333, 1 )
 pause_mode = 2
 
 [node name="container" type="HBoxContainer" parent="desk"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -280,23 +288,13 @@ __meta__ = {
 }
 
 [node name="papers" type="TextureRect" parent="desk/container"]
-margin_left = 181.0
-margin_right = 181.0
+margin_left = 183.0
+margin_right = 183.0
 margin_bottom = 120.0
+rect_scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 19 )
 expand = true
-stretch_mode = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="papers2" type="TextureRect" parent="desk/container"]
-margin_left = 185.0
-margin_right = 185.0
-margin_bottom = 120.0
-texture = ExtResource( 20 )
-expand = true
-stretch_mode = 3
+stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }

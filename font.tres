@@ -5,5 +5,4 @@ antialiased = false
 font_path = "res://fonts/zpix.ttf"
 
 [resource]
-size = 12
 font_data = SubResource( 1 )

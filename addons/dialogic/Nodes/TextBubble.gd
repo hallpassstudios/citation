@@ -259,3 +259,10 @@ func _ready():
 
 func _on_RichTextLabel_meta_clicked(meta):
 	print("meta clicked")
+
+func _on_RichTextLabel_gui_input(event):
+	if event is InputEventScreenDrag:
+		var current_line = 0
+		var line_count = $RichTextLabel.get_line_count()
+		print(line_count)
+		# $RichTextLabel.scroll_to_line(line_count)

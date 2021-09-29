@@ -12,6 +12,9 @@ func _ready():
 	globals.set_player(player)
 	player.position = player_spawn.get_child(globals.player_spawn).position
 	print("spawned player at: ", player.position)
+	
+	if globals.caught_joe:
+		$CanvasModulate.visible = true
 
 func show_ad(value):
 	print("calling show ad", value)

@@ -25,7 +25,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Definitions": {
@@ -170,25 +170,7 @@
 		},
 		"Timelines": {
 			"files": [
-				"timeline-1630273030.json",
-				"timeline-1630273505.json",
-				"timeline-1630273810.json",
-				"timeline-1630273947.json",
-				"timeline-1630274558.json",
-				"timeline-1630276209.json",
-				"timeline-1630278070.json",
-				"timeline-1630280567.json",
-				"timeline-1630280813.json",
-				"timeline-1630445525.json",
-				"timeline-1630445570.json",
-				"timeline-1630445598.json",
-				"timeline-1630445835.json",
-				"timeline-1630863784.json",
-				"timeline-1630864513.json",
-				"timeline-1630866916.json",
-				"timeline-1630867026.json",
-				"timeline-1630867278.json",
-				"timeline-1630870275.json",
+				"timeline-1630522540.json",
 				"timeline-1630522540.json"
 			],
 			"folders": {
@@ -331,7 +313,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"hallway": {

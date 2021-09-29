@@ -9,12 +9,12 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": -45,
+	"offset_y": -90,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://sprites/portraits/portrait.png"
 		}
 	],
-	"scale": 50
+	"scale": 100
 }

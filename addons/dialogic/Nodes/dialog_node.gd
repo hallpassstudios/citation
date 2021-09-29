@@ -1363,9 +1363,10 @@ func save_definitions(autosave = true):
 
 func _on_TextureRect2_gui_input(event):
 	if $Options.get_children().size() == 1:
-		#print(event)
+		print(event)
 		if event is InputEventScreenTouch:
 			if event.is_pressed() == true:
+				print("touched")
 				var a = InputEventAction.new()
 				a.action = input_next
 				a.pressed = true

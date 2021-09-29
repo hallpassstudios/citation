@@ -25,27 +25,34 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = 320.0
+margin_top = 360.0
+margin_right = 320.0
+margin_bottom = 360.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextBubble" parent="." instance=ExtResource( 1 )]
-margin_left = -180.0
-margin_top = -50.0
-margin_right = 180.0
-margin_bottom = 0.0
+margin_left = 140.0
+margin_top = 260.0
+margin_right = 500.0
+margin_bottom = 360.0
 
 [node name="TextureRect2" type="TextureRect" parent="TextBubble"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 313.951
-margin_top = 24.577
-margin_right = 37.9507
-margin_bottom = 38.577
-rect_min_size = Vector2( 25, 25 )
+margin_left = 317.726
+margin_top = 3.18262
+margin_right = 107.726
+margin_bottom = 103.183
+rect_min_size = Vector2( 150, 325 )
 rect_scale = Vector2( 0.3, 0.3 )
 expand = true
 stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Options" type="VBoxContainer" parent="."]
 margin_right = 640.0

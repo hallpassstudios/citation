@@ -10,12 +10,13 @@ func _ready():
 	# does the player have the light spell? If not, we're not able to explore
 	if !globals.is_lit && !globals.caught_joe:
 		dialogue_controller.play_dialogue('library')
+		joe.visible = false
+		flame.visible = false
 
 	if globals.is_lit && !globals.caught_joe:
 		dialogue_controller.play_dialogue('library lit')
 		joe.visible = false
 		flame.visible = false
-		globals.is_lit = true
 
 	if globals.caught_joe:
 		dialogue_controller.play_dialogue('library shade')

@@ -435,7 +435,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -454,7 +454,6 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 3
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -462,6 +461,7 @@ position = Vector2( 646, 132.085 )
 script = ExtResource( 36 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/coffee machine"]
+position = Vector2( 1.98199, 22.9914 )
 shape = SubResource( 30 )
 script = ExtResource( 5 )
 has_dialogue = true
@@ -471,8 +471,10 @@ TYPE = 1
 
 [node name="coffee machine2" type="AnimatedSprite" parent="environment/interactable objects/coffee machine/collider"]
 material = SubResource( 31 )
+position = Vector2( -1.98199, -22.9914 )
 z_index = 1
 frames = SubResource( 38 )
+frame = 4
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -493,7 +495,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -792,8 +794,12 @@ position = Vector2( 257.95, 515.935 )
 shape = SubResource( 66 )
 
 [node name="coffee bar" type="CollisionShape2D" parent="navigation/collisions"]
-position = Vector2( 676, 242 )
+position = Vector2( 685.91, 250.721 )
 shape = SubResource( 67 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0.34902, 0.0784314, 0.835294, 1 )
 
 [connection signal="body_entered" from="environment/interactable objects/owl" to="environment/interactable objects/owl/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/owl" to="environment/interactable objects/owl/collider" method="_on_interactable_body_exited"]

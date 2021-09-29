@@ -12,6 +12,10 @@ func _input_event(viewport, event, shape_idx):
 		print(self)
 		get_child(0).clicked_object = self.name
 		
+		# we should travel if we click
+		if get_child(0).already_inside:
+			get_child(0).inside()
+		
 func on_mouse_entered():
 	get_child(0).outline(true)
 

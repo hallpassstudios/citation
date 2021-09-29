@@ -445,6 +445,7 @@ frame = 6
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
+pause_mode = 2
 
 [node name="floor" type="Sprite" parent="environment/static objects"]
 z_index = 1

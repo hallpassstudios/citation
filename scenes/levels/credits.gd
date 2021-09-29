@@ -1,8 +1,12 @@
 extends Node2D
 
+var player = preload("res://scenes/player/top_down_player.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player = player.instance()
+	add_child(player)
+	globals.set_player(player)
 	VisualServer.set_default_clear_color(Color(0.0,0.0,0.0,0.0))
 	# dialogue_controller.play_dialogue("credits")
 	global_ui.fade_in()

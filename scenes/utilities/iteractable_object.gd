@@ -66,3 +66,14 @@ func _on_interactable_body_exited(body):
 		get_child(0).material.set_shader_param("width", 0)
 		globals.player.interact(false) 
 		already_inside = false
+
+func inside():
+	if clicked_object == get_parent().get_name():
+			# play dialogue if we have it
+			if has_dialogue:
+				dialogue_controller.play_dialogue(dialogue)
+			if globals.player.will_travel && globals.desk_interact:
+				globals.player_spawn = spawn_point
+				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
+			if !globals.desk_interact && !object_name == "desk" && !object_name == "joe":
+				dialogue_controller.play_dialogue('interact')

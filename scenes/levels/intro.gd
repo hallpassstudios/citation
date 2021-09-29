@@ -11,6 +11,7 @@ var page_4 : Label
 
 var next_pressed
 
+
 func _ready():
 	global_ui.fade_in()
 	timer = Timer.new()
@@ -20,10 +21,6 @@ func _ready():
 	# wait a few secs then play our animation?
 	# yield(get_tree().create_timer(1.0), "timeout")
 	next_page()
-
-func _process(delta):
-	if current_animation_finished:
-		pass
 
 func _on_AnimatedSprite_animation_finished():
 	current_animation_finished = true
@@ -66,12 +63,13 @@ func next_page():
 			$"title 2".visible = false
 			$"title 3".visible = true
 			yield(get_tree().create_timer(2.0), "timeout")
-			$"title 4".visible = true
-			$"title 5".visible = true
 			if next_pressed:
 				$"title 4".visible = true
-				yield(get_tree().create_timer(2.0), "timeout")
 				$"title 5".visible = true
+			if next_pressed:
+				$"title 4".visible = false
+				yield(get_tree().create_timer(2.0), "timeout")
+				$"title 5".visible = false
 
 		3: 
 			next_pressed = false
@@ -103,15 +101,28 @@ func on_timer_timeout():
 		next_page()
 
 func _on_Button_pressed():
-	next_pressed = true
+	# stop our sprite
 	$AnimatedSprite.stop()
-	$"title 1".visible = false
-	$"title 2".visible = false
-	$"title 3".visible = false
-	$"title 4".visible = false
-	$"title 5".visible = false
-	$"title 6".visible = false
-	$"title 7".visible = false
+	
+	# what's our current animation?
+	print("current animation is: ", current_animation)
+	print("next animation is: ", current_animation + 1)
+	match current_animation:
+		0:
+			print("never showing title 1 again")
+		1:
+			print("never showing title 2 again")
+		2:
+			print("never showing title 3 again")
+		3:
+			print("never showing title 4 again")
+		4:
+			print("never showing title 5 again")
+		5:
+			print("never showing title 6 again")
+		6:
+			print("never showing title 7 again")
+			
 	current_animation += 1
 	next_page()
 
