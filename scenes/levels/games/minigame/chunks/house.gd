@@ -37,7 +37,7 @@ func _on_restart_pressed():
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed():
-	globals.goto_scene("res://scenes/levels/dorm.tscn")
+	globals.goto_scene("res://scenes/levels/start.tscn")
 
 func _on_trap_body_entered(body):
 	if body.name == "top down runner":

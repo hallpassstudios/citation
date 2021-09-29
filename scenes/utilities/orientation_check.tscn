@@ -8,10 +8,10 @@
 bg_color = Color( 0.0627451, 0.00392157, 0.121569, 1 )
 
 [sub_resource type="DynamicFontData" id=4]
-font_path = "res://fonts/onesize.ttf"
+font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=5]
-size = 12
+size = 30
 font_data = SubResource( 4 )
 
 [node name="Control" type="Control"]
@@ -38,17 +38,19 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Orientation Check/Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 124.074
-margin_top = 3.17123
-margin_right = 124.074
-margin_bottom = 3.17123
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.3333
+margin_top = -158.667
+margin_right = 540.667
+margin_bottom = 201.333
 rect_min_size = Vector2( 100, 50 )
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
 expand = true
-stretch_mode = 4
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }

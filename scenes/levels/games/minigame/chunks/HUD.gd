@@ -21,4 +21,4 @@ func _on_restart_pressed():
 	globals.goto_scene("res://scenes/levels/games/minigame/chunks/final.tscn")
 
 func _on_quit_pressed():
-	globals.goto_scene("res://scenes/levels/dorm.tscn")
+	globals.goto_scene("res://scenes/levels/start.tscn")

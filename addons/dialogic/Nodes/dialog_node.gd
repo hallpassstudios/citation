@@ -462,11 +462,15 @@ func update_name(character) -> void:
 	#print("updating name")
 	if character.has('name'):
 		var parsed_name = character['name']
+		print(parsed_name)
 		if parsed_name == "LILY":
+			parsed_name = globals.player_name
+		if parsed_name == "black and white lily":
 			parsed_name = globals.player_name
 		if character.has('display_name'):
 			if character['display_name'] != '':
-				parsed_name = character['display_name']
+				if parsed_name == "student":
+					parsed_name = "test2"
 		parsed_name = parse_definitions(parsed_name, true, false)
 		$TextBubble.update_name(parsed_name, character.get('color', Color.white), current_theme.get_value('name', 'auto_color', true))
 	else:

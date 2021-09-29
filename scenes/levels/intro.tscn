@@ -77,14 +77,14 @@ animations = [ {
 "name": "3",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "cycle 1",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 39 ), ExtResource( 17 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "cycle 3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "cycle 2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 34 ), ExtResource( 15 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ) ],
@@ -92,9 +92,9 @@ animations = [ {
 "name": "cycle 4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "cycle 2",
+"name": "cycle 1",
 "speed": 5.0
 } ]
 
@@ -119,7 +119,7 @@ antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [sub_resource type="DynamicFont" id=4]
-size = 12
+size = 20
 font_data = SubResource( 3 )
 
 [sub_resource type="DynamicFontData" id=7]
@@ -170,14 +170,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -65.3708
-margin_top = -25.6569
-margin_right = -10.3708
-margin_bottom = -5.65686
+margin_left = -104.969
+margin_top = -43.5703
+margin_right = -17.9688
+margin_bottom = -17.5703
 focus_mode = 0
 custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
-text = "next..."
+text = "skip..."
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false

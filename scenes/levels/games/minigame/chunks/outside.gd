@@ -15,8 +15,6 @@ func _ready():
 	global_ui.fade_in()
 	dialogue_controller.play_dialogue("outside 1")
 	
-
-
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":
 		analytics.objective_completed("completed level 1", {

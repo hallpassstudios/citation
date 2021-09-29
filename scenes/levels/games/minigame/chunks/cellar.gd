@@ -7,6 +7,8 @@ var quote_1 : bool
 var quote_2 : bool
 var door_open : bool
 var played_dialogue
+var shut : bool
+var shut_2 : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -54,12 +56,14 @@ func _on_person_4_body_entered(body):
 		dialogue_controller.play_dialogue("person 4")
 
 func _on_quote_1_area_body_entered(body):
-	if body.name == "quotes":
+	if body.name == "quotes" && !shut:
 		body.sleeping = true
 		quote_1 = true
-	if body.name == "quotes2":
+		shut = true
+	if body.name == "quotes2" && !shut:
 		body.sleeping = true
 		quote_2 = true
+		shut = true
 	if quote_1 && quote_2 && !door_open:
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)
@@ -67,12 +71,14 @@ func _on_quote_1_area_body_entered(body):
 		door_open = true
 
 func _on_quote_2_area_body_entered(body):
-	if body.name == "quotes":
+	if body.name == "quotes" && !shut_2:
 		body.sleeping = true
 		quote_1 = true
-	if body.name == "quotes2":
+		shut_2 = true
+	if body.name == "quotes2" && !shut_2:
 		body.sleeping = true
 		quote_2 = true
+		shut_2 = true
 	if quote_1 && quote_2 && !door_open:
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)

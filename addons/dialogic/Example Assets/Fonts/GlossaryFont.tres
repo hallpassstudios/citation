@@ -5,5 +5,5 @@ antialiased = false
 font_path = "res://fonts/onesize.ttf"
 
 [resource]
-size = 10
+size = 14
 font_data = SubResource( 1 )

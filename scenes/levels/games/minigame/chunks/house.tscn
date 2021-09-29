@@ -432,7 +432,7 @@ __meta__ = {
 
 [node name="title" type="Label" parent="HUD/restart/VBoxContainer"]
 margin_right = 572.0
-margin_bottom = 47.0
+margin_bottom = 37.0
 custom_fonts/font = SubResource( 2 )
 text = "SORRY, YOU DIDN'T SUCCEED."
 align = 1
@@ -440,9 +440,9 @@ valign = 1
 autowrap = true
 
 [node name="subtitle" type="Label" parent="HUD/restart/VBoxContainer"]
-margin_top = 57.0
+margin_top = 47.0
 margin_right = 572.0
-margin_bottom = 76.0
+margin_bottom = 75.0
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 1, 0.823529, 1 )
 text = "try again, joe is counting on you!"
@@ -451,9 +451,9 @@ autowrap = true
 uppercase = true
 
 [node name="restart" type="Button" parent="HUD/restart/VBoxContainer"]
-margin_top = 86.0
+margin_top = 85.0
 margin_right = 572.0
-margin_bottom = 133.0
+margin_bottom = 132.0
 focus_mode = 0
 mouse_filter = 1
 custom_styles/hover = SubResource( 7 )
@@ -464,9 +464,9 @@ enabled_focus_mode = 0
 text = "TRY AGAIN!"
 
 [node name="quit" type="Button" parent="HUD/restart/VBoxContainer"]
-margin_top = 143.0
+margin_top = 142.0
 margin_right = 572.0
-margin_bottom = 196.0
+margin_bottom = 195.0
 focus_mode = 0
 mouse_filter = 1
 custom_fonts/font = SubResource( 5 )

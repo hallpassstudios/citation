@@ -165,6 +165,8 @@ func _on_BACKSPACE_gui_input(event):
 		player_name.text = name_string
 
 func _on_Submit_pressed():
+	if name_string.length() == 0:
+		return
 	globals.player_name = player_name.text
 	analytics.objective_completed("entered a name", {
 		"name" : player_name.text,
