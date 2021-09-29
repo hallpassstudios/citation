@@ -3,19 +3,19 @@
 project-icon.png
 project.godot
 test-scenes
-/.import
-/default_env.tres
-/icon.png
+.import
+default_env.tres
+icon.png
 *.import
-/.vscode
-/previous
+.vscode
+previous
 export_presets.cfg
-/builds
+builds
 
 # Only add dialogic plugin 
-/addons/*
-!/addons/dialogic
+addons/*
+!addons/dialogic
 # Ignore dialogic resources
-/dialogic
+dialogic
 # Place test project files here
-/test-project
+test-project
