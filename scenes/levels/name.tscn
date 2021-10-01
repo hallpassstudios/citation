@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/levels/name.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/name_key.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=57]
 bg_color = Color( 0, 0, 0, 1 )
@@ -110,6 +111,7 @@ custom_fonts/font = SubResource( 60 )
 text = "A"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="B" type="Label" parent="Panel/GridContainer"]
 margin_left = 64.0
@@ -121,6 +123,7 @@ custom_fonts/font = SubResource( 60 )
 text = "B"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="C" type="Label" parent="Panel/GridContainer"]
 margin_left = 128.0
@@ -132,6 +135,7 @@ custom_fonts/font = SubResource( 60 )
 text = "C"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="D" type="Label" parent="Panel/GridContainer"]
 margin_left = 192.0
@@ -143,6 +147,7 @@ custom_fonts/font = SubResource( 60 )
 text = "D"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="E" type="Label" parent="Panel/GridContainer"]
 margin_left = 256.0
@@ -154,6 +159,7 @@ custom_fonts/font = SubResource( 60 )
 text = "E"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="F" type="Label" parent="Panel/GridContainer"]
 margin_left = 320.0
@@ -165,6 +171,7 @@ custom_fonts/font = SubResource( 60 )
 text = "F"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="G" type="Label" parent="Panel/GridContainer"]
 margin_left = 384.0
@@ -176,6 +183,7 @@ custom_fonts/font = SubResource( 60 )
 text = "G"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="H" type="Label" parent="Panel/GridContainer"]
 margin_left = 448.0
@@ -187,6 +195,7 @@ custom_fonts/font = SubResource( 60 )
 text = "H"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="I" type="Label" parent="Panel/GridContainer"]
 margin_left = 512.0
@@ -198,6 +207,7 @@ custom_fonts/font = SubResource( 60 )
 text = "I"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="J" type="Label" parent="Panel/GridContainer"]
 margin_top = 45.0
@@ -209,6 +219,7 @@ custom_fonts/font = SubResource( 60 )
 text = "J"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="K" type="Label" parent="Panel/GridContainer"]
 margin_left = 64.0
@@ -221,6 +232,7 @@ custom_fonts/font = SubResource( 60 )
 text = "K"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="L" type="Label" parent="Panel/GridContainer"]
 margin_left = 128.0
@@ -233,6 +245,7 @@ custom_fonts/font = SubResource( 60 )
 text = "L"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="M" type="Label" parent="Panel/GridContainer"]
 margin_left = 192.0
@@ -245,6 +258,7 @@ custom_fonts/font = SubResource( 60 )
 text = "M"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="N" type="Label" parent="Panel/GridContainer"]
 margin_left = 256.0
@@ -257,6 +271,7 @@ custom_fonts/font = SubResource( 60 )
 text = "N"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="O" type="Label" parent="Panel/GridContainer"]
 margin_left = 320.0
@@ -269,6 +284,7 @@ custom_fonts/font = SubResource( 60 )
 text = "O"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="P" type="Label" parent="Panel/GridContainer"]
 margin_left = 384.0
@@ -281,6 +297,7 @@ custom_fonts/font = SubResource( 60 )
 text = "P"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="Q" type="Label" parent="Panel/GridContainer"]
 margin_left = 448.0
@@ -293,6 +310,7 @@ custom_fonts/font = SubResource( 60 )
 text = "Q"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="R" type="Label" parent="Panel/GridContainer"]
 margin_left = 512.0
@@ -305,6 +323,7 @@ custom_fonts/font = SubResource( 60 )
 text = "R"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="S" type="Label" parent="Panel/GridContainer"]
 margin_top = 90.0
@@ -316,6 +335,7 @@ custom_fonts/font = SubResource( 60 )
 text = "S"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="T" type="Label" parent="Panel/GridContainer"]
 margin_left = 64.0
@@ -328,6 +348,7 @@ custom_fonts/font = SubResource( 60 )
 text = "T"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="U" type="Label" parent="Panel/GridContainer"]
 margin_left = 128.0
@@ -340,6 +361,7 @@ custom_fonts/font = SubResource( 60 )
 text = "U"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="V" type="Label" parent="Panel/GridContainer"]
 margin_left = 192.0
@@ -352,6 +374,7 @@ custom_fonts/font = SubResource( 60 )
 text = "V"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="W" type="Label" parent="Panel/GridContainer"]
 margin_left = 256.0
@@ -364,6 +387,7 @@ custom_fonts/font = SubResource( 60 )
 text = "W"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="X" type="Label" parent="Panel/GridContainer"]
 margin_left = 320.0
@@ -376,6 +400,7 @@ custom_fonts/font = SubResource( 60 )
 text = "X"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="Y" type="Label" parent="Panel/GridContainer"]
 margin_left = 384.0
@@ -388,6 +413,7 @@ custom_fonts/font = SubResource( 60 )
 text = "Y"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="Z" type="Label" parent="Panel/GridContainer"]
 margin_left = 448.0
@@ -400,6 +426,7 @@ custom_fonts/font = SubResource( 60 )
 text = "Z"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="BACKSPACE" type="Label" parent="Panel/GridContainer"]
 margin_left = 512.0
@@ -412,6 +439,7 @@ custom_fonts/font = SubResource( 60 )
 text = "<"
 align = 1
 valign = 1
+script = ExtResource( 2 )
 
 [node name="Submit" type="Button" parent="Panel"]
 margin_left = 390.0
@@ -427,31 +455,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="gui_input" from="Panel/GridContainer/A" to="." method="_on_A_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/B" to="." method="_on_B_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/C" to="." method="_on_C_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/D" to="." method="_on_D_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/E" to="." method="_on_E_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/F" to="." method="_on_F_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/G" to="." method="_on_G_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/H" to="." method="_on_H_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/I" to="." method="_on_I_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/J" to="." method="_on_J_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/K" to="." method="_on_K_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/L" to="." method="_on_L_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/M" to="." method="_on_M_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/N" to="." method="_on_N_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/O" to="." method="_on_O_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/P" to="." method="_on_P_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/Q" to="." method="_on_Q_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/R" to="." method="_on_R_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/S" to="." method="_on_S_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/T" to="." method="_on_T_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/U" to="." method="_on_U_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/V" to="." method="_on_V_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/W" to="." method="_on_W_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/X" to="." method="_on_X_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/Y" to="." method="_on_Y_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/Z" to="." method="_on_Z_gui_input"]
-[connection signal="gui_input" from="Panel/GridContainer/BACKSPACE" to="." method="_on_BACKSPACE_gui_input"]
 [connection signal="pressed" from="Panel/Submit" to="." method="_on_Submit_pressed"]
