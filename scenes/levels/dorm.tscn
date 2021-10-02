@@ -1,7 +1,8 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/options.gd" type="Script" id=3]
 [ext_resource path="res://sprites/environment/dorm/desk.png" type="Texture" id=4]
 [ext_resource path="res://scenes/utilities/clicked_area.gd" type="Script" id=5]
 [ext_resource path="res://sprites/environment/dorm/desk_chair.png" type="Texture" id=6]
@@ -9,6 +10,7 @@
 [ext_resource path="res://scenes/levels/dorm.gd" type="Script" id=8]
 [ext_resource path="res://sprites/environment/dorm/bed.png" type="Texture" id=9]
 [ext_resource path="res://materials/outline.tres" type="Material" id=10]
+[ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=11]
 [ext_resource path="res://sprites/environment/dorm/door.png" type="Texture" id=12]
 [ext_resource path="res://sprites/environment/dorm/ground_props.png" type="Texture" id=13]
 [ext_resource path="res://sprites/npcs/icarus_idle_f.png" type="Texture" id=14]
@@ -17,6 +19,7 @@
 [ext_resource path="res://sprites/environment/dorm/props_1.png" type="Texture" id=17]
 [ext_resource path="res://sprites/environment/dorm/walls.png" type="Texture" id=18]
 [ext_resource path="res://sprites/environment/dorm/floor.png" type="Texture" id=19]
+[ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=20]
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -177,6 +180,22 @@ vertices = PoolVector2Array( 192.219, 129.271, 298.353, 128.343, 297.425, 182.80
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 2, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 17, 13, 16, 18, 19, 12, 11 ), PoolIntArray( 17, 20, 13 ), PoolIntArray( 19, 4, 8, 12 ), PoolIntArray( 21, 22, 3 ), PoolIntArray( 21, 3, 2, 12, 23, 24 ) ]
 outlines = [ PoolVector2Array( 46.0902, 186.454, 114.862, 185.587, 121.432, 219.928, 160.039, 213.745, 161.114, 200.643, 163.336, 191.148, 170.205, 184.683, 171.619, 178.421, 192.219, 178.16, 192.219, 129.271, 298.353, 128.343, 297.425, 182.802, 435.3, 183.203, 435.135, 219.975, 401.109, 221.022, 402.857, 268.384, 403.12, 382.385, 345.367, 383.252, 345.516, 403.338, 314.419, 403.636, 314.27, 397.387, 142.786, 396.142, 142.447, 252.645, 122.973, 252.614, 47.5803, 253.498 ) ]
 
+[sub_resource type="DynamicFontData" id=33]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=30]
+size = 32
+font_data = SubResource( 33 )
+
+[sub_resource type="DynamicFontData" id=34]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=32]
+size = 18
+font_data = SubResource( 34 )
+
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -277,7 +296,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -295,7 +314,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -339,6 +358,132 @@ texture = ExtResource( 12 )
 position = Vector2( 1.57208, 0.497391 )
 navpoly = SubResource( 28 )
 
+[node name="options" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="Settings Button" type="TextureButton" parent="options"]
+anchor_left = 0.979
+anchor_top = 0.029
+anchor_right = 0.979
+anchor_bottom = 0.029
+margin_left = -40.0
+margin_right = -15.0
+margin_bottom = 25.0
+mouse_filter = 1
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="options"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="options/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.835294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="options/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -125.0
+margin_right = 250.0
+margin_bottom = 125.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 36
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="options/Control/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 30 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "OPTIONS"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="options/Control/VBoxContainer"]
+margin_top = 66.0
+margin_right = 500.0
+margin_bottom = 96.0
+custom_constants/separation = 128
+
+[node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
+margin_right = 168.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 30 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SOUND VOLUME"
+align = 1
+valign = 1
+
+[node name="slider" type="HSlider" parent="options/Control/VBoxContainer/HBoxContainer"]
+margin_left = 296.0
+margin_right = 496.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+min_value = -20.0
+max_value = 0.0
+allow_lesser = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="options/Control/VBoxContainer"]
+margin_top = 132.0
+margin_right = 500.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 500, 50 )
+custom_constants/separation = 200
+alignment = 1
+
+[node name="Restart" type="Button" parent="options/Control/VBoxContainer/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "RESTART"
+
+[node name="Quit" type="Button" parent="options/Control/VBoxContainer/HBoxContainer2"]
+margin_left = 350.0
+margin_right = 500.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "QUIT"
+
+[node name="close" type="Button" parent="options/Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -87.4561
+margin_top = -42.8302
+margin_right = -19.4561
+margin_bottom = -19.8302
+custom_fonts/font = SubResource( 32 )
+text = "X CLOSE"
+flat = true
+
 [connection signal="body_entered" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_body_exited"]
 [connection signal="input_event" from="environment/interactable objects/desk" to="environment/interactable objects/desk/collider" method="_on_interactable_input_event"]
@@ -354,3 +499,8 @@ navpoly = SubResource( 28 )
 [connection signal="body_entered" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_exited"]
 [connection signal="input_event" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_input_event"]
+[connection signal="pressed" from="options/Settings Button" to="options" method="_on_Settings_Button_pressed"]
+[connection signal="value_changed" from="options/Control/VBoxContainer/HBoxContainer/slider" to="options" method="_on_slider_value_changed"]
+[connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Restart" to="options" method="_on_Restart_pressed"]
+[connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Quit" to="options" method="_on_Quit_pressed"]
+[connection signal="pressed" from="options/Control/close" to="options" method="_on_close_pressed"]

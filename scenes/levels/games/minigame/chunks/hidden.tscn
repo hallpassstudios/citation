@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
 [ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=4]
-[ext_resource path="res://scenes/levels/games/minigame/chunks/outside.gd" type="Script" id=6]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/hidden.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -305,7 +305,7 @@ shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.5
 
 [node name="hidden" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="joystick" type="CanvasLayer" parent="."]
 script = ExtResource( 1 )

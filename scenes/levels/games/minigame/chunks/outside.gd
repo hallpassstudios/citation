@@ -13,12 +13,12 @@ func _ready():
 	add_child(current_player)
 	current_player.position = spawn.position
 	global_ui.fade_in()
-	dialogue_controller.play_dialogue("hidden")
+	dialogue_controller.play_dialogue("outside 1")
 	
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":
 		analytics.objective_completed("completed level 1", {
 			"elapsed_time": OS.get_ticks_msec()
 		})
-		globals.goto_scene("res://scenes/levels/games/minigame/chunks/celler.tscn")
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/house.tscn")
 

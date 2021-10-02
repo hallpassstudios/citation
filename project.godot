@@ -105,7 +105,7 @@ _global_script_class_icons={
 [application]
 
 config/name="citation"
-run/main_scene="res://scenes/levels/games/minigame/chunks/classroom.tscn"
+run/main_scene="res://scenes/levels/dorm.tscn"
 boot_splash/image="res://sprites/ui/logo.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
