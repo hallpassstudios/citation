@@ -1,0 +1,315 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1630255667-592",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1630444561-366",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "hoooooootie hooot! I saw you go into the library, it's [fade start=4 length=5]Daaaaark[/fade] in there."
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I heard that coffee king up there is looking for some help..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1630444561-366",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1630258075-885",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi Owl! You're wise. I have a question for you."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Do you know how to turn on the light in the library?"
+		},
+		{
+			"action": "join",
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sure [wave amp=5 freq=10]doooo[/wave]"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Really?! How can I?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There isnt' a light in the library. You need a spell."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A spell to light up the room? How do I get that?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You don't, you [wave amp=5 freq=10]eeeeeeearn[/wave] it!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm not sure I understand? How do I \"earn\" a spell?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see you didn't read the Academic Bulletin? Why, you need to beat a game to learn spells at dream school"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Because it's too dark in the library to find it! "
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, at Dream School, you demonstrate mastery by beating games!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are you serious?!"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I suppose you really are new here! At dream school it's possible for students to learn and even take tests by playing specific games"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh cool. You mean I can play a video game AND learn at the same time?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Contrary to popular opinion (and various government regulations), yes! In fact, it's [b]required[/b] in order to learn spells."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So I need to play a game in order to learn how to see in the library?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, you do. "
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay. So how to I play it?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, first you need a cartridge for the spell you want to learn. Normally your professors will hand these out. "
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, I don't have one. And all of the professors are asleep! Are there any other ways?"
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm afraid not, unless you happen to know a gamer. You might need to wait until morning."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't have that much time. Anyway, thanks for the info."
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good luck! "
+		},
+		{
+			"definition": "1630258075-885",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1630255667-592",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"condition": "",
+			"definition": "1630258075-885",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_002",
+			"mirror": true,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave amp=5 freq=10]hoooloooo there [/wave]. Welcome to the lounge."
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi! I'm looking for some coffee for my roomate."
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave amp=5 freq=10]hoooo[/wave], you're in the right place. Coffee is free, you just need a token."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Try the Bean King in the back, he always has some."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1629920697.json",
+		"name": "owl"
+	}
+}

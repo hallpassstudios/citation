@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+					"lit up library"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A warm glow eminates from your body."
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whoa, that spell really does work. I CAN SEEE!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe you should remember why you're here in the first place (*cough* *coughie*)"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1630281661.json",
+		"name": "library lit"
+	}
+}

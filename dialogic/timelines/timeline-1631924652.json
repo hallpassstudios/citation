@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"definition": "1631925726-614",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1631924772.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1631924772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good night, good night! parting is such sweet sorrow, That I shall say good night till it be morrow."
+		},
+		{
+			"character": "character-1631924772.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just wrote that, can't understand why judge judy thinks I plagiarized!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1631924652.json",
+		"name": "person 1"
+	}
+}

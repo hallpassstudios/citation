@@ -15,7 +15,5 @@ builds
 # Only add dialogic plugin 
 addons/*
 !addons/dialogic
-# Ignore dialogic resources
-dialogic
 # Place test project files here
 test-project

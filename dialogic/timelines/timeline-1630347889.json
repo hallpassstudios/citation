@@ -1,0 +1,278 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is an inscription on the bookcase: [color=fuchsia]tales of 11 plagiarising playwrights[/color]"
+		},
+		{
+			"condition": "",
+			"definition": "1630359453-413",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You've already read this book"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Would you like to read it again?"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1630359453-413",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1630359453-413",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"condition": "",
+			"definition": "1630347918-543",
+			"event_id": "dialogic_012",
+			"value": "4"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Somehow it seems like every single book in the library has to do with academic integrity. Strange."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Read the book?"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's a book about 11 different types of unethical playwrites. The first chapter is all about uncited plagarism "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This book contains 2 chapters, each covering a specific type of plagiarism (cited and non-cited)"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Ghost Writer###\nThe writer turns in another's work, word-for-word, as his or her own."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Photocopy###\nThe writer copies significant portions of text straight from a single source, without alteration."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Potluck Paper###\nThe writer tries to disguise plagiarism by copying from several different sources, tweaking the sentences to make them fit together while retaining most of the original phrasing."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Poor Disguise###\nAlthough the writer has retained the essential content of the source, he or she has altered the paper's appearance by changing key words and phrases."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Labor of Laziness###\nThe writer takes the time to paraphrase most of the paper from other sources and make it all fit together, instead of spending the same effort on original work."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Self-Stealer###\nThe writer \"borrows\" generously from his or her previous work, violating policies concerning the expectation of originality adopted by most academic institutions."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This chapter is about plagarism that is cited!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Forgotten Footnote###\nThe writer mentions an author's name for a source, but neglects to include specific information on the location of the material referenced. This often masks other forms of plagiarism by obscuring source locations.."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Misinformer###\nThe writer provides inaccurate or incomplete information regarding the sources, making it impossible to find them."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Too-Perfect Paraphrase###\nThe writer properly cites a source, but neglects to put in quotation marks text that has been copied word-for-word, or close to it. Although attributing the basic ideas to the source, the writer is falsely claiming original presentation and interpretation of the information."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Resourceful Citer###\nThe writer properly cites all sources, paraphrasing and using quotations appropriately. The catch? The paper contains almost no original work!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "###The Perfect Crime###\nThe writer properly quotes and cites sources in some places, but goes on to paraphrase other arguments from those sources without citation. This way, the writer tries to pass off the paraphrased material as his or her own analysis of the cited material."
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "These archetypes are PERFECT for coffee king, it will really add to the presentation."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should be sure and tell him where I found this information too. "
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"read shelf 5"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"definition": "1630359453-413",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"definition": "1630347918-543",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1630347889.json",
+		"name": "shelf 5"
+	}
+}

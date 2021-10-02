@@ -1,0 +1,91 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+					"beat illuminata"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You find yourself right back in your dorm..."
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "WHOOOOO DUDE!!! "
+		},
+		{
+			"action": "join",
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi! You're back! I was worried about you. "
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You put that cartridge in the beakstation and *poof* "
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ya. I was a sucked into the game. "
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "gnarly! Well, that's how you learn right?!"
+		},
+		{
+			"definition": "1630528470-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1630281734.json",
+		"name": "return to dorm"
+	}
+}

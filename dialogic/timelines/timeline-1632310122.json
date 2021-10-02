@@ -1,0 +1,103 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1632308461-200",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're already taken a bulletin. Better head back to Bean King!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1632308461-200",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You search the table and see a huge stack of Academic Bulletins"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I guess they're not exactly 'flying off the shelf'!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"bulletin"
+				],
+				"method_name": "add_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You receive an Academic Bulletin"
+		},
+		{
+			"definition": "1632308461-200",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1632310122.json",
+		"name": "bulletin"
+	}
+}

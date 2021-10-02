@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"definition": "1631925726-614",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1631924780.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1631924780.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm well-known for saying this:"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The way to get started is to quit talking and begin doing."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1631924684.json",
+		"name": "person 2"
+	}
+}

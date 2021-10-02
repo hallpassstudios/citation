@@ -1,0 +1,89 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1629847073-571",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You need your notes if you're ever going to finish studying without your notes! Try talking to your roomate or searching around."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1629847073-571",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The desk is full of the scratches of a thousand souls."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(and its fair share of ancient memes and smiley faces too)"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmmm...where are my notes ?! I know I left them here. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your notes are nowhere to be found. You need them to finish studying for this test. Perhaps your roommate joe knows something"
+		},
+		{
+			"definition": "1629847073-571",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"sat at desk"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1629745718.json",
+		"name": "desk"
+	}
+}

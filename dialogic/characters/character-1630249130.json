@@ -1,0 +1,20 @@
+{
+	"color": "#ff0fd5d1",
+	"description": "The king of beans",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1630249130.json",
+	"mirror_portraits": false,
+	"name": "bean king",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -90,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://sprites/portraits/coffee_king.png"
+		}
+	],
+	"scale": 200
+}

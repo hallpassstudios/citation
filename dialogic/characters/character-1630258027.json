@@ -1,0 +1,20 @@
+{
+	"color": "#fffff500",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1630258027.json",
+	"mirror_portraits": false,
+	"name": "star",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -100,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://sprites/portraits/star_boy.png"
+		}
+	],
+	"scale": 250
+}

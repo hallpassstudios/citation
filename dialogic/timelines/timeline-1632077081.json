@@ -1,0 +1,131 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The test is over..."
+		},
+		{
+			"action": "join",
+			"character": "character-1632077107.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "How do you think you did on the test?"
+		},
+		{
+			"choice": "Really well",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Okay",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1632077107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not exactly."
+		},
+		{
+			"character": "character-1632077107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You got EVERY QUESTION WRONG!"
+		},
+		{
+			"condition": "",
+			"definition": "1632162541-198",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"cheating never pays!",
+					"if an exam is closed book, don't bring a book!"
+				],
+				"method_name": "restart_game",
+				"target_node_path": "office"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"definition": "1632162541-198",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"definition": "1632076048-701",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1632162541-198",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"cheating never pays!",
+					"professors may randomize answers to tests"
+				],
+				"method_name": "restart_game",
+				"target_node_path": "office"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"definition": "1632076048-701",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1632077081.json",
+		"name": "chuck upset"
+	}
+}

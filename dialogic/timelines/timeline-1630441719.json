@@ -1,0 +1,163 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You see a strange figure at the top of the stairs standing next to the torch"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And it's lit!  "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You recall being told that the torch hasn't been lit for thousands of years! Something tells you you shouldn't be here"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey! Have you seen Joe?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You yell to the strange creature standing above you."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What are you doing here? Where's joe?"
+		},
+		{
+			"action": "join",
+			"character": "character-1630442082.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1630442082.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see found you found my desk..."
+		},
+		{
+			"character": "character-1630442082.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=20 level=10]leave immediately[/shake]"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What are you talking about? Where's joe?"
+		},
+		{
+			"character": "character-1630442082.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=20 level=10]He's gone and YOU WILL BE TOO IF YOU DON'T GET OUT OF HERE[/shake]"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay okay. But I have a quick question before I go."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "HAVE YOU SEEN MY NOTES?"
+		},
+		{
+			"character": "character-1630442082.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=30 level=10]ENOUGH OF THIS![/shake]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "shade_spooky",
+				"target_node_path": "library"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"beat the game"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "fade_out",
+				"target_node_path": "library"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "go_to_credits",
+				"target_node_path": "library"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1630441719.json",
+		"name": "final"
+	}
+}

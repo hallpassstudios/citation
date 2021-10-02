@@ -1,0 +1,225 @@
+{
+	"events": [
+		{
+			"condition": "",
+			"definition": "1631925577-718",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Ready to help me judge?!"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "1631925726-614",
+			"event_id": "dialogic_011",
+			"value": "4"
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "So who's innocent?"
+		},
+		{
+			"choice": "Hatim",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry, that's not correct, try again!"
+		},
+		{
+			"choice": "Andrew",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry, that's not correct, try again!"
+		},
+		{
+			"choice": "Zane",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's EXACTLY what I thought too."
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You are good judge."
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As a reward, I'm going to SEND YOU TO THE NEXT LEVEL!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "next_level",
+				"target_node_path": "courtroom"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "Soojin",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry, that's not correct, try again!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "Not yet",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1631925577-718",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi, I'm judge judith, you've probably heard of me. I'm famous."
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see you're an expert on avoiding plagiarism. "
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Can you help me judge?"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks, my cases are all at the tables behind you. I need your help to understand who is guilty of the charge of PLAGARISM!"
+		},
+		{
+			"definition": "1631925577-718",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see. Well, if you change your mind, I would enjoy the help."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1631924711.json",
+		"name": "judge"
+	}
+}

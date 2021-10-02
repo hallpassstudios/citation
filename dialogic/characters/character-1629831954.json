@@ -1,0 +1,20 @@
+{
+	"color": "#ffa0f900",
+	"description": "your trusty roommate",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1629831954.json",
+	"mirror_portraits": false,
+	"name": "joe",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -100,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://sprites/portraits/icarus_portrait.png"
+		}
+	],
+	"scale": 200
+}
