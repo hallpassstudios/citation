@@ -23,7 +23,6 @@ func _ready():
 	# play dialogue
 	dialogue_controller.play_dialogue("house")
 
-
 func restart(title, subtitle):
 	$HUD/restart.visible = true
 	$HUD/restart/VBoxContainer/title.text = title
@@ -69,7 +68,7 @@ func _on_door_body_entered(body):
 		if has_key && !played_door_sound:
 			$door.visible = false
 			$door/StaticBody2D/collider.set_deferred("disabled", true)
-			$door.monitoring = false
+			$door.set_deferred("monitoring", false)
 			$door/door_click.play()
 			played_door_sound = true
 			
@@ -121,3 +120,16 @@ func _on_exit_body_entered(body):
 			"spike deaths": globals.stats.spike_deaths
 		})
 		globals.goto_scene("res://scenes/levels/games/minigame/chunks/cellar.tscn")
+
+func _on_spikies_body_entered(body):
+	if body.name == "top down runner":
+		print("body entered")
+
+func _on_hidden_exit_body_entered(body):
+	print(body.name)
+	if body.name == "top down runner":
+		analytics.objective_completed("found hidden level", {
+			"elapsed_time": OS.get_ticks_msec(),
+			"spike deaths": globals.stats.spike_deaths
+		})
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/hidden.tscn")

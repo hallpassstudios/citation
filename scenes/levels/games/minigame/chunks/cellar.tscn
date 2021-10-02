@@ -685,7 +685,7 @@ z_index = 1
 [node name="sort" type="YSort" parent="."]
 
 [node name="spawner" type="Position2D" parent="sort"]
-position = Vector2( 7.62939e-06, 0 )
+position = Vector2( 1, 0 )
 
 [node name="wall tiles" type="TileMap" parent="sort"]
 position = Vector2( 7.62939e-06, 0 )

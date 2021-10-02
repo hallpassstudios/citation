@@ -1,11 +1,8 @@
 extends Node2D
 
 var songCopy = null
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-onready var base = $base
-onready var excellent = $excellent
+#onready var base = $base
+#onready var excellent = $excellent
 
 
 func loop(song):
@@ -34,8 +31,6 @@ func loop(song):
 		print($song.song_file.get_playback_position(), " ", song_playback)
 		$song.song_file.seek(0)
 		
-		
-		
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -45,3 +40,4 @@ func play():
 
 func _process(delta):
 	loop($song)
+

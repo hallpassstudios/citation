@@ -61,10 +61,10 @@ func _physics_process(delta):
 		
 		# we are moving, so walk
 		animationState.travel("Walk")
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		if collision.collider.is_in_group("spikes"):
-			globals.current_scene.restart("OUCH! watch out for spikes!", "they hurt")
+#	for i in get_slide_count():
+#		var collision = get_slide_collision(i)
+#		if collision.collider.is_in_group("spikes"):
+#			globals.current_scene.restart("OUCH! watch out for spikes!", "they hurt")
 	
 func _on_joystick_use_move_vector(move_vector):
 	if touch_active:

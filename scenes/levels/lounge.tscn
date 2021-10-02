@@ -247,7 +247,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=39]
-radius = 42.0
+radius = 24.7105
 
 [sub_resource type="ShaderMaterial" id=40]
 shader = SubResource( 20 )
@@ -315,7 +315,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=55]
-extents = Vector2( 60, 56 )
+extents = Vector2( 60, 30.4451 )
 
 [sub_resource type="ShaderMaterial" id=56]
 shader = SubResource( 20 )
@@ -435,7 +435,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 7
+frame = 13
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -454,7 +454,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -496,7 +496,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 7
+frame = 8
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]

@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "uh...pretty sure I wasn't supposed to do this."
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "did I break the game?"
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "everything is RGB and there are THREE OF ME!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1633197816.json",
+		"name": "hidden"
+	}
+}

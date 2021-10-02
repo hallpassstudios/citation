@@ -2,6 +2,12 @@
 	"events": [
 		{
 			"condition": "",
+			"definition": "1630351191-912",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"condition": "",
 			"definition": "1630255667-592",
 			"event_id": "dialogic_012",
 			"value": "0"
@@ -97,7 +103,7 @@
 			"character": "character-1630249130.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm too stressed out. I have to give a presentation in the morning on academic integrity. I'm not able to get into the library to get a copy of the Academic Bulletin"
+			"text": "I'm too stressed out. I have to give a presentation on academic integrity. I'm not able to get into the library to get a copy of the Academic Bulletin"
 		},
 		{
 			"character": "character-1629668635.json",
@@ -224,6 +230,24 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1630351191-912",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're done with bean king for now! Enjoy the coffee!"
 		},
 		{
 			"event_id": "dialogic_013"

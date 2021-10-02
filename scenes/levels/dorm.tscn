@@ -277,7 +277,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -295,7 +295,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]

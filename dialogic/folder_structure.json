@@ -313,14 +313,15 @@
 								},
 								"outside": {
 									"files": [
-
+										"timeline-1633197816.json",
+										"timeline-1633197870.json"
 									],
 									"folders": {
 
 									},
 									"metadata": {
 										"color": null,
-										"folded": true
+										"folded": false
 									}
 								}
 							},
@@ -332,7 +333,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"hallway": {

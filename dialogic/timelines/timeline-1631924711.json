@@ -169,6 +169,12 @@
 		},
 		{
 			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is only ONE innocent person out of the the four you see in front of me. I need your help finding out which one is innocent"
+		},
+		{
+			"character": "character-1631924725.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -187,7 +193,13 @@
 			"character": "character-1631924725.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Thanks, my cases are all at the tables behind you. I need your help to understand who is guilty of the charge of PLAGARISM!"
+			"text": "Thanks, my cases are all at the tables behind you. THREE of them are prone to quoting without citing the source, they even attribute the quote to themselves!"
+		},
+		{
+			"character": "character-1631924725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Talk to each and see if you can find our who is innocent."
 		},
 		{
 			"definition": "1631925577-718",
