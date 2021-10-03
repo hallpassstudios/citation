@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
 [ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=4]
 [ext_resource path="res://scenes/levels/games/minigame/chunks/hidden.gd" type="Script" id=5]
+[ext_resource path="res://scenes/levels/options.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -462,6 +463,8 @@ mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="options" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]

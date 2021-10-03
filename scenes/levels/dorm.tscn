@@ -296,7 +296,6 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 4
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]

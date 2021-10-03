@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://sprites/minigame/door.png" type="Texture" id=11]
 [ext_resource path="res://audio/sfx/item.mp3" type="AudioStream" id=12]
 [ext_resource path="res://audio/sfx/door_close.mp3" type="AudioStream" id=13]
+[ext_resource path="res://scenes/levels/options.gd" type="Script" id=14]
+[ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=15]
+[ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFontData" id=56]
 font_path = "res://fonts/zpix.ttf"
@@ -357,6 +360,22 @@ shader_param/warp_amount = 0.391
 shader_param/clip_warp = false
 shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.5
+
+[sub_resource type="DynamicFontData" id=63]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=64]
+size = 32
+font_data = SubResource( 63 )
+
+[sub_resource type="DynamicFontData" id=65]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=66]
+size = 18
+font_data = SubResource( 65 )
 
 [node name="house" type="Node2D"]
 script = ExtResource( 6 )
@@ -1037,6 +1056,132 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="options" type="CanvasLayer" parent="."]
+script = ExtResource( 14 )
+
+[node name="Settings Button" type="TextureButton" parent="options"]
+anchor_left = 0.979
+anchor_top = 0.029
+anchor_right = 0.979
+anchor_bottom = 0.029
+margin_left = -40.0
+margin_right = -15.0
+margin_bottom = 25.0
+mouse_filter = 1
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="options"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="options/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.835294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="options/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -125.0
+margin_right = 250.0
+margin_bottom = 125.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 36
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="options/Control/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 64 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "OPTIONS"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="options/Control/VBoxContainer"]
+margin_top = 66.0
+margin_right = 500.0
+margin_bottom = 96.0
+custom_constants/separation = 128
+
+[node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
+margin_right = 168.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 64 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SOUND VOLUME"
+align = 1
+valign = 1
+
+[node name="slider" type="HSlider" parent="options/Control/VBoxContainer/HBoxContainer"]
+margin_left = 296.0
+margin_right = 496.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+min_value = -20.0
+max_value = 0.0
+allow_lesser = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="options/Control/VBoxContainer"]
+margin_top = 132.0
+margin_right = 500.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 500, 50 )
+custom_constants/separation = 200
+alignment = 1
+
+[node name="Restart" type="Button" parent="options/Control/VBoxContainer/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "RESTART"
+
+[node name="Quit" type="Button" parent="options/Control/VBoxContainer/HBoxContainer2"]
+margin_left = 350.0
+margin_right = 500.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "QUIT"
+
+[node name="close" type="Button" parent="options/Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -87.4561
+margin_top = -42.8302
+margin_right = -19.4561
+margin_bottom = -19.8302
+custom_fonts/font = SubResource( 66 )
+text = "X CLOSE"
+flat = true
+
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="body_entered" from="exit" to="." method="_on_exit_body_entered"]
@@ -1049,3 +1194,8 @@ __meta__ = {
 [connection signal="body_entered" from="table3/table 3" to="." method="_on_table_3_body_entered"]
 [connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
 [connection signal="body_entered" from="key" to="." method="_on_key_body_entered"]
+[connection signal="pressed" from="options/Settings Button" to="options" method="_on_Settings_Button_pressed"]
+[connection signal="value_changed" from="options/Control/VBoxContainer/HBoxContainer/slider" to="options" method="_on_slider_value_changed"]
+[connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Restart" to="options" method="_on_Restart_pressed"]
+[connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Quit" to="options" method="_on_Quit_pressed"]
+[connection signal="pressed" from="options/Control/close" to="options" method="_on_close_pressed"]

@@ -20,5 +20,5 @@ func _on_exit_body_entered(body):
 		analytics.objective_completed("completed hidden level", {
 			"elapsed_time": OS.get_ticks_msec()
 		})
-		globals.goto_scene("res://scenes/levels/games/minigame/chunks/celler.tscn")
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/cellar.tscn")
 
