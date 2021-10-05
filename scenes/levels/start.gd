@@ -14,13 +14,15 @@ func _ready():
 	
 func _on_Start_pressed():
 	globals.goto_scene("res://scenes/levels/name.tscn")
-	analytics.objective_completed("started the game", analytics_data)
+	analytics.set_objective("started the game")
 
 func _on_Backstory_pressed():
 	globals.goto_scene("res://scenes/levels/backstory.tscn")
+	analytics.set_objective("viewed backstory")
 
 func on_timer_timeout():
 	globals.goto_scene("res://scenes/levels/backstory.tscn")
+	analytics.set_objective("shown backstory")
 
 func _on_Control_gui_input(event):
 	timer.stop()

@@ -14,6 +14,7 @@ func _ready():
 	current_player.position = spawn.position
 	global_ui.fade_in()
 	dialogue_controller.play_dialogue("hidden")
+	analytics.hidden_level()
 	
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":

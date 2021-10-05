@@ -241,6 +241,16 @@
 			"event_id": "dialogic_042"
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "read_books",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"definition": "1630359453-413",
 			"event_id": "dialogic_014",
 			"operation": "=",

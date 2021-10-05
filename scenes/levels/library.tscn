@@ -456,11 +456,10 @@ script = ExtResource( 22 )
 pause_mode = 2
 
 [node name="shade" type="AnimatedSprite" parent="environment/interactable objects"]
-visible = false
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]

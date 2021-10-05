@@ -60,7 +60,9 @@ func _on_quote_1_area_body_entered(body):
 		body.sleeping = true
 		quote_1 = true
 		shut = true
+		analytics.citations()
 	if body.name == "quotes2" && !shut:
+		analytics.citations()
 		body.sleeping = true
 		quote_2 = true
 		shut = true
@@ -72,10 +74,12 @@ func _on_quote_1_area_body_entered(body):
 
 func _on_quote_2_area_body_entered(body):
 	if body.name == "quotes" && !shut_2:
+		analytics.citations()
 		body.sleeping = true
 		quote_1 = true
 		shut_2 = true
 	if body.name == "quotes2" && !shut_2:
+		analytics.citations()
 		body.sleeping = true
 		quote_2 = true
 		shut_2 = true

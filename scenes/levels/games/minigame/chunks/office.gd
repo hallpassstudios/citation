@@ -13,12 +13,10 @@ func _ready():
 	globals.player = current_player
 	add_child(current_player)
 	current_player.position = spawn.position
-	analytics.objective_completed("reprimanded", {
-		"elapsed_time": OS.get_ticks_msec()
-		"count": 
-	})
+	analytics.set_objective("reprimanded")
 	global_ui.fade_in()
 	dialogue_controller.play_dialogue("chuck upset")
+	analytics.caught()
 	
 
 func restart(title, subtitle):

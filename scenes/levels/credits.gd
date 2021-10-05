@@ -13,6 +13,9 @@ func _ready():
 	analytics.objective_completed("completed credits", {
 		"elapsed_time": OS.get_ticks_msec()
 		})
+		
+	# player won
+	analytics.player_wins()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

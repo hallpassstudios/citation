@@ -77,9 +77,7 @@ func _on_door_body_entered(body):
 func _on_table_1_body_entered(body):
 	if body.name == "top down runner":
 		globals.stats.table_flips += 1
-		analytics.objective_completed("table flips", {
-		"table flips": globals.stats.table_flips
-		})
+		analytics.table_flips()
 	if body.name == "top down runner" && !key_1:
 		key_1 = true
 		key_progress += 1
@@ -90,9 +88,7 @@ func _on_table_1_body_entered(body):
 func _on_table_2_body_entered(body):
 	if body.name == "top down runner":
 		globals.stats.table_flips += 1
-		analytics.objective_completed("table flips", {
-		"table flips": globals.stats.table_flips
-		})
+		analytics.table_flips()
 	if body.name == "top down runner" && !key_2:
 		key_2 = true
 		key_progress += 1
@@ -103,9 +99,7 @@ func _on_table_2_body_entered(body):
 func _on_table_3_body_entered(body):
 	if body.name == "top down runner":
 		globals.stats.table_flips += 1
-		analytics.objective_completed("table flips", {
-		"table flips": globals.stats.table_flips
-		})
+		analytics.table_flips()
 	if body.name == "top down runner" && !key_3:
 		key_3 = true
 		key_progress += 1
