@@ -459,7 +459,7 @@ pause_mode = 2
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]

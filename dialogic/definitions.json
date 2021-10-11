@@ -99,15 +99,6 @@
 			"url": ""
 		},
 		{
-			"extra": "ask around",
-			"id": "1629935979-599",
-			"name": "notes",
-			"text": "You need these if you want to have any chance of passing this test",
-			"title": "Your notes",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "source: writingcenter.unc.edu",
 			"id": "1629924473-384",
 			"name": "academic integrity",
@@ -230,6 +221,15 @@
 			"name": "gamer",
 			"text": "perhaps you've met him?",
 			"title": "a gamer",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "ask around",
+			"id": "1629935979-599",
+			"name": "notes",
+			"text": "You need these if you want to have any chance of passing this test",
+			"title": "Your notes",
 			"type": 1,
 			"url": ""
 		}
@@ -380,12 +380,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1632162541-198",
-			"name": "took book",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1632308461-200",
 			"name": "bulletin",
 			"type": 0,
@@ -394,6 +388,12 @@
 		{
 			"id": "1630359784-519",
 			"name": "shelf 7",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1632162541-198",
+			"name": "took book",
 			"type": 0,
 			"value": "0"
 		}

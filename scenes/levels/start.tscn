@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/levels/start.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/title hallway.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/environment/sky/parallaxbg_bunnies.png" type="Texture" id=9]
 [ext_resource path="res://sprites/environment/sky/parallaxbg_sky.png" type="Texture" id=10]
 [ext_resource path="res://sprites/environment/sky/parallaxbg-sunst.png" type="Texture" id=11]
+[ext_resource path="res://sprites/ui/hallpass_logo.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFontData" id=3]
 antialiased = false
@@ -20,6 +21,21 @@ font_path = "res://fonts/HungryPro.ttf"
 size = 24
 extra_spacing_top = 2
 font_data = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="DynamicFontData" id=5]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = SubResource( 5 )
 
 [node name="Start Page" type="CanvasLayer"]
 
@@ -127,8 +143,9 @@ __meta__ = {
 }
 
 [node name="Start" type="Button" parent="Control/Title/Menu"]
+margin_top = 12.0
 margin_right = 150.0
-margin_bottom = 26.0
+margin_bottom = 38.0
 rect_min_size = Vector2( 150, 0 )
 focus_mode = 0
 custom_styles/hover = ExtResource( 5 )
@@ -137,11 +154,12 @@ custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = SubResource( 2 )
 enabled_focus_mode = 0
 text = "START"
+expand_icon = true
 
 [node name="Backstory" type="Button" parent="Control/Title/Menu"]
-margin_top = 30.0
+margin_top = 42.0
 margin_right = 150.0
-margin_bottom = 56.0
+margin_bottom = 68.0
 rect_min_size = Vector2( 150, 0 )
 focus_mode = 0
 custom_styles/hover = ExtResource( 5 )
@@ -151,21 +169,26 @@ custom_fonts/font = SubResource( 2 )
 enabled_focus_mode = 0
 text = "BACKSTORY"
 
-[node name="Credits" type="Button" parent="Control/Title/Menu"]
-margin_top = 60.0
-margin_right = 150.0
-margin_bottom = 86.0
-rect_min_size = Vector2( 150, 0 )
-focus_mode = 0
-custom_styles/hover = ExtResource( 5 )
-custom_styles/pressed = ExtResource( 6 )
-custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
-enabled_focus_mode = 0
-text = "CREDITS"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 320.724, 179.962 )
+
+[node name="hallpass_logo" type="Sprite" parent="."]
+position = Vector2( 614.924, 345.229 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 168.404
+margin_top = 337.685
+margin_right = 582.404
+margin_bottom = 356.685
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
+text = "hallpass studios 2021 (https://hallpass.games)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="Control" to="Control" method="_on_Control_gui_input"]
 [connection signal="pressed" from="Control/Title/Menu/Start" to="Control" method="_on_Start_pressed"]

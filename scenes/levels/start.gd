@@ -7,6 +7,7 @@ var analytics_data = {
 }
 
 func _ready():
+	VisualServer.set_default_clear_color(Color(0.07,0.08,0.11,0.0))
 	timer = Timer.new()
 	timer.connect("timeout", self, "on_timer_timeout")
 	add_child(timer)

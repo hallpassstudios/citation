@@ -53,7 +53,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"dorm": {
@@ -73,7 +73,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"hallway": {
@@ -374,14 +374,14 @@
 				},
 				"lounge": {
 					"files": [
-
+						"timeline-1633538224.json"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				}
 			},

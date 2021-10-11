@@ -10,22 +10,27 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 40.0
 margin_bottom = 40.0
+rect_min_size = Vector2( 60, 60 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="slot 1" type="TextureButton" parent="HBoxContainer"]
-margin_bottom = 30.0
+margin_right = 50.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 50 )
+expand = true
+stretch_mode = 5
 
 [node name="slot 2" type="TextureButton" parent="HBoxContainer"]
-margin_left = 4.0
-margin_right = 4.0
-margin_bottom = 30.0
+margin_left = 54.0
+margin_right = 54.0
+margin_bottom = 60.0
 
 [node name="slot 3" type="TextureButton" parent="HBoxContainer"]
-margin_left = 8.0
-margin_right = 8.0
-margin_bottom = 30.0
+margin_left = 58.0
+margin_right = 58.0
+margin_bottom = 60.0
 
 [connection signal="pressed" from="HBoxContainer/slot 1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/slot 2" to="." method="_on_slot_2_pressed"]

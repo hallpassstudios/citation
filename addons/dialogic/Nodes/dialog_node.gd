@@ -327,7 +327,6 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 				'event_idx': event_idx,
 				}
 			if event.has('condition') and event.has('definition') and event.has('value'):
-				#print("e")
 				option = {
 					'question_idx': opened_branch['question_idx'],
 					'label': parse_definitions(event['choice'], true, false),
@@ -337,7 +336,6 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 					'value': event['value'],
 					}
 			else:
-				#print("er")
 				option = {
 					'question_idx': opened_branch['question_idx'],
 					'label': parse_definitions(event['choice'], true, false),
@@ -349,7 +347,6 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 			dialog_script['events'][opened_branch['event_idx']]['options'].append(option)
 			event['question_idx'] = opened_branch['question_idx']
 		elif event['event_id'] == 'dialogic_010':
-			#print("err")
 			event['event_idx'] = event_idx
 			event['question_idx'] = question_idx
 			event['answered'] = false
@@ -357,7 +354,6 @@ func parse_branches(dialog_script: Dictionary) -> Dictionary:
 			questions.append(event)
 			parser_queue.append(event)
 		elif event['event_id'] == 'dialogic_012':
-			#print("errr")
 			event['event_idx'] = event_idx
 			event['question_idx'] = question_idx
 			event['answered'] = false
@@ -444,7 +440,6 @@ func _input(event: InputEvent) -> void:
 			if waiting_for_answer == false and waiting_for_input == false and while_dialog_animation == false:
 				$FX/CharacterVoice.stop_voice() # stop the current voice as well 
 				_load_next_event()
-				#print("using input")
 		if settings.has_section_key('dialog', 'propagate_input'):
 			var propagate_input: bool = settings.get_value('dialog', 'propagate_input')
 			if not propagate_input:
@@ -459,10 +454,8 @@ func set_dialog_script(value):
 
 
 func update_name(character) -> void:
-	#print("updating name")
 	if character.has('name'):
 		var parsed_name = character['name']
-		print(parsed_name)
 		if parsed_name == "LILY":
 			parsed_name = globals.player_name
 		if parsed_name == "black and white lily":
@@ -481,7 +474,6 @@ func update_text(text: String) -> String:
 	if settings.has_section_key('dialog', 'translations') and settings.get_value('dialog', 'translations'):
 		text = tr(text)
 	var final_text = parse_definitions(parse_alignment(text))
-	#print("updating final text")
 	final_text = final_text.replace('[br]', '\n')
 
 	$TextBubble.update_text(final_text)
@@ -522,7 +514,6 @@ func _on_text_completed():
 func on_timeline_start():
 	if not Engine.is_editor_hint():
 		if settings.get_value('saving', 'save_definitions_on_start', true):
-			#print("saving definitions")
 			save_definitions()
 			pass
 		if settings.get_value('saving', 'save_current_timeline', true):
@@ -620,7 +611,6 @@ func handle_voice(event):
 
 
 func event_handler(event: Dictionary):
-	# print(event)
 	# Handling an event and updating the available nodes accordingly.
 	$TextBubble.reset()
 	reset_options()
@@ -698,18 +688,15 @@ func event_handler(event: Dictionary):
 			waiting_for_answer = true
 			if event.has('name'):
 				update_name(event['name'])
-				#print('10')
 			elif event.has('character'):
 				var character_data = get_character(event['character'])
 				update_name(character_data)
-				#print('10')
 				grab_portrait_focus(character_data, event)
 			#voice 
 			handle_voice(event)
 			update_text(event['question'])
 		# Choice event
 		'dialogic_011':
-			print("showing choices...")
 			emit_signal("event_start", "choice", event)
 			for q in questions:
 				if q['question_idx'] == event['question_idx']:
@@ -723,7 +710,6 @@ func event_handler(event: Dictionary):
 			var def_value = null
 			var current_question = questions[event['question_idx']]
 			for d in definitions['variables']:
-				#print(d)
 				if d['id'] == event['definition']:
 					def_value = d['value']
 			
@@ -1152,11 +1138,9 @@ func _on_RichTextLabel_meta_clicked(meta):
 	for d in definitions['glossary']:
 		if d['id'] == meta:
 			if d['url'] != '':
-				print("opening dialogue")
 				open_confirmation(d['url'])
 
 func _on_RichTextLabel_meta_hover_started(meta):
-	print("hover started")
 	$DefinitionInfo.hovering = true
 	var correct_type = false
 	for d in definitions['glossary']:
@@ -1197,7 +1181,6 @@ func dprint(string, arg1='', arg2='', arg3='', arg4='' ):
 
 
 func _compare_definitions(def_value: String, event_value: String, condition: String):
-	# print("comparing variables")
 	var condition_met = false;
 	if def_value != null and event_value != null:
 		# check if event_value equals a definition name and use that instead
@@ -1372,7 +1355,6 @@ func save_definitions(autosave = true):
 
 func _on_TextureRect2_gui_input(event):
 	if $Options.get_children().size() == 1:
-		print(event)
 		if event is InputEventScreenTouch:
 			if event.is_pressed() == true:
 				print("touched")
@@ -1383,9 +1365,9 @@ func _on_TextureRect2_gui_input(event):
 				a.pressed = false
 
 func open_confirmation(url):
-	print("opening confirmation dialogue")
-	current_url = url
-	$"Confirmation Dialogue".visible = true
+	if url != '':
+		current_url = url
+		$"Confirmation Dialogue".visible = true
 
 func _on_Yes_pressed():
 	$"Confirmation Dialogue".visible = false

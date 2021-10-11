@@ -32,9 +32,9 @@
 		{
 			"choice": "Yes",
 			"condition": "",
-			"definition": "1631925726-614",
+			"definition": "",
 			"event_id": "dialogic_011",
-			"value": "4"
+			"value": ""
 		},
 		{
 			"character": "character-1631924725.json",
@@ -199,7 +199,7 @@
 			"character": "character-1631924725.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Talk to each and see if you can find our who is innocent."
+			"text": "Talk to each and see if you can find out who is innocent."
 		},
 		{
 			"definition": "1631925577-718",

@@ -4,12 +4,13 @@
 [ext_resource path="res://sprites/ui/credit_border.png" type="Texture" id=2]
 [ext_resource path="res://sprites/npcs/shade_idle.png" type="Texture" id=3]
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="DynamicFontData" id=15]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=5]
-font_data = SubResource( 4 )
+[sub_resource type="DynamicFont" id=16]
+size = 18
+font_data = SubResource( 15 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -83,31 +84,60 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="story" type="Label" parent="CanvasLayer/TextureRect"]
-margin_left = 21.2182
-margin_top = 224.842
-margin_right = 440.218
-margin_bottom = 617.842
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "It looks like this creature wasn't playing games. You manage to escape the library and immediate return to your dorm and find out that Joe is gone. That creature certainly has something to do with his disappearance. You wonder if the cartridge might hold another clue as well. That'll be the first thing you do after you've had a chance to report Joe missing. 
+[node name="story" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
+margin_left = 24.0
+margin_top = 225.0
+margin_right = 444.0
+margin_bottom = 765.0
+custom_fonts/normal_font = SubResource( 16 )
+bbcode_enabled = true
+bbcode_text = "It looks like this creature wasn't playing games. You manage to escape the library and return to your dorm only to find out that Joe is gone. That creature certainly has something to do with his disappearance. You wonder if the cartridge you found in his desk might hold another clue as well. That'll be the first thing you play after you've had a chance to report Joe missing. 
 
 It looks like you have a few mysteries on your hands now:
-Where's Joe? 
+
+[color=yellow]Where's Joe?
 Who is that strange shade?
 Why did Joe have a stack of contract cheating ads in his desk? 
 Who took your notes?
+[/color]
+[center]
+CREDITS
+Story - Christian Grewell
+Art - Andrew Liu, Hatim Behnsain, Soojin Lee
+Music and Sound - Zane Fadul
+Programming - Christian Grewell, Benjamin Pang
+
+SPECIAL THANKS TO:
+NYU Abu Dhabi
+
+Thanks for playing CITATION EP 1: NOTES. 
+2021 hallpass studios
+[url=<hallpass.games>]https://hallpass.games[/url]
+[/center]"
+text = "It looks like this creature wasn't playing games. You manage to escape the library and return to your dorm only to find out that Joe is gone. That creature certainly has something to do with his disappearance. You wonder if the cartridge you found in his desk might hold another clue as well. That'll be the first thing you play after you've had a chance to report Joe missing. 
+
+It looks like you have a few mysteries on your hands now:
+
+Where's Joe?
+Who is that strange shade?
+Why did Joe have a stack of contract cheating ads in his desk? 
+Who took your notes?
+
 
 CREDITS
 Story - Christian Grewell
 Art - Andrew Liu, Hatim Behnsain, Soojin Lee
 Music and Sound - Zane Fadul
-Programming - Christian Grewell
+Programming - Christian Grewell, Benjamin Pang
 
-Thanks for playing CITATION EP 1: NOTES. "
-align = 3
-valign = 1
-autowrap = true
+SPECIAL THANKS TO:
+NYU Abu Dhabi
+
+Thanks for playing CITATION EP 1: NOTES. 
+2021 hallpass studios
+https://hallpass.games
+"
+fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -164,5 +194,5 @@ __meta__ = {
 position = Vector2( 328.148, 244.404 )
 scale = Vector2( 2.23427, 2.23427 )
 frames = SubResource( 14 )
-frame = 1
+frame = 3
 playing = true

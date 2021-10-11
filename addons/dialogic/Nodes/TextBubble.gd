@@ -251,7 +251,11 @@ func align_name_label():
 	elif name_label_position == 1: # Center
 		name_label.rect_global_position.x = rect_global_position.x + (rect_size.x / 2) - (label_size / 2) + horizontal_offset
 	elif is_player_char == false: # Right ##TO D0: IF NOT PLAYER, THEN NAME_POSITION IS 2
-		name_label.rect_global_position.x = rect_global_position.x + rect_size.x - label_size + 10
+		# name_label.rect_global_position.x = rect_global_position.x + rect_size.x - label_size
+		$NameLabel.ALIGN_RIGHT
+		name_label.rect_global_position.x = get_viewport().size.x - name_label.rect_size.x - 20
+		print("label size ", name_label.rect_size.x)
+		print("rect size ", rect_size.x)
 
 ## *****************************************************************************
 ##								OVERRIDES

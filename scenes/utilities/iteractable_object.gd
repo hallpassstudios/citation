@@ -60,6 +60,8 @@ func _on_interactable_body_entered(body):
 				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
 			if !globals.desk_interact && !object_name == "desk" && !object_name == "joe":
 				dialogue_controller.play_dialogue('interact')
+			if globals.caught_joe && self.get_parent().name != "door to library" && globals.current_scene.name == "lounge":
+				dialogue_controller.play_dialogue('find joe')
 
 func _on_interactable_body_exited(body):
 	if body.name == "top down player":
@@ -77,3 +79,4 @@ func inside():
 				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
 			if !globals.desk_interact && !object_name == "desk" && !object_name == "joe":
 				dialogue_controller.play_dialogue('interact')
+			
