@@ -4,6 +4,7 @@ export(float) var character_speed = 300.0
 var path = []
 var target : Vector2 
 var can_move: bool = true
+export(int) var character_model = 0
 
 enum {
 	IDLE,
@@ -26,6 +27,23 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var light = $light
 
 func _ready():
+	# set our player model and animations
+	if globals.active_char == 1:
+		$YSort/character.visible = true
+		animationPlayer = $AnimationPlayer
+		animationTree = $AnimationTree
+		animationState = animationTree.get("parameters/playback")
+	if globals.active_char == 2:
+		$YSort/character2.visible = true
+		animationPlayer = $AnimationPlayer2
+		animationTree = $AnimationTree2
+		animationState = animationTree.get("parameters/playback")
+	if globals.active_char == 3:
+		$YSort/character3.visible = true
+		animationPlayer = $AnimationPlayer3
+		animationTree = $AnimationTree3
+		animationState = animationTree.get("parameters/playback")
+		
 	if globals.is_lit && globals.current_scene.get_name() == "library":
 		lightAnimation.play("idle")
 		light.visible = true

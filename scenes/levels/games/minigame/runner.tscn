@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://sprites/character/mainCharacter1_jump.png" type="Texture" id=1]
-[ext_resource path="res://sprites/character/mainCharacter1_walkR.png" type="Texture" id=2]
+[ext_resource path="res://sprites/character/character 1/mainCharacter1_jump.png" type="Texture" id=1]
+[ext_resource path="res://sprites/character/character 1/mainCharacter1_walkR.png" type="Texture" id=2]
 [ext_resource path="res://scenes/levels/games/minigame/runner.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]

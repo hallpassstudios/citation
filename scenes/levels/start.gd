@@ -14,7 +14,7 @@ func _ready():
 	timer.start(10)
 	
 func _on_Start_pressed():
-	globals.goto_scene("res://scenes/levels/name.tscn")
+	globals.goto_scene("res://scenes/levels/character select.tscn")
 	analytics.set_objective("started the game")
 
 func _on_Backstory_pressed():

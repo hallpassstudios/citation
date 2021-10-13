@@ -14,6 +14,14 @@
 		{
 			"name": "Default",
 			"path": "res://sprites/portraits/portrait.png"
+		},
+		{
+			"name": "character 2",
+			"path": "res://sprites/portraits/character_2_portrait.png"
+		},
+		{
+			"name": "character 3",
+			"path": "res://sprites/portraits/character_3_portrait.png"
 		}
 	],
 	"scale": 100

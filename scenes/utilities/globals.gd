@@ -11,6 +11,8 @@ var wait_frames
 var time_max = 100 # msec
 var current_scene
 
+var can_change : bool = true
+
 # our player
 var player
 var tutorial_played = false
@@ -24,6 +26,8 @@ var caught_joe = false
 var can_shoot = false
 var read_everything = false
 var desk_interact = false
+
+var active_char = 0
 
 var in_minigame = false
 
@@ -59,7 +63,8 @@ func set_player(current_player):
 
 # progressive scene loading
 func goto_scene(path):
-	if globals.player.will_travel:
+	if can_change:
+		can_change = false
 		# Game requests to switch to this scene.
 		print("loading new level: ", path)
 		loader = ResourceLoader.load_interactive(path)
@@ -67,12 +72,12 @@ func goto_scene(path):
 			print("no loader when calling new scene")
 			return
 		set_process(true)
-
-	current_scene.queue_free() # Get rid of the old scene.
+		current_scene.queue_free() # Get rid of the old scene.
 
 	# Start your "loading..." animation.
 	# get_node("animation").play("loading")
 	wait_frames = 1
+	can_change = true
 
 func _process(delta):
 

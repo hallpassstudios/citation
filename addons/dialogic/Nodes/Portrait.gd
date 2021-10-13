@@ -35,6 +35,7 @@ func set_portrait(expression: String) -> void:
 
 	var default
 	for p in character_data['portraits']:
+		
 		if p['name'] == expression:
 			if is_scene(p['path']):
 				var custom_node = load(p['path'])
@@ -46,6 +47,17 @@ func set_portrait(expression: String) -> void:
 				return
 			else:
 				if ResourceLoader.exists(p['path']):
+					
+					if character_data['name'] == "LILY":
+						if globals.active_char == 1:
+							print("showing portrait 1")
+							p['path'] = "res://sprites/portraits/portrait.png"
+						if globals.active_char == 2:
+							print("showing portrait 2")
+							p['path'] = "res://sprites/portraits/character_2_portrait.png"
+						if globals.active_char == 3:
+							print("showing portrait 3")
+							p['path'] = "res://sprites/portraits/character_3_portrait.png"
 					$TextureRect.texture = load(p['path'])
 				else:
 					$TextureRect.texture = ImageTexture.new()
