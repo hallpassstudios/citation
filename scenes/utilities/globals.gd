@@ -59,13 +59,14 @@ func set_player(current_player):
 
 # progressive scene loading
 func goto_scene(path):
-	# Game requests to switch to this scene.
-	print("loading new level: ", path)
-	loader = ResourceLoader.load_interactive(path)
-	if loader == null: # Check for errors.
-		print("no loader when calling new scene")
-		return
-	set_process(true)
+	if globals.player.will_travel:
+		# Game requests to switch to this scene.
+		print("loading new level: ", path)
+		loader = ResourceLoader.load_interactive(path)
+		if loader == null: # Check for errors.
+			print("no loader when calling new scene")
+			return
+		set_process(true)
 
 	current_scene.queue_free() # Get rid of the old scene.
 

@@ -197,7 +197,6 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = ExtResource( 10 )
 frames = SubResource( 14 )
-frame = 7
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
