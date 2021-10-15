@@ -13,6 +13,28 @@ var current_scene
 
 var can_change : bool = true
 
+#audio_manager helpers
+var previous_area
+var area_by_scene = {
+	'Start Page':'menu',
+	'backstory':'menu',
+	'name input':'menu',
+	'character select':'menu',
+	'intro':'intro',
+	'dorm':'academy',
+	'hallway':'academy',
+	'lounge':'academy',
+	'library':'academy',
+	'horizontal hallway':'academy',
+	'classroom':'academy',
+	'outside':'illuminata',
+	'house':'illuminata',
+	'courtroom':'illuminata',
+	'office':'illuminata',
+	'did not cheat':'illuminata',
+	'final':'illuminata'
+}
+
 # our player
 var player
 var tutorial_played = false
@@ -21,7 +43,10 @@ var player_type : Object
 var player_spawn : int = 0
 var is_lit = false
 var illuminata_challenge_3 = false
-var illuminata_completed = false
+var first_time_illuminata = true setget ,get_first_time_illuminata
+func get_first_time_illuminata(): return first_time_illuminata
+var illuminata_completed = false setget ,get_illuminata_completed
+func get_illuminata_completed(): return illuminata_completed
 var caught_joe = false
 var can_shoot = false
 var read_everything = false
@@ -56,7 +81,16 @@ func _ready():
 	# scene management
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
+	previous_area = get_current_area()
 
+func get_current_area():
+	var scene_name = null
+	if is_instance_valid(current_scene): 
+		scene_name = current_scene.name
+	else:
+		return previous_area
+	return area_by_scene[scene_name]
+	
 func set_player(current_player):
 	player = current_player
 	print("globals: setting current player to: ", current_player)
@@ -125,4 +159,5 @@ func update_progress():
 # calling a new scene
 func set_new_scene(scene_resource):
 	current_scene = scene_resource.instance()
+	previous_area = get_current_area()
 	get_node("/root").add_child(current_scene)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/audio/AudioManager/control_functions.gd" type="Script" id=1]
+[ext_resource path="res://scenes/audio/AudioManager/song_controller.gd" type="Script" id=2]
+[ext_resource path="res://scenes/audio/AudioManager/song_handler.tscn" type="PackedScene" id=3]
+
+[node name="song_controller" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="song_handler" parent="." instance=ExtResource( 3 )]
+
+[node name="control_functions" type="Node2D" parent="."]
+script = ExtResource( 1 )
