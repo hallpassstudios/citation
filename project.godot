@@ -103,14 +103,14 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "Firebase": "res://firebase_app_lite/icon.png",
 "FirebaseApp": "res://firebase_app_lite/icon.png",
-"FirebaseAuth": "res://firebase_auth_lite/icon.png",
+"FirebaseAuth": "",
 "FirebaseDataSnapshot": "res://firebase_database_lite/icon.png",
 "FirebaseDatabase": "res://firebase_database_lite/icon.png",
 "FirebaseError": "res://firebase_app_lite/icon.png",
 "FirebaseEventProcessor": "res://firebase_database_lite/icon.png",
 "FirebaseEventProcessorLite": "res://firebase_database_lite/icon.png",
 "FirebaseReference": "res://firebase_database_lite/icon.png",
-"FirebaseUser": "res://firebase_auth_lite/icon.png",
+"FirebaseUser": "",
 "HTTPSSEClient": "res://firebase_database_lite/icon.png"
 }
 
@@ -131,10 +131,10 @@ orientation_check="*res://scenes/utilities/orientation_check.tscn"
 global_ui="*res://scenes/utilities/global_ui.tscn"
 pause="*res://scenes/utilities/pause.tscn"
 dialogue_controller="*res://scenes/utilities/dialogue controller.tscn"
-background_music="*res://scenes/audio/background music.tscn"
 inventory="*res://scenes/ui/inventory.tscn"
 firebase="*res://firebase_app_lite/firebase.gd"
 analytics="*res://scenes/utilities/analytics.gd"
+audio_manager="*res://scenes/audio/AudioManager/audio_manager.gd"
 
 [display]
 
