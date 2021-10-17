@@ -3,6 +3,7 @@
 [ext_resource path="res://sprites/environment/lounge/plant1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/obstacle.gd" type="Script" id=2]
 
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.5404, 24.5554 )
 

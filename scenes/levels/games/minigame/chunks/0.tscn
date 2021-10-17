@@ -4,6 +4,7 @@
 [ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=3]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=4]
 
+
 [sub_resource type="DynamicFontData" id=45]
 font_path = "res://fonts/zpix.ttf"
 
