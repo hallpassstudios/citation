@@ -45,7 +45,8 @@ var is_lit = false
 var illuminata_challenge_3 = false
 var first_time_illuminata = true setget ,get_first_time_illuminata
 func get_first_time_illuminata(): return first_time_illuminata
-var illuminata_completed = false setget ,get_illuminata_completed
+var illuminata_completed = false setget set_illuminata_completed,get_illuminata_completed
+func set_illuminata_completed(val): illuminata_completed = val
 func get_illuminata_completed(): return illuminata_completed
 var caught_joe = false
 var can_shoot = false
@@ -85,7 +86,7 @@ func _ready():
 
 func get_current_area():
 	var scene_name = null
-	if is_instance_valid(current_scene): 
+	if is_instance_valid(current_scene) and area_by_scene.has(current_scene.name): 
 		scene_name = current_scene.name
 	else:
 		return previous_area

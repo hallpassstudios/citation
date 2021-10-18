@@ -17,6 +17,7 @@
 [ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=16]
 
+
 [sub_resource type="DynamicFontData" id=56]
 font_path = "res://fonts/zpix.ttf"
 
