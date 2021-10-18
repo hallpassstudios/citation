@@ -115,7 +115,7 @@ func goto_scene(path):
 	can_change = true
 
 func _process(delta):
-
+	print('illuminata completed: ', get_illuminata_completed())
 	if loader == null:
 		# no need to process anymore
 		set_process(false)
