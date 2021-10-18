@@ -35,3 +35,6 @@ func play_game(value):
 
 func desk_interact():
 	globals.desk_interact = true
+
+func open_url():
+	OS.shell_open("https://hallpass.games/2021/10/18/bean-king-v-dream-school-case-description/")

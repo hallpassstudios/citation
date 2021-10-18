@@ -53,7 +53,7 @@ func get_state():
 	var _state = {}
 	for variable in state_directory:
 		_state[variable] = str(state_directory[variable].call_func())
-	print(_state)
+	#print(_state)
 	return _state
 
 func _compare_dict(dict1, dict2):

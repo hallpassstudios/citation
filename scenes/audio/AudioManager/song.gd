@@ -83,6 +83,7 @@ func _process(_delta):
 			if fade_direction == 1: curr_volume = 0.0
 			elif fade_direction == -1: curr_volume = -80.0
 			set_volume(curr_volume)
+			set_volume(curr_volume)
 			is_fading = false
 			if fade_direction == -1: emit_signal('remove_me', self)
 		

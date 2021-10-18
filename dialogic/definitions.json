@@ -1,14 +1,6 @@
 {
 	"glossary": [
 		{
-			"extra": "",
-			"id": "1630251574-315",
-			"name": "contract cheating",
-			"text": "This advertisement is for a service to help you cheat on a paper",
-			"title": "A very unwelcome ad",
-			"type": 1
-		},
-		{
 			"extra": "why does he have it?",
 			"id": "1630355199-907",
 			"name": "key to the classroom",
@@ -23,15 +15,6 @@
 			"name": "joe",
 			"text": "Joe is your roomate, he is generally helpful, if not a bit stoic",
 			"title": "A Trusy Friend",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630254242-381",
-			"name": "light",
-			"text": "where on earth can you possibly find some light? ",
-			"title": "some light",
 			"type": 1,
 			"url": ""
 		},
@@ -72,15 +55,6 @@
 			"url": "https://www2.cortland.edu/dotAsset/fddc5439-1889-4f66-8f4f-70e6149f0c6a.pdf"
 		},
 		{
-			"extra": "",
-			"id": "1630254665-813",
-			"name": "crystal ball",
-			"text": "Why is it in the lounge?",
-			"title": "an ominous crystal ball",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "he looks [i]stressed[/i] out",
 			"id": "1630249200-850",
 			"name": "coffee king",
@@ -95,15 +69,6 @@
 			"name": "library",
 			"text": "An essential resource not only for information, but also to help you when you have academic questions",
 			"title": "The Library",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "source: writingcenter.unc.edu",
-			"id": "1629924473-384",
-			"name": "academic integrity",
-			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
-			"title": "Academic Integrity",
 			"type": 1,
 			"url": ""
 		},
@@ -232,6 +197,78 @@
 			"title": "Your notes",
 			"type": 1,
 			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630254242-381",
+			"name": "light",
+			"text": "where on earth can you possibly find some light? ",
+			"title": "some light",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630254665-813",
+			"name": "crystal ball",
+			"text": "Why is it in the lounge?",
+			"title": "an ominous crystal ball",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630251574-315",
+			"name": "contract cheating",
+			"text": "This advertisement is for a service to help you cheat on a paper",
+			"title": "A very unwelcome ad",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "source: writingcenter.unc.edu",
+			"id": "1629924473-384",
+			"name": "academic integrity",
+			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
+			"title": "Academic Integrity",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "watch this!",
+			"id": "1634512111-366",
+			"name": "ETHICS IN EDUCATION",
+			"text": "a short video on ethics in education, by Porter Yelton, NYU Shanghai",
+			"title": "ETHICS IN EDUCATION",
+			"type": 1,
+			"url": "https://stream.nyu.edu/media/Ethics+in+Education+2021/1_4qmm1gpw"
+		},
+		{
+			"extra": "",
+			"id": "1634511139-787",
+			"name": "Dream School",
+			"text": "This is the school of your dreams, the top magic is taught here!",
+			"title": "Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569162-146",
+			"name": "BEAN KING V. DREAM SCHOOL",
+			"text": "Bean King and the consequences of unethical scholarship",
+			"title": "Bean King v. Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569658-918",
+			"name": "Walker v. Harvard Case Description",
+			"text": "A short case study written for the Ethics in Education 2021 academic integrity training",
+			"title": "Walker v. Harvard Case Description",
+			"type": 1,
+			"url": "https://drive.google.com/drive/folders/1eg4ar9VTfo4BVeR-hpK7YzZ1loCYqk4A"
 		}
 	],
 	"variables": [
@@ -332,12 +369,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1630355221-179",
-			"name": "key",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630528470-366",
 			"name": "return to dorm",
 			"type": 0,
@@ -394,6 +425,12 @@
 		{
 			"id": "1632162541-198",
 			"name": "took book",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630355221-179",
+			"name": "key",
 			"type": 0,
 			"value": "0"
 		}
