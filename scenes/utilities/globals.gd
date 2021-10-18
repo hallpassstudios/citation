@@ -47,9 +47,7 @@ var first_time_illuminata = true setget ,get_first_time_illuminata
 func get_first_time_illuminata(): return first_time_illuminata
 var illuminata_completed = false setget set_illuminata_completed,get_illuminata_completed
 func set_illuminata_completed(val): illuminata_completed = val
-func get_illuminata_completed(): 
-	print('getting value ', illuminata_completed)
-	return illuminata_completed
+func get_illuminata_completed(): return illuminata_completed
 var caught_joe = false
 var can_shoot = false
 var read_everything = false
