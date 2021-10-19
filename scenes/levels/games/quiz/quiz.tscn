@@ -2463,7 +2463,6 @@ shape = SubResource( 119 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign2" type="Area2D" parent="sort"]
@@ -2482,6 +2481,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign3" type="Area2D" parent="sort"]
@@ -2500,6 +2500,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign4" type="Area2D" parent="sort"]
@@ -2518,7 +2519,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="sign5" type="Area2D" parent="sort"]
@@ -2537,7 +2538,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign6" type="Area2D" parent="sort"]
@@ -2556,6 +2556,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign7" type="Area2D" parent="sort"]
@@ -2574,6 +2575,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign8" type="Area2D" parent="sort"]
@@ -2592,7 +2594,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="sign9" type="Area2D" parent="sort"]
@@ -2611,7 +2613,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="question 1 explanation" type="Area2D" parent="sort"]
@@ -2630,7 +2632,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="question 2 explanation" type="Area2D" parent="sort"]
@@ -2649,7 +2651,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 3 explanation" type="Area2D" parent="sort"]
@@ -2668,7 +2669,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 4 explanation" type="Area2D" parent="sort"]
@@ -2687,6 +2687,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 5 explanation" type="Area2D" parent="sort"]
@@ -2705,7 +2706,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 6 explanation" type="Area2D" parent="sort"]
@@ -2724,6 +2724,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 7 explanation" type="Area2D" parent="sort"]
@@ -2742,6 +2743,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 8 explanation" type="Area2D" parent="sort"]
@@ -2760,6 +2762,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 9 explanation" type="Area2D" parent="sort"]
@@ -2778,7 +2781,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="path" type="TileMap" parent="sort"]
@@ -2875,10 +2878,10 @@ __meta__ = {
 }
 
 [node name="text2" type="RichTextLabel" parent="sort/question 2"]
-margin_left = 214.0
-margin_top = -42.0
-margin_right = 380.0
-margin_bottom = -6.0
+margin_left = 218.0
+margin_top = -49.0
+margin_right = 384.0
+margin_bottom = -13.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
@@ -2894,9 +2897,9 @@ __meta__ = {
 
 [node name="text3" type="RichTextLabel" parent="sort/question 2"]
 margin_left = 119.0
-margin_top = -42.0
+margin_top = -48.0
 margin_right = 285.0
-margin_bottom = -6.0
+margin_bottom = -12.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
@@ -3267,8 +3270,8 @@ custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Using a different name than her own[/center]"
-text = "Using a different name than her own"
+bbcode_text = "[center]Using a different name than his own[/center]"
+text = "Using a different name than his own"
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -3289,8 +3292,8 @@ custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Find multiple articles to cite, rather than just one, which express a similar argument that she can combine as her own.[/center]"
-text = "Find multiple articles to cite, rather than just one, which express a similar argument that she can combine as her own."
+bbcode_text = "[center]Find multiple articles to cite, rather than just one, which express a similar argument that he can combine as his own.[/center]"
+text = "Find multiple articles to cite, rather than just one, which express a similar argument that he can combine as his own."
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -3307,8 +3310,8 @@ custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Admit that she has not had proper time to complete an article that expresses a completely original argument and request an extension.[/center]"
-text = "Admit that she has not had proper time to complete an article that expresses a completely original argument and request an extension."
+bbcode_text = "[center]Admit that he has not had proper time to complete an article that expresses a completely original argument and request an extension.[/center]"
+text = "Admit that he has not had proper time to complete an article that expresses a completely original argument and request an extension."
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -3325,8 +3328,8 @@ custom_styles/normal = SubResource( 127 )
 custom_fonts/normal_font = SubResource( 126 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Withdraw her submission to the journal, knowing that she cannot submit on time without violating academic integrity standards.[/center]"
-text = "Withdraw her submission to the journal, knowing that she cannot submit on time without violating academic integrity standards."
+bbcode_text = "[center]Withdraw his submission to the journal, knowing that he cannot submit on time without violating academic integrity standards.[/center]"
+text = "Withdraw his submission to the journal, knowing that he cannot submit on time without violating academic integrity standards."
 fit_content_height = true
 scroll_active = false
 __meta__ = {
@@ -3349,7 +3352,7 @@ centered = false
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="effects" type="CanvasLayer" parent="."]
