@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -55,6 +55,34 @@ extents = Vector2( 35.896, 87.5884 )
 
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 12.3975, 29.5395 )
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1);
+uniform float width : hint_range(0, 10) = 1.0;
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * width;
+	
+	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
+	outline += texture(TEXTURE, UV + vec2(0, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
+	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
+}"
+
+[sub_resource type="ShaderMaterial" id=23]
+shader = SubResource( 1 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/width = 0.0
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 4 )
@@ -195,8 +223,9 @@ outline_size = 2.0
 TYPE = 1
 
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
-material = ExtResource( 10 )
+material = SubResource( 23 )
 frames = SubResource( 14 )
+frame = 7
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]

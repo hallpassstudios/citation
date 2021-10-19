@@ -58,6 +58,16 @@ func set_portrait(expression: String) -> void:
 						if globals.active_char == 3:
 							print("showing portrait 3")
 							p['path'] = "res://sprites/portraits/character_3_portrait.png"
+					if character_data['name'] == "black and white lily":
+						if globals.active_char == 1:
+							print("showing portrait 1")
+							p['path'] = "res://sprites/portraits/minigame.png"
+						if globals.active_char == 2:
+							print("showing portrait 2")
+							p['path'] = "res://sprites/portraits/character_2_bw_portrait.png"
+						if globals.active_char == 3:
+							print("showing portrait 3")
+							p['path'] = "res://sprites/portraits/character_3_bw_portrait.png"
 					$TextureRect.texture = load(p['path'])
 				else:
 					$TextureRect.texture = ImageTexture.new()

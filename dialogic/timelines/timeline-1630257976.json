@@ -7,10 +7,31 @@
 			"value": "0"
 		},
 		{
+			"condition": "",
+			"definition": "1634605266-872",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "you see a strange student just standing outside his dorm room."
+			"text": "star seems a bit pre-occupied at the moment"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634605266-872",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You see a star student just standing outside his dorm room."
 		},
 		{
 			"action": "join",
@@ -30,7 +51,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hey, what's up?"
+			"text": "Hi Star. I can't find my academic integrity quiz cart, you didn't happen to have seen it"
 		},
 		{
 			"action": "join",
@@ -50,7 +71,13 @@
 			"character": "character-1630258027.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nothing, just taking a break from playing video games. "
+			"text": "No, unfortunately not, but I just finished that quiz a few minutes ago. "
+		},
+		{
+			"character": "character-1630258027.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Can you believe they assigned the Bean King case? I had no idea he had such a fall from grace back in the day."
 		},
 		{
 			"action": "join",
@@ -70,13 +97,60 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I lost my notes. Have you seen them?"
+			"text": "Ya, that's brutal. So...do you think I could borrow your cart tonight? I'll give it back once I'm done."
 		},
 		{
 			"character": "character-1630258027.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Not sure, I was really engrossed in my game."
+			"text": "Ya, not a problem, just don't erase my saved game!"
+		},
+		{
+			"definition": "1634582450-483",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"quiz cartridge"
+				],
+				"method_name": "add_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You recieve the academic integrity forest cartridge!"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Even though the deadline had already passed, Bean King could have requested an extension, being honest about his situation"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "without violating academic integrity standards."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If the extension was denied, or he simply knew an extension would not be granted, "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "the most ethical choice would be to withdraw an article he could not submit by the deadline in an honest and complete manner."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634600918.json",
+		"name": "question 9 explanation"
+	}
+}

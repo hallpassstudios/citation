@@ -19,15 +19,6 @@
 			"url": ""
 		},
 		{
-			"extra": "source: dictionary.com",
-			"id": "1630350500-690",
-			"name": "crumpet",
-			"text": "a round soft unsweetened bread resembling a muffin, cooked on a griddle or the like, and often toasted.",
-			"title": "crumpet",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "right and wrong",
 			"id": "1630258466-952",
 			"name": "illuminatata cartridge",
@@ -55,15 +46,6 @@
 			"url": "https://www2.cortland.edu/dotAsset/fddc5439-1889-4f66-8f4f-70e6149f0c6a.pdf"
 		},
 		{
-			"extra": "he looks [i]stressed[/i] out",
-			"id": "1630249200-850",
-			"name": "coffee king",
-			"text": "without the help of this magical bean, many a student would suffer",
-			"title": "the KING",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "",
 			"id": "1630249447-419",
 			"name": "library",
@@ -82,15 +64,6 @@
 			"url": ""
 		},
 		{
-			"extra": "check the loung",
-			"id": "1630361968-144",
-			"name": "some coffee",
-			"text": "joe needs this to finish his paper quickly",
-			"title": "coffee",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "click it",
 			"id": "1629936042-949",
 			"name": "desk",
@@ -105,15 +78,6 @@
 			"name": "unscrupulous",
 			"text": "having or showing no moral principles; not honest or fair.",
 			"title": "unscrupulous",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630257154-623",
-			"name": "game cartridge",
-			"text": "you need this in order to play!",
-			"title": "a game catridge",
 			"type": 1,
 			"url": ""
 		},
@@ -159,15 +123,6 @@
 			"name": "Academic Bulletin",
 			"text": "This is an official document that tells you about academic programs and regulations. ",
 			"title": "Academic Bulletin",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1632310767-917",
-			"name": "Bean King",
-			"text": "He's rich! (and bold)",
-			"title": "Bean King",
 			"type": 1,
 			"url": ""
 		},
@@ -269,18 +224,57 @@
 			"title": "Walker v. Harvard Case Description",
 			"type": 1,
 			"url": "https://drive.google.com/drive/folders/1eg4ar9VTfo4BVeR-hpK7YzZ1loCYqk4A"
+		},
+		{
+			"extra": "source: dictionary.com",
+			"id": "1630350500-690",
+			"name": "crumpet",
+			"text": "a round soft unsweetened bread resembling a muffin, cooked on a griddle or the like, and often toasted.",
+			"title": "crumpet",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630257154-623",
+			"name": "game cartridge",
+			"text": "you need this in order to play!",
+			"title": "a game catridge",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1632310767-917",
+			"name": "Bean King",
+			"text": "He's rich! (and bold)",
+			"title": "Bean King",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "he looks [i]stressed[/i] out",
+			"id": "1630249200-850",
+			"name": "coffee king",
+			"text": "without the help of this magical bean, many a student would suffer",
+			"title": "the KING",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "check the lounge",
+			"id": "1630361968-144",
+			"name": "some coffee",
+			"text": "joe needs this to finish his paper quickly",
+			"title": "coffee",
+			"type": 1,
+			"url": ""
 		}
 	],
 	"variables": [
 		{
 			"id": "1630263147-252",
 			"name": "illuminata cartridge",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630351191-912",
-			"name": "token",
 			"type": 0,
 			"value": "0"
 		},
@@ -311,12 +305,6 @@
 		{
 			"id": "1630359451-554",
 			"name": "shelf 3",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630352399-208",
-			"name": "coffee",
 			"type": 0,
 			"value": "0"
 		},
@@ -353,12 +341,6 @@
 		{
 			"id": "1629847073-571",
 			"name": "desk",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630350440-392",
-			"name": "questions",
 			"type": 0,
 			"value": "0"
 		},
@@ -431,6 +413,42 @@
 		{
 			"id": "1630355221-179",
 			"name": "key",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634582450-483",
+			"name": "quiz",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634604039-737",
+			"name": "quiz completed",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630351191-912",
+			"name": "token",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630352399-208",
+			"name": "coffee",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630350440-392",
+			"name": "questions",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634605266-872",
+			"name": "joe quest",
 			"type": 0,
 			"value": "0"
 		}

@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "CORRECT ANSWER!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " While Wikipedia is a great place to look if you want a very general idea of something, "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "it is almost never considered an academically appropriate source to cite in your writing. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Its details are often not fact-checked extensively enough to be as reliable as other reputable sources like newspapers, journals, and texts from a library database. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You may, however, look at a Wikipedia article’s list of cited sources (at the end of each article) to search for more reliable information."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "10 SECS ADDED!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "add_time",
+				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634594410.json",
+		"name": "question 2 explanation"
+	}
+}
