@@ -18,7 +18,7 @@ func _ready():
 	timer = Timer.new()
 	timer.connect("timeout", self, "on_timer_timeout")
 	add_child(timer)
-	timer.start(7)
+	#timer.start(7)
 	# wait a few secs then play our animation?
 	# yield(get_tree().create_timer(1.0), "timeout")
 	next_page()
@@ -46,12 +46,10 @@ func next_page():
 	print(current_animation)
 	match current_animation:
 		0:
-			print("playing animation 0")
 			$AnimatedSprite.play(str(current_animation))
 			$"title 1".visible = true
 		1:
 			next_pressed = false
-			print("here's page 1")
 			print(current_animation)
 			$AnimatedSprite.play(str(current_animation))
 			$"title 1".visible = false
@@ -60,7 +58,6 @@ func next_page():
 				$"title 2".visible = true
 		2: 
 			next_pressed = false
-			print("here's page 2")
 			$AnimatedSprite.play(str(current_animation))
 			$"title 2".visible = false
 			$"title 3".visible = true
@@ -71,7 +68,6 @@ func next_page():
 
 		3: 
 			next_pressed = false
-			print("here's page 3")
 			$"title 3".visible = false
 			$"title 4".visible = false
 			$"title 5".visible = false
@@ -82,7 +78,6 @@ func next_page():
 
 		4: 
 			next_pressed = false
-			print("here's page 4")
 			$AnimatedSprite.play(str(current_animation))
 			$"title 6".visible = false
 			$"title 7".visible = true
@@ -107,21 +102,9 @@ func _on_Button_pressed():
 	# what's our current animation?
 	print("current animation is: ", current_animation)
 	print("next animation is: ", current_animation + 1)
-#	match current_animation:
-#		0:
-#			print("never showing title 1 again")
-#		1:
-#			print("never showing title 2 again")
-#		2:
-#			print("never showing title 3 again")
-#		3:
-#			print("never showing title 4 again")
-#		4:
-#			print("never showing title 5 again")
-#		5:
-#			print("never showing title 6 again")
-#		6:
-#			print("never showing title 7 again")
-			
+	current_animation += 1
+	next_page()
+	
+func _on_music_cue(beat):
 	current_animation += 1
 	next_page()

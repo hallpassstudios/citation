@@ -66,7 +66,7 @@ func _compare_dict(dict1, dict2):
 	
 func _process(delta):
 	if not _compare_dict(state,prev_state):
-		if traverse(trees['root'],state) != traverse(trees['root'],prev_state):
+		if traverse(trees['root'],state) != traverse(trees['root'], prev_state):
 			will_update = true
 	if will_update:
 		emit_signal('state_changed', audio_actions[traverse(trees['root'], state)])
