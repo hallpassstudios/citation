@@ -55,8 +55,7 @@ func set_ready():
 	
 	#User-Set Connections
 	for beat in beats_to_emit_signal:
-		var current_scene = get_tree().get_current_scene()
-		var object = current_scene.get_node(beats_to_emit_signal[beat])
+		var object = get_node(beats_to_emit_signal[beat])
 		if object:
 			connect('music_cue', object, '_on_music_cue')
 			

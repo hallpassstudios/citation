@@ -45,7 +45,7 @@
 
 				],
 				"method_name": "open_door",
-				"target_node_path": "classroom"
+				"target_node_path": "illuminata_classroom"
 			},
 			"event_id": "dialogic_042"
 		},

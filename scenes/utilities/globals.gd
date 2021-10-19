@@ -27,12 +27,14 @@ var area_by_scene = {
 	'library':'academy',
 	'horizontal hallway':'academy',
 	'classroom':'academy',
+	'illuminata_classroom':'illuminata classroom',
 	'outside':'illuminata',
-	'house':'illuminata',
+	'house':'illuminata', 
 	'courtroom':'illuminata',
-	'office':'illuminata',
-	'did not cheat':'illuminata',
-	'final':'illuminata'
+	'office':'illuminata classroom',
+	'did not cheat':'illuminata classroom',
+	'final':'illuminata classroom',
+	'credits':'credits'
 }
 
 # our player
@@ -115,8 +117,7 @@ func goto_scene(path):
 	can_change = true
 
 func _process(delta):
-	print('illuminata completed: ', get_illuminata_completed())
-	if loader == null:
+	if loader == null :
 		# no need to process anymore
 		set_process(false)
 		return
@@ -162,3 +163,6 @@ func set_new_scene(scene_resource):
 	current_scene = scene_resource.instance()
 	previous_area = get_current_area()
 	get_node("/root").add_child(current_scene)
+	
+func _on_music_cue(beat):
+	print("HAHAHHAHA")

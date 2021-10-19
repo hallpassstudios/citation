@@ -90,7 +90,7 @@ func _on_quote_2_area_body_entered(body):
 		door_open = true
 
 func next_level():
-	globals.goto_scene("res://scenes/levels/games/minigame/chunks/classroom.tscn")
+	globals.goto_scene("res://scenes/levels/games/minigame/chunks/illuminata_classroom.tscn")
 	
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":

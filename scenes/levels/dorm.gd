@@ -21,7 +21,6 @@ func _ready():
 	
 	if globals.illuminata_completed:
 		dialogue_controller.play_dialogue('return to dorm')
-		globals.illuminata_completed = false
 		
 func play_game(value):
 	get_tree().paused = false

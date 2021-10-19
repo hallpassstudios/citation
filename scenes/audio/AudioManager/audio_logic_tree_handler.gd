@@ -69,7 +69,6 @@ func _process(delta):
 		if traverse(trees['root'],state) != traverse(trees['root'],prev_state):
 			will_update = true
 	if will_update:
-		print(state,'       ', traverse(trees['root'], state))
 		emit_signal('state_changed', audio_actions[traverse(trees['root'], state)])
 		will_update = false
 	prev_state = state

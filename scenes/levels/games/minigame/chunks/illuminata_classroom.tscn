@@ -1,19 +1,19 @@
 [gd_scene load_steps=52 format=2]
 
-[ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/close_button.tres" type="StyleBox" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=3]
-[ext_resource path="res://sprites/minigame/person.png" type="Texture" id=4]
-[ext_resource path="res://sprites/minigame/door.png" type="Texture" id=5]
-[ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=6]
-[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=7]
-[ext_resource path="res://scenes/levels/games/minigame/chunks/classroom.gd" type="Script" id=8]
-[ext_resource path="res://sprites/minigame/computer.png" type="Texture" id=9]
-[ext_resource path="res://sprites/minigame/computer_emtpy.png" type="Texture" id=10]
-[ext_resource path="res://scenes/levels/games/minigame/chunks/close_button.tres" type="StyleBox" id=11]
-[ext_resource path="res://scenes/levels/options.gd" type="Script" id=12]
+[ext_resource path="res://scenes/levels/options.gd" type="Script" id=3]
+[ext_resource path="res://sprites/ui/mobile_joystick.png" type="Texture" id=4]
+[ext_resource path="res://sprites/ui/mobile_thumbstick.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ui/border_bw.png" type="Texture" id=6]
+[ext_resource path="res://sprites/minigame/computer_emtpy.png" type="Texture" id=7]
+[ext_resource path="res://sprites/minigame/person.png" type="Texture" id=8]
+[ext_resource path="res://sprites/minigame/door.png" type="Texture" id=9]
+[ext_resource path="res://sprites/minigame/computer.png" type="Texture" id=10]
+[ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=11]
+[ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=12]
 [ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=13]
-[ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=14]
+[ext_resource path="res://scenes/levels/games/minigame/chunks/illuminata_classroom.gd" type="Script" id=14]
 
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
@@ -424,23 +424,23 @@ font_path = "res://fonts/HungryPro.ttf"
 size = 18
 font_data = SubResource( 34 )
 
-[node name="classroom" type="Node2D"]
-script = ExtResource( 8 )
+[node name="illuminata_classroom" type="Node2D"]
+script = ExtResource( 14 )
 
 [node name="joystick" type="CanvasLayer" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 11 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="joystick"]
 visible = false
 modulate = Color( 1, 1, 1, 0.145098 )
-normal = ExtResource( 6 )
+normal = ExtResource( 4 )
 shape = SubResource( 27 )
 visibility_mode = 1
 
 [node name="touch sprite" type="Sprite" parent="joystick"]
 visible = false
 position = Vector2( 32, 32 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -528,7 +528,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -565,7 +565,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -603,7 +603,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -641,7 +641,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -679,7 +679,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -717,7 +717,7 @@ z_index = 1
 margin_right = 82.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 patch_margin_left = 20
 patch_margin_top = 18
 patch_margin_right = 18
@@ -779,67 +779,67 @@ tile_data = PoolIntArray( -589814, 115, 0, -589808, 115, 0, -458739, 115, 0 )
 [node name="Sprite13" type="Sprite" parent="sort/students"]
 position = Vector2( -35, -236 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite14" type="Sprite" parent="sort/students"]
 position = Vector2( 15, -236 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite15" type="Sprite" parent="sort/students"]
 position = Vector2( 35, -237 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite5" type="Sprite" parent="sort/students"]
 position = Vector2( -35, -199 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite6" type="Sprite" parent="sort/students"]
 position = Vector2( -15, -199 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite7" type="Sprite" parent="sort/students"]
 position = Vector2( 15, -199 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite8" type="Sprite" parent="sort/students"]
 position = Vector2( 35, -199 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite9" type="Sprite" parent="sort/students"]
 position = Vector2( -35, -218 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite10" type="Sprite" parent="sort/students"]
 position = Vector2( -15, -218 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite11" type="Sprite" parent="sort/students"]
 position = Vector2( 15, -218 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="Sprite12" type="Sprite" parent="sort/students"]
 position = Vector2( 35, -218 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, -3 )
 
 [node name="exit" type="Area2D" parent="sort"]
@@ -857,7 +857,7 @@ z_index = 1
 shape = SubResource( 49 )
 
 [node name="Sprite" type="Sprite" parent="sort/computer"]
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="cabinet" type="Area2D" parent="sort"]
 position = Vector2( 254, -65 )
@@ -891,7 +891,7 @@ shape = SubResource( 67 )
 shape = SubResource( 68 )
 
 [node name="Sprite" type="Sprite" parent="sort/door/StaticBody2D/CollisionShape2D"]
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 
 [node name="computer input" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -906,7 +906,7 @@ margin_left = -223.0
 margin_top = -159.0
 margin_bottom = -2.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 10 )
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 1
 __meta__ = {
@@ -1343,9 +1343,9 @@ margin_right = -10.0
 margin_bottom = -73.0
 rect_min_size = Vector2( 10, 10 )
 focus_mode = 0
-custom_styles/hover = ExtResource( 11 )
-custom_styles/pressed = ExtResource( 11 )
-custom_styles/normal = ExtResource( 11 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
 custom_fonts/font = SubResource( 63 )
 enabled_focus_mode = 0
 text = "x"
@@ -1366,7 +1366,7 @@ __meta__ = {
 }
 
 [node name="options" type="CanvasLayer" parent="."]
-script = ExtResource( 12 )
+script = ExtResource( 3 )
 
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
@@ -1377,9 +1377,9 @@ margin_left = -40.0
 margin_right = -15.0
 margin_bottom = 25.0
 mouse_filter = 1
-texture_normal = ExtResource( 14 )
+texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+texture_hover = ExtResource( 12 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
