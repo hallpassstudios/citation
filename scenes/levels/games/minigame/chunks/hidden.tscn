@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/levels/games/minigame/chunks/hidden.gd" type="Script" id=5]
 [ext_resource path="res://scenes/levels/options.tscn" type="PackedScene" id=6]
 
+
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
 

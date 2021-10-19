@@ -10,6 +10,7 @@ var total_beats = 0
 var song_length = 0
 var prev_frame_beat = 0
 var current_beat = 1
+var original_volume = 0.0
 var beats_to_emit_signal = {
 	'#': 'ref_to_node_relative_to_current_scene'
 }
@@ -79,8 +80,8 @@ func _process(_delta):
 		if fade_direction == -1:
 			fade_speed = 0.3
 		set_volume(curr_volume + (fade_speed*fade_direction))
-		if (curr_volume >= 0.0 and fade_direction == 1) or (curr_volume <= -80.0 and fade_direction == -1):
-			if fade_direction == 1: curr_volume = 0.0
+		if (curr_volume >= original_volume and fade_direction == 1) or (curr_volume <= -80.0 and fade_direction == -1):
+			if fade_direction == 1: curr_volume = original_volume
 			elif fade_direction == -1: curr_volume = -80.0
 			set_volume(curr_volume)
 			set_volume(curr_volume)
@@ -108,11 +109,13 @@ func handle_fade(direction_string):
 	if not is_fading:
 		if direction_string == 'in':
 			fade_direction = 1
+			original_volume = get_volume()
 			set_volume(-80.0)
 
 		elif direction_string == 'out':
 			fade_direction = -1
-			set_volume(0.0)
+			original_volume = get_volume()
+			set_volume(original_volume)
 		else:
 			fade_direction = 1
 		is_fading = true

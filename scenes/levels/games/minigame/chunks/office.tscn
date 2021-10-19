@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=9]
 [ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=10]
 
+
 [sub_resource type="CircleShape2D" id=27]
 radius = 64.0
 

@@ -53,7 +53,6 @@ func get_state():
 	var _state = {}
 	for variable in state_directory:
 		_state[variable] = str(state_directory[variable].call_func())
-	#print(_state)
 	return _state
 
 func _compare_dict(dict1, dict2):
@@ -65,36 +64,39 @@ func _compare_dict(dict1, dict2):
 			return false
 	return true
 	
-func traverse(tree, state):
-	var node_param = null
-	var path = null
-	for root in tree:
-		node_param = root
-	path = tree[node_param]
-	while typeof(path) != TYPE_STRING:
-		var direction = ''
-		if state.has(node_param):
-			direction = str(state[node_param]).to_lower()
-		else:
-			emit_signal("handle_error", node_param + "not in the current tree path!")
-			return
-		if path.has(direction):
-			path = path[direction]
-		else:
-			emit_signal('handle_error', direction + 'not in the current tree path!')
-			return
-		if typeof(path) == TYPE_STRING:
-			break
-		for root in path: #subtree
-			node_param = root
-		path = path[node_param]
-	return path
-	
 func _process(delta):
 	if not _compare_dict(state,prev_state):
-		will_update = true
+		if traverse(trees['root'],state) != traverse(trees['root'],prev_state):
+			will_update = true
 	if will_update:
+		print(state,'       ', traverse(trees['root'], state))
 		emit_signal('state_changed', audio_actions[traverse(trees['root'], state)])
 		will_update = false
 	prev_state = state
 	state = get_state()
+	
+func traverse(tree, state):
+	var curr_node = null
+	var curr_path = null
+	for root in tree:
+		curr_node = root
+	curr_path = tree[curr_node]
+	while typeof(curr_path) != TYPE_STRING:
+		var curr_direction = ''
+		if state.has(curr_node):
+			curr_direction = str(state[curr_node])
+		else:
+			emit_signal("handle_error", curr_node + " not in the current tree path!")
+			return
+		if curr_path.has(curr_direction):
+			curr_path = curr_path[curr_direction]
+		else:
+			emit_signal('handle_error', curr_direction + ' not in the current tree path!')
+			return
+		if typeof(curr_path) == TYPE_STRING:
+			break
+		for root in curr_path: #subtree
+			curr_node = root
+		curr_path = curr_path[curr_node]
+	return curr_path
+	
