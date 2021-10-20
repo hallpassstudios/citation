@@ -23,5 +23,5 @@ func _on_Settings_Button_pressed():
 
 func increase_score(value):
 	print("increasing score")
-	globals.score += value[0]
-	$"Score Value".text = str(globals.score + int(value[0]))
+	globals.score += int(value[0])
+	$"Score Value".text = str(globals.score)

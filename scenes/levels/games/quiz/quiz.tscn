@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -2315,21 +2315,29 @@ shader_param/clip_warp = false
 shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.5
 
-[sub_resource type="DynamicFontData" id=64]
+[sub_resource type="DynamicFontData" id=37]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=65]
+[sub_resource type="DynamicFont" id=131]
+size = 20
+font_data = SubResource( 37 )
+
+[sub_resource type="DynamicFontData" id=38]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=132]
 size = 32
-font_data = SubResource( 64 )
+font_data = SubResource( 38 )
 
-[sub_resource type="DynamicFontData" id=66]
+[sub_resource type="DynamicFontData" id=39]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=67]
+[sub_resource type="DynamicFont" id=133]
 size = 18
-font_data = SubResource( 66 )
+font_data = SubResource( 39 )
 
 [node name="quiz" type="Node2D"]
 script = ExtResource( 6 )
@@ -2391,7 +2399,7 @@ text = "SORRY, YOU DIDN'T SUCCEED."
 align = 1
 valign = 1
 
-[node name="fun text" type="Label" parent="HUD/restart/VBoxContainer"]
+[node name="subtitle" type="Label" parent="HUD/restart/VBoxContainer"]
 margin_top = 38.0
 margin_right = 338.0
 margin_bottom = 49.0
@@ -2729,7 +2737,7 @@ frame = 1
 playing = true
 
 [node name="question 7 explanation" type="Area2D" parent="sort"]
-position = Vector2( 1145, -47 )
+position = Vector2( 1167, -47.5 )
 z_index = 1
 
 [node name="Sprite" type="Sprite" parent="sort/question 7 explanation"]
@@ -3359,7 +3367,6 @@ playing = true
 [node name="effects" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="effects"]
-visible = false
 material = SubResource( 62 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -3370,21 +3377,56 @@ __meta__ = {
 }
 
 [node name="options" type="CanvasLayer" parent="."]
+layer = 0
 script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="options"]
+anchor_right = 1.0
+margin_left = 0.666626
+margin_right = 0.666626
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0, 0, 0, 0.913725 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -40.0
-margin_right = -15.0
-margin_bottom = 25.0
+margin_left = -25.4244
+margin_top = -3.08328
+margin_right = -0.424438
+margin_bottom = 21.9167
 mouse_filter = 1
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 9 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="options"]
+margin_left = 4.19974
+margin_top = 10.7093
+margin_right = 58.1997
+margin_bottom = 29.7093
+custom_fonts/font = SubResource( 131 )
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Value" type="Label" parent="options"]
+margin_left = 59.2004
+margin_top = 11.2706
+margin_right = 113.2
+margin_bottom = 30.2706
+custom_fonts/font = SubResource( 131 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -3425,7 +3467,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 65 )
+custom_fonts/font = SubResource( 132 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -3440,7 +3482,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 65 )
+custom_fonts/font = SubResource( 132 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -3491,7 +3533,7 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 67 )
+custom_fonts/font = SubResource( 133 )
 text = "X CLOSE"
 flat = true
 

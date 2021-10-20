@@ -122,7 +122,7 @@
 			"character": "character-1634585186.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your task is simple. You have 2 minutes to find your way through the forest by following the correct path. "
+			"text": "Your task is simple. You have 60 SECONDS to find your way through the forest by following the correct path. "
 		},
 		{
 			"character": "character-1630272905.json",
@@ -158,7 +158,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "To move: use your arrow keys to move, or touch your mobile screen. "
+			"text": "To move: use your arrows or WASD to move, or touch and hold the left side of your mobile screen. "
 		}
 	],
 	"metadata": {

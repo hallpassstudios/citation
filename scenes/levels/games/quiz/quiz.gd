@@ -37,7 +37,10 @@ func _ready():
 	add_child(current_player)
 	current_player.position = spawn.position
 	global_ui.fade_in()
-	dialogue_controller.play_dialogue("quiz")
+	yield(get_tree().create_timer(1.0), "timeout")
+	if !globals.quiz_intro_played:
+		dialogue_controller.play_dialogue("quiz")
+		globals.quiz_intro_played = true;
 	
 	timer = Timer.new()
 	timer.connect("timeout", self, "on_timer_timeout")
@@ -59,11 +62,32 @@ func _on_exit_body_entered(body):
 func start_timer():
 	timer_started = true
 	print("starting timer...")
-	timer.start(120)
+	timer.start(60)
 
 func on_timer_timeout():
 	print("time is up!")
 	timer.stop()
+	restart("time's up!", "try reading explanations for extra time!")
+
+func restart_game(value):
+	var title = value[0]
+	var subtitle = value[1]
+	restart(title,subtitle)
+	
+func restart(title, subtitle):
+	$HUD/restart.visible = true
+	$HUD/restart/VBoxContainer/title.text = title
+	$HUD/restart/VBoxContainer/subtitle.text = subtitle
+	get_tree().paused = true
+
+func _on_restart_pressed():
+	print("pressed restart")
+	$HUD/restart.visible = false
+	get_tree().paused = false
+	globals.goto_scene("res://scenes/levels/games/quiz/quiz.tscn")
+
+func _on_quit_pressed():
+	globals.goto_scene("res://scenes/levels/dorm.tscn")
 
 func _on_sign_body_entered(body):
 	if body.name == "top down runner" && !question_1:

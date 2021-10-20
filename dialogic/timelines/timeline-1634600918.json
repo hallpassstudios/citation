@@ -59,6 +59,16 @@
 				"target_node_path": "quiz"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "quiz/options"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

@@ -396,12 +396,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1634604039-737",
-			"name": "quiz completed",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630351191-912",
 			"name": "token",
 			"type": 0,
@@ -416,12 +410,6 @@
 		{
 			"id": "1630350440-392",
 			"name": "questions",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1634605266-872",
-			"name": "joe quest",
 			"type": 0,
 			"value": "0"
 		},
@@ -462,12 +450,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1634675144-679",
-			"name": "illuminata complete",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1634675154-152",
 			"name": "bulletin found",
 			"type": 0,
@@ -478,18 +460,6 @@
 			"name": "cheater found",
 			"type": 0,
 			"value": "0"
-		},
-		{
-			"id": "1634680918-847",
-			"name": "quiz complete - desk",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1634682601-531",
-			"name": "quiz complete - spoke to joe",
-			"type": 0,
-			"value": "1"
 		},
 		{
 			"id": "1634682662-673",
@@ -524,6 +494,48 @@
 		{
 			"id": "1634685307-274",
 			"name": "cheater found - reviewed paper",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634741417-173",
+			"name": "start - spoke to star",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634741651-557",
+			"name": "read board",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634604039-737",
+			"name": "quiz completed",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634682601-531",
+			"name": "quiz complete - spoke to joe",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634680918-847",
+			"name": "quiz complete - desk",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634605266-872",
+			"name": "joe quest",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675144-679",
+			"name": "illuminata complete",
 			"type": 0,
 			"value": "0"
 		}

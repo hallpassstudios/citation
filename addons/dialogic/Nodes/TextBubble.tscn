@@ -139,7 +139,7 @@ anims/Static = SubResource( 3 )
 [node name="NameLabel" type="Label" parent="."]
 visible = false
 margin_bottom = -8.0
-grow_horizontal = 2
+grow_horizontal = 0
 size_flags_vertical = 1
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 1 )
@@ -147,6 +147,7 @@ custom_colors/font_color = Color( 0.423529, 0.580392, 0.74902, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.619608 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
+align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false

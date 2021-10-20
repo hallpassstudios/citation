@@ -2,7 +2,7 @@ extends Node2D
 
 var loading : bool = false
 func _ready():
-	pass # Replace with function body.
+	VisualServer.set_default_clear_color(Color(0.04,0.04,0.04,0.0))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

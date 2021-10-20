@@ -57,6 +57,7 @@ var can_shoot = false
 var read_everything = false
 var desk_interact = false
 var completed_quiz = false
+var quiz_intro_played : bool = false
 
 var score : int = 0
 

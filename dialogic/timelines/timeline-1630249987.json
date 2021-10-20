@@ -1,6 +1,27 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1634741651-557",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You don't need to read the board again. Someone is up to no good..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634741651-557",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -96,7 +117,7 @@
 					"10"
 				],
 				"method_name": "increase_score",
-				"target_node_path": "dorm/options"
+				"target_node_path": "lounge/options"
 			},
 			"event_id": "dialogic_042"
 		},
@@ -121,11 +142,22 @@
 			"volume": 0
 		},
 		{
+			"definition": "1634741651-557",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
 			"choice": "No",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

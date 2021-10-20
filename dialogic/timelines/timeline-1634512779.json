@@ -27,6 +27,12 @@
 			"text": "Last you recall, you left the academic integrity cartridge on your desk. "
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(here's 10 points for sticking around this long!)"
+		},
+		{
 			"definition": "1634675123-167",
 			"event_id": "dialogic_014",
 			"operation": "=",

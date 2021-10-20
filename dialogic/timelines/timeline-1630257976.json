@@ -7,6 +7,27 @@
 			"value": "1"
 		},
 		{
+			"condition": "",
+			"definition": "1634741417-173",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perhaps you should try playing the quiz game?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634741417-173",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -71,6 +92,14 @@
 			"text": "Ya, not a problem, just don't erase my saved game!"
 		},
 		{
+			"definition": "1634741417-173",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
 			"definition": "1634582450-483",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -125,6 +154,25 @@
 			"text": "You recieve the academic integrity forest cartridge!"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "hallway/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(and a few more points because why not...)"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
@@ -159,6 +207,12 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675132-146",
+			"event_id": "dialogic_012",
+			"value": "1"
 		},
 		{
 			"condition": "",
@@ -281,7 +335,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi star dude. Can I ask you a question?"
+			"text": "Hi star. Can I ask you a question?"
 		},
 		{
 			"action": "join",
@@ -307,7 +361,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Do you know anything about spells?"
+			"text": "Do you know anything about playing games to learn spells?"
 		},
 		{
 			"character": "character-1630258027.json",
@@ -337,7 +391,13 @@
 			"character": "character-1630258027.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I have one you can borrow dude, just don't erase my save game!"
+			"text": "I have one you can borrow, of course!"
+		},
+		{
+			"character": "character-1630258027.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...just don't erase my save game!"
 		},
 		{
 			"call_node": {
@@ -370,6 +430,16 @@
 			"volume": 0
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "hallway/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -390,18 +460,6 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"condition": "",
-			"definition": "1634683019-686",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "star looks a bit flustered..."
-		},
-		{
 			"event_id": "dialogic_013"
 		},
 		{
@@ -409,6 +467,12 @@
 			"definition": "1634675132-146",
 			"event_id": "dialogic_012",
 			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1630263147-252",
+			"event_id": "dialogic_012",
+			"value": "0"
 		},
 		{
 			"action": "join",
@@ -435,6 +499,24 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "star winks at you, for some reason..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675144-679",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "star seems a bit pre-occupied at the moment."
 		},
 		{
 			"event_id": "dialogic_013"

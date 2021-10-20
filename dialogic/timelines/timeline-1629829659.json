@@ -10,24 +10,6 @@
 			"condition": "",
 			"definition": "1634582450-483",
 			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You don't have your quiz cartridge, you need that before you can play!"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1634582450-483",
-			"event_id": "dialogic_012",
 			"value": "1"
 		},
 		{
@@ -77,6 +59,24 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"condition": "",
+			"definition": "1634582450-483",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You don't have your quiz cartridge, you need that before you can play!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
@@ -113,7 +113,7 @@
 			"portrait": "",
 			"text": "You insert the cartridge. Good luck..."
 		},
-    {
+		{
 			"call_node": {
 				"arguments": [
 					"play_first_time_illuminata"
@@ -189,6 +189,21 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675144-679",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's enough video games for one evening (even if they do teach you a bit!)"
 		},
 		{
 			"event_id": "dialogic_013"

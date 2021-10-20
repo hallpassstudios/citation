@@ -17,22 +17,26 @@ func _ready():
 	player.position = player_spawn.get_child(globals.player_spawn).position
 	# play tutorial if not played already
 	if !globals.tutorial_played:
+		yield(get_tree().create_timer(1.0), "timeout")
 		dialogue_controller.play_dialogue('intro')
 		globals.tutorial_played = true
 	
-	if globals.completed_quiz && !played_quiz:
+	if globals.completed_quiz:
+		yield(get_tree().create_timer(1.0), "timeout")
 		dialogue_controller.play_dialogue('dorm quiz completed')
-		played_quiz = true
+		globals.completed_quiz = false
 		
 	if globals.illuminata_completed:
+		yield(get_tree().create_timer(1.0), "timeout")
 		dialogue_controller.play_dialogue('return to dorm')
+		globals.illuminata_completed = false
 		
 func play_game(value):
 	get_tree().paused = false
-	print("playing the game now", value[0])
+	print("playing the game now ", value[0])
 	global_ui.fade_out()
 	# remove the inventory item
-	yield(get_tree().create_timer(3.0), "timeout")
+	# yield(get_tree().create_timer(3.0), "timeout")
 	
 	if value[0] == "illuminata":
 		globals.goto_scene("res://scenes/levels/games/minigame/chunks/outside.tscn")
