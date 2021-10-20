@@ -1,14 +1,6 @@
 {
 	"glossary": [
 		{
-			"extra": "",
-			"id": "1630251574-315",
-			"name": "contract cheating",
-			"text": "This advertisement is for a service to help you cheat on a paper",
-			"title": "A very unwelcome ad",
-			"type": 1
-		},
-		{
 			"extra": "why does he have it?",
 			"id": "1630355199-907",
 			"name": "key to the classroom",
@@ -23,24 +15,6 @@
 			"name": "joe",
 			"text": "Joe is your roomate, he is generally helpful, if not a bit stoic",
 			"title": "A Trusy Friend",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630254242-381",
-			"name": "light",
-			"text": "where on earth can you possibly find some light? ",
-			"title": "some light",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "source: dictionary.com",
-			"id": "1630350500-690",
-			"name": "crumpet",
-			"text": "a round soft unsweetened bread resembling a muffin, cooked on a griddle or the like, and often toasted.",
-			"title": "crumpet",
 			"type": 1,
 			"url": ""
 		},
@@ -73,37 +47,10 @@
 		},
 		{
 			"extra": "",
-			"id": "1630254665-813",
-			"name": "crystal ball",
-			"text": "Why is it in the lounge?",
-			"title": "an ominous crystal ball",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "he looks [i]stressed[/i] out",
-			"id": "1630249200-850",
-			"name": "coffee king",
-			"text": "without the help of this magical bean, many a student would suffer",
-			"title": "the KING",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
 			"id": "1630249447-419",
 			"name": "library",
 			"text": "An essential resource not only for information, but also to help you when you have academic questions",
 			"title": "The Library",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "source: writingcenter.unc.edu",
-			"id": "1629924473-384",
-			"name": "academic integrity",
-			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
-			"title": "Academic Integrity",
 			"type": 1,
 			"url": ""
 		},
@@ -113,15 +60,6 @@
 			"name": "citation",
 			"text": "a game about the trials and tribulations of ethical scholarship",
 			"title": "citation",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "check the loung",
-			"id": "1630361968-144",
-			"name": "some coffee",
-			"text": "joe needs this to finish his paper quickly",
-			"title": "coffee",
 			"type": 1,
 			"url": ""
 		},
@@ -140,15 +78,6 @@
 			"name": "unscrupulous",
 			"text": "having or showing no moral principles; not honest or fair.",
 			"title": "unscrupulous",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630257154-623",
-			"name": "game cartridge",
-			"text": "you need this in order to play!",
-			"title": "a game catridge",
 			"type": 1,
 			"url": ""
 		},
@@ -199,15 +128,6 @@
 		},
 		{
 			"extra": "",
-			"id": "1632310767-917",
-			"name": "Bean King",
-			"text": "He's rich! (and bold)",
-			"title": "Bean King",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
 			"id": "1630518583-648",
 			"name": "Academic Integrity for Students at NYU",
 			"text": "Click this to be transported to a magical information superhighway",
@@ -235,10 +155,118 @@
 		},
 		{
 			"extra": "",
-			"id": "1634694281-927",
-			"name": "New glossary entry",
-			"text": "",
-			"title": "",
+			"id": "1630254242-381",
+			"name": "light",
+			"text": "where on earth can you possibly find some light? ",
+			"title": "some light",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630254665-813",
+			"name": "crystal ball",
+			"text": "Why is it in the lounge?",
+			"title": "an ominous crystal ball",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630251574-315",
+			"name": "contract cheating",
+			"text": "This advertisement is for a service to help you cheat on a paper",
+			"title": "A very unwelcome ad",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "source: writingcenter.unc.edu",
+			"id": "1629924473-384",
+			"name": "academic integrity",
+			"text": "Academic integrity is the commitment to and demonstration of honest and moral behavior in an academic setting. ",
+			"title": "Academic Integrity",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "watch this!",
+			"id": "1634512111-366",
+			"name": "ETHICS IN EDUCATION",
+			"text": "a short video on ethics in education, by Porter Yelton, NYU Shanghai",
+			"title": "ETHICS IN EDUCATION",
+			"type": 1,
+			"url": "https://stream.nyu.edu/media/Ethics+in+Education+2021/1_4qmm1gpw"
+		},
+		{
+			"extra": "",
+			"id": "1634511139-787",
+			"name": "Dream School",
+			"text": "This is the school of your dreams, the top magic is taught here!",
+			"title": "Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569162-146",
+			"name": "BEAN KING V. DREAM SCHOOL",
+			"text": "Bean King and the consequences of unethical scholarship",
+			"title": "Bean King v. Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569658-918",
+			"name": "Walker v. Harvard Case Description",
+			"text": "A short case study written for the Ethics in Education 2021 academic integrity training",
+			"title": "Walker v. Harvard Case Description",
+			"type": 1,
+			"url": "https://drive.google.com/drive/folders/1eg4ar9VTfo4BVeR-hpK7YzZ1loCYqk4A"
+		},
+		{
+			"extra": "source: dictionary.com",
+			"id": "1630350500-690",
+			"name": "crumpet",
+			"text": "a round soft unsweetened bread resembling a muffin, cooked on a griddle or the like, and often toasted.",
+			"title": "crumpet",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630257154-623",
+			"name": "game cartridge",
+			"text": "you need this in order to play!",
+			"title": "a game catridge",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1632310767-917",
+			"name": "Bean King",
+			"text": "He's rich! (and bold)",
+			"title": "Bean King",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "he looks [i]stressed[/i] out",
+			"id": "1630249200-850",
+			"name": "coffee king",
+			"text": "without the help of this magical bean, many a student would suffer",
+			"title": "the KING",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "check the lounge",
+			"id": "1630361968-144",
+			"name": "some coffee",
+			"text": "joe needs this to finish his paper quickly",
+			"title": "coffee",
 			"type": 1,
 			"url": ""
 		}
@@ -247,12 +275,6 @@
 		{
 			"id": "1630263147-252",
 			"name": "illuminata cartridge",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630351191-912",
-			"name": "token",
 			"type": 0,
 			"value": "0"
 		},
@@ -283,12 +305,6 @@
 		{
 			"id": "1630359451-554",
 			"name": "shelf 3",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630352399-208",
-			"name": "coffee",
 			"type": 0,
 			"value": "0"
 		},
@@ -329,20 +345,8 @@
 			"value": "0"
 		},
 		{
-			"id": "1630350440-392",
-			"name": "questions",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630258075-885",
 			"name": "need_spell",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1630355221-179",
-			"name": "key",
 			"type": 0,
 			"value": "0"
 		},
@@ -407,10 +411,46 @@
 			"value": "0"
 		},
 		{
-			"id": "1634694282-512",
-			"name": "New value",
+			"id": "1630355221-179",
+			"name": "key",
 			"type": 0,
-			"value": ""
+			"value": "0"
+		},
+		{
+			"id": "1634582450-483",
+			"name": "quiz",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634604039-737",
+			"name": "quiz completed",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630351191-912",
+			"name": "token",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630352399-208",
+			"name": "coffee",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630350440-392",
+			"name": "questions",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634605266-872",
+			"name": "joe quest",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }

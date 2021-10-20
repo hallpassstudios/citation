@@ -336,7 +336,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hey Joe, have you seen my notes?"
+			"text": "Hey Joe, have you seen my academic integrity quiz cart?"
 		},
 		{
 			"action": "join",
@@ -356,25 +356,37 @@
 			"character": "character-1629831954.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "hmmmm. I don't think so. What did they look like?"
+			"text": "hmmmm. I don't think so. Where was it last?"
 		},
 		{
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Like a [b] huuuuge [/b] stack of paper, they were on my desk like 10 minutes ago!"
+			"text": "It was on my desk before I took a nap. Now it's GONE!"
 		},
 		{
 			"character": "character-1629831954.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "No idea, I've just been extremely busy writing this paper on academic integrity"
+			"text": "Oh that sucks! No idea why anyone would want to take your quiz cartridge. You need to beat it in order to register for classes!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ya, really strange. I swear I left it on my desk before I fell asleep..."
 		},
 		{
 			"character": "character-1629831954.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "you know, if I had some coffee I might be able to finish this even faster and help you look for them"
+			"text": "Maybe someone took it? I just got back from the lounge a few minutes ago."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay. Let me look around, it's gotta be here somewhere."
 		},
 		{
 			"call_node": {
@@ -614,6 +626,114 @@
 		},
 		{
 			"definition": "1630355221-179",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634604039-737",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634605266-872",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Joe, have you seen my notes? They're not on my desk"
+		},
+		{
+			"action": "join",
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, sorry! I haven't. You have the worst luck huh?"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think someone keeps taking my stuff. You sure you haven't seen anything fishy?"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, not at all. I've been standing here ever since you went into the game too."
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey, I'll make you a deal..."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What kind of deal?"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well...I'm super busy writing this paper, but if you could grab me some coffee from the lounge, I could probably finish it up super fast!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "and...how does that help me find my notes?"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'll finish this paper and have tons of time to help you. I'll even help you study!"
+		},
+		{
+			"definition": "1634605266-872",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,

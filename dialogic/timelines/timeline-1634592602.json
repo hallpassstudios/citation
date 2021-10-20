@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "CORRECT ANSWER!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Incorporating others’ ideas as your own is exactly what you want to avoid when doing any sort of academic work. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A citation helps you to clearly label which work is yours, and which work belongs to someone else."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This clear division of which work you’ve actually incorporated as inspiration from another source "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "is essential to maintaining academic integrity."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "10 SECS ADDED!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "add_time",
+				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634592602.json",
+		"name": "question 1 explanation"
+	}
+}

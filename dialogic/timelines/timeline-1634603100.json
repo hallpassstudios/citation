@@ -1,0 +1,91 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "CONGRATULATIONS!"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You completed the quiz. "
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I hope you enjoyed your time in the academic integrity forest."
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A total of [1,230] players, including you, have already proven themselves worthy."
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "and a total of [230] players weren't able to complete the game"
+		},
+		{
+			"action": "join",
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh golly. What happened to the ones that didn't complete it?"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh don't worry, they're not dead or anything"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "just forever doomed to wander the academic integrity forest for the [shake rate=20 level=10]rest of eternity[/shake]"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Anyhoo, congrats! I've noted this on your record. You're free to go!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634603100.json",
+		"name": "completed quiz"
+	}
+}

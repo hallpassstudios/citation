@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean says he is ‘moving words around.’ The issue with this wording is that it remains vague"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "what does he mean when he says her sources are “included?” We cannot be sure."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If all of his sources were actually included and cited properly, ‘moving words around’ "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "should not affect the level of academic integrity his paper exhibits."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Therefore, this reasoning is no excuse for him failing to cite the sources he used"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634599972.json",
+		"name": "question 6 explanation"
+	}
+}

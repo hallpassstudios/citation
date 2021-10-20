@@ -4,6 +4,7 @@ var camera = preload("res://scenes/utilities/camera.tscn")
 onready var player_spawn = $"environment/player spawn"
 var player = preload("res://scenes/player/top_down_player.tscn")
 # onready var spawn_points = $"player spawn"
+var played_quiz : bool = false
 
 func _ready():
 	if globals.is_lit:
@@ -19,6 +20,11 @@ func _ready():
 		dialogue_controller.play_dialogue('intro')
 		globals.tutorial_played = true
 	
+	if globals.completed_quiz && !played_quiz:
+		dialogue_controller.play_dialogue('dorm quiz completed')
+		played_quiz = true
+		
+	
 	if globals.illuminata_completed:
 		dialogue_controller.play_dialogue('return to dorm')
 		
@@ -28,9 +34,15 @@ func play_game(value):
 	global_ui.fade_out()
 	# remove the inventory item
 	yield(get_tree().create_timer(3.0), "timeout")
-	# background_music.base.stop()
-	# background_music.bad.play()
-	globals.goto_scene("res://scenes/levels/games/minigame/chunks/outside.tscn")
+	
+	if value[0] == "illuminata":
+		globals.goto_scene("res://scenes/levels/games/minigame/chunks/outside.tscn")
+	
+	if value[0] == "quiz":
+		globals.goto_scene("res://scenes/levels/games/quiz/quiz.tscn")
 
 func desk_interact():
 	globals.desk_interact = true
+
+func open_url():
+	OS.shell_open("https://hallpass.games/2021/10/18/bean-king-v-dream-school-case-description/")

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Paraphrasing is changing just a few words in another author’s sentence to make it sound a bit different."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634599333.json",
+		"name": "question 3"
+	}
+}

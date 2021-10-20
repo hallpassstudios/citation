@@ -10,7 +10,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Perhaps you should sit down at your desk and study instead of romp around!"
+			"text": "Perhaps you should play your academic integrity quiz cartridge before romping around!"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -31,7 +31,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Perhaps you should have a conversation with joe before you go looking for you notes?"
+			"text": "Perhaps you should have a conversation with joe before you go looking further?"
 		},
 		{
 			"event_id": "dialogic_013"

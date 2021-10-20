@@ -314,6 +314,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
+frame = 4
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]

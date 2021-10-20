@@ -1,0 +1,169 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Welcome student. I see this is your first quiz at Dream School. Before we begin:"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "At Dream School, students demonstrate their knowledge by beating video games"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They don't merely PLAY the game, they BECOME the game!"
+		},
+		{
+			"action": "join",
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That sounds really transcendental."
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(or like a commercial for a video game)"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This quiz will be testing your knowledge of academic integrity"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I assume you've read the BEAN KING V. DREAM SCHOOL case? If not, you may never exit the forest "
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=20 level=10]alive[/shake] that is..."
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dang, these quizzes are SERIOUS"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=20 level=10]DEADLY[/shake]"
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "okay, got it. Point has been made."
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "serious. [b]deadly[/b] serious. "
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As in you may not make it back to your dorm. Your actual body is here in the game now.  "
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dang. They weren't kidding when they said Dream School was a once-in-a-lifetime opportunity."
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So what do I do?"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your task is simple. You have 2 minutes to find your way through the forest by following the correct path. "
+		},
+		{
+			"character": "character-1630272905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry, I'm new here. How do I do that?"
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You walk, and then when you reach a fork in the road, read the question and pick the best answer."
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you are worthy and select the CORRECT answer, be sure and stop at the [color=yellow]pot of gold[/color] and read the explanation. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Each time you read an explanation, you'll get 5 seconds back on your time."
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Entering the forest will begin the timer. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To move: use your arrow keys to move, or touch your mobile screen. "
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634584513.json",
+		"name": "quiz"
+	}
+}

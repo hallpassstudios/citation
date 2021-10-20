@@ -1,0 +1,253 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean King v. Dream School"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(The following has been adapted from the Walker v. Harvard Case Description, NYU Shanghai, 2021 Ethics in Education presentation, Porter Yelton, 2021)"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In 2009, Bean King was in his final year at Dream School. Having earned his bachelor’s degree in incantation by age 4 and "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "a subsequent doctoral degree in potion-making, accompanied by scholarships and fellowships"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "he looked forward to beginning his career at a top potion firm after graduation."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In his final semester, Bean volunteered to write an article for the school’s Charms and Champs journal"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "he had served as a member for all three years, the first of which as a `sub-citer` who worked to verify citations and quotations used in drafts"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean submitted multiple drafts of his paper throughout the month of February. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "After missing the original deadline on February 22, he received a telepathic note from an editor saying:"
+		},
+		{
+			"action": "join",
+			"character": "character-1634570064.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1634570064.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"We need your draft. Every other student author has gotten their piece in.\""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In response on February 24, Bean sent in his final draft with the following note:"
+		},
+		{
+			"action": "join",
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“All the sources are included, but I’m still moving words around.”"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean described the submission as “the latest draft” (but not the final draft)."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "On February 27 after the final deadline, Bean emailed asking, "
+		},
+		{
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“I’m still getting comments/feedback from partners at a potions firm. If I send a revised copy TONIGHT, is that too late???\""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "During the editing process, members of the journal staff raised concerns that "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean’s main argument was similar to an existing article regarding the same case."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They brought these concerns to the journal’s editors-in-chief, one of whom then reviewed the article for plagiarism"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "using Moogle to run internet searches on sentences taken from his final draft. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He stopped looking for instances of plagiarism after documenting twenty-three apparent cases."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He reported this to the university’s Dean of Students, who took it to the Administrative Board. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " A formal hearing was scheduled for the Board to review his case right before final exams."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean attempted to resolve the situation without a hearing, but he was informed that plagiarism is too serious a charge to resolve informally. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean also requested to change his exam schedule to allow more time to prepare for the hearing, but was denied."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The Administrative Board allowed Bean to graduate with his class, but issued him a disciplinary letter which was noted on his transcript."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bean had secured employment at a potions firm while enrolled; however, the firm withdrew its $160,000/year job offer upon learning of the reprimand."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "For the next 3 years, Bean was left unable to secure new employment until finally he was able to find work in Dream School's student lounge."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In 2012, Bean sued the President and Fellows of Dream School,"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " claiming that Dream School did not uphold standards for fairness and professionalism outlined in the Handbook for Board hearings."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "For example, in the Handbook, one rule states the Board should resolve hearings, “as favorably to students as possible"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "consistent with the maintenance of the high academic and ethical standards of Dream  School.”"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He argued that the submission was not intended to be his final draft, and that if the Board interpreted the facts"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“as favorably to students as possible” as the Handbook requires, then it should have accepted his defense and not marked his transcript."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "However, as stated in the the University Handbook, “all academic or non-academic” work that a student submits"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“that is not their own without clear attribution of all sources, even if inadvertently, will be subject to disciplinary action.”"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thus, the University felt that their actions were justified."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634569428.json",
+		"name": "case"
+	}
+}

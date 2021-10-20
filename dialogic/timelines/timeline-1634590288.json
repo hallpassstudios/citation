@@ -1,0 +1,37 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You have 2 minutes to make it through the forest! "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your first question:"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=yellow]Which of the following is [b]not[/b] a reason you would want to cite properly?[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "start_timer",
+				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634590288.json",
+		"name": "question 1"
+	}
+}

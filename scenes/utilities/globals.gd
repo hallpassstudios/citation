@@ -22,6 +22,7 @@ var area_by_scene = {
 	'character select':'menu',
 	'intro':'intro',
 	'dorm':'academy',
+	'quiz':'illuminata',
 	'hallway':'academy',
 	'lounge':'academy',
 	'library':'academy',
@@ -55,8 +56,9 @@ func get_caught_joe(): return caught_joe
 var can_shoot = false
 var read_everything = false
 var desk_interact = false
+var completed_quiz = false
 
-var active_char = 0
+var active_char = 2
 
 var in_minigame = false
 

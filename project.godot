@@ -103,14 +103,14 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "Firebase": "res://firebase_app_lite/icon.png",
 "FirebaseApp": "res://firebase_app_lite/icon.png",
-"FirebaseAuth": "",
+"FirebaseAuth": "res://firebase_auth_lite/icon.png",
 "FirebaseDataSnapshot": "res://firebase_database_lite/icon.png",
 "FirebaseDatabase": "res://firebase_database_lite/icon.png",
 "FirebaseError": "res://firebase_app_lite/icon.png",
 "FirebaseEventProcessor": "res://firebase_database_lite/icon.png",
 "FirebaseEventProcessorLite": "res://firebase_database_lite/icon.png",
 "FirebaseReference": "res://firebase_database_lite/icon.png",
-"FirebaseUser": "",
+"FirebaseUser": "res://firebase_auth_lite/icon.png",
 "HTTPSSEClient": "res://firebase_database_lite/icon.png"
 }
 

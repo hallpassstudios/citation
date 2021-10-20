@@ -1,0 +1,49 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is known as the “lazy paraphrase” and is actually almost no different from the author’s original words. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In such a case, you’d be better off (and more academically honest) just using the author’s actual words as a cited quote. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Paraphrasing should be used only when you have a legitimate reason for changing the sentence structure, "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "grammar, tense, or when you need to condense more complicated information."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "10 SECS ADDED!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "add_time",
+				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634599525.json",
+		"name": "question 3 explanation"
+	}
+}
