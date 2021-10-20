@@ -55,7 +55,6 @@ func get_pos(song=null):
 	
 func clear():
 	for song in songs:
-		song.stop()
 		remove_song(song)
 
 func handle(song):
@@ -66,6 +65,7 @@ func handle(song):
 			song.play()
 
 func remove_song(song):
+	song.stop()
 	songs.erase(song)
 	song.queue_free()
 

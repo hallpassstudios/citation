@@ -128,7 +128,7 @@ func _on_exit_body_entered(body):
 		globals.is_lit = true
 		
 func return_to_dorm():
-	globals.set_illuminata_completed(true)
+	globals.illuminata_completed = true
 	global_ui.fade_in()
 	globals.goto_scene("res://scenes/levels/dorm.tscn")
 
