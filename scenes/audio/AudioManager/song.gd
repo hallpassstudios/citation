@@ -25,6 +25,7 @@ signal song_ended(song)
 signal remove_me(song)
 
 func handle_params(params): $song_params.params = params
+func set_params(key, value): $song_params.params[key] = value
 func get_params(): return $song_params.params
 func has_param(key): return (get_param(key) != null)
 func get_song_handler(): return get_param('song_handler')
@@ -105,6 +106,7 @@ func set_volume(num):
 	song_file.volume_db = float(num)
 	
 func handle_fade(direction_string):
+	set_params("on_end","stop")
 	if not is_fading:
 		if direction_string == 'in':
 			fade_direction = 1

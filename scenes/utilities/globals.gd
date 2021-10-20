@@ -48,9 +48,9 @@ var is_lit = false
 var illuminata_challenge_3 = false
 var first_time_illuminata = true setget ,get_first_time_illuminata
 func get_first_time_illuminata(): return first_time_illuminata
-var illuminata_completed = false setget set_illuminata_completed,get_illuminata_completed
-func set_illuminata_completed(val): illuminata_completed = val
-func get_illuminata_completed(): return illuminata_completed
+var illuminata_completed = false
+var illuminata_completed_music = false setget , get_illuminata_completed
+func get_illuminata_completed(): return illuminata_completed_music
 var caught_joe = false setget , get_caught_joe
 func get_caught_joe(): return caught_joe
 var can_shoot = false

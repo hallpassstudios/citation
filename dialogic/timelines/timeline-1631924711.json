@@ -84,6 +84,16 @@
 			"portrait": "",
 			"text": "That's EXACTLY what I thought too."
 		},
+    {
+      "call_node": {
+        "arguments": [
+          "fade_out"
+        ],
+        "method_name":"handle_actions",
+        "target_node_path": "audio_manager"
+      },
+      "event_id":"dialogic_042"
+    },
 		{
 			"character": "character-1631924725.json",
 			"event_id": "dialogic_001",

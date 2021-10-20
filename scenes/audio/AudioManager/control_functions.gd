@@ -53,6 +53,5 @@ func fade_out(action):
 			handler.handler_types['fade_out'].call_func(song)
 
 func validate():
-	print('validated')
 	if not has_handler:
 		handler = get_parent().get_node("song_handler")

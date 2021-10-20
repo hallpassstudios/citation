@@ -29,6 +29,7 @@ func _ready():
 	if globals.illuminata_completed:
 		yield(get_tree().create_timer(1.0), "timeout")
 		dialogue_controller.play_dialogue('return to dorm')
+		globals.illuminata_completed_music = true
 		globals.illuminata_completed = false
 		
 func play_game(value):
