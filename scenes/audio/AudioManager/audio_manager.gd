@@ -26,6 +26,17 @@ func _on_configured():
 	add_child(audio_logic_tree_handler)
 	add_child(song_controller)
 	
+func handle_actions(actionArray):
+	var audio_actions = $audio_logic_tree_handler.get_audio_actions()
+	for action in actionArray:
+		var action_to_perform = null
+		if typeof(action) == TYPE_DICTIONARY: action_to_perform = action
+		elif audio_actions.has(action): action_to_perform = audio_actions[action]
+		$song_controller.handle_action(action_to_perform)
+		
+func _on_perform_audio_action(action):
+	$song_controller.handle_action(action)
+	
 func _on_state_changed(action):
 	$song_controller.handle_action(action)
 

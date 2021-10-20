@@ -50,7 +50,8 @@ func get_first_time_illuminata(): return first_time_illuminata
 var illuminata_completed = false setget set_illuminata_completed,get_illuminata_completed
 func set_illuminata_completed(val): illuminata_completed = val
 func get_illuminata_completed(): return illuminata_completed
-var caught_joe = false
+var caught_joe = false setget , get_caught_joe
+func get_caught_joe(): return caught_joe
 var can_shoot = false
 var read_everything = false
 var desk_interact = false
@@ -165,4 +166,4 @@ func set_new_scene(scene_resource):
 	get_node("/root").add_child(current_scene)
 	
 func _on_music_cue(beat):
-	print("HAHAHHAHA")
+	print('big thunder ooo!')

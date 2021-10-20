@@ -46,14 +46,17 @@ func _process(_delta):
 func get_current_songs():
 	return songs
 
-func get_pos():
-	for song in songs:
+func get_pos(song=null):
+	if !song:
+		for song in songs:
+			return song.song_file.get_playback_position()
+	else:
 		return song.song_file.get_playback_position()
 	
 func clear():
 	for song in songs:
 		song.stop()
-		songs.erase(song)
+		remove_song(song)
 
 func handle(song):
 	if !song.is_playing(): 

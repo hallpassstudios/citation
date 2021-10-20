@@ -12,8 +12,9 @@ var prev_state = {}
 var will_update = false
 
 #=====Actions
-onready var audio_actions setget set_audio_actions
+onready var audio_actions setget set_audio_actions, get_audio_actions
 func set_audio_actions(aa): audio_actions = aa
+func get_audio_actions(): return audio_actions
 
 #=====Tree
 onready var trees setget set_trees

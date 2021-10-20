@@ -8,8 +8,7 @@ onready var control_functions = $control_functions
 onready var control_types = {
 	'play': funcref(control_functions, 'play'),
 	'transition_to': funcref(control_functions, 'transition_to'),
-	'crossfade': funcref(control_functions, 'crossfade'),
-	'cut': funcref(control_functions, 'cut'),
+	'cut_to': funcref(control_functions, 'cut_to'),
 	'play_sfx': funcref(control_functions, 'play_sfx'),
 	'fade_out': funcref(control_functions, 'fade_out')
 }

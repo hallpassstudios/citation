@@ -232,6 +232,15 @@
 			"title": "Your notes",
 			"type": 1,
 			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634694281-927",
+			"name": "New glossary entry",
+			"text": "",
+			"title": "",
+			"type": 1,
+			"url": ""
 		}
 	],
 	"variables": [
@@ -396,6 +405,12 @@
 			"name": "took book",
 			"type": 0,
 			"value": "0"
+		},
+		{
+			"id": "1634694282-512",
+			"name": "New value",
+			"type": 0,
+			"value": ""
 		}
 	]
 }
