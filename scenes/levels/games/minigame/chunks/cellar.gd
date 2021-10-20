@@ -1,5 +1,7 @@
 extends Node2D
 
+signal perform_audio_action(action)
+
 onready var player = preload("res://scenes/player/top_down_runner.tscn")
 onready var spawn = $"sort/spawner"
 
@@ -19,6 +21,8 @@ func _ready():
 	globals.player = current_player
 	add_child(current_player)
 	current_player.position = spawn.position
+	#set up connection with audioManager
+	connect('perform_audio_action', get_node('/root/audio_manager'), '_on_perform_audio_action')
 
 func restart(title, subtitle):
 	$HUD/restart.visible = true
@@ -87,10 +91,11 @@ func _on_quote_2_area_body_entered(body):
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)
 		$sort/door/success.play()
+		emit_signal('perform_audio_action', {"fade_out":{}})
 		door_open = true
 
 func next_level():
-	globals.goto_scene("res://scenes/levels/games/minigame/chunks/illuminata classroom.tscn")
+	globals.goto_scene("res://scenes/levels/games/minigame/chunks/illuminata_classroom.tscn")
 	
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":

@@ -76,7 +76,6 @@ func get_state_directory(config):
 	for key in state_dir_keys:
 		var value = config.get_value(section, key)
 		var node = get_node(value[0])
-		print('state directory node ', node )
 		var new_funcref = funcref(node,value[1])
 		_state_directory[key] = new_funcref
 	return _state_directory

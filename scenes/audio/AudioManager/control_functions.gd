@@ -33,14 +33,24 @@ func transition_to(action):
 		params['on_start'] = {'fade_in' : {'at_sec':str(start_pos)}}
 		emit_signal('load_track_request', song, params)
 			
-func crossfade(action):
-	pass
-func cut(action): #change to cut to
+func cut_to(action): #change to cut to
 	pass
 func play_sfx(action):
 	pass
+	
 func fade_out(action):
-	pass
+	var songs = get_parent().get_current_songs()
+	if len(songs) == 0: return
+	var songs_to_fade = []
+	if len(action) == 0:
+		songs_to_fade = songs
+	else:
+		for song in action:
+			songs_to_fade.append(song)
+	for song in songs:
+		if songs_to_fade.has(song):
+			var start_pos = handler.get_pos(song)
+			handler.handler_types['fade_out'].call_func(song)
 
 func validate():
 	print('validated')

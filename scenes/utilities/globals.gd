@@ -28,12 +28,14 @@ var area_by_scene = {
 	'library':'academy',
 	'horizontal hallway':'academy',
 	'classroom':'academy',
+	'illuminata_classroom':'illuminata classroom',
 	'outside':'illuminata',
-	'house':'illuminata',
+	'house':'illuminata', 
 	'courtroom':'illuminata',
-	'office':'illuminata',
-	'did not cheat':'illuminata',
-	'final':'illuminata'
+	'office':'illuminata classroom',
+	'did not cheat':'illuminata classroom',
+	'final':'illuminata classroom',
+	'credits':'credits'
 }
 
 # our player
@@ -49,7 +51,8 @@ func get_first_time_illuminata(): return first_time_illuminata
 var illuminata_completed = false setget set_illuminata_completed,get_illuminata_completed
 func set_illuminata_completed(val): illuminata_completed = val
 func get_illuminata_completed(): return illuminata_completed
-var caught_joe = false
+var caught_joe = false setget , get_caught_joe
+func get_caught_joe(): return caught_joe
 var can_shoot = false
 var read_everything = false
 var desk_interact = false
@@ -117,8 +120,7 @@ func goto_scene(path):
 	can_change = true
 
 func _process(delta):
-
-	if loader == null:
+	if loader == null :
 		# no need to process anymore
 		set_process(false)
 		return
@@ -164,3 +166,6 @@ func set_new_scene(scene_resource):
 	current_scene = scene_resource.instance()
 	previous_area = get_current_area()
 	get_node("/root").add_child(current_scene)
+	
+func _on_music_cue(beat):
+	print('big thunder ooo!')

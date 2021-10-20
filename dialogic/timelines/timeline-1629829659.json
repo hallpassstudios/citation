@@ -116,6 +116,16 @@
 			"portrait": "",
 			"text": "You insert the cartridge. Good luck..."
 		},
+    {
+			"call_node": {
+				"arguments": [
+					"play_first_time_illuminata"
+				],
+				"method_name": "handle_actions",
+				"target_node_path": "audio_manager"
+			},
+			"event_id": "dialogic_042"
+		},
 		{
 			"call_node": {
 				"arguments": [

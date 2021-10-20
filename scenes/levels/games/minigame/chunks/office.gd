@@ -29,7 +29,7 @@ func _on_restart_pressed():
 	print("pressed restart")
 	$HUD/restart.visible = false
 	get_tree().paused = false
-	globals.goto_scene("res://scenes/levels/games/minigame/chunks/classroom.tscn")
+	globals.goto_scene("res://scenes/levels/games/minigame/chunks/illuminata_classroom.tscn")
 
 func _on_quit_pressed():
 	globals.goto_scene("res://scenes/levels/dorm.tscn")

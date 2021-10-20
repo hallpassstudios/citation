@@ -227,6 +227,7 @@ func _on_seat_body_entered(body):
 			globals.goto_scene("res://scenes/levels/games/minigame/chunks/did_not_cheat.tscn")
 
 func open_door():
+	print('door is opening')
 	$sort/door.visible = false
 	$sort/door.monitoring = false
 	$sort/door/StaticBody2D/CollisionShape2D.disabled = true
