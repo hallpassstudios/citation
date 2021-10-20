@@ -24,7 +24,6 @@ func _ready():
 		dialogue_controller.play_dialogue('dorm quiz completed')
 		played_quiz = true
 		
-	
 	if globals.illuminata_completed:
 		dialogue_controller.play_dialogue('return to dorm')
 		
@@ -46,3 +45,5 @@ func desk_interact():
 
 func open_url():
 	OS.shell_open("https://hallpass.games/2021/10/18/bean-king-v-dream-school-case-description/")
+
+	

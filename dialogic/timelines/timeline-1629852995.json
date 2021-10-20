@@ -2,445 +2,15 @@
 	"events": [
 		{
 			"condition": "",
-			"definition": "1630353426-910",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "So did you read my paper yet?"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630283066-644",
+			"definition": "1634683019-686",
 			"event_id": "dialogic_012",
 			"value": "1"
 		},
 		{
 			"condition": "",
-			"definition": "1630352399-208",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I'm soooo thirsty!"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630352399-208",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"call_node": {
-				"arguments": [
-					"gave joe coffee"
-				],
-				"method_name": "dialogue_objective",
-				"target_node_path": "analytics"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
-			"action": "join",
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": true,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			}
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hi joe! I got you some coffee. Finally!"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Sorry it took me so long"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "No problem, thanks dude!"
-		},
-		{
-			"call_node": {
-				"arguments": [
-					"coffee"
-				],
-				"method_name": "remove_item",
-				"target_node_path": "inventory"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "joe takes a sip of the coffee. [shake rate=5 level=10]sluuuurp![/shake]"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You see him furiously typing "
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "[tornado radius=5 freq=20]............[/tornado]"
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Whew! I'm all done with this paper. Wanna take a look?"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Sure, but I really need to finish finding my notes too!"
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Don't worry, I'll help you find them, just take a quick look at my paper and we'll do it!"
-		},
-		{
-			"call_node": {
-				"arguments": [
-					"paper"
-				],
-				"method_name": "add_item",
-				"target_node_path": "inventory"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
-			"audio": "play",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "res://audio/sfx/item.mp3",
-			"volume": 0
-		},
-		{
-			"event_id": "dialogic_023",
-			"wait_seconds": 0.7
-		},
-		{
-			"audio": "stop",
-			"audio_bus": "Master",
-			"event_id": "dialogic_030",
-			"event_name": "AudioEvent",
-			"file": "",
-			"volume": 0
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "you recieve joe's paper. "
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "click it to read it!"
-		},
-		{
-			"definition": "1630353426-910",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
-		},
-		{
-			"definition": "1630352399-208",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "2"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1629847073-571",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hey, I'd love to chat but I'm neck-deep in writing this paper!"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1629847073-571",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"condition": "",
-			"definition": "1630352399-208",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"condition": "",
-			"definition": "1630528470-366",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "that's super cool, you know how to cast light now, you'll be the life of the party"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "or just really annoying at movies..."
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630283066-644",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"action": "join",
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": true,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			}
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Hey Joe, have you seen my academic integrity quiz cart?"
-		},
-		{
-			"action": "join",
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": true
-			}
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "hmmmm. I don't think so. Where was it last?"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "It was on my desk before I took a nap. Now it's GONE!"
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Oh that sucks! No idea why anyone would want to take your quiz cartridge. You need to beat it in order to register for classes!"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Ya, really strange. I swear I left it on my desk before I fell asleep..."
-		},
-		{
-			"character": "character-1629831954.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Maybe someone took it? I just got back from the lounge a few minutes ago."
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Okay. Let me look around, it's gotta be here somewhere."
-		},
-		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "desk_interact",
-				"target_node_path": "dorm"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
-			"definition": "1630283066-644",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630353426-910",
+			"definition": "1634685184-960",
 			"event_id": "dialogic_012",
 			"value": "2"
-		},
-		{
-			"condition": "",
-			"definition": "1631101879-648",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Maybe you should check out the classroom now?!"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1631101879-648",
-			"event_id": "dialogic_012",
-			"value": "0"
 		},
 		{
 			"action": "join",
@@ -636,17 +206,226 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"condition": "",
+			"definition": "1634685184-960",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perhaps you should read joe's paper first (just click on it!)"
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
 			"condition": "",
-			"definition": "1634604039-737",
+			"definition": "1634685184-960",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"gave joe coffee"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi joe! I got you some coffee. Finally!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sorry it took me so long"
+		},
+		{
+			"action": "join",
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No problem, thanks dude!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"coffee"
+				],
+				"method_name": "remove_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "joe takes a sip of the coffee. [shake rate=5 level=10]sluuuurp![/shake]"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You see him furiously typing "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[tornado radius=5 freq=20]............[/tornado]"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Whew! I'm all done with this paper. Wanna take a look?"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sure, but I really need to finish finding my notes too!"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don't worry, I'll help you find them, just take a quick look at my paper and we'll do it!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"paper"
+				],
+				"method_name": "add_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "you recieve joe's paper. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "click it to read it!"
+		},
+		{
+			"definition": "1634685184-960",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"definition": "1634683019-686",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675132-146",
 			"event_id": "dialogic_012",
 			"value": "1"
 		},
 		{
 			"condition": "",
-			"definition": "1634605266-872",
+			"definition": "1634682662-673",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Joe is thirsty, perhaps some coffee or coffee-like beverage would help satiate him?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634682601-531",
 			"event_id": "dialogic_012",
 			"value": "0"
 		},
@@ -733,7 +512,37 @@
 			"text": "I'll finish this paper and have tons of time to help you. I'll even help you study!"
 		},
 		{
-			"definition": "1634605266-872",
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": -10
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
+		},
+		{
+			"definition": "1634682601-531",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -742,6 +551,147 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675123-167",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634682662-673",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey Joe, have you seen my academic integrity quiz cart?"
+		},
+		{
+			"action": "join",
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "hmmmm. I don't think so. Where was it last?"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It was on my desk before I took a nap. Now it's GONE!"
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh that sucks! No idea why anyone would want to take your quiz cartridge. You need to beat it in order to register for classes!"
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ya, really strange. I swear I left it on my desk before I fell asleep..."
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe someone took it? I just got back from the lounge a few minutes ago."
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay. Let me look around, it's gotta be here somewhere."
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "desk_interact",
+				"target_node_path": "dorm"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"definition": "1634682662-673",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675144-679",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629831954.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "that's super cool, you know how to cast light now, you'll be the life of the party"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "or just really annoying at movies..."
 		},
 		{
 			"event_id": "dialogic_013"

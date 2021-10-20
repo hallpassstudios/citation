@@ -74,6 +74,14 @@
 			"value": "1"
 		},
 		{
+			"definition": "1630351191-912",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",

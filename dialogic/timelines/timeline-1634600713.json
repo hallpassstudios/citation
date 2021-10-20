@@ -11,6 +11,42 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "However, even if she did so, it would become clear that his article’s main argument was not her own. "
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "5 SECS ADDED!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "add_time",
+				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

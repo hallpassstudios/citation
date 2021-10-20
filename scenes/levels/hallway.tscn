@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -129,21 +129,29 @@ vertices = PoolVector2Array( 76.3355, 163.4, 49.2013, 150.398, 68.9252, 146.431,
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 3, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 11, 10 ), PoolIntArray( 10, 15, 16, 12 ), PoolIntArray( 17, 8, 11, 4, 7 ), PoolIntArray( 3, 6, 0 ), PoolIntArray( 18, 19, 3, 2 ) ]
 outlines = [ PoolVector2Array( 68.9252, 146.431, 72.0932, 100.372, 121.403, 98.8565, 124.296, 150.646, 145.735, 150.523, 144.89, 297.7, 144.151, 387.9, 144.343, 461.592, 120.907, 459.53, 120.907, 477.073, 70.6398, 476.061, 69.9651, 459.868, 47.1917, 458.742, 45.1594, 362.054, 83.5969, 362.878, 82.2482, 204.599, 78.1536, 204.446, 80.0819, 190.947, 76.3355, 163.4, 49.2013, 150.398 ) ]
 
-[sub_resource type="DynamicFontData" id=19]
+[sub_resource type="DynamicFontData" id=35]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=36]
+size = 20
+font_data = SubResource( 35 )
+
+[sub_resource type="DynamicFontData" id=33]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=37]
 size = 32
-font_data = SubResource( 19 )
+font_data = SubResource( 33 )
 
-[sub_resource type="DynamicFontData" id=21]
+[sub_resource type="DynamicFontData" id=34]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=38]
 size = 18
-font_data = SubResource( 21 )
+font_data = SubResource( 34 )
 
 [node name="hallway" type="Node2D"]
 script = ExtResource( 6 )
@@ -225,7 +233,7 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = SubResource( 23 )
 frames = SubResource( 14 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -270,19 +278,53 @@ navpoly = SubResource( 15 )
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 16 )
 
+[node name="ColorRect" type="ColorRect" parent="options"]
+anchor_right = 1.0
+margin_left = 0.666626
+margin_right = 0.666626
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0, 0, 0, 0.913725 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -40.0
-margin_right = -15.0
-margin_bottom = 25.0
+margin_left = -25.4244
+margin_top = -3.08328
+margin_right = -0.424438
+margin_bottom = 21.9167
 mouse_filter = 1
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="options"]
+margin_left = 4.19974
+margin_top = 10.7093
+margin_right = 58.1997
+margin_bottom = 29.7093
+custom_fonts/font = SubResource( 36 )
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Value" type="Label" parent="options"]
+margin_left = 59.2004
+margin_top = 11.2706
+margin_right = 113.2
+margin_bottom = 30.2706
+custom_fonts/font = SubResource( 36 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -323,7 +365,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 37 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -338,7 +380,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 37 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -389,7 +431,7 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 38 )
 text = "X CLOSE"
 flat = true
 

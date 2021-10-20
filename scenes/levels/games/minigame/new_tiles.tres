@@ -3169,3 +3169,17 @@ points = PoolVector2Array( 0, 0, 10, 0, 10, 10, 0, 10 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 184/z_index = 0
+185/name = "tileset.png 185"
+185/texture = ExtResource( 1 )
+185/tex_offset = Vector2( 0, 0 )
+185/modulate = Color( 1, 1, 1, 1 )
+185/region = Rect2( 200, 240, 10, 10 )
+185/tile_mode = 0
+185/occluder_offset = Vector2( 0, 0 )
+185/navigation_offset = Vector2( 0, 0 )
+185/shape_offset = Vector2( 0, 0 )
+185/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+185/shape_one_way = false
+185/shape_one_way_margin = 0.0
+185/shapes = [  ]
+185/z_index = 0

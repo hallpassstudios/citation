@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -180,21 +180,29 @@ vertices = PoolVector2Array( 192.219, 129.271, 298.353, 128.343, 297.425, 182.80
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 2, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 17, 13, 16, 18, 19, 12, 11 ), PoolIntArray( 17, 20, 13 ), PoolIntArray( 19, 4, 8, 12 ), PoolIntArray( 21, 22, 3 ), PoolIntArray( 21, 3, 2, 12, 23, 24 ) ]
 outlines = [ PoolVector2Array( 46.0902, 186.454, 114.862, 185.587, 121.432, 219.928, 160.039, 213.745, 161.114, 200.643, 163.336, 191.148, 170.205, 184.683, 171.619, 178.421, 192.219, 178.16, 192.219, 129.271, 298.353, 128.343, 297.425, 182.802, 435.3, 183.203, 435.135, 219.975, 401.109, 221.022, 402.857, 268.384, 403.12, 382.385, 345.367, 383.252, 345.516, 403.338, 314.419, 403.636, 314.27, 397.387, 142.786, 396.142, 142.447, 252.645, 122.973, 252.614, 47.5803, 253.498 ) ]
 
-[sub_resource type="DynamicFontData" id=33]
+[sub_resource type="DynamicFontData" id=37]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=36]
+size = 20
+font_data = SubResource( 37 )
+
+[sub_resource type="DynamicFontData" id=38]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=30]
 size = 32
-font_data = SubResource( 33 )
+font_data = SubResource( 38 )
 
-[sub_resource type="DynamicFontData" id=34]
+[sub_resource type="DynamicFontData" id=39]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=32]
 size = 18
-font_data = SubResource( 34 )
+font_data = SubResource( 39 )
 
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
@@ -296,7 +304,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -314,7 +322,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -361,19 +369,53 @@ navpoly = SubResource( 28 )
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 3 )
 
+[node name="ColorRect" type="ColorRect" parent="options"]
+anchor_right = 1.0
+margin_left = 0.666626
+margin_right = 0.666626
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0, 0, 0, 0.913725 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -40.0
-margin_right = -15.0
-margin_bottom = 25.0
+margin_left = -25.4244
+margin_top = -3.08328
+margin_right = -0.424438
+margin_bottom = 21.9167
 mouse_filter = 1
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 20 )
 texture_hover = ExtResource( 11 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="options"]
+margin_left = 4.19974
+margin_top = 10.7093
+margin_right = 58.1997
+margin_bottom = 29.7093
+custom_fonts/font = SubResource( 36 )
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Value" type="Label" parent="options"]
+margin_left = 59.2004
+margin_top = 11.2706
+margin_right = 113.2
+margin_bottom = 30.2706
+custom_fonts/font = SubResource( 36 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

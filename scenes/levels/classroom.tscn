@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://sprites/environment/library/door.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -85,21 +85,29 @@ vertices = PoolVector2Array( 409.021, 156.859, 437.758, 156.537, 435.175, 180.10
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 4, 9, 10, 0 ), PoolIntArray( 4, 3, 11, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 13, 19, 20, 14 ), PoolIntArray( 21, 22, 23, 24, 25 ), PoolIntArray( 26, 27, 25, 24, 28 ), PoolIntArray( 29, 28, 24, 30, 31, 17, 5 ), PoolIntArray( 31, 32, 18, 17 ), PoolIntArray( 29, 5, 8, 33, 13, 12 ) ]
 outlines = [ PoolVector2Array( 51.4573, 159.247, 71.5866, 158.886, 71.7952, 134.906, 107.129, 134.39, 108.209, 186.404, 195.457, 186.12, 205.503, 165.564, 212.603, 170.145, 212.983, 185.713, 276.172, 186.015, 283.246, 186.049, 281.989, 135.279, 305.191, 134.309, 307.99, 157.8, 333.7, 158.352, 333.793, 133.954, 408.957, 135.033, 409.021, 156.859, 437.758, 156.537, 435.175, 180.107, 398.044, 177.846, 373.182, 193.99, 358.394, 197.09, 350.372, 231.015, 350.64, 285.507, 357.344, 294.303, 356.593, 406.183, 354.464, 425.555, 352.059, 508.282, 32.2763, 507.862, 27.8529, 238.25, 46.4795, 236.323, 45.8372, 202.442, 51.4573, 194.895 ) ]
 
-[sub_resource type="DynamicFontData" id=29]
+[sub_resource type="DynamicFontData" id=16]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=17]
+size = 20
+font_data = SubResource( 16 )
+
+[sub_resource type="DynamicFontData" id=18]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=19]
 size = 32
-font_data = SubResource( 29 )
+font_data = SubResource( 18 )
 
-[sub_resource type="DynamicFontData" id=31]
+[sub_resource type="DynamicFontData" id=20]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=33]
+[sub_resource type="DynamicFont" id=21]
 size = 18
-font_data = SubResource( 31 )
+font_data = SubResource( 20 )
 
 [node name="classroom" type="Node2D"]
 script = ExtResource( 8 )
@@ -321,19 +329,53 @@ __meta__ = {
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 20 )
 
+[node name="ColorRect" type="ColorRect" parent="options"]
+anchor_right = 1.0
+margin_left = 0.666626
+margin_right = 0.666626
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0, 0, 0, 0.913725 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -40.0
-margin_right = -15.0
-margin_bottom = 25.0
+margin_left = -25.4244
+margin_top = -3.08328
+margin_right = -0.424438
+margin_bottom = 21.9167
 mouse_filter = 1
 texture_normal = ExtResource( 23 )
 texture_pressed = ExtResource( 22 )
 texture_hover = ExtResource( 23 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="options"]
+margin_left = 4.19974
+margin_top = 10.7093
+margin_right = 58.1997
+margin_bottom = 29.7093
+custom_fonts/font = SubResource( 17 )
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Value" type="Label" parent="options"]
+margin_left = 59.2004
+margin_top = 11.2706
+margin_right = 113.2
+margin_bottom = 30.2706
+custom_fonts/font = SubResource( 17 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -374,7 +416,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -389,7 +431,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -440,7 +482,7 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 21 )
 text = "X CLOSE"
 flat = true
 

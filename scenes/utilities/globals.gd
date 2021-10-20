@@ -58,6 +58,8 @@ var read_everything = false
 var desk_interact = false
 var completed_quiz = false
 
+var score : int = 0
+
 var active_char = 2
 
 var in_minigame = false

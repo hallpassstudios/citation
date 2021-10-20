@@ -2,36 +2,27 @@
 	"events": [
 		{
 			"condition": "",
-			"definition": "1630351191-912",
+			"definition": "1634675132-146",
 			"event_id": "dialogic_012",
-			"value": "0"
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634682601-531",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634684564-553",
+			"event_id": "dialogic_012",
+			"value": "1"
 		},
 		{
 			"condition": "",
 			"definition": "1630255667-592",
 			"event_id": "dialogic_012",
 			"value": "0"
-		},
-		{
-			"condition": "",
-			"definition": "1630444561-366",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Any luck? Did you try going into the library? It should be right over there!"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "bean king points to a door on the right side of the room."
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"action": "join",
@@ -48,8 +39,55 @@
 			}
 		},
 		{
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Any luck? Did you try going into the library? It should be right over there!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "bean king points to a door on the right side of the room."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"condition": "",
-			"definition": "1630444561-366",
+			"definition": "1630255667-592",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "really excited to get that copy of the Academic Bulletin!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634684564-553",
 			"event_id": "dialogic_012",
 			"value": "0"
 		},
@@ -71,7 +109,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi, are you the bean king?"
+			"text": "Hi bean king?"
 		},
 		{
 			"action": "join",
@@ -91,7 +129,7 @@
 			"character": "character-1630249130.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Totally am! How can I help you?"
+			"text": "How can I help you?"
 		},
 		{
 			"character": "character-1629668635.json",
@@ -103,34 +141,34 @@
 			"character": "character-1630249130.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'm too stressed out. I have to give a presentation on academic integrity. I'm not able to get into the library to get a copy of the Academic Bulletin"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Why can't you go to the library?"
+			"text": "You know, I *could* help, but I have to give a presentation on academic integrity."
 		},
 		{
 			"character": "character-1630249130.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Because I'm stuck to the floor and connected to this coffee machine back here! "
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Oh, that makes sense. Let me see if I can help you."
+			"text": "(as part of his pennance, he's forever tasked with delivering new academic training materials to students)"
 		},
 		{
 			"character": "character-1630249130.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "That'd be swell, I'd make it worth your while!"
+			"text": "I'm not able to get into the library to get a copy of the Academic Bulletin. Can you help me?"
 		},
 		{
-			"definition": "1630444561-366",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sure!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's the least you can do for the poor bean king."
+		},
+		{
+			"definition": "1634684564-553",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -144,10 +182,83 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"condition": "==",
-			"definition": "1632308461-200",
+			"definition": "1634675123-167",
 			"event_id": "dialogic_012",
 			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The bean king doesn't ackhowledge your presence."
+		},
+		{
+			"action": "join",
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1629668635.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I guess he's probably tired of the questions...about his past..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675154-152",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634684776-787",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hope you enjoy your coffee!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634684776-787",
+			"event_id": "dialogic_012",
+			"value": "0"
 		},
 		{
 			"action": "join",
@@ -190,27 +301,24 @@
 			"text": "Sure thing. Here you go!"
 		},
 		{
-			"change_timeline": "timeline-1630348811.json",
-			"event_id": "dialogic_020"
+			"call_node": {
+				"arguments": [
+					"bulletin"
+				],
+				"method_name": "remove_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630255667-592",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"condition": "",
-			"definition": "1630444561-366",
-			"event_id": "dialogic_012",
-			"value": "1"
+			"character": "character-1630249130.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As a token of thanks, I'm going to give you a token. Hope you enjoy the coffee!"
 		},
 		{
 			"action": "join",
-			"character": "character-1630249130.json",
+			"character": "character-1629668635.json",
 			"event_id": "dialogic_002",
 			"mirror": false,
 			"portrait": "",
@@ -223,31 +331,67 @@
 			}
 		},
 		{
-			"character": "character-1630249130.json",
+			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "really excited to get that copy of the Academic Bulletin!"
+			"text": "Thanks coffee king, my roommate joe will really appreciate it!"
 		},
 		{
-			"event_id": "dialogic_013"
+			"call_node": {
+				"arguments": [
+					"token"
+				],
+				"method_name": "add_item",
+				"target_node_path": "inventory"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_013"
+			"call_node": {
+				"arguments": [
+					"passed test"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_013"
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://audio/sfx/item.mp3",
+			"volume": 0
 		},
 		{
-			"condition": "",
-			"definition": "1630351191-912",
-			"event_id": "dialogic_012",
-			"value": "1"
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.7
+		},
+		{
+			"audio": "stop",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "",
+			"volume": 0
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You're done with bean king for now! Enjoy the coffee!"
+			"text": "You recieve a token"
+		},
+		{
+			"definition": "1634684776-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

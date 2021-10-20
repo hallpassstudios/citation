@@ -2,6 +2,47 @@
 	"events": [
 		{
 			"condition": "",
+			"definition": "1634675123-167",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi scholar of magical ethics! I sense that you have an important task to complete? hmmmmm?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675132-146",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634605266-872",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
 			"definition": "1630255667-592",
 			"event_id": "dialogic_012",
 			"value": "1"
@@ -124,40 +165,10 @@
 			"text": "You don't, you [wave amp=5 freq=10]eeeeeeearn[/wave] it!"
 		},
 		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I'm not sure I understand? How do I \"earn\" a spell?"
-		},
-		{
 			"character": "character-1629920597.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I see you didn't read the Academic Bulletin? Why, you need to beat a game to learn spells at dream school"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Because it's too dark in the library to find it! "
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Well, at Dream School, you demonstrate mastery by beating games!"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Are you serious?!"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I suppose you really are new here! At dream school it's possible for students to learn and even take tests by playing specific games"
+			"text": "You see, at Dream School, you demonstrate mastery by beating games!"
 		},
 		{
 			"character": "character-1629668635.json",
@@ -175,31 +186,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "So I need to play a game in order to learn how to see in the library?"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Yes, you do. "
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Okay. So how to I play it?"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Well, first you need a cartridge for the spell you want to learn. Normally your professors will hand these out. "
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Oh, I don't have one. And all of the professors are asleep! Are there any other ways?"
+			"text": "Any idea where I can find this game?"
 		},
 		{
 			"character": "character-1629920597.json",
@@ -211,7 +198,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't have that much time. Anyway, thanks for the info."
+			"text": "I think I might have an 'in' with someone who can help! Thanks!"
 		},
 		{
 			"character": "character-1629920597.json",
@@ -226,6 +213,9 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -266,7 +256,7 @@
 			"character": "character-1629920597.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[wave amp=5 freq=10]hoooloooo there [/wave]. Welcome to the lounge."
+			"text": "[wave amp=5 freq=10]hoooloooo there [/wave]"
 		},
 		{
 			"action": "join",
@@ -302,6 +292,38 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634683019-686",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"action": "join",
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1629920597.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "enjoy the beverage, I know I'd be up ALL DAY if I drank that!"
 		},
 		{
 			"event_id": "dialogic_013"

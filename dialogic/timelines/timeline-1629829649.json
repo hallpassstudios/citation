@@ -2,13 +2,7 @@
 	"events": [
 		{
 			"condition": "",
-			"definition": "1629847073-571",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"condition": "",
-			"definition": "1630283066-644",
+			"definition": "1634675123-167",
 			"event_id": "dialogic_012",
 			"value": "1"
 		},
@@ -59,10 +53,7 @@
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I can't just give up, I need to get a good grade on this test!"
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "I can't just give up, I have work to do."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -72,48 +63,15 @@
 		},
 		{
 			"condition": "",
-			"definition": "1629847073-571",
+			"definition": "1634675132-146",
 			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"condition": "",
-			"definition": "1630283066-644",
-			"event_id": "dialogic_012",
-			"value": "0"
+			"value": "1"
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Perhaps sit down at your desk and study instead of going to bed!"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1629847073-571",
-			"event_id": "dialogic_012",
-			"value": "1"
-		},
-		{
-			"condition": "",
-			"definition": "1630283066-644",
-			"event_id": "dialogic_012",
-			"value": "0"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Might want to talk to your roomate instead of going to bed!"
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

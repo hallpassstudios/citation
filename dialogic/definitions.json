@@ -1,15 +1,6 @@
 {
 	"glossary": [
 		{
-			"extra": "why does he have it?",
-			"id": "1630355199-907",
-			"name": "key to the classroom",
-			"text": "this key opens the classroom",
-			"title": "classroom key",
-			"type": 1,
-			"url": ""
-		},
-		{
 			"extra": "he knows ancient secrets",
 			"id": "1629935878-233",
 			"name": "joe",
@@ -19,56 +10,11 @@
 			"url": ""
 		},
 		{
-			"extra": "right and wrong",
-			"id": "1630258466-952",
-			"name": "illuminatata cartridge",
-			"text": "a game about light and dark",
-			"title": "illuminatata cartridge",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "and unscrupulous",
-			"id": "1630258281-765",
-			"name": "star dude",
-			"text": "he's a bit sketchy. ",
-			"title": "star dude",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630519665-787",
-			"name": "information",
-			"text": "",
-			"title": "",
-			"type": 1,
-			"url": "https://www2.cortland.edu/dotAsset/fddc5439-1889-4f66-8f4f-70e6149f0c6a.pdf"
-		},
-		{
 			"extra": "",
 			"id": "1630249447-419",
 			"name": "library",
 			"text": "An essential resource not only for information, but also to help you when you have academic questions",
 			"title": "The Library",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630439663-648",
-			"name": "citation",
-			"text": "a game about the trials and tribulations of ethical scholarship",
-			"title": "citation",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "click it",
-			"id": "1629936042-949",
-			"name": "desk",
-			"text": "this is where the magic happens. click  it.",
-			"title": "your desk",
 			"type": 1,
 			"url": ""
 		},
@@ -125,15 +71,6 @@
 			"title": "Academic Bulletin",
 			"type": 1,
 			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1630518583-648",
-			"name": "Academic Integrity for Students at NYU",
-			"text": "Click this to be transported to a magical information superhighway",
-			"title": "NYU Academic Integrity Policy",
-			"type": 1,
-			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
 		},
 		{
 			"extra": "",
@@ -199,33 +136,6 @@
 			"url": "https://stream.nyu.edu/media/Ethics+in+Education+2021/1_4qmm1gpw"
 		},
 		{
-			"extra": "",
-			"id": "1634511139-787",
-			"name": "Dream School",
-			"text": "This is the school of your dreams, the top magic is taught here!",
-			"title": "Dream School",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1634569162-146",
-			"name": "BEAN KING V. DREAM SCHOOL",
-			"text": "Bean King and the consequences of unethical scholarship",
-			"title": "Bean King v. Dream School",
-			"type": 1,
-			"url": ""
-		},
-		{
-			"extra": "",
-			"id": "1634569658-918",
-			"name": "Walker v. Harvard Case Description",
-			"text": "A short case study written for the Ethics in Education 2021 academic integrity training",
-			"title": "Walker v. Harvard Case Description",
-			"type": 1,
-			"url": "https://drive.google.com/drive/folders/1eg4ar9VTfo4BVeR-hpK7YzZ1loCYqk4A"
-		},
-		{
 			"extra": "source: dictionary.com",
 			"id": "1630350500-690",
 			"name": "crumpet",
@@ -262,6 +172,24 @@
 			"url": ""
 		},
 		{
+			"extra": "",
+			"id": "1630439663-648",
+			"name": "citation",
+			"text": "a game about the trials and tribulations of ethical scholarship",
+			"title": "citation",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "why does he have it?",
+			"id": "1630355199-907",
+			"name": "key to the classroom",
+			"text": "this key opens the classroom",
+			"title": "classroom key",
+			"type": 1,
+			"url": ""
+		},
+		{
 			"extra": "check the lounge",
 			"id": "1630361968-144",
 			"name": "some coffee",
@@ -269,6 +197,69 @@
 			"title": "coffee",
 			"type": 1,
 			"url": ""
+		},
+		{
+			"extra": "click it",
+			"id": "1629936042-949",
+			"name": "desk",
+			"text": "this is where the magic happens. click  it.",
+			"title": "your desk",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634511139-787",
+			"name": "Dream School",
+			"text": "This is the school of your dreams, the top magic is taught here!",
+			"title": "Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569162-146",
+			"name": "BEAN KING V. DREAM SCHOOL",
+			"text": "Bean King and the consequences of unethical scholarship",
+			"title": "Bean King v. Dream School",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1634569658-918",
+			"name": "Walker v. Harvard Case Description",
+			"text": "A short case study written for the Ethics in Education 2021 academic integrity training",
+			"title": "Walker v. Harvard Case Description",
+			"type": 1,
+			"url": "https://drive.google.com/drive/folders/1eg4ar9VTfo4BVeR-hpK7YzZ1loCYqk4A"
+		},
+		{
+			"extra": "right and wrong",
+			"id": "1630258466-952",
+			"name": "illuminatata cartridge",
+			"text": "a game about light and dark",
+			"title": "illuminatata cartridge",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "and unscrupulous",
+			"id": "1630258281-765",
+			"name": "star dude",
+			"text": "he's a bit sketchy. ",
+			"title": "star dude",
+			"type": 1,
+			"url": ""
+		},
+		{
+			"extra": "",
+			"id": "1630518583-648",
+			"name": "Academic Integrity for Students at NYU",
+			"text": "Click this to be transported to a magical information superhighway",
+			"title": "NYU Academic Integrity Policy",
+			"type": 1,
+			"url": "https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html"
 		}
 	],
 	"variables": [
@@ -321,12 +312,6 @@
 			"value": "0"
 		},
 		{
-			"id": "1630440117-787",
-			"name": "caught",
-			"type": 0,
-			"value": "0"
-		},
-		{
 			"id": "1630283066-644",
 			"name": "joe",
 			"type": 0,
@@ -335,12 +320,6 @@
 		{
 			"id": "1630353426-910",
 			"name": "paper",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1629847073-571",
-			"name": "desk",
 			"type": 0,
 			"value": "0"
 		},
@@ -365,12 +344,6 @@
 		{
 			"id": "1630359450-788",
 			"name": "shelf 2",
-			"type": 0,
-			"value": "0"
-		},
-		{
-			"id": "1631101879-648",
-			"name": "entered classroom",
 			"type": 0,
 			"value": "0"
 		},
@@ -449,6 +422,108 @@
 		{
 			"id": "1634605266-872",
 			"name": "joe quest",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1630440117-787",
+			"name": "caught",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1631101879-648",
+			"name": "entered classroom",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1629847073-571",
+			"name": "desk",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634672696-951",
+			"name": "bean king quest",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675123-167",
+			"name": "start",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675132-146",
+			"name": "quiz complete",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675144-679",
+			"name": "illuminata complete",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675154-152",
+			"name": "bulletin found",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634675164-123",
+			"name": "cheater found",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634680918-847",
+			"name": "quiz complete - desk",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634682601-531",
+			"name": "quiz complete - spoke to joe",
+			"type": 0,
+			"value": "1"
+		},
+		{
+			"id": "1634682662-673",
+			"name": "start - spoke to joe",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634683019-686",
+			"name": "coffee acquired",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634684564-553",
+			"name": "quiz complete - spoke to bean king",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634684776-787",
+			"name": "bulletin found - gave to coffee king",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1634685184-960",
+			"name": "cheater found - read paper",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1634685307-274",
+			"name": "cheater found - reviewed paper",
 			"type": 0,
 			"value": "0"
 		}

@@ -57,7 +57,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"dorm": {
@@ -76,7 +76,12 @@
 						"1634569658-918",
 						"1634582450-483",
 						"1634604039-737",
-						"1634605266-872"
+						"1634605266-872",
+						"1634680918-847",
+						"1634682601-531",
+						"1634682662-673",
+						"1634685184-960",
+						"1634685307-274"
 					],
 					"folders": {
 
@@ -84,6 +89,23 @@
 					"metadata": {
 						"color": null,
 						"folded": false
+					}
+				},
+				"game states": {
+					"files": [
+						"1634675123-167",
+						"1634675132-146",
+						"1634675144-679",
+						"1634675154-152",
+						"1634675164-123",
+						"1634683019-686"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
 					}
 				},
 				"hallway": {
@@ -97,7 +119,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"items": {
@@ -123,16 +145,16 @@
 						"1630359454-170",
 						"1630359784-519",
 						"1630518583-648",
-						"1630519665-787",
 						"1632308346-585",
-						"1632308461-200"
+						"1632308461-200",
+						"1634672696-951"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"lounge": {
@@ -148,14 +170,16 @@
 						"1630362101-400",
 						"1630444561-366",
 						"1632310767-917",
-						"1632955758-679"
+						"1632955758-679",
+						"1634684564-553",
+						"1634684776-787"
 					],
 					"folders": {
 
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"minigame": {
@@ -170,7 +194,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},
@@ -190,7 +214,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": true
+				"folded": false
 			}
 		},
 		"Timelines": {
@@ -403,7 +427,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"lounge": {
@@ -415,7 +439,6 @@
 						"timeline-1630249987.json",
 						"timeline-1630254552.json",
 						"timeline-1630254718.json",
-						"timeline-1630348811.json",
 						"timeline-1630248983.json"
 					],
 					"folders": {
@@ -423,7 +446,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				}
 			},

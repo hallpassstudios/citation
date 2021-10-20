@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://sprites/environment/library/props.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -71,6 +71,38 @@ region = Rect2( 768, 0, 128, 128 )
 atlas = ExtResource( 29 )
 region = Rect2( 896, 0, 128, 128 )
 
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 35 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 35 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 35 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 35 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 35 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 35 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 35 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 35 )
+region = Rect2( 896, 0, 128, 128 )
+
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 128, 128 )
@@ -135,38 +167,6 @@ region = Rect2( 1792, 0, 128, 128 )
 atlas = ExtResource( 32 )
 region = Rect2( 1920, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 35 )
-region = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=65]
-atlas = ExtResource( 35 )
-region = Rect2( 128, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 35 )
-region = Rect2( 256, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=67]
-atlas = ExtResource( 35 )
-region = Rect2( 384, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=68]
-atlas = ExtResource( 35 )
-region = Rect2( 512, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=69]
-atlas = ExtResource( 35 )
-region = Rect2( 640, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=70]
-atlas = ExtResource( 35 )
-region = Rect2( 768, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=71]
-atlas = ExtResource( 35 )
-region = Rect2( 896, 0, 128, 128 )
-
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
@@ -174,14 +174,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
-"loop": false,
-"name": "spooky",
-"speed": 10.0
-}, {
 "frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
 "loop": true,
 "name": "spooky idle",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": false,
+"name": "spooky",
 "speed": 10.0
 } ]
 
@@ -431,7 +431,7 @@ antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=73]
-size = 32
+size = 20
 font_data = SubResource( 72 )
 
 [sub_resource type="DynamicFontData" id=74]
@@ -439,8 +439,16 @@ antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=75]
-size = 18
+size = 32
 font_data = SubResource( 74 )
+
+[sub_resource type="DynamicFontData" id=76]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=77]
+size = 18
+font_data = SubResource( 76 )
 
 [node name="library" type="Node2D"]
 script = ExtResource( 8 )
@@ -459,7 +467,7 @@ pause_mode = 2
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -816,19 +824,53 @@ __meta__ = {
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 36 )
 
+[node name="ColorRect" type="ColorRect" parent="options"]
+anchor_right = 1.0
+margin_left = 0.666626
+margin_right = 0.666626
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+color = Color( 0, 0, 0, 0.913725 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Settings Button" type="TextureButton" parent="options"]
 anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -40.0
-margin_right = -15.0
-margin_bottom = 25.0
+margin_left = -25.4244
+margin_top = -3.08328
+margin_right = -0.424438
+margin_bottom = 21.9167
 mouse_filter = 1
 texture_normal = ExtResource( 38 )
 texture_pressed = ExtResource( 37 )
 texture_hover = ExtResource( 38 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="options"]
+margin_left = 4.19974
+margin_top = 10.7093
+margin_right = 58.1997
+margin_bottom = 29.7093
+custom_fonts/font = SubResource( 73 )
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Value" type="Label" parent="options"]
+margin_left = 59.2004
+margin_top = 11.2706
+margin_right = 113.2
+margin_bottom = 30.2706
+custom_fonts/font = SubResource( 73 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -869,7 +911,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 75 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -884,7 +926,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 73 )
+custom_fonts/font = SubResource( 75 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -935,7 +977,7 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 77 )
 text = "X CLOSE"
 flat = true
 

@@ -2,9 +2,9 @@
 	"events": [
 		{
 			"condition": "",
-			"definition": "1634604039-737",
+			"definition": "1634675123-167",
 			"event_id": "dialogic_012",
-			"value": "0"
+			"value": "1"
 		},
 		{
 			"condition": "",
@@ -16,16 +16,16 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You need to find your cartridge! Try talking to your roomate or searching around."
+			"text": "You [b]must[/b] complete this quiz before tomorrow or else you can't register for new classes!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perhaps see if you roomate joe knows where it is?"
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1629847073-571",
-			"event_id": "dialogic_012",
-			"value": "0"
 		},
 		{
 			"character": "",
@@ -63,21 +63,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You [b]must[/b] complete this quiz before tomorrow or else you can't register for new classes!"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Perhaps see if you roomate joe knows where it is?"
-		},
-		{
-			"definition": "1629847073-571",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
+			"text": "You need to find your cartridge! Try talking to your roomate or searching around."
 		},
 		{
 			"call_node": {
@@ -90,16 +76,42 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_013"
+			"definition": "1629847073-571",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
 		},
 		{
 			"event_id": "dialogic_013"
 		},
 		{
 			"condition": "",
-			"definition": "1634604039-737",
+			"definition": "1634675132-146",
 			"event_id": "dialogic_012",
 			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1634680918-847",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No time to lose, you NEED those notes!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634680918-847",
+			"event_id": "dialogic_012",
+			"value": "0"
 		},
 		{
 			"action": "join",
@@ -138,6 +150,17 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Your desk appears to be a bottomless pit designed to swallow everything you hold dear in life..."
+		},
+		{
+			"definition": "1634680918-847",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

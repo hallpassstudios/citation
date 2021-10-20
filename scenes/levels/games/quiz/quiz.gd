@@ -37,7 +37,7 @@ func _ready():
 	add_child(current_player)
 	current_player.position = spawn.position
 	global_ui.fade_in()
-	# dialogue_controller.play_dialogue("quiz")
+	dialogue_controller.play_dialogue("quiz")
 	
 	timer = Timer.new()
 	timer.connect("timeout", self, "on_timer_timeout")

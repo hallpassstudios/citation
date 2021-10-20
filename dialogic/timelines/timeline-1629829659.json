@@ -2,9 +2,9 @@
 	"events": [
 		{
 			"condition": "",
-			"definition": "1630263147-252",
+			"definition": "1634675123-167",
 			"event_id": "dialogic_012",
-			"value": "0"
+			"value": "1"
 		},
 		{
 			"condition": "",
@@ -23,12 +23,6 @@
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"condition": "",
-			"definition": "1630263147-252",
-			"event_id": "dialogic_012",
-			"value": "0"
 		},
 		{
 			"condition": "",
@@ -86,7 +80,10 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"event_id": "dialogic_013"
+			"condition": "",
+			"definition": "1634675132-146",
+			"event_id": "dialogic_012",
+			"value": "1"
 		},
 		{
 			"condition": "",
@@ -162,6 +159,33 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1634675132-146",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
+			"definition": "1630263147-252",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You don't have any carts to play!"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

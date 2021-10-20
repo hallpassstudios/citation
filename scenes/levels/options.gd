@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+func _ready():
+	$"Score Value".text = str(globals.score)
+	
 func _on_Quit_pressed():
 	get_tree().quit()
 
@@ -17,3 +20,8 @@ func _on_close_pressed():
 
 func _on_Settings_Button_pressed():
 	$Control.visible = true
+
+func increase_score(value):
+	print("increasing score")
+	globals.score += value[0]
+	$"Score Value".text = str(globals.score + int(value[0]))

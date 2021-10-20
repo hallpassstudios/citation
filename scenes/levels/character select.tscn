@@ -388,7 +388,7 @@ texture = ExtResource( 8 )
 position = Vector2( 192.333, 204.118 )
 
 [node name="select_your_character" type="Sprite" parent="environment"]
-position = Vector2( 191.304, 88.8181 )
+position = Vector2( 194.304, 88.8181 )
 scale = Vector2( 0.773915, 0.773915 )
 z_index = 1
 texture = ExtResource( 20 )
@@ -412,7 +412,6 @@ material = SubResource( 42 )
 z_index = 1
 frames = SubResource( 23 )
 animation = "idle"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="environment/character 1"]
@@ -426,7 +425,7 @@ material = SubResource( 43 )
 position = Vector2( 101.829, 170.255 )
 z_index = 1
 frames = SubResource( 32 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="shadow" type="Sprite" parent="environment/character 2/character 2"]
@@ -447,6 +446,7 @@ position = Vector2( 277.646, 171.119 )
 z_index = 1
 frames = SubResource( 41 )
 animation = "idle"
+frame = 6
 playing = true
 
 [node name="shadow" type="Sprite" parent="environment/character 3/character 3"]
