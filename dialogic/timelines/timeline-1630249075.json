@@ -197,6 +197,16 @@
 			"text": "It's the least you can do for the poor bean king."
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "lounge/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"definition": "1634684564-553",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -370,6 +380,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Sure thing. Here you go!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "lounge/options"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"call_node": {

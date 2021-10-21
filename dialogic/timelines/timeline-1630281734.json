@@ -63,6 +63,26 @@
 			"text": "You're glowing :)"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"100"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"completed illuminata"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"definition": "1630528470-366",
 			"event_id": "dialogic_014",
 			"operation": "=",

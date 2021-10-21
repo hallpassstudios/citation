@@ -81,6 +81,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Anyhoo, congrats! I've noted this on your record. You're free to go!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"quiz completed"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

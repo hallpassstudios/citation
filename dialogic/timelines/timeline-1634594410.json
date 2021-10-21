@@ -75,6 +75,16 @@
 				"target_node_path": "quiz/options"
 			},
 			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 2 explained"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

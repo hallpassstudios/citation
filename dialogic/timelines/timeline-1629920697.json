@@ -237,6 +237,16 @@
 			"text": "Good luck! "
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "lounge/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"definition": "1630258075-885",
 			"event_id": "dialogic_014",
 			"operation": "=",

@@ -7,6 +7,16 @@
 			"value": "1"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "decrease_score",
+				"target_node_path": "cellar/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -26,6 +36,16 @@
 			"definition": "1632162541-198",
 			"event_id": "dialogic_012",
 			"value": "0"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "decrease_score",
+				"target_node_path": "cellar/options"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"character": "",

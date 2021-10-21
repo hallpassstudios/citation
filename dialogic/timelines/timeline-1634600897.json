@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What would have been an appropriate solution for Bean King to avoid academic integrity issues with his article? "
+			"text": "[color=yellow]What would have been an appropriate solution for Bean King to avoid academic integrity issues with his article? [/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 9 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

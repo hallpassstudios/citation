@@ -424,6 +424,7 @@ position = Vector2( 32, 32 )
 texture = ExtResource( 3 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="restart" type="Control" parent="HUD"]
 pause_mode = 2

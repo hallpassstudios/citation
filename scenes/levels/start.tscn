@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/levels/start.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/title hallway.png" type="Texture" id=2]
@@ -22,19 +22,11 @@ size = 24
 extra_spacing_top = 2
 font_data = SubResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.0666667, 0.0823529, 0.105882, 1 )
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 2.0
-expand_margin_bottom = 2.0
-
 [sub_resource type="DynamicFontData" id=5]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=6]
-size = 20
 font_data = SubResource( 5 )
 
 [node name="Start Page" type="CanvasLayer"]
@@ -58,6 +50,7 @@ scroll_ignore_camera_zoom = true
 script = ExtResource( 7 )
 
 [node name="sky" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+position = Vector2( 4.864, -32.5514 )
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 600, 0 )
 
@@ -68,6 +61,7 @@ centered = false
 hframes = 4
 
 [node name="sun" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+position = Vector2( 4.864, -32.5514 )
 motion_scale = Vector2( 0.1, 1 )
 
 [node name="sun" type="Sprite" parent="Control/ParallaxBackground/sun"]
@@ -77,6 +71,7 @@ centered = false
 hframes = 4
 
 [node name="clouds" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+position = Vector2( 4.864, -32.5514 )
 motion_scale = Vector2( 0.4, 2 )
 motion_mirroring = Vector2( 800, 0 )
 
@@ -87,6 +82,7 @@ centered = false
 hframes = 2
 
 [node name="bunnies" type="ParallaxLayer" parent="Control/ParallaxBackground"]
+position = Vector2( 4.864, -32.5514 )
 motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 500, 0 )
 
@@ -106,7 +102,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
-stretch_mode = 6
+stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -173,17 +169,16 @@ text = "BACKSTORY"
 position = Vector2( 320.724, 179.962 )
 
 [node name="hallpass_logo" type="Sprite" parent="."]
-position = Vector2( 614.924, 345.229 )
+position = Vector2( 29.3731, 277.881 )
 scale = Vector2( 0.4, 0.4 )
 z_index = 1
 texture = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 168.404
-margin_top = 337.685
-margin_right = 582.404
-margin_bottom = 356.685
-custom_styles/normal = SubResource( 4 )
+margin_left = 50.6667
+margin_top = 271.333
+margin_right = 372.667
+margin_bottom = 290.333
 custom_fonts/font = SubResource( 6 )
 text = "hallpass studios 2021 (https://hallpass.games)"
 __meta__ = {

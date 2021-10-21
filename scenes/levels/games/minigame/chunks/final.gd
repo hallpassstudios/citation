@@ -138,4 +138,4 @@ func fade_out():
 func _on_death_body_entered(body):
 	if body.name == "top down runner":
 		analytics.bat_deaths()
-		restart("oh bats!", "maybe he is afraid of something?!")
+		restart("oh bats!", "maybe they are afraid of something?!")

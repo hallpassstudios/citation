@@ -30,6 +30,16 @@
 		{
 			"call_node": {
 				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "lounge/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
 					"horizontal hallway"
 				],
 				"method_name": "change_scene",

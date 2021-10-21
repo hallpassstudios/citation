@@ -2471,7 +2471,7 @@ shape = SubResource( 119 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="sign2" type="Area2D" parent="sort"]
@@ -2490,7 +2490,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign3" type="Area2D" parent="sort"]
@@ -2509,7 +2508,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign4" type="Area2D" parent="sort"]
@@ -2528,6 +2526,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign5" type="Area2D" parent="sort"]
@@ -2546,7 +2545,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="sign6" type="Area2D" parent="sort"]
@@ -2565,7 +2564,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign7" type="Area2D" parent="sort"]
@@ -2584,7 +2582,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="sign8" type="Area2D" parent="sort"]
@@ -2603,6 +2600,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="sign9" type="Area2D" parent="sort"]
@@ -2621,6 +2619,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 1 explanation" type="Area2D" parent="sort"]
@@ -2639,6 +2638,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="question 2 explanation" type="Area2D" parent="sort"]
@@ -2657,7 +2657,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="question 3 explanation" type="Area2D" parent="sort"]
@@ -2676,7 +2676,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="question 4 explanation" type="Area2D" parent="sort"]
@@ -2695,7 +2695,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 5 explanation" type="Area2D" parent="sort"]
@@ -2714,7 +2713,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="question 6 explanation" type="Area2D" parent="sort"]
@@ -2733,7 +2732,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 7 explanation" type="Area2D" parent="sort"]
@@ -2752,7 +2750,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 8 explanation" type="Area2D" parent="sort"]
@@ -2771,7 +2768,6 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
-frame = 1
 playing = true
 
 [node name="question 9 explanation" type="Area2D" parent="sort"]
@@ -2790,6 +2786,7 @@ shape = SubResource( 128 )
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="path" type="TileMap" parent="sort"]
@@ -3362,9 +3359,11 @@ centered = false
 position = Vector2( 5, -3 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 123 )
+frame = 2
 playing = true
 
 [node name="effects" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="ColorRect" type="ColorRect" parent="effects"]
 material = SubResource( 62 )
@@ -3377,7 +3376,6 @@ __meta__ = {
 }
 
 [node name="options" type="CanvasLayer" parent="."]
-layer = 0
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]

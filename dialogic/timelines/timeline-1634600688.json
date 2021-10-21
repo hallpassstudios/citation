@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What was the root issue of Bean King’s lack of academic integrity?"
+			"text": "[color=yellow]What was the root issue of Bean King’s lack of academic integrity?[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 8 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

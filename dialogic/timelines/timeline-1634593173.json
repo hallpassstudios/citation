@@ -5,6 +5,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "[color=yellow]Select the source that is [b]not[/b] reliable[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 2 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

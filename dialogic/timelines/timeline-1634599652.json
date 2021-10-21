@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You must always use an entire quote if you wish to cite something; you cannot delete any irrelevant information from it."
+			"text": "[color=yellow]You must always use an entire quote if you wish to cite something; you cannot delete any irrelevant information from it.[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 4 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

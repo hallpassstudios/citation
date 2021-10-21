@@ -41,6 +41,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Maybe you should remember why you're here in the first place (*cough* *coughie*)"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "library/options"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

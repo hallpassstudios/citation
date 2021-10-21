@@ -1,6 +1,16 @@
 {
 	"events": [
 		{
+			"call_node": {
+				"arguments": [
+					"cheated"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",

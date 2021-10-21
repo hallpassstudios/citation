@@ -70,7 +70,13 @@ func player_wins():
 	var result = yield(ref.update({
 		"player wins": value + 1
 	}), "completed")
-	
+	update_score()
+
+func update_score():
+	var ref : FirebaseReference = db.get_reference_lite("/sessions/" + session_id)
+	var result = yield(ref.update({
+		"player score": globals.player_score
+	}), "completed")
 
 # citations
 func citations():

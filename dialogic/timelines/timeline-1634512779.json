@@ -56,7 +56,7 @@
 			"event_id": "dialogic_030",
 			"event_name": "AudioEvent",
 			"file": "res://audio/sfx/item.mp3",
-			"volume": -10
+			"volume": 0
 		},
 		{
 			"event_id": "dialogic_023",

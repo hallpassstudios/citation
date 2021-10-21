@@ -8,7 +8,6 @@ var velocity = Vector2.ZERO
 var player = null
 var chasing : bool
 
-
 enum states {PATROL, CHASE}
 var state = states.PATROL
 

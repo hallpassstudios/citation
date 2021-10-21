@@ -15,6 +15,16 @@
 		{
 			"call_node": {
 				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "cellar/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
 
 				],
 				"method_name": "go_to_final",

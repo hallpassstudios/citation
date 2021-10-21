@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What is the main idea sentence(s) of your paper called?"
+			"text": "[color=yellow]What is the main idea sentence(s) of your paper called?[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 5 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

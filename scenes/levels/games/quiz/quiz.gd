@@ -62,7 +62,7 @@ func _on_exit_body_entered(body):
 func start_timer():
 	timer_started = true
 	print("starting timer...")
-	timer.start(60)
+	timer.start(100)
 
 func on_timer_timeout():
 	print("time is up!")
@@ -186,7 +186,7 @@ func _on_sign8_body_entered(body):
 
 func _on_question_8_explanation_body_entered(body):
 	if body.name == "top down runner" && !explanation_8:
-		dialogue_controller.play_dialogue("question 5 explanation")
+		dialogue_controller.play_dialogue("question 8 explanation")
 		$"sort/question 8 explanation/AnimatedSprite".visible = false
 		explanation_8 = true
 
@@ -198,6 +198,6 @@ func _on_sign9_body_entered(body):
 
 func _on_question_9_explanation_body_entered(body):
 	if body.name == "top down runner" && !explanation_9:
-		dialogue_controller.play_dialogue("question 5 explanation")
+		dialogue_controller.play_dialogue("question 9 explanation")
 		$"sort/question 9 explanation/AnimatedSprite".visible = false
 		explanation_9 = true

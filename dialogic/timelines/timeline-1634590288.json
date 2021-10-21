@@ -4,7 +4,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You have 60 SECONDS to make it through the forest! "
+			"text": "You have 100 SECONDS to make it through the forest! "
 		},
 		{
 			"character": "",
@@ -25,6 +25,16 @@
 				],
 				"method_name": "start_timer",
 				"target_node_path": "quiz"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 1 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
 			},
 			"event_id": "dialogic_042"
 		}

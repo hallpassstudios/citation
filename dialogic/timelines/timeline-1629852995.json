@@ -216,6 +216,16 @@
 			"text": "they're in my desk"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"definition": "1630355221-179",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -257,6 +267,16 @@
 				],
 				"method_name": "dialogue_objective",
 				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
 			},
 			"event_id": "dialogic_042"
 		},
@@ -351,16 +371,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Don't worry, I'll help you find them, just take a quick look at my paper and we'll do it!"
-		},
-		{
-			"call_node": {
-				"arguments": [
-					"20"
-				],
-				"method_name": "increase_score",
-				"target_node_path": "dorm/options"
-			},
-			"event_id": "dialogic_042"
 		},
 		{
 			"call_node": {

@@ -122,7 +122,7 @@
 			"character": "character-1634585186.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your task is simple. You have 60 SECONDS to find your way through the forest by following the correct path. "
+			"text": "Your task is simple. You have 100 SECONDS to find your way through the forest by following the correct path. "
 		},
 		{
 			"character": "character-1630272905.json",
@@ -153,6 +153,12 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Entering the forest will begin the timer. "
+		},
+		{
+			"character": "character-1634585186.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You can credit (blame) Porter Yelton and Linjie Hua of NYU Shanghai for these diabolical question BTW..."
 		},
 		{
 			"character": "",

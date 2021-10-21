@@ -905,14 +905,13 @@ texture = ExtResource( 9 )
 pause_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="computer input"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -223.0
-margin_top = -159.0
-margin_bottom = -2.0
+margin_top = -136.0
+margin_bottom = 21.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 expand = true

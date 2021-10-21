@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Paraphrasing is changing just a few words in another author’s sentence to make it sound a bit different."
+			"text": "[color=yellow]Paraphrasing is changing just a few words in another author’s sentence to make it sound a bit different.[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 3 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

@@ -35,6 +35,16 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"change_timeline": "timeline-1634512779.json",
 			"event_id": "dialogic_020"
 		},
@@ -62,6 +72,16 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"change_timeline": "timeline-1634569428.json",
 			"event_id": "dialogic_020"
 		},
@@ -71,6 +91,16 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "dorm/options"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"call_node": {

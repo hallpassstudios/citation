@@ -73,6 +73,16 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"10"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "library/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"action": "join",
 			"character": "character-1629668635.json",
 			"event_id": "dialogic_002",

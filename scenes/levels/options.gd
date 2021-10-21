@@ -25,3 +25,8 @@ func increase_score(value):
 	print("increasing score")
 	globals.score += int(value[0])
 	$"Score Value".text = str(globals.score)
+	
+func decrease_score(value):
+	print("decreasing score")
+	globals.score -= int(value[0])
+	$"Score Value".text = str(globals.score)

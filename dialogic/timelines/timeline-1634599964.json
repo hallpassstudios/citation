@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What was Bean King’s response when he was asked for his draft?"
+			"text": "[color=yellow]What was Bean King’s response when he was asked for his draft?[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 6 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

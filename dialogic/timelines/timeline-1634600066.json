@@ -4,7 +4,17 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Bean King submitted his final draft with all outside work properly cited."
+			"text": "[color=yellow]Bean King submitted his final draft with all outside work properly cited.[/color]"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"question 7 read"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

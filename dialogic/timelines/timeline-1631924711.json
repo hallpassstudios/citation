@@ -109,6 +109,26 @@
 		{
 			"call_node": {
 				"arguments": [
+					"20"
+				],
+				"method_name": "increase_score",
+				"target_node_path": "cellar/options"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"judged"
+				],
+				"method_name": "dialogue_objective",
+				"target_node_path": "analytics"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
 
 				],
 				"method_name": "next_level",
@@ -171,16 +191,16 @@
 			"portrait": "",
 			"text": "Hi, I'm judge judith, you've probably heard of me. I'm famous."
 		},
-    {
-      "call_node": {
-        "arguments": [
-          "play_judge_judith"
-        ],
-        "method_name":"handle_actions",
-        "target_node_path": "audio_manager"
-      },
-      "event_id":"dialogic_042"
-    },
+		{
+			"call_node": {
+				"arguments": [
+					"play_judge_judith"
+				],
+				"method_name": "handle_actions",
+				"target_node_path": "audio_manager"
+			},
+			"event_id": "dialogic_042"
+		},
 		{
 			"character": "character-1631924725.json",
 			"event_id": "dialogic_001",
