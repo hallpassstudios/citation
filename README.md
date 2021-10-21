@@ -17,23 +17,25 @@ Citation is a small mobile and desktop HTML5 game made in the amazing open-sourc
 Note: You’ll need to read this case study on academic integrity in order to complete the game!
 
 ## play
-This repository is the source code to the game. If you'd like to play the game, head to [here](https://hallpass.games/citation)
+This repository is the source code to the game. If you'd like to play the game, head [here](https://hallpass.games)
 ## installation
 If you'd like to explore the project, hack it, make it your own, etc...simply download the [Godot Game Engine](https://godotengine.org/) and open the ```project.godot``` file. 
 
 ## credits
 Lots of great people worked to make this game a reality. In no particular order:
-Soojin Lee - art, ui/ux, video and playtesting
-Christian Grewell - game design, programming
-Zane Fadul - sound design, sound system programming
-Andrew Liu - art, web design
-Hatim Behsain  - art, animation
-Benjamin Pang - programming
+- Soojin Lee - art, ui/ux, video and playtesting
+- Christian Grewell - game design, programming
+- Zane Fadul - sound design, sound system programming
+- Andrew Liu - art, web design
+- Hatim Behsain  - art, animation
+- Benjamin Pang - programming
 
-Special thanks for NYU Abu Dhabi for generously letting us work on this!
-Special thanks to NYU Shanghai for the incredible materials and inspiration
-Special thanks to Emilio for his amazing [Dialogic](https://github.com/coppolaemilio/dialogic/) plugin for Godot. 
-Special thanks to v3x3d for a great [low-bit tileset](https://v3x3d.itch.io/bountiful-bits)
+Special Thanks To:
+
+- [NYU Abu Dhabi](https://nyuad.nyu.edu/en/) for generously letting us work on this!
+- [NYU Shanghai](https://shanghai.nyu.edu) for the incredible materials and inspiration
+- Emilio for his amazing [Dialogic](https://github.com/coppolaemilio/dialogic/) plugin for Godot. 
+- v3x3d for a great [low-bit tileset](https://v3x3d.itch.io/bountiful-bits)
 
 
 
