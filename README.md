@@ -28,6 +28,7 @@ Christian Grewell - game design, programming
 Zane Fadul - sound design, sound system programming
 Andrew Liu - art, web design
 Hatim Behsain  - art, animation
+Benjamin Pang - programming
 
 Special thanks for NYU Abu Dhabi for generously letting us work on this!
 Special thanks to NYU Shanghai for the incredible materials and inspiration
