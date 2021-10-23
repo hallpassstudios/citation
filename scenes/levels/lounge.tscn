@@ -374,13 +374,13 @@ extents = Vector2( 371.469, 10 )
 [sub_resource type="RectangleShape2D" id=75]
 extents = Vector2( 9.54462, 302.805 )
 
-[sub_resource type="DynamicFontData" id=68]
+[sub_resource type="DynamicFontData" id=76]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=69]
 size = 20
-font_data = SubResource( 68 )
+font_data = SubResource( 76 )
 
 [sub_resource type="DynamicFontData" id=70]
 antialiased = false
@@ -424,10 +424,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -180.0
-margin_top = -60.0
-margin_right = 180.0
-margin_bottom = 60.0
+margin_left = -107.414
+margin_top = -83.1975
+margin_right = 252.586
+margin_bottom = 36.8025
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
@@ -468,7 +468,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 11
+frame = 10
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -487,7 +487,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -508,7 +508,7 @@ material = SubResource( 31 )
 position = Vector2( -1.98199, -22.9914 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -529,6 +529,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
+frame = 4
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -855,6 +856,11 @@ position = Vector2( 119.815, 324.271 )
 z_index = 2
 shape = SubResource( 75 )
 
+[node name="wall4" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 756.625, 332.503 )
+z_index = 2
+shape = SubResource( 75 )
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color( 0.34902, 0.0784314, 0.835294, 1 )
@@ -895,6 +901,17 @@ margin_right = 58.1997
 margin_bottom = 29.7093
 custom_fonts/font = SubResource( 69 )
 text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score2" type="Label" parent="options"]
+margin_left = 85.4052
+margin_top = 11.1947
+margin_right = 139.405
+margin_bottom = 30.1947
+custom_fonts/font = SubResource( 69 )
+text = "of 620"
 __meta__ = {
 "_edit_use_anchors_": false
 }

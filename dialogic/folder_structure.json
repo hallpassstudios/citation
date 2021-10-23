@@ -250,7 +250,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"dorm": {
@@ -271,7 +271,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"games": {
@@ -320,7 +320,7 @@
 									},
 									"metadata": {
 										"color": null,
-										"folded": true
+										"folded": false
 									}
 								},
 								"outside": {
@@ -376,7 +376,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"hallway": {
@@ -428,7 +428,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"lounge": {

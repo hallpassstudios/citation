@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=2]
+[gd_scene load_steps=123 format=2]
 
 [ext_resource path="res://sprites/environment/library/props.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -468,6 +468,14 @@ font_path = "res://fonts/HungryPro.ttf"
 size = 18
 font_data = SubResource( 76 )
 
+[sub_resource type="DynamicFontData" id=84]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=85]
+size = 20
+font_data = SubResource( 84 )
+
 [node name="library" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -485,7 +493,7 @@ pause_mode = 2
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -1080,6 +1088,17 @@ margin_bottom = -19.8302
 custom_fonts/font = SubResource( 77 )
 text = "X CLOSE"
 flat = true
+
+[node name="Score2" type="Label" parent="options"]
+margin_left = 85.4052
+margin_top = 11.1947
+margin_right = 139.405
+margin_bottom = 30.1947
+custom_fonts/font = SubResource( 85 )
+text = "of 620"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="environment/interactable objects2/shelf 1" to="environment/interactable objects2/shelf 1/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects2/shelf 1" to="environment/interactable objects2/shelf 1/collider" method="_on_interactable_body_exited"]

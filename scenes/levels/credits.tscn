@@ -143,20 +143,20 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_left = 108.0
-margin_top = -4.0
-margin_right = 541.0
-margin_bottom = 84.0
+margin_left = 103.8
+margin_top = -45.1574
+margin_right = 536.8
+margin_bottom = 42.8426
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-margin_left = 107.109
-margin_top = 285.84
-margin_right = 540.109
-margin_bottom = 373.84
+margin_left = 101.229
+margin_top = 254.762
+margin_right = 534.229
+margin_bottom = 342.762
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -194,5 +194,5 @@ __meta__ = {
 position = Vector2( 328.148, 244.404 )
 scale = Vector2( 2.23427, 2.23427 )
 frames = SubResource( 14 )
-frame = 3
+frame = 5
 playing = true

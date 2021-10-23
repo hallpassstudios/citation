@@ -644,6 +644,27 @@
 		},
 		{
 			"condition": "",
+			"definition": "1629847073-571",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You might want to leave joe alone for now, he seems deep in thought."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1629847073-571",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"condition": "",
 			"definition": "1634682662-673",
 			"event_id": "dialogic_012",
 			"value": "0"
@@ -735,6 +756,9 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

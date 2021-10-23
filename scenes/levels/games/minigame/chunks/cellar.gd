@@ -74,6 +74,8 @@ func _on_quote_1_area_body_entered(body):
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)
 		$sort/door/success.play()
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		door_open = true
 
 func _on_quote_2_area_body_entered(body):

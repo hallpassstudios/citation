@@ -1,6 +1,12 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1634685184-960",
+			"event_id": "dialogic_012",
+			"value": "2"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -49,6 +55,9 @@
 			"random_upper_limit": 100,
 			"set_random": false,
 			"set_value": "2"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -162,6 +162,14 @@ font_path = "res://fonts/HungryPro.ttf"
 size = 18
 font_data = SubResource( 34 )
 
+[sub_resource type="DynamicFontData" id=42]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=43]
+size = 20
+font_data = SubResource( 42 )
+
 [node name="hallway" type="Node2D"]
 script = ExtResource( 6 )
 
@@ -242,7 +250,6 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = SubResource( 23 )
 frames = SubResource( 14 )
-frame = 3
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -468,6 +475,17 @@ margin_bottom = -19.8302
 custom_fonts/font = SubResource( 38 )
 text = "X CLOSE"
 flat = true
+
+[node name="Score2" type="Label" parent="options"]
+margin_left = 85.4052
+margin_top = 11.1947
+margin_right = 139.405
+margin_bottom = 30.1947
+custom_fonts/font = SubResource( 43 )
+text = "of 620"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="environment/interactable objects/interactable" to="environment/interactable objects/interactable/collider" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="environment/interactable objects/interactable" to="environment/interactable objects/interactable/collider" method="_on_interactable_body_exited"]

@@ -624,6 +624,7 @@ vframes = 8
 frame = 40
 
 [node name="character2" type="Sprite" parent="YSort"]
+visible = false
 texture = ExtResource( 5 )
 hframes = 8
 vframes = 8

@@ -46,13 +46,16 @@ func _on_trap_body_entered(body):
 func _on_Area2D_body_entered(body):
 	if body.name == "top down runner":
 		globals.stats.spike_deaths += 1
+		globals.score -= 10
+		$"options/Score Value".text = str(globals.score)
 		analytics.objective_completed("spike deaths", {
 			"spike deaths": globals.stats.spike_deaths
 		})
 		restart("OUCH SPIKES!", "academic integrity keeps you sharper than these spikes!")
 
 func _on_table_body_entered(body):
-	if body.name == "top down runner":
+	if body.name == "top down runner" && key_progress <= 3:
+		
 		key_progress += 1
 		if key_progress == 3:
 			$key.visible = true
@@ -60,6 +63,8 @@ func _on_table_body_entered(body):
 
 func _on_key_body_entered(body):
 	if body.name == "top down runner":
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		has_key = true
 		$key.visible = false
 
@@ -79,6 +84,8 @@ func _on_table_1_body_entered(body):
 		globals.stats.table_flips += 1
 		analytics.table_flips()
 	if body.name == "top down runner" && !key_1:
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		key_1 = true
 		key_progress += 1
 		if key_progress == 3:
@@ -90,6 +97,8 @@ func _on_table_2_body_entered(body):
 		globals.stats.table_flips += 1
 		analytics.table_flips()
 	if body.name == "top down runner" && !key_2:
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		key_2 = true
 		key_progress += 1
 		if key_progress == 3:
@@ -101,6 +110,8 @@ func _on_table_3_body_entered(body):
 		globals.stats.table_flips += 1
 		analytics.table_flips()
 	if body.name == "top down runner" && !key_3:
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		key_3 = true
 		key_progress += 1
 		if key_progress == 3:
@@ -109,6 +120,8 @@ func _on_table_3_body_entered(body):
 
 func _on_exit_body_entered(body):
 	if body.name == "top down runner":
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		analytics.objective_completed("completed level 2", {
 			"elapsed_time": OS.get_ticks_msec(),
 			"spike deaths": globals.stats.spike_deaths
@@ -122,6 +135,8 @@ func _on_spikies_body_entered(body):
 func _on_hidden_exit_body_entered(body):
 	print(body.name)
 	if body.name == "top down runner":
+		globals.score += 1000
+		$"options/Score Value".text = str(globals.score)
 		analytics.objective_completed("found hidden level", {
 			"elapsed_time": OS.get_ticks_msec(),
 			"spike deaths": globals.stats.spike_deaths

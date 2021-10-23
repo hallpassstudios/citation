@@ -1,83 +1,13 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://sprites/environment/classroom/background.png" type="Texture" id=1]
 [ext_resource path="res://sprites/character/shadow.png" type="Texture" id=2]
-[ext_resource path="res://scenes/utilities/clicked_area.gd" type="Script" id=3]
-[ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=4]
-[ext_resource path="res://sprites/environment/classroom/desk1.png" type="Texture" id=5]
-[ext_resource path="res://sprites/environment/classroom/desk5.png" type="Texture" id=6]
-[ext_resource path="res://sprites/environment/classroom/desk6.png" type="Texture" id=7]
-[ext_resource path="res://sprites/environment/library/door.png" type="Texture" id=8]
 [ext_resource path="res://sprites/character/character 2/mainCharacter2_sheet.png" type="Texture" id=9]
-[ext_resource path="res://sprites/environment/classroom/foreground.png" type="Texture" id=10]
-[ext_resource path="res://sprites/environment/classroom/props.png" type="Texture" id=11]
 [ext_resource path="res://sprites/character/character 3/mainCharacter3_sheet.png" type="Texture" id=12]
-[ext_resource path="res://scenes/utilities/interactable_old.gd" type="Script" id=13]
-[ext_resource path="res://sprites/environment/classroom/magic_pot.png" type="Texture" id=14]
-[ext_resource path="res://sprites/environment/classroom/desk2.png" type="Texture" id=15]
-[ext_resource path="res://sprites/environment/classroom/desk3.png" type="Texture" id=16]
-[ext_resource path="res://sprites/environment/classroom/desk4.png" type="Texture" id=17]
 [ext_resource path="res://shaders/outline.gdshader" type="Shader" id=18]
 [ext_resource path="res://sprites/character/character 1/mainCharacter1_idle_walk-Sheet.png" type="Texture" id=19]
 [ext_resource path="res://sprites/ui/select_your_character.png" type="Texture" id=20]
 [ext_resource path="res://scenes/levels/character select.gd" type="Script" id=21]
 [ext_resource path="res://scenes/levels/outline.gd" type="Script" id=22]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 38, 23.7489 )
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 38, 18 )
-
-[sub_resource type="ShaderMaterial" id=4]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 40, 19 )
-
-[sub_resource type="ShaderMaterial" id=6]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 42, 17 )
-
-[sub_resource type="ShaderMaterial" id=8]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 38, 16 )
-
-[sub_resource type="ShaderMaterial" id=10]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 38, 18 )
-
-[sub_resource type="ShaderMaterial" id=12]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 0.0
-
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 52.2605, 49 )
-
-[sub_resource type="ShaderMaterial" id=14]
-shader = ExtResource( 18 )
-shader_param/line_color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
 
 [sub_resource type="ShaderMaterial" id=42]
 shader = ExtResource( 18 )
@@ -234,177 +164,24 @@ current = true
 position = Vector2( -100.296, -128.548 )
 scale = Vector2( 2, 2 )
 
-[node name="static objects" type="YSort" parent="environment"]
-
-[node name="walls" type="Sprite" parent="environment/static objects"]
-position = Vector2( -0.268173, -0.268188 )
-z_index = 2
-texture = ExtResource( 10 )
-centered = false
-
-[node name="floor" type="Sprite" parent="environment/static objects"]
-position = Vector2( -0.268173, 0 )
-texture = ExtResource( 1 )
-centered = false
-
-[node name="props" type="Sprite" parent="environment/static objects"]
-texture = ExtResource( 11 )
-centered = false
-
-[node name="magic pot" type="Sprite" parent="environment/static objects"]
-z_index = 2
-texture = ExtResource( 14 )
-centered = false
-
-[node name="interactable objects" type="YSort" parent="environment"]
-
-[node name="desk 1" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 103, 321 )
-z_index = -1
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 1"]
-shape = SubResource( 1 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 1"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 1" type="Sprite" parent="environment/interactable objects/desk 1/collider"]
-material = SubResource( 2 )
-z_index = 1
-texture = ExtResource( 5 )
-
-[node name="desk 2" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 263, 321 )
-z_index = -1
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 2"]
-shape = SubResource( 3 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 2"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 2" type="Sprite" parent="environment/interactable objects/desk 2/collider"]
-material = SubResource( 4 )
-z_index = 1
-texture = ExtResource( 15 )
-
-[node name="desk 3" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 103, 397 )
-z_index = -1
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 3"]
-shape = SubResource( 5 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 3"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 3" type="Sprite" parent="environment/interactable objects/desk 3/collider"]
-material = SubResource( 6 )
-z_index = 1
-texture = ExtResource( 16 )
-
-[node name="desk 4" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 265, 398 )
-z_index = -1
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 4"]
-shape = SubResource( 7 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 4"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 4" type="Sprite" parent="environment/interactable objects/desk 4/collider"]
-material = SubResource( 8 )
-z_index = 1
-texture = ExtResource( 17 )
-
-[node name="desk 5" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 103, 475 )
-z_index = -1
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 5"]
-shape = SubResource( 9 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 5"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 5" type="Sprite" parent="environment/interactable objects/desk 5/collider"]
-material = SubResource( 10 )
-z_index = 1
-texture = ExtResource( 6 )
-
-[node name="desk 6" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 263, 474 )
-z_index = -1
-script = ExtResource( 13 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/desk 6"]
-shape = SubResource( 11 )
-script = ExtResource( 4 )
-has_dialogue = true
-dialogue = "desk 6"
-outline_size = 2.0
-TYPE = 1
-
-[node name="desk 6" type="Sprite" parent="environment/interactable objects/desk 6/collider"]
-material = SubResource( 12 )
-z_index = 1
-texture = ExtResource( 7 )
-
-[node name="door to hallway" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 376, 463 )
-script = ExtResource( 3 )
-
-[node name="collider" type="CollisionShape2D" parent="environment/interactable objects/door to hallway"]
-position = Vector2( 28.2843, 0 )
-shape = SubResource( 13 )
-script = ExtResource( 4 )
-travel_to = "horizontal hallway"
-outline_size = 2.0
-spawn_point = 1
-
-[node name="door" type="Sprite" parent="environment/interactable objects/door to hallway/collider"]
-material = SubResource( 14 )
-position = Vector2( -28.2843, 0 )
-z_index = 2
-texture = ExtResource( 8 )
-
-[node name="smoke" type="CPUParticles2D" parent="environment"]
-position = Vector2( 192.333, 204.118 )
-
 [node name="select_your_character" type="Sprite" parent="environment"]
-position = Vector2( 194.304, 88.8181 )
+position = Vector2( 206.574, 94.4813 )
 scale = Vector2( 0.773915, 0.773915 )
 z_index = 1
 texture = ExtResource( 20 )
 
 [node name="ColorRect" type="ColorRect" parent="environment"]
-margin_left = 78.4162
-margin_top = 103.273
-margin_right = 304.416
-margin_bottom = 110.273
+margin_left = 93.306
+margin_top = 110.284
+margin_right = 319.306
+margin_bottom = 117.284
 color = Color( 0, 0, 0, 0.478431 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="character 1" type="Area2D" parent="environment"]
-position = Vector2( 189.959, 170.646 )
+position = Vector2( 207.893, 165.612 )
 script = ExtResource( 22 )
 
 [node name="character 1" type="AnimatedSprite" parent="environment/character 1"]
@@ -412,12 +189,14 @@ material = SubResource( 42 )
 z_index = 1
 frames = SubResource( 23 )
 animation = "idle"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="environment/character 1"]
 shape = SubResource( 45 )
 
 [node name="character 2" type="Area2D" parent="environment"]
+position = Vector2( 17.9336, -5.034 )
 script = ExtResource( 22 )
 
 [node name="character 2" type="AnimatedSprite" parent="environment/character 2"]
@@ -425,7 +204,7 @@ material = SubResource( 43 )
 position = Vector2( 101.829, 170.255 )
 z_index = 1
 frames = SubResource( 32 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="shadow" type="Sprite" parent="environment/character 2/character 2"]
@@ -438,6 +217,7 @@ position = Vector2( 102.123, 169.323 )
 shape = SubResource( 46 )
 
 [node name="character 3" type="Area2D" parent="environment"]
+position = Vector2( 17.9336, -5.034 )
 script = ExtResource( 22 )
 
 [node name="character 3" type="AnimatedSprite" parent="environment/character 3"]
@@ -446,7 +226,6 @@ position = Vector2( 277.646, 171.119 )
 z_index = 1
 frames = SubResource( 41 )
 animation = "idle"
-frame = 6
 playing = true
 
 [node name="shadow" type="Sprite" parent="environment/character 3/character 3"]
@@ -457,34 +236,6 @@ texture = ExtResource( 2 )
 position = Vector2( 278.589, 173.027 )
 shape = SubResource( 47 )
 
-[connection signal="body_entered" from="environment/interactable objects/desk 1" to="environment/interactable objects/desk 1/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 1" to="environment/interactable objects/desk 1/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 1" to="environment/interactable objects/desk 1/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 1" to="environment/interactable objects/desk 1/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/desk 2" to="environment/interactable objects/desk 2/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 2" to="environment/interactable objects/desk 2/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 2" to="environment/interactable objects/desk 2/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 2" to="environment/interactable objects/desk 2/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/desk 3" to="environment/interactable objects/desk 3/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 3" to="environment/interactable objects/desk 3/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 3" to="environment/interactable objects/desk 3/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 3" to="environment/interactable objects/desk 3/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/desk 4" to="environment/interactable objects/desk 4/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 4" to="environment/interactable objects/desk 4/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 4" to="environment/interactable objects/desk 4/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 4" to="environment/interactable objects/desk 4/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/desk 5" to="environment/interactable objects/desk 5/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 5" to="environment/interactable objects/desk 5/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 5" to="environment/interactable objects/desk 5/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 5" to="environment/interactable objects/desk 5/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/desk 6" to="environment/interactable objects/desk 6/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/desk 6" to="environment/interactable objects/desk 6/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/desk 6" to="environment/interactable objects/desk 6/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/desk 6" to="environment/interactable objects/desk 6/collider" method="_on_interactable_input_event"]
-[connection signal="body_entered" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_entered"]
-[connection signal="body_exited" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_body_exited"]
-[connection signal="body_shape_entered" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_shelf_1_body_shape_entered"]
-[connection signal="input_event" from="environment/interactable objects/door to hallway" to="environment/interactable objects/door to hallway/collider" method="_on_interactable_input_event"]
 [connection signal="input_event" from="environment/character 1" to="." method="_on_character_1_input_event"]
 [connection signal="mouse_entered" from="environment/character 1" to="." method="_on_character_1_mouse_entered"]
 [connection signal="mouse_exited" from="environment/character 1" to="." method="_on_character_1_mouse_exited"]

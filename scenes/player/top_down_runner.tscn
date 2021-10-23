@@ -406,6 +406,7 @@ scale = Vector2( 0.376801, 0.463708 )
 texture = ExtResource( 2 )
 
 [node name="character" type="Sprite" parent="YSort"]
+visible = false
 z_index = 2
 texture = ExtResource( 1 )
 hframes = 8
@@ -413,7 +414,6 @@ vframes = 6
 frame = 32
 
 [node name="character2" type="Sprite" parent="YSort"]
-visible = false
 z_index = 2
 texture = ExtResource( 5 )
 hframes = 8

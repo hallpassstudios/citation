@@ -18,7 +18,7 @@ func _ready():
 	# play tutorial if not played already
 	if !globals.tutorial_played:
 		yield(get_tree().create_timer(1.0), "timeout")
-		#dialogue_controller.play_dialogue('intro')
+		dialogue_controller.play_dialogue('intro')
 		globals.tutorial_played = true
 	
 	if globals.completed_quiz:
