@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -129,6 +129,15 @@ vertices = PoolVector2Array( 76.3355, 163.4, 49.2013, 150.398, 68.9252, 146.431,
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 3, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 11, 10 ), PoolIntArray( 10, 15, 16, 12 ), PoolIntArray( 17, 8, 11, 4, 7 ), PoolIntArray( 3, 6, 0 ), PoolIntArray( 18, 19, 3, 2 ) ]
 outlines = [ PoolVector2Array( 68.9252, 146.431, 72.0932, 100.372, 121.403, 98.8565, 124.296, 150.646, 145.735, 150.523, 144.89, 297.7, 144.151, 387.9, 144.343, 461.592, 120.907, 459.53, 120.907, 477.073, 70.6398, 476.061, 69.9651, 459.868, 47.1917, 458.742, 45.1594, 362.054, 83.5969, 362.878, 82.2482, 204.599, 78.1536, 204.446, 80.0819, 190.947, 76.3355, 163.4, 49.2013, 150.398 ) ]
 
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 106.06, 10 )
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 11.2864, 215.592 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 17.1519, 84.4984 )
+
 [sub_resource type="DynamicFontData" id=35]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
@@ -256,6 +265,7 @@ centered = false
 [node name="banners" type="Sprite" parent="environment/static objects"]
 position = Vector2( 32.0185, 55.0087 )
 z_index = 2
+z_as_relative = false
 texture = ExtResource( 13 )
 centered = false
 
@@ -275,14 +285,38 @@ texture = ExtResource( 14 )
 position = Vector2( 3.7189, -0.67395 )
 navpoly = SubResource( 15 )
 
+[node name="collisions" type="StaticBody2D" parent="navigation"]
+
+[node name="Wall" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 106.173, 510.385 )
+z_index = 2
+shape = SubResource( 39 )
+
+[node name="Wall2" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 97.2738, 97.0301 )
+z_index = 2
+shape = SubResource( 39 )
+
+[node name="Wall3" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 179.144, 296.366 )
+z_index = 2
+shape = SubResource( 40 )
+
+[node name="Wall4" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 16.7386, 302.15 )
+z_index = 2
+shape = SubResource( 40 )
+
+[node name="Wall5" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 48.4866, 258.761 )
+z_index = 2
+shape = SubResource( 41 )
+
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 16 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {

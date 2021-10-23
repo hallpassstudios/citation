@@ -80,4 +80,3 @@ func inside():
 				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
 			if !globals.desk_interact && !object_name == "desk" && !object_name == "joe":
 				dialogue_controller.play_dialogue('interact')
-			

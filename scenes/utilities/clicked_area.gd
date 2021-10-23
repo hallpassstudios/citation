@@ -17,6 +17,7 @@ func _input_event(viewport, event, shape_idx):
 			get_child(0).inside()
 		
 func on_mouse_entered():
+	print("mouse entered")
 	get_child(0).outline(true)
 
 func on_mouse_exited():

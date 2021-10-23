@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -180,6 +180,24 @@ vertices = PoolVector2Array( 192.219, 129.271, 298.353, 128.343, 297.425, 182.80
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 2, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 16 ), PoolIntArray( 17, 13, 16, 18, 19, 12, 11 ), PoolIntArray( 17, 20, 13 ), PoolIntArray( 19, 4, 8, 12 ), PoolIntArray( 21, 22, 3 ), PoolIntArray( 21, 3, 2, 12, 23, 24 ) ]
 outlines = [ PoolVector2Array( 46.0902, 186.454, 114.862, 185.587, 121.432, 219.928, 160.039, 213.745, 161.114, 200.643, 163.336, 191.148, 170.205, 184.683, 171.619, 178.421, 192.219, 178.16, 192.219, 129.271, 298.353, 128.343, 297.425, 182.802, 435.3, 183.203, 435.135, 219.975, 401.109, 221.022, 402.857, 268.384, 403.12, 382.385, 345.367, 383.252, 345.516, 403.338, 314.419, 403.636, 314.27, 397.387, 142.786, 396.142, 142.447, 252.645, 122.973, 252.614, 47.5803, 253.498 ) ]
 
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 273.462, 10 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 29.3554, 213.946 )
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 70.3367, 43.1768 )
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 70.3367, 98.5733 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 44.7975, 20.9182 )
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 44.7975, 20.9182 )
+
 [sub_resource type="DynamicFontData" id=37]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
@@ -304,7 +322,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -322,7 +340,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -366,14 +384,45 @@ texture = ExtResource( 12 )
 position = Vector2( 1.57208, 0.497391 )
 navpoly = SubResource( 28 )
 
+[node name="collisions" type="StaticBody2D" parent="navigation"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 244.106, 422.286 )
+shape = SubResource( 40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 239.355, 124.726 )
+shape = SubResource( 40 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 14.8001, 266.275 )
+shape = SubResource( 42 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 100.305, 152.744 )
+shape = SubResource( 43 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 41.3711, 395.97 )
+shape = SubResource( 45 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 449.013, 266.082 )
+shape = SubResource( 42 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 359.329, 161.55 )
+shape = SubResource( 41 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 363.92, 161.55 )
+shape = SubResource( 44 )
+
 [node name="options" type="CanvasLayer" parent="."]
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {

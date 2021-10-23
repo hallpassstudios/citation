@@ -90,7 +90,7 @@ func _on_quit_pressed():
 	globals.goto_scene("res://scenes/levels/dorm.tscn")
 
 func _on_sign_body_entered(body):
-	if body.name == "top down runner" && !question_1:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 1")
 		question_1 = true
 		$sort/sign/AnimatedSprite.visible = false
@@ -103,7 +103,7 @@ func _on_question_1_explanation_body_entered(body):
 		explanation_1 = true
 
 func _on_sign2_body_entered(body):
-	if body.name == "top down runner" && !question_2:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 2")
 		question_2 = true
 		$sort/sign2/AnimatedSprite.visible = false
@@ -119,7 +119,7 @@ func _on_question_2_explanation_body_entered(body):
 		explanation_2 = true
 
 func _on_sign3_body_entered(body):
-	if body.name == "top down runner" && !question_3:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 3")
 		question_3 = true
 		$sort/sign3/AnimatedSprite.visible = false
@@ -131,7 +131,7 @@ func _on_question_3_explanation_body_entered(body):
 		explanation_3 = true
 
 func _on_sign4_body_entered(body):
-	if body.name == "top down runner" && !question_4:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 4")
 		question_4 = true
 		$sort/sign4/AnimatedSprite.visible = false
@@ -143,7 +143,7 @@ func _on_question_4_explanation_body_entered(body):
 		explanation_3 = true
 
 func _on_sign5_body_entered(body):
-	if body.name == "top down runner" && !question_5:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 5")
 		question_5 = true
 		$sort/sign5/AnimatedSprite.visible = false
@@ -155,7 +155,7 @@ func _on_question_5_explanation_body_entered(body):
 		explanation_5 = true
 
 func _on_sign6_body_entered(body):
-	if body.name == "top down runner" && !question_6:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 6")
 		question_6 = true
 		$sort/sign6/AnimatedSprite.visible = false
@@ -167,7 +167,7 @@ func _on_question_6_explanation_body_entered(body):
 		explanation_6 = true
 
 func _on_sign7_body_entered(body):
-	if body.name == "top down runner" && !question_7:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 7")
 		question_7 = true
 		$sort/sign7/AnimatedSprite.visible = false
@@ -179,7 +179,7 @@ func _on_question_7_explanation_body_entered(body):
 		explanation_7 = true
 
 func _on_sign8_body_entered(body):
-	if body.name == "top down runner" && !question_8:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 8")
 		question_8 = true
 		$sort/sign8/AnimatedSprite.visible = false
@@ -191,7 +191,7 @@ func _on_question_8_explanation_body_entered(body):
 		explanation_8 = true
 
 func _on_sign9_body_entered(body):
-	if body.name == "top down runner" && !question_9:
+	if body.name == "top down runner":
 		dialogue_controller.play_dialogue("question 9")
 		question_9 = true
 		$sort/sign9/AnimatedSprite.visible = false

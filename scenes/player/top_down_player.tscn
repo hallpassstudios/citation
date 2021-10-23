@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://sprites/character/character 1/mainCharacter1_sheet.png" type="Texture" id=1]
 [ext_resource path="res://sprites/character/shadow.png" type="Texture" id=2]
@@ -36,7 +36,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle_down"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -53,7 +53,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "idle_left"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -70,7 +70,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=4]
 resource_name = "idle_right"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -87,7 +87,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "idle_up"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -104,7 +104,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "walk_down"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -121,7 +121,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "walk_left"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -138,7 +138,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=8]
 resource_name = "walk_right"
-length = 1.2
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -155,7 +155,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "walk_up"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character:frame")
@@ -169,25 +169,25 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 25, 26, 27, 28, 29, 24 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("YSort/character2:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 25, 26, 27, 28, 29, 24 ]
-}
 
 [sub_resource type="Animation" id=43]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("YSort/character2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 13 ]
+}
 
 [sub_resource type="Animation" id=44]
 resource_name = "idle_down"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -204,7 +204,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=45]
 resource_name = "idle_left"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -221,7 +221,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=46]
 resource_name = "idle_right"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -238,7 +238,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=47]
 resource_name = "idle_up"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -255,7 +255,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=48]
 resource_name = "walk_down"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -264,15 +264,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 9, 10, 11, 12, 13 ]
+"values": [ 8, 9, 10, 11, 12, 13 ]
 }
 
 [sub_resource type="Animation" id=49]
 resource_name = "walk_left"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -289,7 +289,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=50]
 resource_name = "walk_right"
-length = 1.2
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -306,7 +306,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=51]
 resource_name = "walk_up"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character2:frame")
@@ -338,7 +338,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=53]
 resource_name = "idle_down"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -355,7 +355,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=54]
 resource_name = "idle_left"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -372,7 +372,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=55]
 resource_name = "idle_right"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -389,7 +389,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=56]
 resource_name = "idle_up"
-length = 0.8
+length = 0.7
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -415,15 +415,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 9, 10, 11, 12, 13 ]
+"values": [ 8, 9, 10, 11, 12, 13 ]
 }
 
 [sub_resource type="Animation" id=58]
 resource_name = "walk_left"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -440,7 +440,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=59]
 resource_name = "walk_right"
-length = 1.2
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -457,7 +457,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=60]
 resource_name = "walk_up"
-length = 0.6
+length = 0.5
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("YSort/character3:frame")
@@ -498,39 +498,6 @@ blend_point_3/node = SubResource( 14 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=25]
-animation = "idle_up"
-
-[sub_resource type="AnimationNodeAnimation" id=26]
-animation = "idle_down"
-
-[sub_resource type="AnimationNodeAnimation" id=27]
-animation = "idle_right"
-
-[sub_resource type="AnimationNodeAnimation" id=28]
-animation = "idle_left"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=29]
-blend_point_0/node = SubResource( 25 )
-blend_point_0/pos = Vector2( 0, -1 )
-blend_point_1/node = SubResource( 26 )
-blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 27 )
-blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 28 )
-blend_point_3/pos = Vector2( -1, 0 )
-blend_mode = 1
-
-[sub_resource type="AnimationNodeTimeScale" id=30]
-
-[sub_resource type="AnimationNodeBlendTree" id=31]
-nodes/BlendSpace2D/node = SubResource( 29 )
-nodes/BlendSpace2D/position = Vector2( 120, 60 )
-nodes/TimeScale/node = SubResource( 30 )
-nodes/TimeScale/position = Vector2( 400, 100 )
-nodes/output/position = Vector2( 580, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace2D" ]
-
 [sub_resource type="AnimationNodeAnimation" id=21]
 animation = "walk_left"
 
@@ -554,44 +521,6 @@ blend_point_3/node = SubResource( 24 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=32]
-animation = "walk_left"
-
-[sub_resource type="AnimationNodeAnimation" id=33]
-animation = "walk_up"
-
-[sub_resource type="AnimationNodeAnimation" id=34]
-animation = "walk_down"
-
-[sub_resource type="AnimationNodeAnimation" id=35]
-animation = "walk_right"
-
-[sub_resource type="AnimationNodeStateMachine" id=36]
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=37]
-blend_point_0/node = SubResource( 32 )
-blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 33 )
-blend_point_1/pos = Vector2( 0, -0.9 )
-blend_point_2/node = SubResource( 34 )
-blend_point_2/pos = Vector2( 0, 1 )
-blend_point_3/node = SubResource( 35 )
-blend_point_3/pos = Vector2( 1, 0 )
-blend_point_4/node = SubResource( 36 )
-blend_point_4/pos = Vector2( 0, -0.9 )
-blend_mode = 1
-
-[sub_resource type="AnimationNodeTimeScale" id=38]
-
-[sub_resource type="AnimationNodeBlendTree" id=39]
-graph_offset = Vector2( -55, 3 )
-nodes/BlendSpace2D/node = SubResource( 37 )
-nodes/BlendSpace2D/position = Vector2( 120, 80 )
-nodes/TimeScale/node = SubResource( 38 )
-nodes/TimeScale/position = Vector2( 360, 100 )
-nodes/output/position = Vector2( 580, 120 )
-node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace2D" ]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
@@ -599,27 +528,17 @@ node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "BlendSpace2D" ]
 [sub_resource type="AnimationNodeStateMachine" id=19]
 states/Idle/node = SubResource( 15 )
 states/Idle/position = Vector2( 303.667, 151.889 )
-states/Idle2/node = SubResource( 31 )
-states/Idle2/position = Vector2( 303.667, 238 )
 states/Walk/node = SubResource( 16 )
 states/Walk/position = Vector2( 516.667, 151.889 )
-states/Walk2/node = SubResource( 39 )
-states/Walk2/position = Vector2( 516.667, 238 )
 transitions = [ "Idle", "Walk", SubResource( 17 ), "Walk", "Idle", SubResource( 18 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -131, 52 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=40]
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=62]
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=63]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=64]
 
 [sub_resource type="Animation" id=41]
 length = 0.001
@@ -680,6 +599,7 @@ tracks/1/keys = {
 "player",
 ]]
 z_index = 1
+collision/safe_margin = 3.0
 script = ExtResource( 3 )
 
 [node name="light" type="Light2D" parent="."]
@@ -704,7 +624,6 @@ vframes = 8
 frame = 40
 
 [node name="character2" type="Sprite" parent="YSort"]
-visible = false
 texture = ExtResource( 5 )
 hframes = 8
 vframes = 8
@@ -730,6 +649,7 @@ anims/walk_right = SubResource( 8 )
 anims/walk_up = SubResource( 9 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
 playback_speed = 0.44
 anims/RESET = SubResource( 43 )
 anims/idle_down = SubResource( 44 )
@@ -762,39 +682,24 @@ tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 20 )
-parameters/Idle/blend_position = Vector2( 0.261506, 0.0447942 )
-parameters/Idle2/BlendSpace2D/blend_position = Vector2( 1, 0 )
-parameters/Idle2/TimeScale/scale = 0.75
-parameters/Walk/blend_position = Vector2( 0.00633919, 0.872928 )
-parameters/Walk2/BlendSpace2D/blend_position = Vector2( -0.312203, -0.0775862 )
-parameters/Walk2/BlendSpace2D/4/playback = SubResource( 40 )
-parameters/Walk2/TimeScale/scale = 0.75
+parameters/Idle/blend_position = Vector2( -0.00711298, 0.0602636 )
+parameters/Walk/blend_position = Vector2( 0.00460255, 0.0112994 )
 
 [node name="AnimationTree2" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer2")
 active = true
 parameters/playback = SubResource( 61 )
-parameters/Idle/blend_position = Vector2( -0.0230126, 0.734867 )
-parameters/Idle2/BlendSpace2D/blend_position = Vector2( 1, 0 )
-parameters/Idle2/TimeScale/scale = 0.75
-parameters/Walk/blend_position = Vector2( 0.00633919, 0.872928 )
-parameters/Walk2/BlendSpace2D/blend_position = Vector2( -0.312203, -0.0775862 )
-parameters/Walk2/BlendSpace2D/4/playback = SubResource( 62 )
-parameters/Walk2/TimeScale/scale = 0.75
+parameters/Idle/blend_position = Vector2( 0.007, 0.007 )
+parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="AnimationTree3" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer3")
 active = true
 parameters/playback = SubResource( 63 )
-parameters/Idle/blend_position = Vector2( 1, 1 )
-parameters/Idle2/BlendSpace2D/blend_position = Vector2( 1, 0 )
-parameters/Idle2/TimeScale/scale = 0.75
-parameters/Walk/blend_position = Vector2( 0.00633919, 0.872928 )
-parameters/Walk2/BlendSpace2D/blend_position = Vector2( -0.312203, -0.0775862 )
-parameters/Walk2/BlendSpace2D/4/playback = SubResource( 64 )
-parameters/Walk2/TimeScale/scale = 0.75
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

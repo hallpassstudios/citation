@@ -1,10 +1,9 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://sprites/environment/library/door.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/utilities/interactable_old.gd" type="Script" id=3]
+[ext_resource path="res://scenes/utilities/clicked_area.gd" type="Script" id=3]
 [ext_resource path="res://sprites/environment/sky/parallaxbg_bunnies.png" type="Texture" id=4]
-[ext_resource path="res://scenes/utilities/interactable_item_old.gd" type="Script" id=5]
 [ext_resource path="res://scenes/levels/horizontal hallway.gd" type="Script" id=6]
 [ext_resource path="res://sprites/environment/sky/parallaxbg_clouds.png" type="Texture" id=7]
 [ext_resource path="res://sprites/environment/sky/parallaxbg_sky.png" type="Texture" id=8]
@@ -16,6 +15,7 @@
 [ext_resource path="res://scenes/levels/options.gd" type="Script" id=14]
 [ext_resource path="res://sprites/ui/settings_button_pressed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/ui/settings_button.png" type="Texture" id=16]
+[ext_resource path="res://scenes/utilities/iteractable_object.gd" type="Script" id=17]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 8 )
@@ -86,15 +86,21 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 22, 68 )
+extents = Vector2( 26.0263, 68 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 19, 57.106 )
 
 [sub_resource type="NavigationPolygon" id=17]
 vertices = PoolVector2Array( 42, 136, 441, 135, 441, 223, 42, 224 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 42, 136, 441, 135, 441, 223, 42, 224 ) ]
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 250.744, 10 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 26.9363, 129.877 )
 
 [sub_resource type="DynamicFontData" id=18]
 antialiased = false
@@ -176,18 +182,6 @@ position = Vector2( 424, 173 )
 [node name="1" type="Node2D" parent="environment/player spawn"]
 position = Vector2( 63, 169 )
 
-[node name="classroom door" type="Sprite" parent="environment"]
-material = ExtResource( 10 )
-position = Vector2( 9, 112 )
-texture = ExtResource( 1 )
-flip_h = true
-
-[node name="lounge door" type="Sprite" parent="environment"]
-material = ExtResource( 10 )
-position = Vector2( 471, 113 )
-z_index = 1
-texture = ExtResource( 1 )
-
 [node name="foreground" type="Sprite" parent="environment"]
 z_index = 2
 texture = ExtResource( 13 )
@@ -202,33 +196,65 @@ centered = false
 texture = ExtResource( 12 )
 centered = false
 
-[node name="interactable zone" type="Area2D" parent="."]
+[node name="door to classroom" type="Area2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="door to classroom" type="CollisionShape2D" parent="interactable zone"]
+[node name="collider" type="CollisionShape2D" parent="door to classroom"]
 position = Vector2( 13, 126 )
 shape = SubResource( 15 )
-script = ExtResource( 5 )
+script = ExtResource( 17 )
 travel_to = "classroom"
-object_name = "classroom door"
-outline_size = 0.025
-sprite = NodePath("../../environment/classroom door")
+outline_size = 3.0
 
-[node name="door to lounge" type="CollisionShape2D" parent="interactable zone"]
+[node name="classroom door" type="Sprite" parent="door to classroom/collider"]
+material = ExtResource( 10 )
+position = Vector2( -4, -14 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="door to lounge" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="collider" type="CollisionShape2D" parent="door to lounge"]
 position = Vector2( 465, 117 )
-shape = SubResource( 16 )
-script = ExtResource( 5 )
+shape = SubResource( 26 )
+script = ExtResource( 17 )
 travel_to = "lounge"
-object_name = "lounge door"
-outline_size = 0.025
-sprite = NodePath("../../environment/lounge door")
-spawn_point = 1
+outline_size = 3.0
+
+[node name="lounge door" type="Sprite" parent="door to lounge/collider"]
+material = ExtResource( 10 )
+position = Vector2( 6, -4 )
+z_index = 1
+texture = ExtResource( 1 )
 
 [node name="navigation" type="Navigation2D" parent="."]
 
 [node name="navmesh" type="NavigationPolygonInstance" parent="navigation"]
 position = Vector2( -0.504272, 0.504272 )
 navpoly = SubResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="navigation"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="navigation/StaticBody2D"]
+position = Vector2( 248.725, 255.799 )
+z_index = 1
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="navigation/StaticBody2D"]
+position = Vector2( 243.386, 98.2877 )
+z_index = 1
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="navigation/StaticBody2D"]
+position = Vector2( -3.5, 147.422 )
+z_index = 1
+shape = SubResource( 25 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="navigation/StaticBody2D"]
+position = Vector2( 476, 147.422 )
+z_index = 1
+shape = SubResource( 25 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 476.0
@@ -281,9 +307,6 @@ script = ExtResource( 14 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {
@@ -436,9 +459,12 @@ custom_fonts/font = SubResource( 23 )
 text = "X CLOSE"
 flat = true
 
-[connection signal="body_shape_entered" from="interactable zone" to="interactable zone" method="_on_interactable_zone_body_shape_entered"]
-[connection signal="body_shape_exited" from="interactable zone" to="interactable zone" method="_on_interactable_zone_body_shape_exited"]
-[connection signal="input_event" from="interactable zone" to="interactable zone" method="_on_interactable_zone_input_event"]
+[connection signal="body_entered" from="door to classroom" to="door to classroom/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="door to classroom" to="door to classroom/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="door to classroom" to="door to classroom/collider" method="_on_interactable_input_event"]
+[connection signal="body_entered" from="door to lounge" to="door to lounge/collider" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="door to lounge" to="door to lounge/collider" method="_on_interactable_body_exited"]
+[connection signal="input_event" from="door to lounge" to="door to lounge/collider" method="_on_interactable_input_event"]
 [connection signal="pressed" from="options/Settings Button" to="options" method="_on_Settings_Button_pressed"]
 [connection signal="value_changed" from="options/Control/VBoxContainer/HBoxContainer/slider" to="options" method="_on_slider_value_changed"]
 [connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Restart" to="options" method="_on_Restart_pressed"]

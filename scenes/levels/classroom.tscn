@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://sprites/environment/library/door.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -84,6 +84,21 @@ shader_param/width = 1.0
 vertices = PoolVector2Array( 409.021, 156.859, 437.758, 156.537, 435.175, 180.107, 398.044, 177.846, 333.7, 158.352, 195.457, 186.12, 205.503, 165.564, 212.603, 170.145, 212.983, 185.713, 333.793, 133.954, 408.957, 135.033, 373.182, 193.99, 358.394, 197.09, 283.246, 186.049, 307.99, 157.8, 71.7952, 134.906, 107.129, 134.39, 108.209, 186.404, 71.5866, 158.886, 281.989, 135.279, 305.191, 134.309, 352.059, 508.282, 32.2763, 507.862, 27.8529, 238.25, 46.4795, 236.323, 354.464, 425.555, 357.344, 294.303, 356.593, 406.183, 350.64, 285.507, 350.372, 231.015, 45.8372, 202.442, 51.4573, 194.895, 51.4573, 159.247, 276.172, 186.015 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 4, 9, 10, 0 ), PoolIntArray( 4, 3, 11, 12, 13, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 13, 19, 20, 14 ), PoolIntArray( 21, 22, 23, 24, 25 ), PoolIntArray( 26, 27, 25, 24, 28 ), PoolIntArray( 29, 28, 24, 30, 31, 17, 5 ), PoolIntArray( 31, 32, 18, 17 ), PoolIntArray( 29, 5, 8, 33, 13, 12 ) ]
 outlines = [ PoolVector2Array( 51.4573, 159.247, 71.5866, 158.886, 71.7952, 134.906, 107.129, 134.39, 108.209, 186.404, 195.457, 186.12, 205.503, 165.564, 212.603, 170.145, 212.983, 185.713, 276.172, 186.015, 283.246, 186.049, 281.989, 135.279, 305.191, 134.309, 307.99, 157.8, 333.7, 158.352, 333.793, 133.954, 408.957, 135.033, 409.021, 156.859, 437.758, 156.537, 435.175, 180.107, 398.044, 177.846, 373.182, 193.99, 358.394, 197.09, 350.372, 231.015, 350.64, 285.507, 357.344, 294.303, 356.593, 406.183, 354.464, 425.555, 352.059, 508.282, 32.2763, 507.862, 27.8529, 238.25, 46.4795, 236.323, 45.8372, 202.442, 51.4573, 194.895 ) ]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 300.981, 10 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 17.3412, 263.108 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 78.1359, 27.5938 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 14.0245, 68.9513 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 10.2534, 104.433 )
 
 [sub_resource type="DynamicFontData" id=16]
 antialiased = false
@@ -292,6 +307,38 @@ position = Vector2( -0.70301, 67.0529 )
 scale = Vector2( 0.988897, 0.703729 )
 polygon = PoolVector2Array( 107.25, 277.375, 148.823, 301.252, 242.033, 301.043, 275.813, 279.357, 277.482, 220.553, 103.783, 222.013 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 242.303, 103 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 220, 551.778 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( -7.68896, 304.29 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 388.5, 484.839 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 459.962, 243.196 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 193.618, 135.715 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 27.2118, 169.53 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 459.962, 135.715 )
+shape = SubResource( 25 )
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.431373, 0.278431, 0.733333, 1 )
 
@@ -331,9 +378,6 @@ script = ExtResource( 20 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {

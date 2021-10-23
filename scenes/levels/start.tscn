@@ -50,7 +50,7 @@ scroll_ignore_camera_zoom = true
 script = ExtResource( 7 )
 
 [node name="sky" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-position = Vector2( 4.864, -32.5514 )
+position = Vector2( 3.66669, -32.3333 )
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 600, 0 )
 
@@ -61,7 +61,7 @@ centered = false
 hframes = 4
 
 [node name="sun" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-position = Vector2( 4.864, -32.5514 )
+position = Vector2( 3.66669, -32.3333 )
 motion_scale = Vector2( 0.1, 1 )
 
 [node name="sun" type="Sprite" parent="Control/ParallaxBackground/sun"]
@@ -71,7 +71,7 @@ centered = false
 hframes = 4
 
 [node name="clouds" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-position = Vector2( 4.864, -32.5514 )
+position = Vector2( 3.66669, -32.3333 )
 motion_scale = Vector2( 0.4, 2 )
 motion_mirroring = Vector2( 800, 0 )
 
@@ -82,7 +82,7 @@ centered = false
 hframes = 2
 
 [node name="bunnies" type="ParallaxLayer" parent="Control/ParallaxBackground"]
-position = Vector2( 4.864, -32.5514 )
+position = Vector2( 3.66669, -32.3333 )
 motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 500, 0 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=2]
+[gd_scene load_steps=122 format=2]
 
 [ext_resource path="res://sprites/environment/lounge/plant11.png" type="Texture" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -368,6 +368,12 @@ extents = Vector2( 17.1195, 9.47253 )
 [sub_resource type="RectangleShape2D" id=67]
 extents = Vector2( 44, 6.00002 )
 
+[sub_resource type="RectangleShape2D" id=74]
+extents = Vector2( 371.469, 10 )
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 9.54462, 302.805 )
+
 [sub_resource type="DynamicFontData" id=68]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
@@ -462,7 +468,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 8
+frame = 11
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -481,7 +487,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -502,7 +508,7 @@ material = SubResource( 31 )
 position = Vector2( -1.98199, -22.9914 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -523,7 +529,6 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 9
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -643,10 +648,12 @@ texture = ExtResource( 29 )
 
 [node name="back banner" type="Sprite" parent="environment/static objects"]
 position = Vector2( 380.03, 610.236 )
+z_index = 1
 texture = ExtResource( 28 )
 
 [node name="back banner2" type="Sprite" parent="environment/static objects"]
 position = Vector2( 483.093, 609.854 )
+z_index = 1
 texture = ExtResource( 28 )
 
 [node name="beanbag 1" type="Sprite" parent="environment/static objects"]
@@ -685,6 +692,7 @@ texture = ExtResource( 15 )
 position = Vector2( 628.445, 432.432 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+z_index = 1
 texture = ExtResource( 19 )
 offset = Vector2( 0, 30 )
 
@@ -702,10 +710,12 @@ texture = ExtResource( 17 )
 
 [node name="plant 1" type="Sprite" parent="environment/static objects"]
 position = Vector2( 627.193, 589.181 )
+z_index = 1
 texture = ExtResource( 12 )
 
 [node name="plant 2" type="Sprite" parent="environment/static objects"]
 position = Vector2( 149.671, 587.399 )
+z_index = 1
 texture = ExtResource( 9 )
 
 [node name="plant 3" type="Sprite" parent="environment/static objects"]
@@ -718,14 +728,17 @@ texture = ExtResource( 23 )
 
 [node name="plant 5" type="Sprite" parent="environment/static objects"]
 position = Vector2( 313.373, 597.913 )
+z_index = 1
 texture = ExtResource( 13 )
 
 [node name="plant 6" type="Sprite" parent="environment/static objects"]
 position = Vector2( 736.476, 399.717 )
+z_index = 1
 texture = ExtResource( 14 )
 
 [node name="plant 7" type="Sprite" parent="environment/static objects"]
 position = Vector2( 550.342, 457.833 )
+z_index = 1
 texture = ExtResource( 10 )
 
 [node name="plant 8" type="Sprite" parent="environment/static objects"]
@@ -735,6 +748,7 @@ texture = ExtResource( 11 )
 
 [node name="plant 9" type="Sprite" parent="environment/static objects"]
 position = Vector2( 710.632, 476.401 )
+z_index = 1
 texture = ExtResource( 21 )
 
 [node name="plant 10" type="Sprite" parent="environment/static objects"]
@@ -798,6 +812,7 @@ texture = ExtResource( 35 )
 position = Vector2( 721.628, 589.181 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+z_index = 1
 texture = ExtResource( 22 )
 
 [node name="coffee bar" type="Sprite" parent="environment/static objects"]
@@ -825,6 +840,21 @@ shape = SubResource( 66 )
 position = Vector2( 685.91, 250.721 )
 shape = SubResource( 67 )
 
+[node name="wall" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 428.118, 616.86 )
+z_index = 2
+shape = SubResource( 74 )
+
+[node name="wall2" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 424.377, 144.677 )
+z_index = 2
+shape = SubResource( 74 )
+
+[node name="wall3" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 119.815, 324.271 )
+z_index = 2
+shape = SubResource( 75 )
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color( 0.34902, 0.0784314, 0.835294, 1 )
@@ -834,9 +864,6 @@ script = ExtResource( 44 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {
