@@ -493,7 +493,7 @@ pause_mode = 2
 position = Vector2( 432, 292 )
 z_index = 2
 frames = SubResource( 25 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -1090,9 +1090,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 85.4052
+margin_left = 91.4052
 margin_top = 11.1947
-margin_right = 139.405
+margin_right = 145.405
 margin_bottom = 30.1947
 custom_fonts/font = SubResource( 85 )
 text = "of 620"

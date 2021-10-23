@@ -71,6 +71,8 @@ func _on_quote_1_area_body_entered(body):
 		quote_2 = true
 		shut = true
 	if quote_1 && quote_2 && !door_open:
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)
 		$sort/door/success.play()
@@ -84,12 +86,18 @@ func _on_quote_2_area_body_entered(body):
 		body.sleeping = true
 		quote_1 = true
 		shut_2 = true
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 	if body.name == "quotes2" && !shut_2:
 		analytics.citations()
 		body.sleeping = true
 		quote_2 = true
 		shut_2 = true
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 	if quote_1 && quote_2 && !door_open:
+		globals.score += 10
+		$"options/Score Value".text = str(globals.score)
 		$sort/door.visible = false
 		$sort/door/collider.set_deferred("disabled", true)
 		$sort/door/success.play()

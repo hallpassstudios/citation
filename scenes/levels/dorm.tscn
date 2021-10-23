@@ -330,7 +330,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -348,7 +348,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -584,9 +584,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 85.4052
+margin_left = 91.4052
 margin_top = 11.1947
-margin_right = 139.405
+margin_right = 145.405
 margin_bottom = 30.1947
 custom_fonts/font = SubResource( 47 )
 text = "of 620"

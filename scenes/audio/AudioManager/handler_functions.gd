@@ -21,7 +21,7 @@ func get_pos(song):
 func start_at_pos(song, handler_function):
 	song.song_file.seek(_get_position(song, handler_function))
 
-func _get_fade_threshold(song, handler_function):
+func _get_fade_threshold(_song, _handler_function):
 	var threshold = 0
 	
 func _get_position(song, handler_function):

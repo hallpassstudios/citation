@@ -15,7 +15,7 @@ func pause(value):
 		print("pausing before dialogue")
 		
 func after_dialog(timeline_name):
-	#print("unpausing after dialogue")
+	print("unpausing after dialogue")
 	get_tree().paused = false
 	yield(get_tree().create_timer(.5), "timeout")
 	globals.player.can_move = true

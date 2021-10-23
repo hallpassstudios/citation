@@ -21,7 +21,7 @@ func _ready():
 		platform = "desktop"
 		print("this is a desktop")
 
-func _process(delta):
+func _process(_delta):
 	# if we are not in the minigame
 	if globals.in_minigame:
 		panel.visible = false

@@ -22,6 +22,7 @@ signal text_completed()
 
 func update_name(name: String, color: Color = Color.white, autocolor: bool=false) -> void:
 	if not name.empty():
+		print("speaker's name is: ", name)
 		name_label.visible = true
 		# Hack to reset the size
 		name_label.rect_min_size = Vector2(0, 0)

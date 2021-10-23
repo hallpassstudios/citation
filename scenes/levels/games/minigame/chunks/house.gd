@@ -71,6 +71,8 @@ func _on_key_body_entered(body):
 func _on_door_body_entered(body):
 	if body.name == "top down runner":
 		if has_key && !played_door_sound:
+			globals.score += 20
+			$"options/Score Value".text = str(globals.score)
 			$door.visible = false
 			$door/StaticBody2D/collider.set_deferred("disabled", true)
 			$door.set_deferred("monitoring", false)

@@ -659,9 +659,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 91.0719
+margin_left = 97.0719
 margin_top = 11.1947
-margin_right = 145.072
+margin_right = 151.072
 margin_bottom = 30.1947
 custom_fonts/font = SubResource( 72 )
 text = "of 620"

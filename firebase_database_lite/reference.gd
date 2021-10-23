@@ -33,10 +33,10 @@
 extends Node
 class_name FirebaseReference, "icon.png"
 
-signal value_changed(snapshot)  # JS: value, Java: onDataChange, Unity: ValueChanged
-signal child_added(snapshot)
-signal child_changed(snapshot)
-signal child_removed(snapshot)
+# signal value_changed(snapshot)  # JS: value, Java: onDataChange, Unity: ValueChanged
+#signal child_added(snapshot)
+#signal child_changed(snapshot)
+#signal child_removed(snapshot)
 #TOnotDO:
 #signal child_moved(snapshot)  # no hurry on this one - requires ordering first
 

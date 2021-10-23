@@ -52,14 +52,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ) ],
 "loop": false,
-"name": "1",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "0",
+"name": "4",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 46 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 38 ), ExtResource( 47 ), ExtResource( 39 ) ],
@@ -67,9 +62,14 @@ animations = [ {
 "name": "2",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": false,
-"name": "4",
+"name": "0",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "1",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 15 ) ],
@@ -82,9 +82,9 @@ animations = [ {
 "name": "cycle 2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 39 ), ExtResource( 17 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 15 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ) ],
 "loop": true,
-"name": "cycle 3",
+"name": "cycle 4",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ) ],
@@ -92,9 +92,9 @@ animations = [ {
 "name": "cycle 1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 15 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 40 ) ],
+"frames": [ ExtResource( 39 ), ExtResource( 17 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "cycle 4",
+"name": "cycle 3",
 "speed": 5.0
 } ]
 
@@ -155,7 +155,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 318.419, 188.819 )
+position = Vector2( 318.419, 148.819 )
 scale = Vector2( 0.7286, 0.495374 )
 frames = SubResource( 1 )
 animation = "1"
@@ -203,19 +203,31 @@ __meta__ = {
 
 [node name="title 2" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 64.0
-margin_top = 250.361
-margin_right = 576.0
-margin_bottom = 337.361
+margin_left = 62.0
+margin_top = 52.0
+margin_right = 574.0
+margin_bottom = 249.0
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]located above an ancient, unexplored source of magical energy called
 
-[color=yellow]THE RATIO[/color][/center]"
+
+
+
+
+
+[color=yellow]THE RATIO[/color][/center]
+"
 text = "located above an ancient, unexplored source of magical energy called
 
-THE RATIO"
+
+
+
+
+
+THE RATIO
+"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -224,9 +236,9 @@ __meta__ = {
 [node name="title 3" type="RichTextLabel" parent="."]
 visible = false
 margin_left = 62.018
-margin_top = 45.2743
+margin_top = 5.2743
 margin_right = 574.018
-margin_bottom = 89.2743
+margin_bottom = 49.2743
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
@@ -240,9 +252,9 @@ __meta__ = {
 [node name="title 4" type="RichTextLabel" parent="."]
 visible = false
 margin_left = 151.209
-margin_top = 229.477
+margin_top = 189.477
 margin_right = 346.209
-margin_bottom = 273.477
+margin_bottom = 233.477
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
@@ -256,9 +268,9 @@ __meta__ = {
 [node name="title 5" type="RichTextLabel" parent="."]
 visible = false
 margin_left = 345.441
-margin_top = 253.865
+margin_top = 213.865
 margin_right = 563.441
-margin_bottom = 297.865
+margin_bottom = 257.865
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
@@ -272,9 +284,9 @@ __meta__ = {
 [node name="title 6" type="RichTextLabel" parent="."]
 visible = false
 margin_left = 51.6309
-margin_top = 255.189
+margin_top = 215.189
 margin_right = 581.631
-margin_bottom = 299.189
+margin_bottom = 259.189
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
@@ -288,9 +300,9 @@ __meta__ = {
 [node name="title 7" type="RichTextLabel" parent="."]
 visible = false
 margin_left = 60.7481
-margin_top = 252.811
+margin_top = 212.811
 margin_right = 590.748
-margin_bottom = 296.811
+margin_bottom = 256.811
 custom_fonts/normal_font = SubResource( 9 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true

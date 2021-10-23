@@ -63,10 +63,5 @@ func update_inventory():
 			slot_1.set_normal_texture(load("res://sprites/ui/quiz_cartridge.png"))
 
 func _on_slot_1_pressed():
-	dialogue_controller.play_dialogue(inventory[0])
-
-func _on_slot_2_pressed():
-	dialogue_controller.play_dialogue(inventory[1])
-
-func _on_slot_3_pressed():
-	dialogue_controller.play_dialogue(inventory[2])
+	if globals.player.can_move:
+		dialogue_controller.play_dialogue(inventory[0])

@@ -122,7 +122,7 @@ func goto_scene(path):
 	wait_frames = 1
 	can_change = true
 
-func _process(delta):
+func _process(_delta):
 	if loader == null :
 		# no need to process anymore
 		set_process(false)
@@ -153,7 +153,7 @@ func _process(delta):
 
 # our loading animation
 func update_progress():
-	var progress = float(loader.get_stage()) / loader.get_stage_count()
+	# var progress = float(loader.get_stage()) / loader.get_stage_count()
 	# Update your progress bar?
 	# get_node("progress").set_progress(progress)
 
@@ -163,6 +163,7 @@ func update_progress():
 	# Call this on a paused animation. Use "true" as the second argument to
 	# force the animation to update.
 	# get_node("animation").seek(progress * length, true)
+	pass
 
 # calling a new scene
 func set_new_scene(scene_resource):
@@ -170,5 +171,5 @@ func set_new_scene(scene_resource):
 	previous_area = get_current_area()
 	get_node("/root").add_child(current_scene)
 	
-func _on_music_cue(beat):
+func _on_music_cue(_beat):
 	print('big thunder ooo!')

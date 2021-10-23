@@ -136,7 +136,7 @@ extents = Vector2( 106.06, 10 )
 extents = Vector2( 11.2864, 215.592 )
 
 [sub_resource type="RectangleShape2D" id=41]
-extents = Vector2( 17.1519, 84.4984 )
+extents = Vector2( 17.0156, 61.3 )
 
 [sub_resource type="DynamicFontData" id=35]
 antialiased = false
@@ -162,13 +162,13 @@ font_path = "res://fonts/HungryPro.ttf"
 size = 18
 font_data = SubResource( 34 )
 
-[sub_resource type="DynamicFontData" id=42]
+[sub_resource type="DynamicFontData" id=44]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=43]
 size = 20
-font_data = SubResource( 42 )
+font_data = SubResource( 44 )
 
 [node name="hallway" type="Node2D"]
 script = ExtResource( 6 )
@@ -250,6 +250,7 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = SubResource( 23 )
 frames = SubResource( 14 )
+frame = 5
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -315,7 +316,7 @@ z_index = 2
 shape = SubResource( 40 )
 
 [node name="Wall5" type="CollisionShape2D" parent="navigation/collisions"]
-position = Vector2( 48.4866, 258.761 )
+position = Vector2( 48.4866, 283.482 )
 z_index = 2
 shape = SubResource( 41 )
 
@@ -477,9 +478,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 85.4052
+margin_left = 89.4052
 margin_top = 11.1947
-margin_right = 139.405
+margin_right = 143.405
 margin_bottom = 30.1947
 custom_fonts/font = SubResource( 43 )
 text = "of 620"

@@ -43,7 +43,7 @@ func close() -> void:
 
 
 ################################################################################
-func _process(delta):
+func _process(d_elta):
 	#TODO: should I slow this polling down to 100ms or so?
 	match state:
 

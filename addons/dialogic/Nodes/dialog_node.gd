@@ -379,9 +379,9 @@ func _should_show_glossary():
 func parse_definitions(text: String, variables: bool = true, glossary: bool = true):
 	var final_text: String = text
 	if not preview:
-		definitions = get_tree().get_meta('definitions')
-		if definitions == null:
-			definitions = {}
+#		definitions = get_tree().get_meta('definitions')
+#		if definitions == null:
+#			definitions = {}
 		definitions = get_definitions()
 	if variables:
 		final_text = _insert_variable_definitions(text)

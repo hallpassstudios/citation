@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://scenes/levels/games/minigame/joystick.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/games/minigame/new_tiles.tres" type="TileSet" id=2]
@@ -397,6 +397,14 @@ font_path = "res://fonts/HungryPro.ttf"
 [sub_resource type="DynamicFont" id=71]
 size = 18
 font_data = SubResource( 70 )
+
+[sub_resource type="DynamicFontData" id=72]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=73]
+size = 20
+font_data = SubResource( 72 )
 
 [node name="final" type="Node2D"]
 script = ExtResource( 6 )
@@ -1380,6 +1388,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="big bat"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="big bat"]
@@ -1405,7 +1414,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat2"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat2"]
@@ -1431,6 +1439,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat3"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat3"]
@@ -1456,7 +1465,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat4"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat4"]
@@ -1482,7 +1490,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat5"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat5"]
@@ -1508,6 +1515,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat10"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat10"]
@@ -1533,6 +1541,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat6"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat6"]
@@ -1558,6 +1567,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat7"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat7"]
@@ -1583,7 +1593,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat9"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat9"]
@@ -1609,7 +1618,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat8"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat8"]
@@ -1796,6 +1804,17 @@ margin_bottom = -19.8302
 custom_fonts/font = SubResource( 71 )
 text = "X CLOSE"
 flat = true
+
+[node name="Score2" type="Label" parent="options"]
+margin_left = 89.4052
+margin_top = 11.1947
+margin_right = 143.405
+margin_bottom = 30.1947
+custom_fonts/font = SubResource( 73 )
+text = "of 620"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="HUD/restart/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="HUD/restart/VBoxContainer/quit" to="." method="_on_quit_pressed"]

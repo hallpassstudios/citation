@@ -468,7 +468,7 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 10
+frame = 9
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
@@ -487,7 +487,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -508,7 +508,6 @@ material = SubResource( 31 )
 position = Vector2( -1.98199, -22.9914 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 3
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -529,7 +528,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -906,9 +905,9 @@ __meta__ = {
 }
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 85.4052
+margin_left = 91.4052
 margin_top = 11.1947
-margin_right = 139.405
+margin_right = 145.405
 margin_bottom = 30.1947
 custom_fonts/font = SubResource( 69 )
 text = "of 620"
