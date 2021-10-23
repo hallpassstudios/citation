@@ -137,7 +137,7 @@ func _on_spikies_body_entered(body):
 func _on_hidden_exit_body_entered(body):
 	print(body.name)
 	if body.name == "top down runner":
-		globals.score += 1000
+		globals.score -= 1000
 		$"options/Score Value".text = str(globals.score)
 		analytics.objective_completed("found hidden level", {
 			"elapsed_time": OS.get_ticks_msec(),

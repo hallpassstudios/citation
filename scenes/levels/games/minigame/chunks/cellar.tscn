@@ -585,37 +585,37 @@ shader_param/clip_warp = false
 shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.5
 
-[sub_resource type="DynamicFontData" id=37]
-antialiased = false
-font_path = "res://fonts/HungryPro.ttf"
-
-[sub_resource type="DynamicFont" id=74]
-size = 20
-font_data = SubResource( 37 )
-
-[sub_resource type="DynamicFontData" id=38]
+[sub_resource type="DynamicFontData" id=74]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=75]
-size = 32
-font_data = SubResource( 38 )
-
-[sub_resource type="DynamicFontData" id=39]
-antialiased = false
-font_path = "res://fonts/HungryPro.ttf"
-
-[sub_resource type="DynamicFont" id=76]
-size = 18
-font_data = SubResource( 39 )
-
-[sub_resource type="DynamicFontData" id=77]
-antialiased = false
-font_path = "res://fonts/HungryPro.ttf"
-
-[sub_resource type="DynamicFont" id=78]
 size = 20
-font_data = SubResource( 77 )
+font_data = SubResource( 74 )
+
+[sub_resource type="DynamicFontData" id=76]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=77]
+size = 32
+font_data = SubResource( 76 )
+
+[sub_resource type="DynamicFontData" id=78]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=79]
+size = 18
+font_data = SubResource( 78 )
+
+[sub_resource type="DynamicFontData" id=80]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=81]
+size = 20
+font_data = SubResource( 80 )
 
 [node name="courtroom" type="Node2D"]
 script = ExtResource( 6 )
@@ -1112,10 +1112,8 @@ script = ExtResource( 11 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-margin_left = 0.666626
-margin_right = 0.666626
-margin_bottom = 40.0
-rect_min_size = Vector2( 0, 40 )
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1126,10 +1124,11 @@ anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -25.4244
+margin_left = -10.7576
 margin_top = -3.08328
-margin_right = -0.424438
+margin_right = 14.2423
 margin_bottom = 21.9167
+rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 12 )
@@ -1141,10 +1140,10 @@ __meta__ = {
 
 [node name="Score" type="Label" parent="options"]
 margin_left = 4.19974
-margin_top = 10.7093
+margin_top = 3.7093
 margin_right = 58.1997
-margin_bottom = 29.7093
-custom_fonts/font = SubResource( 74 )
+margin_bottom = 22.7093
+custom_fonts/font = SubResource( 75 )
 text = "SCORE:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1152,10 +1151,10 @@ __meta__ = {
 
 [node name="Score Value" type="Label" parent="options"]
 margin_left = 59.2004
-margin_top = 11.2706
+margin_top = 3.2706
 margin_right = 113.2
-margin_bottom = 30.2706
-custom_fonts/font = SubResource( 74 )
+margin_bottom = 22.2706
+custom_fonts/font = SubResource( 75 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1197,7 +1196,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 77 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -1212,7 +1211,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 75 )
+custom_fonts/font = SubResource( 77 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -1263,16 +1262,16 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 76 )
+custom_fonts/font = SubResource( 79 )
 text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 89.4052
-margin_top = 11.1947
-margin_right = 143.405
-margin_bottom = 30.1947
-custom_fonts/font = SubResource( 78 )
+margin_left = 91.4052
+margin_top = 3.1947
+margin_right = 145.405
+margin_bottom = 22.1947
+custom_fonts/font = SubResource( 81 )
 text = "of 620"
 __meta__ = {
 "_edit_use_anchors_": false

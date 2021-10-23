@@ -330,7 +330,7 @@ TYPE = 1
 material = SubResource( 4 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
@@ -348,7 +348,7 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -431,7 +431,8 @@ script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-rect_min_size = Vector2( 0, 40 )
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -442,10 +443,11 @@ anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -25.4244
+margin_left = -10.7576
 margin_top = -3.08328
-margin_right = -0.424438
+margin_right = 14.2423
 margin_bottom = 21.9167
+rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 20 )
@@ -457,9 +459,9 @@ __meta__ = {
 
 [node name="Score" type="Label" parent="options"]
 margin_left = 4.19974
-margin_top = 10.7093
+margin_top = 3.7093
 margin_right = 58.1997
-margin_bottom = 29.7093
+margin_bottom = 22.7093
 custom_fonts/font = SubResource( 36 )
 text = "SCORE:"
 __meta__ = {
@@ -468,9 +470,9 @@ __meta__ = {
 
 [node name="Score Value" type="Label" parent="options"]
 margin_left = 59.2004
-margin_top = 11.2706
+margin_top = 3.2706
 margin_right = 113.2
-margin_bottom = 30.2706
+margin_bottom = 22.2706
 custom_fonts/font = SubResource( 36 )
 text = "0"
 __meta__ = {
@@ -585,9 +587,9 @@ flat = true
 
 [node name="Score2" type="Label" parent="options"]
 margin_left = 91.4052
-margin_top = 11.1947
+margin_top = 3.1947
 margin_right = 145.405
-margin_bottom = 30.1947
+margin_bottom = 22.1947
 custom_fonts/font = SubResource( 47 )
 text = "of 620"
 __meta__ = {
