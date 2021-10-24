@@ -1,0 +1,225 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://scenes/levels/episode_one_credits.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ui/credit_border.png" type="Texture" id=2]
+[ext_resource path="res://sprites/npcs/shade_idle.png" type="Texture" id=3]
+[ext_resource path="res://sprites/character/character 2/mainCharacter2LowResSheet.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=15]
+antialiased = false
+font_path = "res://fonts/HungryPro.ttf"
+
+[sub_resource type="DynamicFont" id=16]
+font_data = SubResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="DynamicFontData" id=2]
+antialiased = false
+font_path = "res://fonts/zpix.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = SubResource( 2 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
+region = Rect2( 160, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="episode one credits" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.0
+margin_top = -114.5
+margin_right = 231.0
+margin_bottom = 114.5
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="story" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
+margin_left = 176.0
+margin_top = 223.0
+margin_right = 450.0
+margin_bottom = 398.0
+custom_fonts/normal_font = SubResource( 16 )
+bbcode_enabled = true
+bbcode_text = "Thanks for playing [color=yellow] EPISODE ONE: The Fall of Bean King![/color]
+
+We hope that you enjoyed the game. EPISODE 2: Where are my notes!?! is available now. Play the game again to try it out!
+
+CREDITS
+Story - Christian Grewell
+Art - Andrew Liu, Hatim Behnsain, Soojin Lee
+Music and Sound - Zane Fadul
+Programming - Christian Grewell, Benjamin Pang
+
+SPECIAL THANKS TO:
+NYU Abu Dhabi
+
+Thanks for playing CITATION EP 1: NOTES. 
+2021 hallpass studios
+[url=<hallpass.games>]https://hallpass.games[/url]
+[/center]
+
+ "
+text = "Thanks for playing  EPISODE ONE: The Fall of Bean King!
+
+We hope that you enjoyed the game. EPISODE 2: Where are my notes!?! is available now. Play the game again to try it out!
+
+CREDITS
+Story - Christian Grewell
+Art - Andrew Liu, Hatim Behnsain, Soojin Lee
+Music and Sound - Zane Fadul
+Programming - Christian Grewell, Benjamin Pang
+
+SPECIAL THANKS TO:
+NYU Abu Dhabi
+
+Thanks for playing CITATION EP 1: NOTES. 
+2021 hallpass studios
+https://hallpass.games
+[/center]
+
+ "
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_left = 103.8
+margin_top = -45.1574
+margin_right = 536.8
+margin_bottom = 42.8426
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+margin_left = 101.229
+margin_top = 254.762
+margin_right = 534.229
+margin_bottom = 342.762
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -231.0
+margin_top = -114.5
+margin_right = 231.0
+margin_bottom = 114.5
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer/TextureRect2"]
+margin_left = 136.458
+margin_top = -0.167419
+margin_right = 312.458
+margin_bottom = 14.8326
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.713726, 0, 1 )
+text = "JUST THE BEGINNING"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 155.764, 207.124 )
+scale = Vector2( 3.4781, 3.4781 )
+frames = SubResource( 14 )
+animation = "New Anim"
+frame = 3
+playing = true

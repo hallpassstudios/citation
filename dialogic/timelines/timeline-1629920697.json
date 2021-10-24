@@ -180,7 +180,7 @@
 			"character": "character-1629920597.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "There isnt' a light in the library. You need a spell."
+			"text": "There isnt' a light in the library. You need a spell. "
 		},
 		{
 			"character": "character-1629668635.json",
@@ -192,37 +192,7 @@
 			"character": "character-1629920597.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You don't, you [wave amp=5 freq=10]eeeeeeearn[/wave] it!"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You see, at Dream School, you demonstrate mastery by beating games!"
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Oh cool. You mean I can play a video game AND learn at the same time?"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Contrary to popular opinion (and various government regulations), yes! In fact, it's [b]required[/b] in order to learn spells."
-		},
-		{
-			"character": "character-1629668635.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Any idea where I can find this game?"
-		},
-		{
-			"character": "character-1629920597.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "I'm afraid not, unless you happen to know a gamer. You might need to wait until morning."
+			"text": "I'm afraid unless you happen to know a gamer. You might need to wait until morning."
 		},
 		{
 			"character": "character-1629668635.json",

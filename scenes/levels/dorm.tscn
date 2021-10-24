@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://scenes/props/cursor.gd" type="Script" id=1]
 [ext_resource path="res://scenes/utilities/dialogue controller.tscn" type="PackedScene" id=2]
@@ -26,7 +26,7 @@
 extents = Vector2( 60.2834, 29.5395 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.82053, 28.943 )
+extents = Vector2( 17.2807, 28.943 )
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -183,6 +183,9 @@ outlines = [ PoolVector2Array( 46.0902, 186.454, 114.862, 185.587, 121.432, 219.
 [sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 273.462, 10 )
 
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 6.89404, 23.6193 )
+
 [sub_resource type="RectangleShape2D" id=42]
 extents = Vector2( 29.3554, 213.946 )
 
@@ -198,42 +201,43 @@ extents = Vector2( 44.7975, 20.9182 )
 [sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 44.7975, 20.9182 )
 
-[sub_resource type="DynamicFontData" id=37]
+[sub_resource type="DynamicFontData" id=48]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=36]
 size = 20
-font_data = SubResource( 37 )
+font_data = SubResource( 48 )
 
-[sub_resource type="DynamicFontData" id=38]
+[sub_resource type="DynamicFontData" id=49]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=30]
 size = 32
-font_data = SubResource( 38 )
+font_data = SubResource( 49 )
 
-[sub_resource type="DynamicFontData" id=39]
+[sub_resource type="DynamicFontData" id=50]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=32]
 size = 18
-font_data = SubResource( 39 )
+font_data = SubResource( 50 )
 
-[sub_resource type="DynamicFontData" id=46]
+[sub_resource type="DynamicFontData" id=51]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
 [sub_resource type="DynamicFont" id=47]
 size = 20
-font_data = SubResource( 46 )
+font_data = SubResource( 51 )
 
 [node name="dorm" type="Node2D"]
 script = ExtResource( 8 )
 
 [node name="cursor" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 1 )
 
 [node name="dialogue controller" parent="." instance=ExtResource( 2 )]
@@ -328,10 +332,12 @@ TYPE = 1
 
 [node name="joe" type="AnimatedSprite" parent="environment/interactable objects/joe/collider"]
 material = SubResource( 4 )
+position = Vector2( -0.333344, 12.3333 )
 z_index = 1
 frames = SubResource( 13 )
-frame = 5
+frame = 7
 playing = true
+offset = Vector2( 0, -20 )
 
 [node name="game console" type="Area2D" parent="environment/interactable objects"]
 position = Vector2( 114.958, 165.208 )
@@ -348,7 +354,6 @@ TYPE = 1
 [node name="game system" type="AnimatedSprite" parent="environment/interactable objects/game console/collider"]
 material = SubResource( 15 )
 frames = SubResource( 22 )
-frame = 2
 playing = true
 
 [node name="bed" type="Area2D" parent="environment/interactable objects"]
@@ -397,6 +402,10 @@ navpoly = SubResource( 28 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="navigation/collisions"]
 position = Vector2( 244.106, 422.286 )
 shape = SubResource( 40 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="navigation/collisions"]
+position = Vector2( 395.773, 274.953 )
+shape = SubResource( 52 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="navigation/collisions"]
 position = Vector2( 239.355, 124.726 )
@@ -586,9 +595,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 91.4052
+margin_left = 101.405
 margin_top = 3.1947
-margin_right = 145.405
+margin_right = 155.405
 margin_bottom = 22.1947
 custom_fonts/font = SubResource( 47 )
 text = "of 620"

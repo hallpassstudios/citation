@@ -3385,6 +3385,7 @@ __meta__ = {
 }
 
 [node name="options" type="CanvasLayer" parent="."]
+layer = 0
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
@@ -3544,9 +3545,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 91.4052
+margin_left = 101.405
 margin_top = 3.1947
-margin_right = 145.405
+margin_right = 155.405
 margin_bottom = 22.1947
 custom_fonts/font = SubResource( 138 )
 text = "of 620"

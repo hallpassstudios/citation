@@ -48,14 +48,24 @@ func outline(value):
 		get_child(0).material.set_shader_param("width", 0)
 
 func _on_interactable_body_entered(body):
-	print("entering...", body.name)
+	
 	if body.name == "top down player":
+		print(globals.player.using_keyboard)
+		print(clicked_object)
 		already_inside = true
 		if clicked_object == get_parent().get_name():
 			# play dialogue if we have it
 			if has_dialogue:
 				dialogue_controller.play_dialogue(dialogue)
-			if globals.player.will_travel && globals.desk_interact:
+			if globals.player.will_travel && globals.desk_interact && !globals.caught_joe:
+				globals.player_spawn = spawn_point
+				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
+				globals.player.travel(false)
+			if globals.current_scene.name == "horizontal hallway" && globals.caught_joe:
+				globals.player_spawn = spawn_point
+				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
+				globals.player.travel(false)
+			if globals.current_scene.name == "classroom" && globals.caught_joe:
 				globals.player_spawn = spawn_point
 				globals.goto_scene("res://scenes/levels/" + travel_to + ".tscn")
 				globals.player.travel(false)
@@ -63,7 +73,7 @@ func _on_interactable_body_entered(body):
 				dialogue_controller.play_dialogue('interact')
 			if globals.caught_joe && self.get_parent().name != "door to library" && globals.current_scene.name == "lounge":
 				dialogue_controller.play_dialogue('find joe')
-
+				
 func _on_interactable_body_exited(body):
 	if body.name == "top down player":
 		get_child(0).material.set_shader_param("width", 0)

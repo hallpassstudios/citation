@@ -1,10 +1,10 @@
 extends Control
 
 func play_dialogue(dialogue_name):
-	pause(true)	
+	pause(true)
 	globals.player.can_move = false
 	var dialogue = Dialogic.start(dialogue_name, true)
-	add_child(dialogue)
+	call_deferred('add_child', dialogue)
 	dialogue.connect("dialogic_signal", self, "pause")
 	dialogue.connect('timeline_end', self, 'after_dialog')
 

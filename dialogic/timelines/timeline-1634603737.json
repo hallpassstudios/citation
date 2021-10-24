@@ -63,6 +63,48 @@
 		},
 		{
 			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Would you like to continue with [color=yellow]EPISODE 2: WHERE ARE MY NOTES!?![/color]"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Great! "
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "episode_one_credits",
+				"target_node_path": "dorm"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Perhaps you should take a seat at your desk and start studying your notes?"

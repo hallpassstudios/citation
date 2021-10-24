@@ -58,7 +58,7 @@ func set_ready():
 	for beat in beats_to_emit_signal:
 		var object = get_node(beats_to_emit_signal[beat])
 		if object:
-			connect('music_cue', object, '_on_music_cue')
+			connect('music_cue', object, '_ on_music_cue')
 			
 func _process(_delta):
 	current_beat = stepify( stepify(song_file.get_playback_position(), 0.001) / spb , 1) + 1

@@ -25,9 +25,7 @@ func _ready():
 	db = firebase.database()
 	session_id = v4()
 	print(session_id)
-	new_session()
-	add_player()
-	
+
 	# Sign in anon
 	# Get a reference to the database service.
 	var auth : FirebaseAuth = firebase.auth()
@@ -39,6 +37,8 @@ func _ready():
 	else:
 		var user = result as FirebaseUser
 		print(user.email)
+		new_session()
+		add_player()
 	
 #store the session id upon load
 func new_session():

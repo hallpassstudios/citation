@@ -11,9 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _input(event):
-	if event.is_action_pressed("ui_cancel"): # esc by default
-		print("pausing game")
-		get_tree().paused = !get_tree().paused # toggles pause status
+	pass
 		
 		# show the menu
 

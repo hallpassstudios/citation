@@ -598,6 +598,7 @@ tracks/1/keys = {
 [node name="top down player" type="KinematicBody2D" groups=[
 "player",
 ]]
+pause_mode = 2
 z_index = 1
 collision/safe_margin = 3.0
 script = ExtResource( 3 )
@@ -613,7 +614,8 @@ color = Color( 0.937255, 1, 0.32549, 1 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="shadow" type="Sprite" parent="YSort"]
-position = Vector2( -2.37842, 31.3158 )
+position = Vector2( -1.38742, 31.7122 )
+z_index = -1
 texture = ExtResource( 2 )
 
 [node name="character" type="Sprite" parent="YSort"]
@@ -628,7 +630,7 @@ visible = false
 texture = ExtResource( 5 )
 hframes = 8
 vframes = 8
-frame = 25
+frame = 13
 
 [node name="character3" type="Sprite" parent="YSort"]
 visible = false
@@ -704,6 +706,8 @@ parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
 
 [node name="light animation" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 41 )

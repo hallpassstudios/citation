@@ -7,6 +7,16 @@
 			"text": "You see a strange figure at the top of the stairs standing next to the torch"
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "camera",
+				"target_node_path": "library"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",

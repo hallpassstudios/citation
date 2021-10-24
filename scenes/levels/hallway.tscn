@@ -54,7 +54,7 @@ shader_param/width = 0.0
 extents = Vector2( 35.896, 87.5884 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 12.3975, 29.5395 )
+extents = Vector2( 20.2734, 29.5395 )
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -138,37 +138,37 @@ extents = Vector2( 11.2864, 215.592 )
 [sub_resource type="RectangleShape2D" id=41]
 extents = Vector2( 17.0156, 61.3 )
 
-[sub_resource type="DynamicFontData" id=35]
+[sub_resource type="DynamicFontData" id=37]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=36]
+[sub_resource type="DynamicFont" id=47]
 size = 20
-font_data = SubResource( 35 )
+font_data = SubResource( 37 )
 
-[sub_resource type="DynamicFontData" id=33]
+[sub_resource type="DynamicFontData" id=38]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=48]
 size = 32
-font_data = SubResource( 33 )
+font_data = SubResource( 38 )
 
-[sub_resource type="DynamicFontData" id=34]
+[sub_resource type="DynamicFontData" id=49]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=38]
+[sub_resource type="DynamicFont" id=50]
 size = 18
-font_data = SubResource( 34 )
+font_data = SubResource( 49 )
 
-[sub_resource type="DynamicFontData" id=44]
+[sub_resource type="DynamicFontData" id=46]
 antialiased = false
 font_path = "res://fonts/HungryPro.ttf"
 
-[sub_resource type="DynamicFont" id=43]
+[sub_resource type="DynamicFont" id=51]
 size = 20
-font_data = SubResource( 44 )
+font_data = SubResource( 46 )
 
 [node name="hallway" type="Node2D"]
 script = ExtResource( 6 )
@@ -250,7 +250,6 @@ TYPE = 1
 [node name="star dude" type="AnimatedSprite" parent="environment/interactable objects/star dude/collider"]
 material = SubResource( 23 )
 frames = SubResource( 14 )
-frame = 5
 playing = true
 
 [node name="static objects" type="YSort" parent="environment"]
@@ -325,7 +324,8 @@ script = ExtResource( 16 )
 
 [node name="ColorRect" type="ColorRect" parent="options"]
 anchor_right = 1.0
-rect_min_size = Vector2( 0, 40 )
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
 color = Color( 0, 0, 0, 0.913725 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -336,10 +336,11 @@ anchor_left = 0.979
 anchor_top = 0.029
 anchor_right = 0.979
 anchor_bottom = 0.029
-margin_left = -25.4244
+margin_left = -10.7576
 margin_top = -3.08328
-margin_right = -0.424438
+margin_right = 14.2423
 margin_bottom = 21.9167
+rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 17 )
@@ -351,10 +352,10 @@ __meta__ = {
 
 [node name="Score" type="Label" parent="options"]
 margin_left = 4.19974
-margin_top = 10.7093
+margin_top = 3.7093
 margin_right = 58.1997
-margin_bottom = 29.7093
-custom_fonts/font = SubResource( 36 )
+margin_bottom = 22.7093
+custom_fonts/font = SubResource( 47 )
 text = "SCORE:"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -362,10 +363,10 @@ __meta__ = {
 
 [node name="Score Value" type="Label" parent="options"]
 margin_left = 59.2004
-margin_top = 11.2706
+margin_top = 3.2706
 margin_right = 113.2
-margin_bottom = 30.2706
-custom_fonts/font = SubResource( 36 )
+margin_bottom = 22.2706
+custom_fonts/font = SubResource( 47 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -407,7 +408,7 @@ __meta__ = {
 [node name="Title" type="Label" parent="options/Control/VBoxContainer"]
 margin_right = 500.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 48 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPTIONS"
 align = 1
@@ -422,7 +423,7 @@ custom_constants/separation = 128
 [node name="sound" type="Label" parent="options/Control/VBoxContainer/HBoxContainer"]
 margin_right = 168.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 48 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SOUND VOLUME"
 align = 1
@@ -473,16 +474,16 @@ margin_left = -87.4561
 margin_top = -42.8302
 margin_right = -19.4561
 margin_bottom = -19.8302
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 50 )
 text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 89.4052
-margin_top = 11.1947
-margin_right = 143.405
-margin_bottom = 30.1947
-custom_fonts/font = SubResource( 43 )
+margin_left = 101.405
+margin_top = 3.1947
+margin_right = 155.405
+margin_bottom = 22.1947
+custom_fonts/font = SubResource( 51 )
 text = "of 620"
 __meta__ = {
 "_edit_use_anchors_": false

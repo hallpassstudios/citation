@@ -51,4 +51,5 @@ func desk_interact():
 func open_url():
 	OS.shell_open("https://hallpass.games/2021/10/18/bean-king-v-dream-school-case-description/")
 
-	
+func episode_one_credits():
+	globals.goto_scene("res://scenes/levels/episode_one_credits.tscn")

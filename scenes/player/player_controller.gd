@@ -78,7 +78,9 @@ func _input(event):
 func _process(delta):
 
 	if !can_move:
+		PLAYER_STATE = IDLE
 		return
+		
 	# keyboard movement
 	keyboard_movement()
 	# click to move
@@ -94,7 +96,9 @@ func _process(delta):
 
 func _unhandled_input(event):
 	if !can_move:
+		PLAYER_STATE = IDLE
 		return
+		
 	if event.is_action_pressed("click"):
 		_update_navigation_path(self.position, get_global_mouse_position())
 	
@@ -121,7 +125,9 @@ func clear_path():
 		
 func move_along_path(distance):
 	if !can_move:
+		PLAYER_STATE = IDLE
 		return
+		
 	var last_point = self.position
 	var direction = (target - position).normalized()
 
@@ -178,3 +184,10 @@ func travel(value):
 		will_travel = true
 	else: 
 		will_travel = false
+
+func camera_off():
+	print("turning camera off")
+	$Camera2D.smoothing_speed = .6
+	$Camera2D.position.y = -110
+
+	

@@ -1388,6 +1388,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="big bat"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="big bat"]
@@ -1413,7 +1414,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat2"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat2"]
@@ -1439,6 +1439,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat3"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat3"]
@@ -1464,7 +1465,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat4"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat4"]
@@ -1490,7 +1490,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat5"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat5"]
@@ -1516,6 +1515,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat10"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat10"]
@@ -1541,6 +1541,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat6"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat6"]
@@ -1566,6 +1567,7 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat7"]
 frames = SubResource( 59 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat7"]
@@ -1591,7 +1593,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat9"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat9"]
@@ -1617,7 +1618,6 @@ shape = SubResource( 61 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat8"]
 frames = SubResource( 59 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat8"]
@@ -1626,6 +1626,84 @@ shape = SubResource( 60 )
 [node name="death" type="Area2D" parent="bat8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bat8/death"]
+position = Vector2( 0, -4.71937 )
+shape = SubResource( 63 )
+
+[node name="bat11" type="KinematicBody2D" parent="."]
+position = Vector2( -311, -108 )
+scale = Vector2( 0.25, 0.25 )
+z_index = 2
+script = ExtResource( 13 )
+
+[node name="detect radius" type="Area2D" parent="bat11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat11/detect radius"]
+shape = SubResource( 61 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bat11"]
+frames = SubResource( 59 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat11"]
+shape = SubResource( 60 )
+
+[node name="death" type="Area2D" parent="bat11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat11/death"]
+position = Vector2( 0, -4.71937 )
+shape = SubResource( 63 )
+
+[node name="bat12" type="KinematicBody2D" parent="."]
+position = Vector2( -289.5, -127.5 )
+scale = Vector2( 0.25, 0.25 )
+z_index = 2
+script = ExtResource( 13 )
+
+[node name="detect radius" type="Area2D" parent="bat12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat12/detect radius"]
+shape = SubResource( 61 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bat12"]
+frames = SubResource( 59 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat12"]
+shape = SubResource( 60 )
+
+[node name="death" type="Area2D" parent="bat12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat12/death"]
+position = Vector2( 0, -4.71937 )
+shape = SubResource( 63 )
+
+[node name="bat13" type="KinematicBody2D" parent="."]
+position = Vector2( -264, -121.5 )
+scale = Vector2( 0.25, 0.25 )
+z_index = 2
+script = ExtResource( 13 )
+
+[node name="detect radius" type="Area2D" parent="bat13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat13/detect radius"]
+shape = SubResource( 61 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bat13"]
+frames = SubResource( 59 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat13"]
+shape = SubResource( 60 )
+
+[node name="death" type="Area2D" parent="bat13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bat13/death"]
 position = Vector2( 0, -4.71937 )
 shape = SubResource( 63 )
 
@@ -1805,9 +1883,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 91.4052
+margin_left = 101.405
 margin_top = 3.1947
-margin_right = 145.405
+margin_right = 155.405
 margin_bottom = 22.1947
 custom_fonts/font = SubResource( 73 )
 text = "of 620"
@@ -1854,6 +1932,15 @@ __meta__ = {
 [connection signal="body_entered" from="bat8/detect radius" to="bat8" method="_on_detect_radius_body_entered"]
 [connection signal="body_exited" from="bat8/detect radius" to="bat8" method="_on_detect_radius_body_exited"]
 [connection signal="body_entered" from="bat8/death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="bat11/detect radius" to="bat11" method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="bat11/detect radius" to="bat11" method="_on_detect_radius_body_exited"]
+[connection signal="body_entered" from="bat11/death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="bat12/detect radius" to="bat12" method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="bat12/detect radius" to="bat12" method="_on_detect_radius_body_exited"]
+[connection signal="body_entered" from="bat12/death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="bat13/detect radius" to="bat13" method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="bat13/detect radius" to="bat13" method="_on_detect_radius_body_exited"]
+[connection signal="body_entered" from="bat13/death" to="." method="_on_death_body_entered"]
 [connection signal="pressed" from="options/Settings Button" to="options" method="_on_Settings_Button_pressed"]
 [connection signal="value_changed" from="options/Control/VBoxContainer/HBoxContainer/slider" to="options" method="_on_slider_value_changed"]
 [connection signal="pressed" from="options/Control/VBoxContainer/HBoxContainer2/Restart" to="options" method="_on_Restart_pressed"]

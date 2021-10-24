@@ -143,7 +143,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 14, 34 )
+extents = Vector2( 23.5879, 34 )
 
 [sub_resource type="Shader" id=20]
 code = "shader_type canvas_item;
@@ -358,9 +358,9 @@ shader_param/line_color = Color( 1, 1, 1, 1 )
 shader_param/width = 0.0
 
 [sub_resource type="NavigationPolygon" id=65]
-vertices = PoolVector2Array( 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 449.049, 126.705, 455.223, 84.0512, 446.613, 317.226, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999, 457.468, 414.744, 28.3516, 77.6634, 407.304, 76.6252, 422.859, 126.331, 421.771, 328.117, 431.877, 415.297, 441.953, 402.358, 396.904, 416.053, 397.985, 368.842 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 9, 11, 12, 13, 6, 14 ), PoolIntArray( 15, 16, 10 ), PoolIntArray( 15, 10, 9, 17 ), PoolIntArray( 13, 4, 6 ), PoolIntArray( 9, 14, 18 ), PoolIntArray( 9, 18, 17 ) ]
-outlines = [ PoolVector2Array( 28.3516, 77.6634, 407.304, 76.6252, 422.859, 126.331, 449.049, 126.705, 455.223, 84.0512, 609.497, 84.6933, 611.615, 337.927, 576.742, 336.67, 570.261, 311.741, 446.613, 317.226, 421.771, 328.117, 397.985, 368.842, 396.904, 416.053, 431.877, 415.297, 441.953, 402.358, 457.468, 414.744, 610.002, 411.447, 612.422, 477.503, 38.5869, 476.999 ) ]
+vertices = PoolVector2Array( 398.169, 414.134, 614.924, 410.638, 612.422, 477.503, 27.5877, 476.064, 28.3516, 77.6634, 388.352, 79.8958, 397.985, 368.842, 403.415, 147.681, 432.131, 337.221, 441.47, 147.284, 611.615, 337.927, 609.497, 84.6933, 455.223, 84.0512 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5, 6 ), PoolIntArray( 6, 5, 7, 8 ), PoolIntArray( 8, 7, 9, 10 ), PoolIntArray( 11, 10, 9, 12 ) ]
+outlines = [ PoolVector2Array( 28.3516, 77.6634, 388.352, 79.8958, 403.415, 147.681, 441.47, 147.284, 455.223, 84.0512, 609.497, 84.6933, 611.615, 337.927, 432.131, 337.221, 397.985, 368.842, 398.169, 414.134, 614.924, 410.638, 612.422, 477.503, 27.5877, 476.064 ) ]
 
 [sub_resource type="RectangleShape2D" id=66]
 extents = Vector2( 17.1195, 9.47253 )
@@ -476,11 +476,11 @@ TYPE = 1
 material = SubResource( 3 )
 z_index = 1
 frames = SubResource( 18 )
-frame = 4
+frame = 13
 playing = true
 
 [node name="coffee king" type="Area2D" parent="environment/interactable objects"]
-position = Vector2( 548, 194 )
+position = Vector2( 531.747, 205.496 )
 script = ExtResource( 36 )
 
 [node name="collider" type="CollisionShape2D" parent="environment/interactable objects/coffee king"]
@@ -495,7 +495,7 @@ TYPE = 1
 material = SubResource( 21 )
 z_index = 1
 frames = SubResource( 29 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="coffee machine" type="Area2D" parent="environment/interactable objects"]
@@ -516,7 +516,7 @@ material = SubResource( 31 )
 position = Vector2( -1.98199, -22.9914 )
 z_index = 1
 frames = SubResource( 38 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="crystal ball" type="Area2D" parent="environment/interactable objects"]
@@ -537,7 +537,7 @@ material = SubResource( 40 )
 position = Vector2( 0, -18 )
 z_index = 1
 frames = SubResource( 54 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="board" type="Area2D" parent="environment/interactable objects"]
@@ -1033,9 +1033,9 @@ text = "X CLOSE"
 flat = true
 
 [node name="Score2" type="Label" parent="options"]
-margin_left = 91.4052
+margin_left = 101.405
 margin_top = 3.1947
-margin_right = 145.405
+margin_right = 155.405
 margin_bottom = 22.1947
 custom_fonts/font = SubResource( 83 )
 text = "of 620"
